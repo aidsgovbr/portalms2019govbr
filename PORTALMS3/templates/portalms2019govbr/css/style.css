@@ -1196,10 +1196,11 @@ header .box-menu {
 
 div#viewlet-below-content {
 	margin: 60px auto;
-	min-height: 35px;
+	min-height: 80px;
 	position: relative;
 	padding: 20px 0;
 	border-top: .5px solid #ccc;
+	border-bottom: .5px solid #ccc;
 	max-width: 1152px;
 	clear: both;
 	margin-bottom: 100px;
@@ -1208,40 +1209,40 @@ div#viewlet-below-content {
 .voltar-topo {
 	position: absolute;
 	right: 0;
-    top: 30px;
+	top: 10px;
 }
 
 .voltar-topo a {
-	color: #1351b4;
-	text-transform: uppercase;
-	font-size: .8rem;
-	font-weight: 700;
-	margin-top: 1rem;
-	display: inline-block;
-	text-decoration: none;
+    color: #1351b4;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .voltar-topo a:after {
-	content: "^";
-	background: #1351b4;
-	color: #fff;
-	border-radius: 50%;
-	padding: 11px 10px 8px;
-	display: block;
-	float: right;
-	width: 40px;
-	height: 40px;
-	line-height: 1.1;
-	text-align: center;
-	font-size: 1.4em;
-	margin: -10px 0 0 10px;
-	font-weight: 700;
-	-webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
-	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16)
+    content: "^";
+    background: #1351b4;
+    color: #fff;
+    border-radius: 50%;
+    padding: 11px 10px 8px;
+    display: block;
+    float: right;
+    width: 40px;
+    height: 40px;
+    line-height: 1.1;
+    text-align: center;
+    font-size: 1.4em;
+    margin: -10px 0 0 10px;
+    font-weight: 700;
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
 }
 
 .voltar-topo a:hover:after {
-	background: #2670e8
+	background: #2670e8;
 }
 
 .texto-copyright {
@@ -1900,6 +1901,10 @@ body.capa-azul .documentFirstHeading {
 #interna .conteudo-interna .tileContent h2.tileHeadline a {
     color: #0c326f!important;
 	font-weight: 600;
+}
+
+#interna .conteudo-interna .tileContent h2.tileHeadline a:hover {
+    color: #1351b4!important;
 }
 
 #interna .conteudo-interna .tileContent .tileBody .description, 
