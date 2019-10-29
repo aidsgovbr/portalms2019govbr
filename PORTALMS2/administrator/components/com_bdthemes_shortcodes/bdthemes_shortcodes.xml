@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>bdthemes_shortcodes</name>
+    <creationDate>26th March 2016</creationDate>
+    <author>BdThemes Ltd</author>
+    <authorEmail>info@bdthemes.com</authorEmail>
+    <authorUrl>http://www.bdtheme.com</authorUrl>
+    <copyright>(C) 2012 BDThemes Ltd. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>2.3.1</version>
+    <description>Shortcode Ultimate Component for generate shortcode easily.</description>
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update> <!-- Runs on update -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>bdthemes_shortcodes.php</filename>
+        <filename>controller.php</filename>
+        <folder>helpers</folder>
+        <folder>views</folder>
+    </files>
+
+    <administration>
+        <files folder="admin">
+            <filename>bdthemes_shortcodes.php</filename>
+            <filename>controller.php</filename>
+            <folder>helpers</folder>
+			<folder>sql</folder>
+            <folder>views</folder>
+        </files>
+    </administration>
+</extension>
+

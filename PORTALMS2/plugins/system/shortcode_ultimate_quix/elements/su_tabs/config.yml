@@ -1,0 +1,76 @@
+name: Tabs
+slug: bdt_tabs
+groups: ["Shortcode Ultimate", "content"]
+form:
+  general:
+    - name: tab
+      type: group-repeater
+      schema:
+        - name: title
+          value: Default
+
+        - name: icon
+          help: 'Type your icon name here. Example- "icon: home" or "licon: home"'
+          value: 'icon: heart'
+
+        - name: content
+          type: editor
+          value: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+
+      value:
+        - title: Default
+
+  Tabs:
+    - name: active
+      type: slider
+      min: 1
+      max: 100
+      value: 1
+
+    - name: vertical
+      label: Vertical Tab
+      type: switch
+
+    - name: style
+      type: select
+      options:
+        default: Default
+        1: Style 1
+        2: Style 2
+        3: Style 3
+        carbon: Carbon
+        sharp: Sharp
+        grid: Grid
+        wood: Wood
+        fabric: Fabric
+        modern-dark: Modern Dark
+        modern-light: Modern Light
+        modern-violet: Modern Violet
+        modern-orange: Modern Orange
+        flat-dark: Flat Dark
+        flat-light: Flat Light
+        flat-blue: Flat Blue
+        flat-green: Flat Green
+      value: default
+
+    - name: align
+      type: select
+      options:
+        left: Left
+        center: Center (no working if Vertical='Yes')
+        right: Right
+      value: left
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

@@ -1,0 +1,99 @@
+name: Switcher
+slug: bdt_switcher
+groups: ["Shortcode Ultimate", "content"]
+form:
+  general:
+    - name: position
+      type: select
+      options:
+        top: Top
+        right: Right
+        bottom: Bottom
+        left: Left
+      value: top
+
+    - name: active
+      label: Active Switch
+      type: slider
+      min: 1
+      max: 10
+      value: 1
+
+  Switcher Item:   
+    - name: switcher_item
+      type: group-repeater
+      schema:
+        - name: title
+          value: Default
+
+        - name: icon
+          help: 'Type your icon name here. Example- "icon: home" or "licon: home"'
+          value: 'icon: heart'
+
+        - name: content
+          type: editor
+          value: switcher item content
+
+      value:
+        - title: Default
+          content: switcher item content
+
+  styles:
+    - name: style
+      type: select
+      options:
+        1: Style 1
+        2: Style 2
+        3: Style 3
+        4: Style 4
+        5: Style 5
+      value: 1
+
+    - name: align
+      type: select
+      options:
+        left: Left
+        center: Center
+        right: Right
+      value: center
+
+    - name: animation
+      type: select
+      options:
+        fadeOut: Fade Out
+        quicksand: Quicksand
+        boxShadow: Box Shadow
+        bounceLeft: Bounce Left
+        bounceTop: Bounce Top
+        bounceBottom: Bounce Bottom
+        moveLeft: Move Left
+        slideLeft: Slide Left
+        fadeOutTop: Fade Out Top
+        sequentially: Sequentially
+        skew: Skew
+        slideDelay: Slide Delay
+        3dflip: 3d Flip
+        rotateSides: Rotate Sides
+        flipOutDelay: Flip Out Delay
+        flipOut: Flip Out
+        unfold: Unfold
+        foldLeft: Fold Left
+        scaleDown: Scale Down
+        scaleSides: Scale Sides
+        frontRow: Front Row
+        flipBottom: Flip Bottom
+        rotateRoom: Rotate Room
+    
+  Animation:
+    - name: pl_animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

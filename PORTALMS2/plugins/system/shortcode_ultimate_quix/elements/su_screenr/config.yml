@@ -1,0 +1,40 @@
+name : Screenr
+slug : bdt_screenr
+groups : Shortcode Ultimate
+form :
+  general :
+    - name: url
+      label: URL
+
+    - name: width
+      type: slider
+      min: 200
+      max: 1600
+      step: 20
+      value: 600
+
+    - name: height
+      type: slider
+      min: 200
+      max: 1600
+      step: 20
+      value: 400
+
+    - name: responsive
+      type: switch
+      value: true
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation
+        

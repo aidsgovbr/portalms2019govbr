@@ -1,0 +1,88 @@
+name: Photo Panel
+slug: bdt_photo_panel
+groups: ["Shortcode Ultimate", "content"]
+form:
+  general:
+    - name: photo
+      type: image
+
+    - name: alt
+      label: Image Alt Text
+      help: Define the HTML ALT text for your image here.
+
+    - name: url
+      help: Please give specific url.
+
+    - name: text_align
+      label: Text Align
+      type: select
+      options:
+        left: Left
+        right: Right
+        center: Center
+      value: left
+
+    - name: content
+      type: editor
+      value: Photo panel content
+
+  styles:
+    - name: background
+      type: color
+      label: Photo Panel Background
+
+    - name: color
+      label: Text Color
+      type: color
+
+    - name: border
+      type: switch
+
+    - name: border_width
+      label: Border Width
+      type: slider
+      depends: 
+        border : true
+
+    - name: border_style
+      label: Border Style
+      type: select
+      options:
+        none: None
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+      value: solid
+      depends: 
+        border : true
+
+    - name: border_color
+      label: Border Color
+      type: color
+      value: #cccccc
+      depends: 
+        border : true
+
+    - name: radius
+      type: slider
+      value: 0
+
+    - name: shadow
+      help: "Type shadow value. Example: 0px 1px 2px #f5f5f5"
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

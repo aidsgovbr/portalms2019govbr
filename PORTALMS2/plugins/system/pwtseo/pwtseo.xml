@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8" type="plugin" group="system" method="upgrade">
+    <name>PLG_PWTSEO</name>
+    <author>Perfect Web Team</author>
+    <creationDate>25 January 2018</creationDate>
+    <copyright>Copyright (C) 2016 - 2018 Perfect Web Team</copyright>
+    <license>GPLv3 http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>extensions@perfectwebteam.com</authorEmail>
+    <authorUrl>https://extensions.perfectwebteam.com</authorUrl>
+    <version>1.0.2</version>
+    <description>PLG_PWTSEO_XML_DESCRIPTION</description>
+
+	<files>
+        <folder>fields</folder>
+        <folder>form</folder>
+        <folder>language</folder>
+        <folder>sql</folder>
+        <folder>tmpl</folder>
+        <filename plugin="pwtseo">pwtseo.php</filename>
+    </files>
+
+    <administration>
+        <languages folder="language">
+            <language tag="en-GB">en-GB/en-GB.plg_system_pwtseo.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_system_pwtseo.sys.ini</language>
+        </languages>
+    </administration>
+
+    <media folder="media/plg_system_pwtseo" destination="plg_system_pwtseo">
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+
+    <install>
+        <sql>
+            <file charset="utf8" driver="mysql">sql/install.mysql.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file charset="utf8" driver="mysql">sql/uninstall.mysql.sql</file>
+        </sql>
+    </uninstall>
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/</schemapath>
+        </schemas>
+    </update>
+
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+                <field
+                        name="advanced_mode"
+                        type="list"
+                        label="PLG_SYSTEM_PWTSEO_PARAMS_ADVANCED_LABEL"
+                        description="PLG_SYSTEM_PWTSEO_PARAMS_ADVANCED_DESC"
+                        filter="intval"
+                        size="1"
+                        default="0" >
+                    <option value="1">
+                        JYES
+                    </option>
+                    <option value="0">
+                        JNO
+                    </option>
+                </field>
+
+                <!--<field
+                    name="show_mobile_serp"
+                    type="list"
+                    label="PLG_SYSTEM_PWTSEO_PARAMS_SHOW_MOBILE_SERP_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_PARAMS_SHOW_MOBILE_SERP_DESC"
+                    filter="intval"
+                    size="1"
+                    default="0" >
+                    <option value="1">
+                        JYES
+                    </option>
+                    <option value="0">
+                        JNO
+                    </option>
+                </field>-->
+
+                <field
+                    name="show_counters"
+                    type="list"
+                    label="PLG_SYSTEM_PWTSEO_PARAMS_SHOW_COUNTERS_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_PARAMS_SHOW_COUNTERS_DESC"
+                    filter="intval"
+                    size="1"
+                    default="1" >
+                    <option value="1">
+                        JYES
+                    </option>
+                    <option value="0">
+                        JNO
+                    </option>
+                </field>
+
+                <field
+                    name="set_canonical"
+                    type="list"
+                    label="PLG_SYSTEM_PWTSEO_PARAMS_SET_CANONICAL_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_PARAMS_SET_CANONICAL_DESC"
+                    filter="intval"
+                    size="1"
+                    default="1" >
+                    <option value="1">
+                        JYES
+                    </option>
+                    <option value="0">
+                        JNO
+                    </option>
+                </field>
+
+                <field
+                        name="poll_interval"
+                        type="number"
+                        label="PLG_SYSTEM_PWTSEO_PARAMS_POLL_INTERVAL_LABEL"
+                        description="PLG_SYSTEM_PWTSEO_PARAMS_POLL_INTERVAL_DESC"
+                        filter="intval"
+                        default="30" />
+			</fieldset>
+            <fieldset name="advanced">
+                <field name="spacer_1" type="spacer" label="PLG_SYSTEM_PWTSEO_PARAMS_SPACER_COUNT_TITLE_LABEL" />
+
+                <field
+                        name="count_min_title"
+                        type="number"
+                        label="PLG_SYSTEM_PWTSEO_PARAMS_COUNT_MIN_TITLE_LABEL"
+                        description="PLG_SYSTEM_PWTSEO_PARAMS_COUNT_MIN_TITLE_DESC"
+                        filter="intval"
+                        default="40" />
+
+                <field
+                        name="count_max_title"
+                        type="number"
+                        label="PLG_SYSTEM_PWTSEO_PARAMS_COUNT_MAX_TITLE_LABEL"
+                        description="PLG_SYSTEM_PWTSEO_PARAMS_COUNT_MAX_TITLE_DESC"
+                        filter="intval"
+                        default="50" />
+
+                <field name="spacer_2" type="spacer" label="PLG_SYSTEM_PWTSEO_PARAMS_SPACER_COUNT_METADESC_LABEL" />
+
+                <field
+                        name="count_min_metadesc"
+                        type="number"
+                        label="PLG_SYSTEM_PWTSEO_PARAMS_COUNT_MIN_METADESC_LABEL"
+                        description="PLG_SYSTEM_PWTSEO_PARAMS_COUNT_MIN_METADESC_DESC"
+                        filter="intval"
+                        default="100" />
+
+                <field
+                        name="count_max_metadesc"
+                        type="number"
+                        label="PLG_SYSTEM_PWTSEO_PARAMS_COUNT_MAX_METADESC_LABEL"
+                        description="PLG_SYSTEM_PWTSEO_PARAMS_COUNT_MAX_METADESC_DESC"
+                        filter="intval"
+                        default="150" />
+            </fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,167 @@
+name: Flip Box
+slug: bdt_flip_box
+groups: ["Shortcode Ultimate", "content"]
+
+form:
+  general:
+    - name: animation_style
+      label: Animation Style
+      type: select
+      options:
+        horizontal_flip_left: Horizontal Flip Left
+        horizontal_flip_right: Horizontal Flip Right
+        vertical_flip_top: Vertical Flip Top
+        vertical_flip_bottom: Vertical Flip Bottom
+        flip_left: Flip Left
+        flip_right: Flip Right
+        flip_top: Flip Top
+        flip_bottom: Flip Bottom
+      value: horizontal_flip_left
+
+  Flip Front:
+    - name: ffbackground
+      label: Background
+      type: color
+      value: #ffffff
+
+    - name: ffcolor
+      label: Text Color
+      type: color
+      value: #444444
+
+    - name: ffborder
+      label: Border
+      type: switch
+
+    - name: ffborder_width
+      label: Border Width
+      value: 0px
+      depends:
+        ffborder: true
+
+    - name: ffborder_style
+      label: Border Style
+      type: select
+      options:
+        none: None
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+      value: solid
+      depends:
+        ffborder: true
+
+    - name: ffborder_color
+      label: Border Color
+      type: color
+      value: #eeeeee
+      depends:
+        ffborder: true
+
+    - name: ffshadow
+      label: Shadow
+      value: 0px 0px 0px #444444
+
+    - name: fftext_align
+      label: Align
+      type: select
+      options:
+        left: Left
+        center: Center
+        right: Right
+      value: center
+
+    - name: ffpadding
+      label: Padding
+      type: padding
+
+    - name: ffradius
+      label: Radius
+      help: "You can set border radius from here, for example: 3px 10px 25px also you can set value as em, % etc if you need"
+      value: 0px
+
+    - name: ffcontent
+      label: Content
+      type: editor
+      value: Flip front content
+
+  Flip Back:
+    - name: background
+      type: color
+      value: #ffffff
+
+    - name: color
+      label: Text Color
+      type: color
+      value: #444444
+
+    - name: border
+      type: switch
+
+    - name: border_width
+      label: Border Width
+      value: 0px
+      depends:
+        border: true
+
+    - name: border_style
+      label: Border Style
+      type: select
+      options:
+        none: None
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+      value: solid
+      depends:
+        border: true
+
+    - name: border_color
+      label: Border Color
+      type: color
+      value: #eeeeee
+      depends:
+        border: true
+
+    - name: shadow
+      value: 0px 0px 0px #444444
+
+    - name: text_align
+      label: Align
+      type: select
+      options:
+        left: Left
+        center: Center
+        right: Right
+      value: center
+
+    - name: padding
+      type: padding
+
+    - name: radius
+      help: "You can set border radius from here, for example: 3px 10px 25px also you can set value as em, % etc if you need"
+      value: 0px
+
+    - name: content
+      type: editor
+      value: Flip back content
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

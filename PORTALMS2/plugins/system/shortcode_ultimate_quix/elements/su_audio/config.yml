@@ -1,0 +1,41 @@
+name: Audio
+slug: bdt_audio
+groups: Shortcode Ultimate
+form:
+  general:
+    - name: style
+      type: select
+      options:
+        dark: Dark
+        light: Light
+      value: dark
+
+    - name: url
+      help: "Please give specific audio file url. Supported formats: mp3, ogg"
+      label: File
+
+    - name: autoplay
+      type: switch
+
+    - name: loop
+      type: switch
+
+    - name: volume
+      type: slider
+      max: 100
+      step: 2
+      value: 50
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

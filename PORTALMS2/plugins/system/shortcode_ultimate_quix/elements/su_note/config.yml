@@ -1,0 +1,54 @@
+name : Note
+slug : bdt_note
+groups : [Shortcode Ultimate, content]
+form :
+  general :
+    - name: type
+      label: Note Type
+      type: select
+      options:
+        info: Info
+        success: Success
+        warning: Warning
+        danger: Danger
+      value: info
+
+    - name: icon
+      label: Note Icon
+      type: switch
+
+    - name: content
+      type: editor
+      value: <strong>Heads up!</strong> This alert needs your attention, but <a href='#'>it's not super important.</a>
+
+  Style :
+    - name: style
+      label: Note Style
+      type: select
+      options:
+        1: Style 1
+        2: Style 2
+        3: Style 3
+        4: Style 4
+        5: Style 5
+        6: Style 6
+      value: 1
+
+    - name: radius
+      value: 3px
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation
+
+        

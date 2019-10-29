@@ -1,0 +1,82 @@
+.su-joint-btn {
+  display: flex;
+  position: relative;
+}
+.su-joint-btn .joint-btn-left {
+  background: #666666;
+  text-align: left;
+}
+.su-joint-btn .joint-btn-left:hover {
+  background: #4d4d4d;
+}
+.su-joint-btn .joint-btn-left i {
+  margin-right: 5px;
+}
+.su-joint-btn .joint-btn-right {
+  background: #f57c00;
+  text-align: right;
+}
+.su-joint-btn .joint-btn-right:hover {
+  background: #fa8d1d;
+}
+.su-joint-btn .joint-btn-right i {
+  margin-left: 5px;
+}
+.su-joint-btn .joint-btn-left,
+.su-joint-btn .joint-btn-right,
+.su-joint-btn span {
+  letter-spacing: 2px;
+  vertical-align: middle;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 14px;
+}
+.su-joint-btn .joint-btn-left,
+.su-joint-btn .joint-btn-right {
+  text-decoration: none;
+  width: 50%;
+  padding: 15px 40px;
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.2);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.su-joint-btn span {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  border-radius: 50%;
+  z-index: 1;
+  position: relative;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
+  background: #FAFAF8;
+  color: #444444;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media (max-width: 479px) {
+  .su-joint-btn {
+    display: block;
+    width: 260px !important;
+  }
+  .su-joint-btn .joint-btn-left,
+  .su-joint-btn .joint-btn-right {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+  }
+  .su-joint-btn .joint-btn-left {
+    margin-bottom: 7px;
+  }
+  .su-joint-btn span {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+  }
+}

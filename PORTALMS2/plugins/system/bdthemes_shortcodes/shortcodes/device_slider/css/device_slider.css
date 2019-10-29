@@ -1,0 +1,301 @@
+
+.su-device-slider-wrapper {
+	position: relative;
+	margin: 0 auto;	
+}
+
+.su-device-slider-device {
+	position: absolute;
+	max-width: 100%;
+}
+/* mac style */
+.su-device-imac {
+	max-width: 1130px;
+}
+.su-device-imac .su-device-slider {
+	position: relative;
+	padding: 4.3% 8.2% 18%;
+	max-width: 944px;
+}
+
+/* macbook style */
+.su-device-macbook {
+	max-width: 1130px;
+}
+.su-device-macbook .su-device-slider {
+	position: relative;
+	padding: 4% 15.35% 11.5% 14.65%;
+	  max-width: 792px;
+}
+
+/* iphone style */
+.su-device-iphone {
+	max-width: 540px;
+}
+.su-device-iphone .su-device-slider {
+	position: relative;
+	padding: 29.4% 8.6% 26.5%;
+	max-width: 451px;
+}
+
+/* ipad style */
+.su-device-ipad {
+	max-width: 768px;
+}
+.su-device-ipad .su-device-slider {
+	position: relative;
+	padding: 14.8% 11.2% 19.5%;
+	max-width: 644px;
+}
+
+/* galaxy s6 style */
+.su-device-galaxys6 {
+	max-width: 540px;
+}
+.su-device-galaxys6 .su-device-slider {
+	position: relative;
+	padding: 23.7% 8.5% 18.6% 8.6%;
+	max-width: 451px;
+}
+.su-device-galaxys6 .owl-carousel .owl-stage-outer {
+	opacity: 0.9;
+}
+
+.su-device-slider .owl-item {
+	-webkit-transform: translateZ(0);
+}
+
+.su-device-imac .owl-carousel .owl-stage-outer,
+.su-device-macbook .owl-carousel .owl-stage-outer {
+	border-radius: 2px;
+}
+.su-device-iphone .owl-carousel .owl-stage-outer,
+.su-device-galaxys6 .owl-carousel .owl-stage-outer {
+	border-radius: 0 0 3px 3px;
+}
+
+.su-device-slider.owl-carousel {
+	width: auto !important;
+}
+
+/*==================
+	arrow design
+====================*/
+.su-device-slider .owl-nav [class*='owl-'] {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+	font-family: FontAwesome;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	opacity: 0;
+	color: #fff;
+	-webkit-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+.su-device-slider:hover .owl-nav [class*='owl-'] {
+	opacity: 1;
+}
+
+.su-device-slider .owl-prev:before { content: "\f053"; }
+.su-device-slider .owl-next:before { content: "\f054"; }
+
+.su-device-slider-wrapper.su-device-imac .owl-nav [class*='owl-'], 
+.su-device-slider-wrapper.su-device-macbook .owl-nav [class*='owl-'] {
+	position: absolute;
+	top: 50%;
+	margin-top: -5.5%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+ 
+.su-device-slider-wrapper.su-device-imac .owl-nav .owl-prev {
+	left: 12%;
+}
+.su-device-slider-wrapper.su-device-imac .owl-nav .owl-next {
+	right: 12%;
+}
+
+.su-device-slider-wrapper.su-device-macbook .owl-nav .owl-prev {
+	left: 18%;
+}
+.su-device-slider-wrapper.su-device-macbook .owl-nav .owl-next {
+	right: 18.6%;
+}
+ 
+.su-device-iphone .owl-nav [class*='owl-'], 
+.su-device-ipad .owl-nav [class*='owl-'], 
+.su-device-galaxys6 .owl-nav [class*='owl-'] {
+	position: absolute;
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+	margin-top: -8.5%;
+}
+
+.su-device-iphone .owl-next, 
+.su-device-galaxys6 .owl-next, 
+.su-device-ipad .owl-next {
+	right: 12%;
+}
+.su-device-iphone .owl-prev, 
+.su-device-galaxys6 .owl-prev, 
+.su-device-ipad .owl-prev {
+	left: 12%;
+}
+
+/*===========================
+	dot navigation
+=============================*/
+
+.su-device-slider .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.su-device-slider .owl-dots .owl-dot {
+	display: inline-block;
+	zoom: 1;
+	position: relative;
+	margin: 0 5px;
+	width: 10px;
+	height: 10px;
+	cursor: pointer;
+}
+.su-device-slider .owl-pagination {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.su-device-slider-wrapper.su-device-imac .owl-dots, 
+.su-device-slider-wrapper.su-device-macbook .owl-dots {
+	-webkit-transform: translateY(-50px);
+	transform: translateY(-50px);
+}
+
+.su-device-slider-wrapper .owl-dot span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: transparent;
+	box-shadow: inset 0 0 0 2px white;
+	-webkit-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
+}
+
+.su-device-slider-wrapper .owl-dot span::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	border-radius: 50%;
+	background-color: #fff;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-transition: -webkit-transform 0.3s ease;
+	transition: transform 0.3s ease;
+}
+
+.su-device-slider-wrapper .owl-dot span:hover,
+.su-device-slider-wrapper .owl-dot span:focus {
+	opacity: 0.7; 
+}
+
+.su-device-slider-wrapper .owl-dot.active span::after {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.su-device-iphone .owl-dots, 
+.su-device-galaxys6 .owl-dots, 
+.su-device-ipad .owl-dots {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	transform: translateY(-50%) translateX(-50%);
+}
+.su-device-iphone .owl-dots {
+	margin-top: -15%;
+}
+
+.su-device-ipad .owl-dots {
+	margin-top: -11%;
+}
+.su-device-galaxys6 .owl-dots {
+	margin-top: -14%;
+}
+
+
+.su-device-slider.has-lightbox .su-device-slide-item:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.su-device-slider.has-lightbox .su-device-slide-item:hover::after {
+    opacity: 1;
+}
+
+.su-device-slider .su-device-links a {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	margin-top: -20px;
+    height: 46px;
+    width: 46px;
+    line-height: 46px;
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.31);
+    text-align: center;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+	margin-left: -20px;
+	-webkit-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+    opacity: 0;
+}
+.su-device-slider .su-device-links a:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+.su-device-slider .su-device-slide-item:hover .su-device-links a {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+@media (max-width: 480px) {
+	.su-device-iphone .owl-dots, 
+	.su-device-galaxys6 .owl-dots, 
+	.su-device-ipad .owl-dots {
+		margin-top: -22%;
+	}
+	.su-device-slider-wrapper.su-device-imac .owl-nav [class*='owl-'], 
+	.su-device-slider-wrapper.su-device-macbook .owl-nav [class*='owl-'] {
+		margin-top: -8.5%;
+	}
+
+	.su-device-iphone .owl-nav [class*='owl-'], 
+	.su-device-ipad .owl-nav [class*='owl-'], 
+	.su-device-galaxys6 .owl-nav [class*='owl-'] {
+		margin-top: -16%;
+	}
+}
+

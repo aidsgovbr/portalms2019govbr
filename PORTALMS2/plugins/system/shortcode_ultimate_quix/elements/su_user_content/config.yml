@@ -1,0 +1,38 @@
+name: User Content
+slug: bdt_user_content
+groups: ["Shortcode Ultimate", "content"]
+form:
+  general:
+    - name: message
+      value: This content is for registered users only. Please %login%.
+      help: Message for guest user who not logged in your site
+
+    - name: color
+      label: Box Color
+      type: color
+
+    - name: login_text
+      label: Login Link Text
+      value: Login
+
+    - name: login_url
+      label: Login Link URL
+      value: index.php?option=com_users&view=login
+
+    - name: content
+      type: editor
+      value: Content for logged User
+
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

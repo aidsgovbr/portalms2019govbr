@@ -1,0 +1,61 @@
+name: Splash Screen
+slug: bdt_splash
+groups: ["Shortcode Ultimate", "content"]
+form:
+  general:
+    - name: width
+      type: slider
+      min: 100
+      max: 1600
+      value: 480
+
+    - name: opacity
+      type: slider
+      value: 80
+
+    - name: url
+      value: http://www.bdthemes.com
+
+    - name: onclick
+      type: select
+      options:
+        none: None
+        close: Close
+        close-bg: Close on Background Click
+        url: URL
+      value: close-bg
+
+    - name: delay
+      type: slider
+      max: 120
+
+    - name: close
+      type: switch
+      value: true
+
+    - name: esc
+      label: Esc Hotkey
+      type: switch
+      value: true
+
+    - name: content
+      type: editor
+      value: Splash screen content
+
+  styles:
+    - name: style
+      type: select
+      options:
+        dark: Dark
+        dark-boxed: Dark-Boxed
+        light: Light
+        light-boxed: Light-Boxed
+        blue-boxed: Blue-Boxed
+        light-boxed-blue: Light-Boxed-Blue
+        light-boxed-green: Light-Boxed-Green
+        light-boxed-orange: Light-Boxed-Orange
+        maintenance: Maintenance
+      value: dark
+
+    - name: padding
+      type: padding

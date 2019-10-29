@@ -1,0 +1,32 @@
+.su-counter-number { line-height: normal; color: #444444;}
+.su-counter-text { line-height: normal; color: #666666;}
+.su-counter-text p { margin-bottom: 0;}
+.su-counter-wrapper {padding: 20px;}
+.su-counter-icon i {color: #444444;}
+.su-counter-top {
+    text-align: center;
+}
+.su-counter-left .su-counter-number {
+	text-align: left;
+}
+.su-counter-left .su-counter-desc {
+    float: left;
+    margin-left: 20px;
+}
+.su-counter-left .su-counter-icon {
+    float: left;
+    padding-top: 5px;
+}
+
+.su-counter-right .su-counter-number {
+	text-align: right;
+}
+.su-counter-right .su-counter-desc {
+    float: right;
+    text-align: right;
+    margin-right: 20px;
+}
+.su-counter-right .su-counter-icon {
+    float: right;
+    padding-top: 5px;
+}

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	version="3.x.x"
+	type="plugin"
+	group="system"
+	method="upgrade">
+	<name>Recria_Urls_Alias_Assets</name>
+	<author>Tiago Garcia</author>
+	<creationDate>Março 2014</creationDate>
+	<copyright>Copyright (C) 2014 TiagoGarcia, Inc. All rights reserved.</copyright>
+	<license></license>
+	<authorEmail>tiago@gmail.com</authorEmail>
+	<authorUrl>http://www.tiagogarcia.com.br</authorUrl>
+	<version></version>
+	<description>Reconstrutor de Alias para qualquer tabela, por default esta setado Artigos(content). Gera assets.Obs:assets são gerados, quando estão como zero(int) no banco de dados. O tempo deste plugin, depende do tamanho das tabelas. Para iniciar, basta clicar em salvar.Apos rodar, ele se despublica para evitar acidentes. Para cada 7000 artigos, recomenda-se alterar no php ini, max_execution_time = 300</description>
+	<scriptfile />
+	<files>
+		<filename plugin="urlaliasgenerator">urlaliasgenerator.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="pt-BR">pt-BR/pt-BR.plg_system_urlaliasgenerator.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.plg_system_urlaliasgenerator.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field
+					name="alias"
+					type="radio"
+					label="Gerar Alias?"
+					description="Abilita geração de alias."
+					default="0"
+					class="btn-group btn-group-yesno"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="tabela"
+					type="text"
+					class="inputbox"
+					label="Nome da Tabela que contenha Alias"
+					default="content"
+					description="Nome da tabela do banco de dados que ira re-criar os alias."
+					size="40" />
+
+				<field
+					name="assetComponente"
+					type="radio"
+					label="Gerar Assets dos Componentes?"
+					class="btn-group btn-group-yesno"
+					description="Abilita geração de assets dos componentes."
+					default="0"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="assetArtigos"
+					type="radio"
+					label="Gerar Assets dos Artigos?"
+					class="btn-group btn-group-yesno"
+					description="Abilita geração de assets dos artigos."
+					default="0"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="assetModulos"
+					type="radio"
+					label="Gerar Assets dos Modulos?"
+					class="btn-group btn-group-yesno"
+					description="Abilita geração de assets dos modulos."
+					default="0"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="encurtada"
+					type="radio"
+					label="Reconstruir url encurtada dos artigos?"
+					description="Abilita geração de url encurtada em todos os artigos."
+					class="btn-group btn-group-yesno"
+					default="0"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="qtd"
+					type="text"
+					class="inputbox"
+					label="Iniciar em?"
+					description="Padrão é zero, ou indicar numero da linha que ira iniciar as urls a serem renovadas."
+					default="0"
+					/>
+				<field
+					name="limpar_tabela"
+					type="radio"
+					label="Deletar tabela encurtada?"
+					description="limpa toda a tabela de encurtadas ou manter e gerar novas/correção."
+					class="btn-group btn-group-yesno"
+					default="0"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				</fieldset>
+			</fields>
+		</config>
+	</extension>

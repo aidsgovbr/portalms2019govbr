@@ -1,0 +1,102 @@
+.su-post-block {
+    width: 102%;
+    margin-left: -2%;
+}
+
+.su-post-block * {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+.su-post-block .su-post-block-item {
+    width: 50%;
+    float: left;
+    padding-left: 2%;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+.su-post-block .su-post-block-item:nth-child(2n+3) {
+    clear: both;
+}
+
+.su-post-block .su-post-block-item .supb-img-wrap,
+.su-post-block .su-post-block-item .supb-desc {
+  width: 50%;
+  float: left;
+}
+
+.su-post-block .su-post-block-item.hide-thumb .supb-desc {
+  width: 100%;
+}
+
+.su-post-block .supb-thumb img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.su-post-block .supb-desc {
+    padding-left: 30px;
+}
+
+.su-post-block-item.hide-thumb .supb-desc {
+    padding-left: 0;
+}
+
+.su-post-block .supb-desc h4 {
+    margin-bottom: 5px;
+    line-height: 28px;
+    font-size: 20px;
+}
+.su-post-block .supb-desc h4 a {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: rgb(51, 51, 51);
+}
+
+
+.su-post-block .supb-desc .supb-meta {
+    font-size: 12px;
+    line-height: 18px;
+    color: rgb(153,153,153);
+    font-family: "Open Sans";
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.su-post-block .supb-desc .supb-meta span {
+  margin-right: 20px;
+} 
+
+
+@media only screen and (max-width : 1024px) {
+
+  .su-post-block .su-post-block-item {
+      width: 100%;
+  }
+}
+
+@media only screen and (max-width : 480px) {
+
+  .su-post-block .su-post-block-item .supb-img-wrap, 
+  .su-post-block .su-post-block-item .supb-desc {
+      width: 100%;
+  }
+  .su-post-block .supb-desc {
+      padding-left: 0px;
+      margin-top: 20px;
+  }
+}
+
+/* 
+
+[post_block source="k2-category: 1,15,16,17,18,2,9,10,11,12,13,14,3,4,7,5" limit="14" order="ordering" order_by="asc" category="yes" date="yes" show_intro_text="yes" intro_text_limit="150" show_meta="yes" show_title="yes" show_thumb="yes" thumb_resize="no" thumb_width="50" thumb_height="50"]
+
+*/
+
+
+

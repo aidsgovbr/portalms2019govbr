@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension group="search" method="upgrade" type="plugin" version="3">
+	<name>plg_search_phocagallery</name>
+	<creationDate>01/12/2013</creationDate>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<authorEmail></authorEmail>
+	<authorUrl>www.phoca.cz</authorUrl>
+	<copyright>Jan Pavelka</copyright>
+	<license>GNU/GPL</license>
+	<version>4.0.4</version>
+	
+	<description>PLG_SEARCH_PHOCAGALLERY_DESCRIPTION</description>
+	
+	<files>
+		<filename plugin="phocagallery">phocagallery.php</filename>
+		<filename >index.html</filename>
+	</files>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_search_phocagallery.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_search_phocagallery.sys.ini</language>
+	</languages>
+	
+	<administration>
+		<languages>
+			<language tag="en-GB">language/en-GB/en-GB.plg_search_phocagallery.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.plg_search_phocagallery.sys.ini</language>
+		</languages>
+	</administration>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="search_limit" type="text" size="5" default="20" label="PLG_SEARCH_PHOCAGALLERY_SEARCH_LIMIT_LABEL" description="PLG_SEARCH_PHOCAGALLERY_SEARCH_LIMIT_DESC"/>
+				
+				<field name="image_link" type="list" default="0" label="PLG_SEARCH_PHOCAGALLERY_VIEW_LINK_LABEL" description="PLG_SEARCH_PHOCAGALLERY_VIEW_LINK_DESC">
+					<option value="0">PLG_SEARCH_PHOCAGALLERY_CATEGORY_VIEW</option>
+					<option value="1">PLG_SEARCH_PHOCAGALLERY_DETAIL_VIEW</option>
+				</field>
+				
+				<field name="display_images" type="list" default="0" label="PLG_SEARCH_PHOCAGALLERY_DISPLAY_IMAGES_LABEL" description="PLG_SEARCH_PHOCAGALLERY_DISPLAY_IMAGES_DESC">
+					<option value="0">PLG_SEARCH_PHOCAGALLERY_NO</option>
+					<option value="1">PLG_SEARCH_PHOCAGALLERY_YES_MEDIUM_THUMBNAIL</option>
+					<option value="2">PLG_SEARCH_PHOCAGALLERY_YES_SMALL_THUMBNAIL</option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

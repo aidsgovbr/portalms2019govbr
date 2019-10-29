@@ -1,0 +1,19 @@
+.jp-accordion .jp-accordion-item .ui-accordion-header A {
+	zoom: 1;
+}
+
+.jp-accordion .ui-accordion-content {
+	display:none;
+}
+
+UL.jp-accordion,
+#main UL.jp-accordion,
+.component-content UL.jp-accordion {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#main UL.jp-accordion H3 {
+	margin: 1px 0 0 0;
+}

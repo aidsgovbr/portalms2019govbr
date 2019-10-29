@@ -1,0 +1,127 @@
+name: Devider
+slug: bdt_devider
+groups: Shortcode Ultimate
+form:
+  general:
+    - name: align
+      label: Devider Align
+      type: select
+      options:
+        left: Left
+        right: Right
+        center: Center
+      value: center
+
+    - name: top
+      label: Show Top Link
+      type: switch
+
+    - name: width
+      label: Divider Width(%)
+      type: slider
+      max: 100
+      value: 100
+
+    - name: force_fullwidth
+      label: Force Fullwidth
+      type: switch
+
+    - name: margin_top
+      label: Margin Top
+      type: slider
+      max: 200
+      value: 10
+
+    - name: margin_bottom
+      label: Margin Bottom
+      type: slider
+      max: 200
+      value: 10
+
+  icon:
+    - name: icon
+      help: 'Type your icon name here. Example- "icon: home" or "licon: home"'
+      value: 'icon: heart'
+
+    - name: icon_align
+      label: Icon Align
+      type: select
+      options:
+        left: Left
+        right: Right
+        center: Center
+      value: center
+
+    - name: icon_style
+      label: Icon Style
+      type: select
+      options:
+        1: Default
+        2: Background
+        3: Border
+      value: 1
+
+    - name: icon_color
+      label: Icon Color
+      type: color
+      value: #444444
+
+    - name: icon_size
+      label: Icon Size
+      type: slider
+      min: 10
+      max: 320
+      value: 24
+
+  style:
+    - name: style
+      type: select
+      options:
+        1: Single Line
+        2: Double Line
+        3: Single Dashed
+        4: Double Dashed
+        5: Single Dotted
+        6: Double Dotted
+        7: Striped
+      value: 1
+
+    - name: color
+      type: color
+      value: #c5c5c5
+
+  Responsive:
+    - name: visible
+      type: select
+      options:
+        default: Default
+        large: Large
+        medium: Medium
+        small: Small
+      value: default
+
+    - name: hidden
+      type: select
+      options:
+        default: Default
+        large: Large
+        medium: Medium
+        small: Small
+      value: default
+
+    - name: center
+      type: switch
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_video_gallery</name>
+    <creationDate>2015-01-16</creationDate>
+    <copyright>Copyright (C) 2014. Todos os direitos reservados.</copyright>
+    <license>GNU General Public License versão 2 ou posterior; consulte o arquivo License. txt</license>
+    <author>Fábio Nery Pinto</author>
+    <authorEmail>contato@fabionery.com.br</authorEmail>
+    <authorUrl>http://www.fabionery.com.br</authorUrl>
+    <version>1.0.0</version>
+    <description>Componente criado para adaptação da galeria de vídeos do Ministério da Saúde.</description>
+    
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>video_gallery.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>assets</folder>
+    </files>
+    <languages folder="languages/site">
+        
+			<language tag="pt-BR">pt-BR/pt-BR.com_video_gallery.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_video_gallery/assets/images/s_com_video_gallery.png" >COM_VIDEO_GALLERY</menu>
+        <submenu>
+            
+			<menu link="option=com_video_gallery&amp;view=gallerylistas" view="gallerylistas" img="components/com_video_gallery/assets/images/s_gallerylistas.png" alt="Video_gallery/Gallerylistas">COM_VIDEO_GALLERY_TITLE_GALLERYLISTAS</menu>
+
+			<menu link="option=com_categories&amp;extension=com_video_gallery" view="categories" img="components/com_video_gallery/assets/images/s_gallerylistas.png" alt="Video_gallery/Categories">COM_VIDEO_GALLERY_GALLERYLISTAS_CATEGORIA</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>video_gallery.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="pt-BR">pt-BR/pt-BR.com_video_gallery.ini</language>
+			<language tag="pt-BR">pt-BR/pt-BR.com_video_gallery.sys.ini</language>
+        </languages>
+    </administration>
+    <plugins>
+        <plugin group="search" plugin="video_gallery"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->

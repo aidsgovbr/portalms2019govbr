@@ -1,0 +1,12 @@
+/*		Common
+---------------------------------------------------------------*/
+
+.su-clearfix:before,
+.su-clearfix:after {
+	display: table;
+	content: " ";
+}
+.su-clearfix:after { clear: both; }
+.su-content-wrap > *:first-child { margin-top: 0; }
+.su-content-wrap > *:last-child { margin-bottom: 0; }
+

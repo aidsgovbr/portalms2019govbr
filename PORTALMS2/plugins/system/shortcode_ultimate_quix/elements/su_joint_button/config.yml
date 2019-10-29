@@ -1,0 +1,80 @@
+name: Joint Button
+slug: bdt_joint_button
+groups: Shortcode Ultimate
+form:
+  general:
+    - name: left_btn
+      label: Left Button
+      type: link
+
+    - name: middle_txt
+      label: Middle Text
+      value: Or
+
+    - name: right_btn
+      label: Right Button
+      type: link
+
+    - name: width
+      label: Buttons Width
+      help: You can set value as px, em, % etc if you need
+      value: 450px
+
+    - name: align
+      type: select
+      options:
+        left: Left
+        right: Right
+        center: Center
+      value: center
+
+  icon:
+    - name: left_btn_icon
+      help: 'Type your icon name here. Example- if fontawesome icon so "icon: home" or if line icon so "licon: home"'
+      label: Left Button Icon
+
+    - name: right_btn_icon
+      help: 'Type your icon name here. Example- if fontawesome icon so "icon: home" or if line icon so "licon: home"'
+      label: Right Button Icon
+
+  style:
+    - name: left_btn_bg
+      label: Left Button Background Color
+      type: color
+
+    - name: left_btn_hover_bg
+      label: Left Button Hover Background Color
+      type: color
+
+    - name: left_btn_color
+      label: Left Button Text Color
+      type: color
+
+    - name: right_btn_bg
+      label: Right Button Background Color
+      type: color
+
+    - name: right_btn_hover_bg
+      label: Right Button Hover Background Color
+      type: color
+
+    - name: right_btn_color
+      label: Right Button Text Color
+      type: color
+
+    - name: radius
+      help: You can set value as px, em, % etc if you need
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

@@ -1,0 +1,76 @@
+name: Flipbook
+slug: bdt_flipbook
+groups: Shortcode Ultimate
+form:
+  general:
+    - name: fb_type
+      label: Type
+      type: select
+      options:
+        thumbnail: Thumbnail
+        link: Link
+        frame: Frame
+      value: frame
+
+    - name: src
+      label: Source
+      help: 'Select pdf file source, for example: images/sample.pdf or http://example.com/sample.pdf'
+
+    - name: thumbnail
+      label: Thumbnail Source
+      type: image
+      help: Select thumbnail image best size 300px by 425px. This image need only for thumnail type.
+
+    - name: title
+
+    - name: tags
+      help: Enter some tag for display tags upon thumbnail
+
+    - name: webgl
+      label: 3D Mode
+      type: switch
+
+    - name: downloadable
+      type: switch
+      value: true
+
+    - name: sound
+      type: switch
+      value: true
+
+    - name: mouse_scroll
+      label: Mouse Scroll
+      help: Enable this option for zoom view with mouse scroll.
+      type: switch
+    
+  style:
+    - name: background
+      type: color
+
+    - name: height
+      type: slider
+      min: 100
+      max: 1600
+      step: 10
+      value: 750
+
+    - name: duration
+      type: slider
+      min: 400
+      max: 1200
+      step: 10
+      value: 800
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

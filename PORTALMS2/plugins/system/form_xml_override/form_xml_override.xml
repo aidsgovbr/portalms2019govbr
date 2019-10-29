@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="plugin" group="system" method="upgrade">
+	<name>System - Form XML Override</name>
+	<creationDate>July 2013</creationDate>
+	<author>iCueProject, Randy Carey</author>
+	<authorEmail>support@iCueProject.com</authorEmail>
+	<authorUrl>http://iCueProject.com</authorUrl>
+	<copyright>(C) 2013-2014 Randy Carey, iCue Project. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<version>1.0.1</version>
+	<description>PLG_FORM_XML_OVERRIDE_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="form_xml_override">form_xml_override.php</filename>
+	</files>
+	<languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_form_xml_override.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_form_xml_override.sys.ini</language>
+    </languages>	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="admin_com_name" type="textarea" size="44" default="" label="PLG_FORM_XML_OVERRIDE_ADMIN_COMPONENTS_LABEL" description="PLG_FORM_XML_OVERRIDE_ADMIN_COMPONENTS_DESC" />
+				<field name="site_com_name" type="textarea" size="44" default="" label="PLG_FORM_XML_OVERRIDE_SITE_COMPONENTS_LABEL" description="PLG_FORM_XML_OVERRIDE_SITE_COMPONENTS_DESC" />
+                <field name="slash_dir" type="radio"  default="0" label="PLG_FORM_XML_OVERRIDE_OS_SYSTEM_LABEL" description="PLG_FORM_XML_OVERRIDE_OS_SYSTEM_DESC" >
+                        <option value="0">PLG_FORM_XML_OVERRIDE_UNSURE</option>
+                        <option value="1">PLG_FORM_XML_OVERRIDE_LINUX</option>
+                        <option value="-1">PLG_FORM_XML_OVERRIDE_WINDOWS</option>
+                </field>
+				<field type="spacer" label="PLG_FORM_XML_OVERRIDE_HELP" />
+
+            </fieldset>
+		</fields>
+	</config>
+</extension>

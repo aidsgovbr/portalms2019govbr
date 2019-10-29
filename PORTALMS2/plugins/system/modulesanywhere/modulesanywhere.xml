@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="system" method="upgrade">
+	<name>plg_system_modulesanywhere</name>
+	<description>PLG_SYSTEM_MODULESANYWHERE_DESC</description>
+	<version>7.3.2</version>
+	<creationDate>May 2017</creationDate>
+	<author>Regular Labs (Peter van Westen)</author>
+	<authorEmail>info@regularlabs.com</authorEmail>
+	<authorUrl>https://www.regularlabs.com</authorUrl>
+	<copyright>Copyright © 2017 Regular Labs - All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Regular Labs Modules Anywhere">
+			http://download.regularlabs.com/updates.xml?e=modulesanywhere&amp;type=.xml
+		</server>
+	</updateservers>
+
+	<files>
+		<filename plugin="modulesanywhere">modulesanywhere.php</filename>
+		<filename>script.install.helper.php</filename>
+		<folder>language</folder>
+		<folder>src</folder>
+		<folder>vendor</folder>
+	</files>
+
+	<media folder="media" destination="whatnothing">
+		<folder>images</folder>
+	</media>
+
+	<config>
+		<fields name="params" addfieldpath="/libraries/regularlabs/fields">
+			<fieldset name="description">
+				<field name="@loadlanguage_regularlabs" type="rl_loadlanguage" extension="plg_system_regularlabs" />
+				<field name="@loadlanguage" type="rl_loadlanguage" extension="plg_system_modulesanywhere" />
+				<field name="@loadlanguage" type="rl_loadlanguage" extension="com_modules" />
+				<field name="@license" type="rl_license" extension="MODULES_ANYWHERE" />
+				<field name="@version" type="rl_version" extension="MODULES_ANYWHERE" />
+				<field name="@header" type="rl_header"
+					   label="MODULES_ANYWHERE"
+					   description="MODULES_ANYWHERE_DESC"
+					   url="https://www.regularlabs.com/modulesanywhere" />
+			</fieldset>
+			<fieldset name="basic">
+				<field name="@block_styling_a" type="rl_block" start="1" label="RL_STYLING" />
+				<field name="style" type="text" default="none"
+					   label="MA_DEFAULT_STYLE"
+					   description="MA_DEFAULT_STYLE_DESC" />
+				<field name="styles" type="text" default="none,division,tabs,well"
+					   label="MA_DEFAULT_STYLES"
+					   description="MA_DEFAULT_STYLES_DESC" />
+				<field name="override_style" type="radio" class="btn-group" default="1"
+					   label="MA_ENABLE_STYLE_OVERRIDING"
+					   description="MA_ENABLE_STYLE_OVERRIDING_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@block_styling_b" type="rl_block" end="1" />
+
+				<field name="@block_behavior_a" type="rl_block" start="1" label="RL_BEHAVIOR" />
+				<field name="@notice_override_settings" type="rl_plaintext"
+					   label="MA_ENABLE_PARAMETER_OVERRIDING"
+					   description="MA_ENABLE_PARAMETER_OVERRIDING_DESC"
+					   default="RL_ONLY_AVAILABLE_IN_PRO" />
+				<field name="ignore_access" type="radio" class="btn-group" default="0"
+					   label="MA_IGNORE_MODULE_ACCESS"
+					   description="MA_IGNORE_MODULE_ACCESS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="ignore_state" type="radio" class="btn-group" default="0"
+					   label="MA_IGNORE_MODULE_STATE"
+					   description="MA_IGNORE_MODULE_STATE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="ignore_assignments" type="radio" class="btn-group" default="1"
+					   label="MA_IGNORE_MODULE_ASSIGNMENTS"
+					   description="MA_IGNORE_MODULE_ASSIGNMENTS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="ignore_caching" type="radio" class="btn-group" default="0"
+					   label="MA_IGNORE_CACHING"
+					   description="MA_IGNORE_CACHING_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@loadlanguage_config" type="rl_loadlanguage" extension="com_config" />
+				<field name="@notice_show_edit" type="rl_plaintext"
+					   label="MA_FRONTEND_EDITING"
+					   description="COM_CONFIG_FRONTEDITING_DESC"
+					   default="RL_ONLY_AVAILABLE_IN_PRO" />
+				<field name="fix_html" type="radio" class="btn-group" default="1"
+					   label="RL_FIX_HTML"
+					   description="RL_FIX_HTML_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="place_comments" type="radio" class="btn-group" default="1"
+					   label="RL_PLACE_HTML_COMMENTS"
+					   description="RL_PLACE_HTML_COMMENTS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@block_behavior_b" type="rl_block" end="1" />
+			</fieldset>
+
+			<fieldset name="RL_SETTINGS_SECURITY">
+				<field name="@block_articles_a" type="rl_block" start="1"
+					   label="RL_ARTICLES"
+					   description="MA_ARTICLES_DESC" />
+				<field name="@notice_articles" type="rl_plaintext"
+					   label="MA_SECURITY_LEVEL"
+					   description="MA_SECURITY_LEVEL_DESC"
+					   default="RL_ONLY_AVAILABLE_IN_PRO" />
+				<field name="@block_articles_b" type="rl_block" end="1" />
+
+				<field name="@block_components_a" type="rl_block" start="1"
+					   label="RL_COMPONENTS"
+					   description="MA_COMPONENTS_DESC" />
+				<field name="@notice_components" type="rl_plaintext"
+					   label="RL_DISABLE_ON_COMPONENTS"
+					   description="MA_DISABLE_ON_COMPONENTS_DESC"
+					   default="RL_ONLY_AVAILABLE_IN_PRO" />
+				<field name="@block_components_b" type="rl_block" end="1" />
+
+				<field name="@block_otherareas_a" type="rl_block" start="1"
+					   label="RL_OTHER_AREAS"
+					   description="MA_OTHER_AREAS_DESC" />
+				<field name="@notice_otherareas" type="rl_plaintext"
+					   label="RL_ENABLE_OTHER_AREAS"
+					   description="RL_ENABLE_OTHER_AREAS_DESC"
+					   default="RL_ONLY_AVAILABLE_IN_PRO" />
+				<field name="@block_otherareas_b" type="rl_block" end="1" />
+			</fieldset>
+
+			<fieldset name="RL_SETTINGS_EDITOR_BUTTON">
+				<field name="button_text" type="text" default="Module"
+					   label="RL_BUTTON_TEXT"
+					   description="RL_BUTTON_TEXT_DESC" />
+				<field name="enable_frontend" type="radio" class="btn-group" default="1"
+					   label="RL_ENABLE_IN_FRONTEND"
+					   description="RL_ENABLE_IN_FRONTEND_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="@block_tag_a" type="rl_block" start="1"
+					   label="MA_DEFAULT_DATA_TAG_SETTINGS"
+					   description="MA_DEFAULT_DATA_TAG_SETTINGS_DESC" />
+				<field name="showtitle" type="radio" class="btn-group" default=""
+					   label="COM_MODULES_FIELD_SHOWTITLE_LABEL"
+					   description="COM_MODULES_FIELD_SHOWTITLE_DESC">
+					<option value="">JDEFAULT</option>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="@block_tag_a" type="rl_block" start="1" label="RL_TAG_SYNTAX" />
+				<field name="module_tag" type="text" default="module"
+					   label="MA_MODULE_TAG"
+					   description="MA_TAG_DESC" />
+				<field name="modulepos_tag" type="text" default="modulepos"
+					   label="MA_MODULEPOS_TAG"
+					   description="MA_TAG_DESC" />
+				<field name="tag_characters" type="list" default="{.}" class="input-small"
+					   label="RL_TAG_CHARACTERS"
+					   description="RL_TAG_CHARACTERS_DESC">
+					<option value="{.}">{...}</option>
+					<option value="[.]">[...]</option>
+					<option value="{{.}}">{{...}}</option>
+					<option value="[[.]]">[[...]]</option>
+					<option value="[:.:]">[:...:]</option>
+					<option value="[%.%]">[%...%]</option>
+				</field>
+				<field name="handle_loadposition" type="radio" class="btn-group" default="0"
+					   label="MA_HANDLE_LOADPOSITION_TAGS"
+					   description="MA_HANDLE_LOADPOSITION_TAGS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@toggler_10a" type="rl_toggler" param="handle_loadposition" value="1" />
+				<field name="activate_jumper" type="radio" class="btn-group" default="0"
+					   label="MA_ACTIVATE_JUMPER"
+					   description="MA_ACTIVATE_JUMPER_DESC">
+					<option value="0">JNO</option>
+					<option value="">JYES</option>
+				</field>
+				<field name="@toggler_11a" type="rl_toggler" param="activate_jumper" value="" />
+				<field name="@block_11" type="rl_plaintext"
+					   label="&#60;&#99;&#101;&#110;&#116;&#101;&#114;&#62;&#60;&#105;&#109;&#103;&#32;&#115;&#114;&#99;&#61;&#34;&#46;&#46;&#47;&#109;&#101;&#100;&#105;&#97;&#47;&#109;&#111;&#100;&#117;&#108;&#101;&#115;&#97;&#110;&#121;&#119;&#104;&#101;&#114;&#101;&#47;&#105;&#109;&#97;&#103;&#101;&#115;&#47;&#106;&#117;&#109;&#112;&#46;&#103;&#105;&#102;&#34;&#32;&#98;&#111;&#114;&#100;&#101;&#114;&#61;&#34;&#48;&#34;&#32;&#97;&#108;&#116;&#61;&#34;&#34;&#32;&#119;&#105;&#100;&#116;&#104;&#61;&#34;&#56;&#52;&#34;&#32;&#104;&#101;&#105;&#103;&#104;&#116;&#61;&#34;&#49;&#52;&#48;&#34;&#32;&#115;&#116;&#121;&#108;&#101;&#61;&#34;&#102;&#108;&#111;&#97;&#116;&#58;&#110;&#111;&#110;&#101;&#59;&#34;&#32;&#47;&#62;&#60;&#47;&#99;&#101;&#110;&#116;&#101;&#114;&#62;" />
+				<field name="@toggler_11b" type="rl_toggler" />
+				<field name="@toggler_10b" type="rl_toggler" />
+				<field name="@block_tag_b" type="rl_block" end="1" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

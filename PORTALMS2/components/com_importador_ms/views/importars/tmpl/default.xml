@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_IMPORTADOR_MS_TITLE_LIST_VIEW_IMPORTARS" option="View">
+        <message>
+                        <![CDATA[COM_IMPORTADOR_MS_TITLE_LIST_VIEW_IMPORTARS_DESC]]>
+        </message>
+	</layout>
+</metadata>

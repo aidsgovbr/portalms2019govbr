@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_VIDEO_GALLERY_FORM_LBL_LISTAGALERIA_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_VIDEO_GALLERY_FORM_LBL_LISTAGALERIA_CREATED_BY"
+            description="COM_VIDEO_GALLERY_FORM_DESC_LISTAGALERIA_CREATED_BY"  /> 
+
+       <field name="titulo" type="text"
+                
+            label="COM_VIDEO_GALLERY_FORM_LBL_LISTAGALERIA_TITULO"
+            description="COM_VIDEO_GALLERY_FORM_DESC_LISTAGALERIA_TITULO" 
+                
+                
+                 required="true"  /> 
+
+       <field name="tipo_video" type="radio"
+                
+            label="COM_VIDEO_GALLERY_FORM_LBL_LISTAGALERIA_TIPO_VIDEO"
+            description="COM_VIDEO_GALLERY_FORM_DESC_LISTAGALERIA_TIPO_VIDEO" 
+                
+                
+                 required="true" >
+                <option value="youtube">Youtube</option>
+                <option value="flv">FLV</option>
+        </field> 
+
+ 
+		<field name="filter_tipo_video" type="list" onchange="this.form.submit();">
+			<option value="">COM_VIDEO_GALLERY_GALLERYLISTAS_TIPO_VIDEO_FILTER</option>
+			<option value="YOUTUBE">Youtube</option>
+			<option value="FLV">FLV</option>
+		</field> 
+
+       <field name="destaque" type="radio" buttons="true"
+                                                class="btn-group btn-group-yesno" default="1"
+        
+        
+            label="COM_VIDEO_GALLERY_FORM_LBL_LISTAGALERIA_DESTAQUE"
+            description="COM_VIDEO_GALLERY_FORM_DESC_LISTAGALERIA_DESTAQUE" ><option value="1">COM_VIDEO_GALLERY_GALLERYLISTAS_DESTAQUE_OPTION_ON</option><option value="0">COM_VIDEO_GALLERY_GALLERYLISTAS_DESTAQUE_OPTION_OFF</option></field> 
+
+       <field name="link" type="text"
+                
+            label="COM_VIDEO_GALLERY_FORM_LBL_LISTAGALERIA_LINK"
+            description="COM_VIDEO_GALLERY_FORM_DESC_LISTAGALERIA_LINK" 
+                
+                
+                 required="true"  /> 
+
+       <field name="categoria" type="category"
+                
+            label="COM_VIDEO_GALLERY_FORM_LBL_LISTAGALERIA_CATEGORIA"
+            description="COM_VIDEO_GALLERY_FORM_DESC_LISTAGALERIA_CATEGORIA" 
+                
+                
+                 required="true" 
+            extension="com_video_gallery" /> 
+
+       <field name="descricao" type="editor"
+                
+            label="COM_VIDEO_GALLERY_FORM_LBL_LISTAGALERIA_DESCRICAO"
+            description="COM_VIDEO_GALLERY_FORM_DESC_LISTAGALERIA_DESCRICAO" 
+                
+                
+                 /> 
+
+       <field name="created" type="timecreated" default="" 
+            label="COM_VIDEO_GALLERY_FORM_LBL_LISTAGALERIA_CREATED"
+            description="COM_VIDEO_GALLERY_FORM_DESC_LISTAGALERIA_CREATED"  /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+        <option value="2">JARCHIVED</option>
+        <option value="-2">JTRASHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

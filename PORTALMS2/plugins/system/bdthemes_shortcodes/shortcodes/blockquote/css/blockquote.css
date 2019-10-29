@@ -1,0 +1,66 @@
+.su-blockquote {
+	padding: 10px 20px;
+	margin: 0 0 20px;
+	font-size: 17.5px;
+	border-left: 5px solid #eee;
+}
+
+.su-blockquote .su-blockquote-cite {
+	display: block;
+	font-size: 80%;
+	line-height: 1.42857143;
+	color: #777;
+	margin-top: 15px;
+}
+
+.su-blockquote .su-blockquote-cite:before,
+.su-blockquote-pull.su-blockquote-align-right .su-blockquote-cite:before {
+	content: '\2014 \00A0';
+}
+.su-blockquote-align-right .su-blockquote-cite:before,
+.su-blockquote-pull.su-blockquote-align-right .su-blockquote-cite:after {
+	content: none;
+}
+.su-blockquote-align-right .su-blockquote-cite:after {
+	content: '\00A0 \2014';
+}
+
+.su-blockquote .su-blockquote-inner {
+	line-height: 1.5;
+	
+}
+
+.su-blockquote-align-left {
+	float: left;
+	border-right: none;
+	margin: 20px 20px 10px 0 !important;
+	padding-right: 0;
+}
+.su-blockquote-align-right {
+	float: right;
+	border-left: none;
+	border-right: 5px solid #eee;
+	text-align: right;
+	margin: 20px 20px 10px 0 !important;
+}
+
+
+.su-blockquote-italic .su-blockquote-inner {
+	font-style: italic;
+}
+
+.su-blockquote-pull {
+	max-width: 45%;
+}
+
+.su-blockquote-pull.su-blockquote-align-right {
+	border-right: none;
+	border-left: 5px solid #eee;
+	text-align: left;
+	margin: 20px 0 10px 20px !important;
+}
+
+.su-blockquote-font-1 .su-blockquote-inner { font-family: Georgia; }
+.su-blockquote-font-2 .su-blockquote-inner { font-family: "Times New Roman"; }
+.su-blockquote-font-3 .su-blockquote-inner { font-family: "Segoe Print"; }
+.su-blockquote-font-4 .su-blockquote-inner { font-family: Verdana; }

@@ -1,0 +1,52 @@
+name: Blockquote
+slug: bdt_blockquote
+groups: ["Shortcode Ultimate", "content"]
+form:
+  general:
+    - name: cite
+
+    - name: url
+      label: URL
+
+    - name: pull
+      type: switch
+
+    - name: italic
+      type: switch
+
+    - name: content
+      type: editor
+      value: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum. Sapiente, culpa fugit sit est laboriosam odit."
+
+  styles:
+    - name: font
+      label: Font Style
+      type: select
+      options:
+        default: Default
+        1: Style 1
+        2: Style 2
+        3: Style 3
+      value: default
+
+    - name: align
+      type: select
+      options:
+        default: Default
+        left: Left
+        right: Right
+      value: default
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

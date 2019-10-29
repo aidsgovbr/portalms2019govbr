@@ -1,0 +1,38 @@
+name: Fancy Text
+slug: bdt_fancy_text
+groups: Shortcode Ultimate
+form:
+  general:
+    - name: tags
+      help: Please put interchangeable word by using separated comma(,)
+      value: Text 1, Text 2, Text 3
+
+    - name: fancy_type
+      label: Fancy Type
+      type: select
+      options:
+        1: Type 1
+        2: Type 2
+        3: Type 3
+        4: Type 4
+        5: Type 5
+        6: Type 6
+        7: Type 7
+        8: Type 8
+        9: Type 9
+        10: Type 10
+      value: 1
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

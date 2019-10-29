@@ -1,0 +1,107 @@
+.su-post-grid .cbp-l-grid-blog-title {
+  margin-top: 0;
+}
+.su-post-grid .su-blog-img {
+  margin-bottom: 17px;
+}
+.su-pgrid-meta > .cbp-l-grid-blog-date {
+    padding-right: 10px;
+    margin-right: 5px;
+}
+
+.su-pgrid-meta > span {
+    font-size: 12px;
+    position: relative;
+}
+
+.su-pgrid-meta > .cbp-l-grid-blog-date:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 11px;
+    width: 2px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.cbp-l-filters-alignCenter .cbp-filter-item:before {
+  content: "/";
+  position: absolute;
+  right: -2px;
+  top: 0;
+}
+
+.cbp-l-filters-text.new_filter .cbp-filter-item:last-child:before {display: none;}
+
+.cbp-l-filters-text.new_filter .cbp-filter-item:before {
+  content: "|";
+  position: absolute;
+  right: -2px;
+  top: 0;
+}
+
+.cbp-l-filters-alignCenter .cbp-filter-item:last-child:before {display: none;}
+
+
+.cbp-l-filters-list .cbp-filter-item:last-child {
+  border-right-width: 1px;
+}
+
+.cbp-l-filters-dropdownWrap {
+  right: auto;
+  display: inline-block;
+  position: relative;
+}
+.cbp-l-filters-dropdownWrap .cbp-l-filters-dropdownHeader {
+  text-align: left;
+}
+.su-post-grid-filter-align-center .cbp-l-filters-dropdownWrap {
+  margin-left: -100px;
+}
+
+.su-post-grid-filter-align-left > div[class*="cbp-l-filters"] {
+  text-align: left;
+}
+.su-post-grid-filter-align-right > div[class*="cbp-l-filters"] {
+  text-align: right;
+}
+
+.su-post-grid-filter-align-right .cbp-search {
+  float: left;
+}
+
+.su-post-grid-filter-align-center > div[class*="cbp-l-filters"] {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.cbp-l-filters-text, .cbp-l-filters-alignCenter {
+  padding: 0;
+  margin-bottom: 35px;
+}
+.cbp-l-filters-text > div:first-child, 
+.cbp-l-filters-alignCenter > div:first-child {
+  padding-left: 0;
+}
+.cbp-l-filters-text > div:last-child, 
+.cbp-l-filters-alignCenter > div:last-child {
+  padding-right: 0;
+}
+
+.cbp-search input[type="text"] {
+    height: 36px;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    margin: 0;
+}
+
+.cbp-l-loadMore-defaultText {
+  text-transform: uppercase;
+}
+
+.su-post-grid .cbp-mode-slider {
+  margin: 25px auto 40px;
+}

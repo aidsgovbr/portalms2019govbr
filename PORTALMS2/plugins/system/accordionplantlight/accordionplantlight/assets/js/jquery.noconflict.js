@@ -1,0 +1,1 @@
+;if (typeof(window["jpJQuery"]) == "undefined") window["jpJQuery"] = jQuery.noConflict();

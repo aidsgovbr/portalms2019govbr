@@ -1,0 +1,79 @@
+.su-panel-slider {
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
+.su-panel-slider .swiper-container {
+  cursor: -webkit-grab;
+}
+.su-panel-slider .su-panel-slide .su-pnls-desc {
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+    -webkit-transition-property: opacity,transform,filter;
+    transition-property: opacity,transform,filter;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    margin: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    opacity: 0;
+}
+.su-panel-slider .su-panel-slide:hover .su-pnls-desc {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+.su-panel-slider .su-panel-slide {
+    position: relative;
+}
+.su-panel-slider .su-panel-slide:after {
+    content: '';
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 40%, rgba(0,0,0,0.45) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 40%, rgba(0,0,0,0.45) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.45) 100%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+    -webkit-transition-property: opacity,transform,filter;
+    transition-property: opacity,transform,filter;
+}
+.su-panel-slider .su-panel-slide:hover:after {
+    opacity: 1;
+}
+.su-panel-slider .su-slide-title {
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+.su-panel-slider .su-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px
+}
+.su-panel-slider .swiper-button-prev,
+.su-panel-slider .swiper-container-rtl .swiper-button-next {
+  left: 30px;
+}
+.su-panel-slider .swiper-button-next,
+.su-panel-slider .swiper-container-rtl .swiper-button-prev {
+  right: 30px;
+}
+.su-panel-slider .su-panel-slide .su-pnls-thumb img {
+  opacity: 0.5;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.su-panel-slider .su-panel-slide:hover .su-pnls-thumb img {
+  opacity: 1;
+}

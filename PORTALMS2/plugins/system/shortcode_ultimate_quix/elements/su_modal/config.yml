@@ -1,0 +1,133 @@
+name: Modal
+slug: bdt_modal
+groups: Shortcode Ultimate
+
+form:
+  general:
+    - name: title
+      label: Modal Title
+      value: Modal title
+
+    - name: width
+      label: Modal Width
+      value: 750px
+
+    - name: height
+      label: Modal Height
+      value: auto
+
+    - name: button_text
+      label: Button Text
+      value: Open Modal
+
+    - name: close_button
+      label: Close Button
+      type: switch
+
+    - name: button_class
+      label: Button Class
+
+    - name: content
+      type: editor
+      value: Type your modal content here
+
+  style:
+    - name: effect
+      type: select
+      options:
+        1: Fade In & Scale
+        2: Slide In Right
+        3: Slide In Bottom
+        4: Fall
+        5: Slide Fall
+        6: Sticky Up
+        7: 3d Flip Horizontal
+        8: 3d Flip Vertical
+        9: 3d Sign
+        10: Super Scaled
+        11: Just Me
+        12: 3d Slit
+        13: 3d Rotate Bottom
+        14: 3d Rotate In Left
+        15: Blur
+        16: Let Me In
+        17: Make Way!
+        18: Slip From Top
+      value: 1
+
+    - name: title_background
+      label: Title Background
+      type: color
+      value: rgba(0,0,0,0.1)
+
+    - name: title_color
+      label: Title Color
+      type: color
+      value: #ffcc00
+
+    - name: background
+      label: Modal Background
+      type: color
+      value: #2D89EF
+
+    - name: color
+      label: Modal Color
+      type: color
+      value: #ffcc00
+
+    - name: border
+      type: switch
+      label: Border
+
+    - name: border_width
+      label: Border Width
+      type: slider
+      depends: 
+        border : true
+
+    - name: border_style
+      label: Border Style
+      type: select
+      options:
+        none: None
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+      value: solid
+      depends: 
+        border : true
+
+    - name: border_color
+      label: Border Color
+      type: color
+      value: #cccccc
+      depends: 
+        border : true
+
+    - name: shadow
+      label: Modal Shadow
+      value: "0px 0px 0px #000000"
+
+    - name: overlay_background
+      label: Overlay Background
+      type: color
+      value: rgba(0,0,0,0.5)
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation
+
+    

@@ -1,0 +1,97 @@
+.su-contact-form .su-input-box input, .su-contact-form .su-input-box textarea {
+	width: 100%;
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+	padding: 5px 10px;
+	border: 1px solid #eee;
+}
+.su-contact-form .su-input-box input:focus,
+.su-contact-form .su-input-box textarea:focus {
+	border: 1px solid #d5d5d5;
+	outline: none;
+}
+
+.su-input-box input {
+	height: 40px !important;
+}
+
+
+.su-form-wrapper .submit-button {
+	margin-top: 10px;
+}
+.su-form-wrapper .submit-button input {
+	margin-right: 10px;
+	color: #fff;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	padding: 8px 15px;
+	text-align: center;
+	text-decoration: none !important;
+	display: inline-block;
+	cursor: pointer;
+	line-height: normal;
+	border: 2px solid transparent;
+}
+.su-form-wrapper .submit-button input[type*="submit"] {
+	background: #4fc1e9;
+	border-color: #4fc1e9;
+}
+.su-form-wrapper .submit-button input[type*="submit"]:hover {
+	background: #21b0e4;
+	border-color: #21b0e4;
+}
+.su-form-wrapper .submit-button input[type*="reset"] {
+	background: #da314b;
+	border-color: #da314b;
+}
+.su-form-wrapper .submit-button input[type*="reset"]:hover {
+	background: #e4354f;
+	border-color: #e4354f;
+}
+
+.su-contact-form .su-form-fields {
+	position: relative;
+	display: flex;
+	margin: 0 0 10px -2%;
+}
+
+.su-contact-form .su-cf-group {
+	margin: 0 0 0 2%;
+	width: 100%;
+}
+
+.su-contact-form.name-email-subject .su-form-fields .su-cf-group {
+	width: 33.33%;
+	float: left;
+}
+.su-contact-form.email-subject .su-form-fields .su-cf-group {
+	width: 50%;
+	float: left;
+}
+.su-contact-form.email .su-form-fields .su-cf-group {
+	width: 100%;
+}
+.su-cf-message-content {
+	margin-bottom: 20px;
+}
+
+.su-contact-form form {
+	margin: 0 !important;
+}
+
+.su-contact-form .su-note {
+	display: none;
+}
+
+
+/*Mobile Modes*/
+@media (max-width: 767px) {
+	.su-contact-form .su-form-fields {display: block;}
+	.su-contact-form.name-email-subject .su-form-fields .su-cf-group ,
+	.su-contact-form.email-subject .su-form-fields .su-cf-group,
+	.su-contact-form.name-email .su-form-fields .su-cf-group {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+}

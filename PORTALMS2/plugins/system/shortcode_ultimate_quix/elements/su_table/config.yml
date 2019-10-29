@@ -1,0 +1,26 @@
+name : Table
+slug : bdt_table
+groups : [Shortcode Ultimate, content]
+form :
+  general :
+    - name: url
+      help: Upload CSV file if you want to create HTML-table from file
+      label: CSV File
+
+    - name: content
+      type: editor
+      value: <table><tr><td>Table</td><td>Table</td></tr><tr><td>Table</td><td>Table</td></tr></table>
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

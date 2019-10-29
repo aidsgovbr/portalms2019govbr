@@ -1,0 +1,116 @@
+
+.su-showcase .cbp-popup-content a.cbp-l-inline-view {
+	margin-top: 25px;
+}
+
+
+div[class*="cbp-popup-"] .cpb-category, 
+div[class*="cbp-popup-"] .cpb-date {
+	display: inline-block;
+	position: relative;
+	margin-right: 22px;
+}
+
+div[class*="cbp-popup-"] .cpb-category:after, 
+div[class*="cbp-popup-"] .cpb-date:after {
+	content: '//';
+	position: absolute;
+	right: -16px;
+}
+
+div[class*="subtitle"] div:last-child:after {
+	content: none;
+	margin-right: 0;
+}
+
+.cbp-l-project-title {
+  font-size: 42px;
+  font-family: inherit;
+  line-height: 42px;
+  letter-spacing: normal;
+}
+
+.cbp-popup-singlePageInline .cbp-popup-close {
+  top: 40px;
+}
+
+.cbp-l-project-details-visit {
+  margin-top: -10px;
+}
+
+.cbp-linkNoPage {
+  cursor: default;
+}
+
+.cbp-l-filters-alignCenter .cbp-filter-item:before {
+  content: "/";
+  position: absolute;
+  right: -2px;
+  top: 0;
+}
+
+.cbp-l-filters-text.new_filter .cbp-filter-item:last-child:before {display: none;}
+
+.cbp-l-filters-text.new_filter .cbp-filter-item:before {
+  content: "|";
+  position: absolute;
+  right: -2px;
+  top: 0;
+}
+
+.cbp-l-filters-alignCenter .cbp-filter-item:last-child:before {display: none;}
+
+
+.cbp-l-filters-list .cbp-filter-item:last-child {
+  border-right-width: 1px;
+}
+
+.cbp-l-filters-dropdownWrap {
+  right: auto;
+  display: inline-block;
+  position: relative;
+}
+.cbp-l-filters-dropdownWrap .cbp-l-filters-dropdownHeader {
+  text-align: left;
+}
+.su-showcase-filter-align-center .cbp-l-filters-dropdownWrap {
+  margin-left: -100px;
+}
+
+.su-showcase-filter-align-left > div[class*="cbp-l-filters"] {
+  text-align: left;
+}
+.su-showcase-filter-align-right > div[class*="cbp-l-filters"] {
+  text-align: right;
+}
+.su-showcase-filter-align-center > div[class*="cbp-l-filters"] {
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.cbp-l-filters-text, .cbp-l-filters-alignCenter {
+  padding: 0;
+  margin-bottom: 35px;
+}
+.cbp-l-filters-text div:first-child, .cbp-l-filters-alignCenter div:first-child {
+  padding-left: 0;
+}
+.cbp-l-filters-text div:last-child, .cbp-l-filters-alignCenter div:last-child {
+  padding-right: 0;
+}
+
+.cbp-l-loadMore-defaultText {
+  text-transform: uppercase;
+}
+
+.su-showcase .cbp-mode-slider {
+  margin: 25px auto 40px;
+}
+.cbp-l-project-social-wrapper {
+    display: inline-block;
+    width: 100px;
+}
+
+/*.cbp-popup-singlePage .cbp-popup-navigation-wrap {
+  background-color: #4d4c4d;
+}*/

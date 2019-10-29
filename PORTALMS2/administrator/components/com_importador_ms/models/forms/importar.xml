@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+              <field name="id" type="text" default="0" label="COM_IMPORTADOR_MS_FORM_LBL_IMPORTAR_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" />
+
+       <field name="created_by" type="createdby" default=""
+            label="COM_IMPORTADOR_MS_FORM_LBL_IMPORTAR_CREATED_BY"
+            description="COM_IMPORTADOR_MS_FORM_DESC_IMPORTAR_CREATED_BY"  />
+
+ <field name="categoria_antiga" type="foreignkey" class="inputbox" multiple="true"
+            label="COM_IMPORTADOR_MS_FORM_LBL_IMPORTAR_CATEGORIA_ANTIGA"
+            description="COM_IMPORTADOR_MS_FORM_DESC_IMPORTAR_CATEGORIA_ANTIGA" input_type="list" table="#__banners" key_field="id" value_field="name"  />
+
+
+        <field name="categoria_nova" type="sql" label="Categoria Nova" description="Selecione a Categoria em que os artigos devem ser importados." query="SELECT id, title, extension FROM #__categories WHERE extension = 'com_content' AND published = 1" key_field="id" value_field="title"  required="true" />
+
+        <field name="change_import" type="radio"
+
+            label="COM_IMPORTADOR_MS_FORM_LBL_IMPORTAR_CHANGE_IMPORT"
+            description="COM_IMPORTADOR_MS_FORM_DESC_IMPORTAR_CHANGE_IMPORT"
+
+
+            required="true" >
+            <option value="1">Sim</option>
+            <option value="0">Não</option>
+        </field>
+
+        <field name="data_inicial" type="calendar"
+
+            label="COM_IMPORTADOR_MS_FORM_LBL_IMPORTAR_DATA_INICIAL"
+            description="COM_IMPORTADOR_MS_FORM_DESC_IMPORTAR_DATA_INICIAL"
+            format="%Y-%m-%d"
+
+
+            />
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+        <option value="2">JARCHIVED</option>
+        <option value="-2">JTRASHED</option>
+    </field>
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+    </fieldset>
+
+</form>

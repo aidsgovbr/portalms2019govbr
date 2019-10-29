@@ -1,0 +1,113 @@
+name: Odometer
+slug: bdt_odometer
+groups: ["Shortcode Ultimate", "content"]
+
+form:
+  general:
+    - name: count_start
+      label: Count Start From
+      value: 0
+
+    - name: count_end
+      label: Count End
+      value: 5000
+
+    - name: content
+      type: editor
+      value: Odometer content
+     
+  Icon:
+    - name: icon
+      label: Odometer Icon
+      help: 'Type your icon name here. Example- "icon: home" or "licon: home"'
+      value: 'icon: heart'
+
+    - name: align
+      label: Icon Align
+      type: select
+      options:
+        top: Top
+        left: Left
+        right: Right
+      value: top
+
+    - name: icon_color
+      label: Icon Color
+      type: color
+      value: #44444444
+
+    - name: icon_size
+      label: Icon Size
+      value: 24px
+
+  styles:
+    - name: count_color
+      label: Odometer Number Color
+      type: color
+
+    - name: count_size
+      help: You can set value as em, % etc if you need
+      label: Odometer Number Size
+      value: 32px
+
+    - name: text_color
+      label: Text Color
+      type: color
+      value: #666666
+
+    - name: text_size
+      help: You can set value as em, % etc if you need
+      label: Odometer Text Size
+      value: 14px
+
+    - name: background
+      type: color
+      value: #ffffff
+
+    - name: padding
+      type: padding
+    
+    - name: border
+      type: switch
+
+    - name: border_width
+      label: Border Width
+      type: slider
+      depends: 
+        border : true
+
+    - name: border_style
+      label: Border Style
+      type: select
+      options:
+        none: None
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+      value: solid
+      depends: 
+        border : true
+
+    - name: border_color
+      label: Border Color
+      type: color
+      value: #dddddd
+      depends: 
+        border : true
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

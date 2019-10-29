@@ -1,0 +1,78 @@
+name: Social Gallery
+slug: bdt_social_gallery
+groups: Shortcode Ultimate
+form:
+  general:
+    - name: instagram_name
+      label: Instagram Name
+
+    - name: facebook_album_url
+      label: Facebook Album URL
+
+    - name: facebook_album_name
+      label: Facebook Album Name
+
+    - name: google_user_url
+      label: Google User URL
+
+    - name: google_user_name
+      label: Google User Name
+
+    - name: header_title
+      label: Header Title
+
+    - name: header_sub_title
+      label: Header Sub Title
+
+    - name: header_image
+      label: Header Image
+      type: image
+
+    - name: header_bg_image
+      label: Header Background Image
+      type: image
+
+    - name: header_link
+      label: Header Link
+
+    - name: google_plus_link
+      label: Google Plus Link
+
+    - name: twitter_link
+      label: Twitter Link
+
+    - name: facebook_link
+      label: Facebook Link
+
+    - name: limit
+      type: slider
+      min: 1
+      max: 100
+      value: 15
+
+    - name: link_type
+      label: Link Type
+      type: select
+      options:
+        "no": "No"
+        popup: Popup
+        link: Link
+      value: popup
+
+    - name: load_more
+      label: Load More
+      type: switch
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

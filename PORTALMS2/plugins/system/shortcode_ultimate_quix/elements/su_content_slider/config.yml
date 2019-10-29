@@ -1,0 +1,182 @@
+
+slug  : bdt_content_slider
+name  : Content Slider
+groups: [ "Shortcode Ultimate", "content" ]
+form  : 
+  general:
+    - name : margin
+      type : slider
+      max  : 80
+      step : 5
+      value: 10
+    
+    - name : arrows
+      type : switch
+      value: true
+  
+    - name              : arrow_position
+      label             : Arrow Position
+      type              : select
+      options           : 
+        arrow-default     : Default
+        arrow-top-left    : Top-Left
+        arrow-top-right   : Top-Right
+        arrow-bottom-left : Bottom-Left
+        arrow-bottom-right: Bottom-Right
+      value             : arrow-default
+  
+    - name: pagination
+      type: switch
+  
+    - name : autoplay
+      type : switch
+      value: true
+  
+    - name : autoheight
+      label: Auto Height
+      type : switch
+  
+    - name : hoverpause
+      help : If you select Yes then when you hover on the slide then it will be paused
+      label: Paused on Hover
+      type : switch
+      value: true
+  
+    - name : lazyload
+      help : If you select yes then your images will be load after scrolling.
+      label: Lazy Load
+      type : switch
+  
+    - name : loop
+      help : Setting of Yes will cause the player to play the initial item again and again
+      type : switch
+      value: true
+  
+    - name : speed
+      help : Specify time (in second) that will be taken to complete animation effect
+      type : slider
+      min  : 0.1
+      max  : 15
+      step : 0.2
+      value: 0.6
+  
+    - name : delay
+      help : After mentioned time (in second) animation will start
+      type : slider
+      min  : 1
+      max  : 10
+      value: 4
+
+
+  Content Slide  : 
+    - name   : content_slide
+      type   : group-repeater
+      schema : 
+        - name   : title
+          value  : Slide 1
+
+        - name   : content
+          type   : editor
+          value  : Your content here.
+
+      value  : 
+        - title  : Slide 1
+
+  style: 
+    - name   : style
+      type   : select
+      options: 
+        default: Default
+        dark   : Dark
+        light  : Light
+      value  : default
+
+    - name   : transitionin
+      Label  : Transition In
+      type   : select
+      options:
+        bounceIn: bounceIn
+        bounceInDown: bounceInDown
+        bounceInLeft: bounceInLeft
+        bounceInRight: bounceInRight
+        bounceInUp: bounceInUp
+        fadeIn: fadeIn
+        fadeInDown: fadeInDown
+        fadeInDownBig: fadeInDownBig
+        fadeInLeft: fadeInLeft
+        fadeInLeftBig: fadeInLeftBig
+        fadeInRight: fadeInRight
+        fadeInRightBig: fadeInRightBig
+        fadeInUp: fadeInUp
+        fadeInUpBig: fadeInUpBig
+        flipInX: flipInX
+        flipInY: flipInY
+        lightSpeedIn: lightSpeedIn
+        rotateIn: rotateIn
+        rotateInDownLeft: rotateInDownLeft
+        rotateInDownRight: rotateInDownRight
+        rotateInUpLeft: rotateInUpLeft
+        rotateInUpRight: rotateInUpRight
+        rollIn: rollIn
+        zoomIn: zoomIn
+        zoomInDown: zoomInDown
+        zoomInLeft: zoomInLeft
+        zoomInRight: zoomInRight
+        zoomInUp: zoomInUp
+        slideInDown: slideInDown
+        slideInLeft: slideInLeft
+        slideInRight: slideInRight
+        slideInUp: slideInUp
+      value  : fadeIn
+
+    - name   : transitionout
+      Label  : Transition Out
+      type   : select
+      options:
+        bounceOut: bounceOut
+        bounceOutDown: bounceOutDown
+        bounceOutLeft: bounceOutLeft
+        bounceOutRight: bounceOutRight
+        bounceOutUp: bounceOutUp
+        fadeOut: fadeOut
+        fadeOutDown: fadeOutDown
+        fadeOutDownBig: fadeOutDownBig
+        fadeOutLeft: fadeOutLeft
+        fadeOutLeftBig: fadeOutLeftBig
+        fadeOutRight: fadeOutRight
+        fadeOutRightBig: fadeOutRightBig
+        fadeOutUp: fadeOutUp
+        fadeOutUpBig: fadeOutUpBig
+        flipOutX: flipOutX
+        flipOutY: flipOutY
+        lightSpeedOut: lightSpeedOut
+        rotateOut: rotateOut
+        rotateOutDownLeft: rotateOutDownLeft
+        rotateOutDownRight: rotateOutDownRight
+        rotateOutUpLeft: rotateOutUpLeft
+        rotateOutUpRight: rotateOutUpRight
+        rollOut: rollOut
+        zoomOut: zoomOut
+        zoomOutDown: zoomOutDown
+        zoomOutLeft: zoomOutLeft
+        zoomOutRight: zoomOutRight
+        zoomOutUp: zoomOutUp
+        slideOutDown: slideOutDown
+        slideOutLeft: slideOutLeft
+        slideOutRight: slideOutRight
+        slideOutUp: slideOutUp
+      value  : fadeOut
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

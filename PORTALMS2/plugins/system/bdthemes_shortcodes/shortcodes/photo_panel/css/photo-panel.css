@@ -1,0 +1,13 @@
+.su-photo-panel {
+	display: inline-block;
+	max-width: 100%;
+}
+.su-photo-panel-content {
+	padding: 10px;
+}
+.su-photo-panel-head {
+	overflow: hidden;
+}
+.su-panel-clickable {
+	cursor: pointer;
+}

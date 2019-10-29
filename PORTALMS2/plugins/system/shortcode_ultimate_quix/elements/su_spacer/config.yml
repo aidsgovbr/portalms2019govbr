@@ -1,0 +1,19 @@
+name: Spacer
+slug: bdt_spacer
+groups: Shortcode Ultimate
+form:
+  general:
+    - name: size
+      type: slider
+      max: 600
+      value: 20
+
+    - name: medium
+      type: slider
+      max: 400
+      value: 15
+
+    - name: small
+      type: slider
+      max: 300
+      value: 10

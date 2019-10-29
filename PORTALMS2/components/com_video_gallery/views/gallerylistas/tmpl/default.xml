@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_VIDEO_GALLERY_TITLE_LIST_VIEW_GALLERYLISTAS" option="View">
+		<message>
+			<![CDATA[COM_VIDEO_GALLERY_TITLE_LIST_VIEW_GALLERYLISTAS_DESC]]>
+		</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request"
+			>
+
+			<field name="categoria" type="category"
+				description="JGLOBAL_CHOOSE_CATEGORY_DESC"
+				extension="com_video_gallery"
+				label="JGLOBAL_CHOOSE_CATEGORY_LABEL"
+				required="true"
+				/>
+			</fieldset>
+		</fields>
+	</metadata>

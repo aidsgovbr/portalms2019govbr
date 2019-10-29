@@ -1,0 +1,74 @@
+name : Weather
+slug : bdt_weather
+groups : Shortcode Ultimate
+form :
+  general :
+    - name: location
+      value: Bogra
+
+    - name: country
+      value: Bangladesh
+
+    - name: city_only
+      help: if you want to display only city name, select yes
+      label: City Only
+      type: switch
+
+    - name: forecast
+      help: "how many days you want for forecast. Note: max 5"
+      value: 4
+
+    - name: api
+      type: select
+      options:
+        openweathermap: Openweathermap
+        yahoo: Yahoo
+      value: yahoo
+
+    - name: view
+      type: select
+      options:
+        partial: Partial
+        full: Full
+        simple: Simple
+        today: Today
+        forecast: Forecast
+      value: partial
+
+    - name: units
+      type: select
+      options:
+        auto: Auto
+        metric: Metric
+        imperial: Imperial
+      value: auto
+
+  Style :
+    - name: color
+      type: color
+      value: #ffffff
+
+    - name: background
+      type: color
+      value: #8DD438
+
+    - name: padding
+      type: padding
+
+    - name: margin
+      type: margin
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation
+        
