@@ -1,0 +1,79 @@
+name: Flip Countdown
+slug: bdt_flip_countdown
+groups: Shortcode Ultimate
+
+form:
+  general:
+    - name: datetime
+      help: "You can set countdown date here as YYYY-MM-DDTHH:MM:SS, For Example 2018-11-15T14:15:00"
+      label: Countdown Datetime
+
+    - name: time_name
+      label: Time Name
+      type: switch
+      value: true
+
+    - name: prefix
+      help: "You can add text before the count number. For example: $,€ etc"
+      label: Prefix Text
+
+    - name: suffix
+      help: "You can add text after the count number. For example: /-"
+      label: Suffix Text
+
+    - name: layout
+      type: select
+      value: horizontal
+      options:
+        horizontal: Horizontal
+        vertical: Vertical
+
+  styles:
+    - name: count_size
+      label: Count Size
+      type: select
+      value: default
+      options:
+        default: Default
+        small: Small
+        medium: Medium
+        large: Large
+
+    - name: count_color
+      label: Count Color
+      type: select
+      value: dark
+      options:
+        dark: Dark
+        light: Light
+
+    - name: text
+      label: Text Color
+      type: select
+      value: dark
+      options:
+        dark: Dark
+        light: Light
+
+    - name: align
+      type: select
+      label: Countdown Align
+      value: left
+      options:
+        left: Left
+        right: Right
+        center: Center
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

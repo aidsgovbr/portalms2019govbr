@@ -1,0 +1,108 @@
+/**
+ * @package         Better Preview
+ * @version         6.0.6
+ * 
+ * @author          Peter van Westen <info@regularlabs.com>
+ * @link            http://www.regularlabs.com
+ * @copyright       Copyright © 2017 Regular Labs All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+@import "../../regularlabs/less/init.less";
+
+.betterpreview-dropdown {
+	.dropdown-menu > li {
+		> .list-item {
+			padding:     8px 20px;
+			margin:      0;
+			display:     block;
+			clear:       both;
+			font-weight: normal;
+			line-height: @baseLineHeight;
+			color:       @dropdownLinkColor;
+			white-space: nowrap;
+		}
+		> a.list-item {
+			color: @dropdownLinkColor !important;
+			&:hover {
+				color: @white !important;
+				.icon-url,
+				.icon-urlinfo {
+					color: @white;
+				}
+				.label {
+					background-color: @white;
+					color:            @dropdownLinkBackgroundHover;
+					text-shadow:      none;
+				}
+			}
+		}
+		table {
+			width:   100%;
+			margin:  0;
+			padding: 0;
+			td {
+				margin:         0;
+				padding:        0;
+				vertical-align: middle;
+				&.rl_status_td_right {
+					text-align: right;
+					span {
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+		&.divider {
+			clear:  both;
+			margin: 2px 0 1px;
+		}
+	}
+}
+
+.betterpreview-alert {
+	position: fixed;
+	top:      10%;
+}
+
+.icon-url {
+	color: #51a351;
+}
+
+.icon-url:before {
+	content: "\e024";
+}
+
+.icon-urlinfo {
+	margin-top: 2px;
+	color:      #2f96b4;
+}
+
+.icon-urlinfo:before {
+	content: "\45";
+}
+
+#betterpreview_urlinfo {
+	.icon-url {
+		vertical-align: middle;
+	}
+}
+
+@media (max-width: 738px) {
+	.betterpreview-dropdown {
+		.icon-arrow-down-3 {
+			display: none;
+		}
+	}
+}
+
+/* Make status position show on mobile */
+@media (max-width: 767px) {
+	#status.hidden-phone {
+		display:    block !important;
+		text-align: center;
+		.pull-right {
+			float:   none;
+			display: block;
+		}
+	}
+}

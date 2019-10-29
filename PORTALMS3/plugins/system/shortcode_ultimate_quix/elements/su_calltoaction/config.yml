@@ -1,0 +1,80 @@
+name: Call to Action
+slug: bdt_calltoaction
+groups: ["Shortcode Ultimate", "content"]
+
+form:
+  general:
+    - name: title
+      value: Can't Wait For Shortcode Ultimate Plugin!
+
+    - name: button
+      help: You can type here any hyperlink to make link in button
+      label: Button Link
+      type: link
+
+    - name: content
+      type: editor
+      value: Lorem ipsum dolor sit amet timeam deleniti mnesarchum ex sed alii hinc dolores ad cum. Urbanitas similique ex nam paulo temporibus ea vis id odio adhuc nostrum eos.
+
+  styles:
+    - name: align
+      label: Text Align
+      type: select
+      value: left
+      options:
+        left: Left
+        right: Right
+        center: Center
+
+    - name: title_color
+      label: Title Color
+      type: color
+      value: #333333
+
+    - name: color
+      label: Text Color
+      type: color
+      value: #888888
+
+    - name: background
+      label: Calltoaction Background
+      type: color
+      value: #f5f5f5
+
+    - name: button_color
+      label: Button Color
+      type: color
+      value: #e5e5e5
+
+    - name: button_background
+      label: Button Background
+      type: color
+      value: #444444
+
+    - name: button_background_hover
+      label: Button Hover Background
+      type: color
+
+    - name: radius
+      label: Calltoaction Radius
+      help: You can set value as px, em, % etc if you need
+      value: 2px
+
+    - name: button_radius
+      help: You can set value as px, em, % etc if you need
+      label: Button Radius
+      value: 2px
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

@@ -1,0 +1,59 @@
+name: Icon
+slug: bdt_icon
+groups: Shortcode Ultimate
+form:
+  general:
+    - name: icon_type
+      label: Icon Type
+      type: select
+      options:
+        fontawesome: Fontawesome Icon
+        lineicon: Line Icon
+        image: Image Icon
+      value: fontawesome
+
+    - name: icon_fontawesome
+      label: Icon Fontawesome
+      type: icon
+      value: fa fa-home
+      depends:
+        icon_type: fontawesome
+
+    - name: icon_lineicon
+      label: Line Icon
+      label: "Type line icon name here.  Example: home"
+      value: home
+      depends:
+        icon_type: lineicon
+
+    - name: icon_image
+      label: Image Icon
+      type: image
+      depends:
+        icon_type: image
+
+    - name: url
+
+    - name: size
+      type: slider
+      min: 1
+      max: 200
+      value: 16
+
+    - name: color
+      label: Icon Color
+      type: color
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

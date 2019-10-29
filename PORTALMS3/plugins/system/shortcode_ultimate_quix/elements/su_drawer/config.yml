@@ -1,0 +1,99 @@
+name: Drawer
+slug: bdt_drawer
+groups: ["Shortcode Ultimate", "content"]
+form:
+  general:
+    - name: open_title
+      label: Open Title
+      value: Reveal it
+
+    - name: close_title
+      label: Close Title
+      value: Close me
+
+    - name: content
+      type: editor
+      value: <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p><p>Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+    
+  icon:
+    - name: open_icon
+      label: Open Icon
+      type: icon
+
+    - name: close_icon
+      label: Close Icon
+      type: icon
+
+  style:
+    - name: animation
+      label: Drawer Animation
+      type: select
+      value: easeOutExpo
+      options:
+        linear: linear 
+        swing: swing
+        jswing: jswing
+        easeInQuad: easeInQuad
+        easeInCubic: easeInCubic
+        easeInQuart: easeInQuart
+        easeInQuint: easeInQuint
+        easeInSine: easeInSine
+        easeInExpo: easeInExpo
+        easeInCirc: easeInCirc
+        easeInElastic: easeInElastic
+        easeInBack: easeInBack
+        easeInBounce: easeInBounce
+        easeOutQuad: easeOutQuad
+        easeOutCubic: easeOutCubic
+        easeOutQuart: easeOutQuart
+        easeOutQuint: easeOutQuint
+        easeOutSine: easeOutSine
+        easeOutExpo: easeOutExpo
+        easeOutCirc: easeOutCirc
+        easeOutElastic: easeOutElastic
+        easeOutBack: easeOutBack
+        easeOutBounce: easeOutBounce
+        easeInOutQuad: easeInOutQuad
+        easeInOutCubic: easeInOutCubic
+        easeInOutQuart: easeInOutQuart
+        easeInOutQuint: easeInOutQuint
+        easeInOutSine: easeInOutSine
+        easeInOutExpo: easeInOutExpo
+        easeInOutCirc: easeInOutCirc
+        easeInOutElastic: easeInOutElastic
+        easeInOutBack: easeInOutBack
+        easeInOutBounce: easeInOutBounce
+
+    - name: title_background
+      label: Title Background
+      type: color
+
+    - name: title_color
+      label: Title Color
+      type: color
+
+    - name: background
+      label: Content Background
+      type: color
+
+    - name: color
+      label: Content Color
+      type: color
+
+    - name: padding
+      label: Content Padding
+      value: 30px
+
+  Animation:
+    - name: pl_animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

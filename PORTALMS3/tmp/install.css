@@ -1,0 +1,124 @@
+body table.adminform {
+	width: 100%;
+}
+
+body table.adminform th {
+	text-align:center !important;
+	font-size:18px;
+	padding-bottom:20px;
+	color:#555;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+	font-weight: 300;
+}
+
+.suinstall-logo {
+	display: block;
+	width: 160px;
+	height: 30px;
+	margin: 0;
+	position: absolute;
+	top: -45px;
+	left: 25px;
+}
+
+#suinstall {
+	position: relative;
+	margin-bottom: 35px;
+}
+
+#suinstall-status {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+	font-weight: 300;
+	font-size:14px;
+	color:#fff;
+	padding: 25px 25px 10px 25px;
+	border:1px solid #e5e5e5;
+	background:#fff;
+	border-radius: 4px 4px 0 4px;
+	margin: 0 15px 0 -15px;
+}
+
+#suinstall-status li {
+	border-radius: 3px;
+	margin-bottom:15px;
+	padding: 15px;
+
+	background: #fff;
+	border: none;
+	border-bottom: 3px solid transparent;
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+}
+
+.suinstall-icon > span {
+	display: block;
+	width: 26px;
+	height: 26px;
+}
+
+#suinstall-status .suinstall-row {
+	display:block;
+}
+
+.suinstall-icon {
+	display: block;
+	float:left;
+	vertical-align: middle;
+	background-repeat:no-repeat;
+	height:26px;
+	width:26px;
+	margin-left: 2px;
+	margin-top: -5px;
+}
+
+#suinstall-status {
+	list-style:none;
+}
+
+#suinstall .suinstall-header {
+	border: 1px solid #e5e5e5;
+	padding: 0px 10px;
+	font-size: 10px;
+	position: absolute;
+	right: 15px;
+	border-radius: 0 0 4px 4px;
+	border-top: none;
+	text-transform: uppercase;
+}
+
+
+
+
+
+/* SUCCESS */
+#suinstall-status li.suinstall-success {
+	color: #629031;
+	border-bottom-color: #8CC152;
+}
+
+#suinstall-status {
+	list-style:none
+}
+
+/* UPDATE */
+#suinstall-status li.suinstall-update {
+	color: #218BB2;
+	border-bottom-color: #3BAFDA;
+}
+
+
+/* FAILURE */
+#suinstall-status li.suinstall-failure {
+	color: #C14029;
+	border-bottom-color: #E9573F;
+}
+
+.suinstall-failure .suinstall-errormsg {
+	text-indent: 0;
+	margin-left: 20px;
+	display: block;
+	color: #888;
+	font-weight: normal;
+	font-size: 13px;
+	margin-top: 5px;
+}

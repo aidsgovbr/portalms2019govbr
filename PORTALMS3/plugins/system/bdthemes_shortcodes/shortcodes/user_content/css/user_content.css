@@ -1,0 +1,11 @@
+.su-user_content {
+    border-style: solid;
+    border-width: 1px 0;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    text-align: center;
+}
+.su-user_content a {
+    color: inherit;
+    text-decoration: underline;
+}

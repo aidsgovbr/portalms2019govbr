@@ -1,0 +1,133 @@
+name: Member
+slug: bdt_member
+groups: Shortcode Ultimate
+
+form:
+  general:
+    - name: photo
+      help: Type your desired image link or upload an image for member
+      type: image
+      label: Member Photo
+      value: http://192.168.1.100/shortcode/plugins/system/bdthemes_shortcodes/images/sample/member.svg
+
+    - name: name
+      value: John Doe
+
+    - name: role
+      value: Designer
+
+    - name: url
+      help: URL/Link of the author. Leave empty to disable link
+
+    - name: content
+      type: editor
+      value: Type here some info about this team member
+
+  styles:
+    - name: style
+      type: select
+      options:
+        1: Style 1
+        2: Style 2
+        3: Style 3
+        4: Style 4
+        5: Style 5
+        6: Style 6
+        7: Style 7
+        8: Style 8
+      value: 1
+
+    - name: background
+      type: color
+      value: #ffffff
+
+    - name: color
+      type: color
+      value: #333333
+
+    - name: border
+      type: switch
+
+    - name: border_width
+      label: Border Width
+      type: slider
+      value: 1
+      depends: 
+        border : true
+
+    - name: border_style
+      label: Border Style
+      type: select
+      options:
+        none: None
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+      value: solid
+      depends: 
+        border : true
+
+    - name: border_color
+      label: Border Color
+      type: color
+      value: #cccccc
+      depends: 
+        border : true
+
+    - name: shadow
+      value: "0px 0px 0px #eeeeee"
+
+    - name: radius
+      help: You can set value as px, em, % etc.
+      value: 0px
+
+    - name: text_align
+      label: Align
+      type: select
+      options:
+        left: Left
+        center: Center
+        right: Right
+      value: left
+
+  social share:
+    - name: icon_1_url
+      help: URL/Link of the author. Leave empty to disable link
+      label: Facebook URL
+
+    - name: icon_2_url
+      help: URL/Link of the author. Leave empty to disable link
+      label: Twitter URL
+
+    - name: icon_3_url
+      help: URL/Link of the author. Leave empty to disable link
+      label: Google-Plus URL
+
+    - name: icon_4_url
+      help: URL/Link of the author. Leave empty to disable link
+      label: Pinterest URL
+
+    - name: icon_5_url
+      help: URL/Link of the author. Leave empty to disable link
+      label: Github URL
+
+    - name: icon_6_url
+      help: URL/Link of the author. Leave empty to disable link
+      label: Linkedin URL
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

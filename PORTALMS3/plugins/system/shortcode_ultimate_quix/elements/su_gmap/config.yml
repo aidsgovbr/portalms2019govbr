@@ -1,0 +1,125 @@
+name: Google Map
+slug: bdt_gmap_advanced
+groups: ["Shortcode Ultimate", "content"]
+
+form:
+  general:
+    - name: lat
+      help: Set latitude value for show first your desire location when page is loaded
+      label: Latitude
+      value: 24.823679
+
+    - name: lng
+      help: Set longitude value for show first your desire location when page is loaded
+      label: Longitude
+      value: 89.384198
+
+    - name: address
+      help: Type something that you want to show for display when you click on the marker. it work only for marker
+
+    - name: zoom_control_style
+      label: Zoom Control Style
+      type: select
+      value: SMALL
+      options:
+        LARGE: Large
+        SMALL: Small
+
+    - name: zoom_control
+      label: Zoom Control
+      type: switch
+      value: true
+
+    - name: zoom
+      help: Select a value to set zoom of the map
+      type: slider
+      min: 1
+      max: 20
+      step: 1
+      value: 16
+
+    - name: street_view_control
+      label: Street View Control
+      type: switch
+
+    - name: location_marker
+      type: switch
+      value: true
+
+    - name: custom_marker
+      help: Upload your desired Marker, or type in the URL to the image you would like to display.
+      label: Custom Marker
+      type: image
+
+  styles:
+    - name: style
+      type: select
+      value: default
+      options:
+        default: Default
+        map_style_1: Map Style 1
+        map_style_2: Map Style 2
+        map_style_3: Map Style 3
+        map_style_4: Map Style 4
+        map_style_5: Map Style 5
+        map_style_6: Map Style 6
+        map_style_7: Map Style 7
+        map_style_8: Map Style 8
+        map_style_9: Map Style 9
+
+    - name: height
+      type: slider
+      min: 100
+      max: 1600
+      step: 10
+      value: 400
+      
+    - name: border
+      type: switch
+
+    - name: border_width
+      label: Border Width
+      type: slider
+      depends: 
+        border : true
+
+    - name: border_style
+      label: Border Style
+      type: select
+      options:
+        none: None
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+      value: solid
+      depends: 
+        border : true
+
+    - name: border_color
+      label: Border Color
+      type: color
+      value: #cccccc
+      depends: 
+        border : true
+
+    - name: responsive
+      help: Ignore width and height parameters and make object responsive
+      type: switch
+      value: true
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation      

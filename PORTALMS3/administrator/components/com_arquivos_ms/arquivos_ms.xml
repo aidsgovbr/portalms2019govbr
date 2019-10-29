@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_arquivos_ms</name>
+    <creationDate>2013-07-05</creationDate>
+    <copyright>Copyright (C) 2013. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Fábio</author>
+    <authorEmail>fabio.nery@saude.gov.br</authorEmail>
+    <authorUrl>http://www.saude.gov.br</authorUrl>
+    <version>1.0.0</version>
+    <description>Gerenciador de arquivos Ministério da Saúde</description>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <administration>
+        <menu img="components/com_arquivos_ms/assets/images/s_com_arquivos_ms.png" >COM_ARQUIVOS_MS</menu>
+        <submenu>
+            
+			<menu link="option=com_arquivos_ms&amp;view=arquivoss" view="arquivoss" img="components/com_arquivos_ms/assets/images/s_arquivoss.png" alt="Arquivos_ms/Arquivoss">COM_ARQUIVOS_MS_TITLE_ARQUIVOSS</menu>
+            <menu link="option=com_arquivos_ms&amp;view=mss" view="mss" img="components/com_arquivos_ms/assets/images/s_mss.png" alt="Arquivos_ms/Mss">COM_ARQUIVOS_MS_TITLE_MSS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>arquivos_ms.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator">
+            
+			<language tag="en-GB">language/en-GB.com_arquivos_ms.ini</language>
+			<language tag="en-GB">language/en-GB.com_arquivos_ms.sys.ini</language>
+			<language tag="pt-BR">language/pt-BR.com_arquivos_ms.ini</language>
+			<language tag="pt-BR">language/pt-BR.com_arquivos_ms.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.notwebdesign.com/joomla-component-creator/ -->

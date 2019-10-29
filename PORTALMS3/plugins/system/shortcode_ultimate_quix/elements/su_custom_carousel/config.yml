@@ -1,0 +1,164 @@
+name: Custom Carousel
+slug: bdt_custom_carousel
+groups: ["Shortcode Ultimate", "content"]
+
+form:
+  general:
+    - name: pagination
+      type: switch
+      value: true
+
+    - name: arrows
+      type: switch
+      value: true
+
+    - name: autoplay
+      type: switch
+      value: true
+
+    - name: center_zoom
+      help: Zoom middle item from other carousel item. so, you need to set 'yes'
+      label: Center Zoom
+      type: switch
+
+    - name: hoverpause
+      help: If you select Yes then when you hover on the slide then it will be paused
+      label: Paused on Hover
+      type: switch
+      value: true
+
+    - name: lazyload
+      help: If you select yes then your images will be load after scrolling.
+      label: Lazy Load
+      type: switch
+
+    - name: loop
+      help: Setting of Yes will cause the player to play the initial item again and again
+      type: switch
+      value: true
+
+    - name: speed
+      help: Specify time (in second) that will be taken to complete animation effect
+      type: slider
+      min: 0.1
+      max: 15
+      step: 0.2
+      value: 0.6
+
+    - name: delay
+      help: After mentioned time (in second) animation will start
+      type: slider
+      min: 1
+      max: 10
+      value: 4
+
+  Carousel Item:   
+    - name: carousel_item
+      type: group-repeater
+      schema:
+        - name: title
+          value: Carousel Item 1
+
+        - name: content
+          type: editor
+          value: Slide content
+
+      value:
+        - title: Carousel Item 1
+
+  styles:
+    - name: style
+      type: select
+      options:
+        1: Style 1
+        2: Style 2
+        3: Style 3
+        4: Style 4
+        5: Style 5
+      value: 1
+
+    - name: margin
+      type: slider
+      max: 80
+      step: 5
+      value: 10
+
+    - name: padding
+      type: padding
+
+    - name: border
+      type: switch
+
+    - name: border_width
+      label: Border Width
+      type: slider
+      depends: 
+        border : true
+
+    - name: border_style
+      label: Border Style
+      type: select
+      options:
+        none: None
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+      value: solid
+      depends: 
+        border : true
+
+    - name: border_color
+      label: Border Color
+      type: color
+      value: #eeeeee
+      depends: 
+        border : true
+
+    - name: background
+      type: color
+
+    - name: color
+      type: color
+      value: #444444
+
+  Responsive:   
+    - name: small
+      help: Which item you need to show your small device on responsive mode.
+      label: Small Device Item
+      type: slider
+      min: 1
+      max: 10
+      value: 1
+
+    - name: medium
+      help: Which item you need to show your medium device on responsive mode.
+      label: Medium Device Item
+      type: slider
+      min: 1
+      max: 5
+      value: 3
+
+    - name: large
+      help: Which item you need to show your large device on responsive mode.
+      label: Large Device Item
+      type: slider
+      min: 1
+      max: 10
+      value: 5
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

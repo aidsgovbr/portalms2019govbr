@@ -1,0 +1,79 @@
+name: Instagram
+slug: bdt_instagram
+groups: Shortcode Ultimate
+
+form:
+  general:
+    - name: user
+      help: Add URL of user of instagram account
+      value: https://instagram.com/google
+
+    - name: hash_tag
+      help: "You can load your images by hash tag instead of user url, such as #google,#nature, #shortcode etc."
+      label: Hash Tag
+
+    - name: client_id
+      help: You must set Client ID of instagram account here.
+      label: Client Id
+
+    - name: limit
+      help: Set limit of item as you need from here.
+      label: Item Limit
+      type: slider
+      min: 1
+      max: 100
+      value: 20
+
+    - name: column
+      help: set the number of column of photos
+      type: slider
+      min: 1
+      max: 10
+      value: 6
+
+    - name: link_type
+      help: help
+      label: Link Type
+      type: select
+      options:
+        no: no
+        popup: popup
+        link: link
+      value: popup
+
+  styles:
+    - name: gap
+      help: Set space between two images from here.
+      type: switch
+      value: true
+
+  Responsive:
+    - name: medium
+      help: Which item you need to show your medium device on responsive mode.
+      label: Medium Device Item
+      type: slider
+      min: 1
+      max: 8
+      value: 3
+
+    - name: small
+      help: Which item you need to show your small device on responsive mode.
+      label: Small Device Item
+      type: slider
+      min: 1
+      max: 5
+      value: 2
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

@@ -1,0 +1,38 @@
+name : Dummy Text
+slug : bdt_dummy_text
+groups : Shortcode Ultimate
+form :
+  general :
+    - name: what
+      type: select
+      options:
+        paras: Paragraphs
+        words: Words
+        bytes: Bytes
+      value: paras
+
+    - name: cache
+      type: switch
+      value: true
+
+    - name: amount
+      type: slider
+      min: 1
+      max: 100
+      value: 1
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation
+
+        

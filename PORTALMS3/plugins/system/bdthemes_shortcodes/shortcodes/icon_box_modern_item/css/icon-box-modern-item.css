@@ -1,0 +1,256 @@
+.icon-box-modern-wrap {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    width: 100%;
+    clear: both;
+}
+
+.icon-box-modern-wrap .icon-box-modern {
+    margin-bottom: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+}
+.icon-box-modern-wrap .icon-box-modern .icon-box-modern-item {
+    position: relative;
+    padding: 45px 80px;
+    overflow: initial;
+    border-radius: inherit;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+.icon-box-modern-wrap .icon-box-modern .icon-box-modern-item .head-container {
+    position: relative;
+    display: table;
+    padding-bottom: 15px;
+}
+.icon-box-modern-wrap .icon-box-modern .icon-box-modern-item .head-container .icon-wrap,
+.icon-box-modern-wrap .icon-box-modern .icon-box-modern-item .head-container .title-wrap {
+    display: table-cell;
+    vertical-align: middle;
+}
+.icon-box-modern-wrap .icon-box-modern .icon-box-modern-item .head-container .icon-wrap {
+    font-size: 40px;
+}
+.icon-box-modern-wrap .icon-box-modern .icon-box-modern-item .head-container .icon-wrap img {
+    display: inline-block;
+    max-width: initial;
+}
+.icon-box-modern-wrap .icon-box-modern .icon-box-modern-item .head-container .icon-decoration {
+    position: relative;
+    display: block;
+}
+.icon-box-modern-wrap .icon-box-modern .icon-box-modern-item .head-container .title-wrap {
+    padding-left: 25px;
+}
+.icon-box-modern-wrap .icon-box-modern .icon-box-modern-item .head-container .title-wrap .su-content-title-big {
+    line-height: 1.3;
+    padding-bottom: 5px;
+}
+.icon-box-modern-wrap .icon-box-modern .icon-box-modern-item .head-container .title-wrap .su-content-subtitle {
+    font-size: 13px;
+    line-height: 1.3;
+}
+.icon-box-modern-wrap .icon-box-modern .icon-box-modern-item .description {
+    position: relative;
+}
+.icon-box-modern-wrap .icon-box-modern .icon-box-modern-item .skew-bg {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 10px;
+    border-radius: inherit;
+}
+.icon-box-modern-wrap .icon-box-modern .icon-box-modern-item .skew-bg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+.icon-box-modern-wrap .icon-box-modern .icon-box-modern-item .skew-bg:before {
+    background: inherit;
+}
+.icon-box-modern-wrap .icon-box-modern li {
+    border-radius: inherit;
+}
+.icon-box-modern-wrap .icon-box-modern li:first-child .icon-box-modern-item {
+    padding-left: 50px;
+}
+.icon-box-modern-wrap .icon-box-modern li:first-child .icon-box-modern-item .skew-bg {
+    margin-left: 0;
+}
+.icon-box-modern-wrap .icon-box-modern li:first-child .icon-box-modern-item .skew-bg:before {
+    width: 150%;
+    right: 0;
+}
+.icon-box-modern-wrap .icon-box-modern li:last-child .icon-box-modern-item {
+    padding-right: 50px;
+}
+.icon-box-modern-wrap .icon-box-modern li:last-child .icon-box-modern-item .skew-bg {
+    margin-right: 0;
+}
+.icon-box-modern-wrap .icon-box-modern li:last-child .icon-box-modern-item .skew-bg:before {
+    left: 0;
+    width: 150%;
+}
+.icon-box-modern-wrap.style-1 .full-width-element .icon-box-modern-item .skew-bg,
+.icon-box-modern-wrap.style-2 .full-width-element .icon-box-modern-item .skew-bg {
+    -webkit-transform: skew(0);
+    -moz-transform: skew(0);
+    -o-transform: skew(0);
+    transform: skew(0);
+}
+.icon-box-modern-wrap.style-1 .icon-box-modern-item .skew-bg {
+    -webkit-transform: skew(24deg);
+    -moz-transform: skew(24deg);
+    -o-transform: skew(24deg);
+    transform: skew(24deg);
+}
+.icon-box-modern-wrap.style-2 .icon-box-modern-item .skew-bg {
+    -webkit-transform: skew(-24deg);
+    -moz-transform: skew(-24deg);
+    -o-transform: skew(-24deg);
+    transform: skew(-24deg);
+}
+.icon-box-modern-wrap .icon-box-modern li {
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+}
+
+@media only screen and (min-width: 960px) {
+.icon-box-modern-wrap .icon-box-modern li {
+    float: left;
+    display: inline-block;
+}
+.icon-box-modern-wrap .icon-box-modern.child-width-1-2 li {
+    width: calc(100% * 1 / 2.001);
+}
+.icon-box-modern-wrap .icon-box-modern.child-width-1-3 li {
+    width: calc(100% * 1 / 3.001);
+}
+.icon-box-modern-wrap .icon-box-modern.child-width-1-4 li {
+    width: calc(100% * 1 / 4.001);
+}
+}
+
+
+@media only screen and (max-width: 1199px) {
+    .icon-box-modern-wrap .icon-box-modern li .icon-box-modern-item {
+        margin-bottom: 20px;
+    }
+    .icon-box-modern-wrap .icon-box-modern li .icon-box-modern-item .skew-bg {
+        margin: 0;
+    }
+    .icon-box-modern-wrap .icon-box-modern li .icon-box-modern-item:first-child .skew-bg:before,
+    .icon-box-modern-wrap .icon-box-modern li .icon-box-modern-item:last-child .skew-bg:before {
+        width: 100%;
+    }
+    .icon-box-modern-wrap .icon-box-modern li:last-child {
+        margin-bottom: 0;
+    }
+    .icon-box-modern-wrap.style-1 .icon-box-modern-item .skew-bg,
+    .icon-box-modern-wrap.style-2 .icon-box-modern-item .skew-bg {
+        -webkit-transform: skew(0);
+        -moz-transform: skew(0);
+        -o-transform: skew(0);
+        transform: skew(0);
+    }
+}
+@media (min-width: 1200px) {
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-2 li:nth-child(2n+3) .skew-bg {
+        margin-left: 0;
+    }
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-2 li:nth-child(2n+3) .skew-bg:before {
+        width: 150%;
+        right: 0;
+        left: auto;
+    }
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-2 li:nth-child(2n+2) .skew-bg {
+        margin-right: 0;
+    }
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-2 li:nth-child(2n+2) .skew-bg:before {
+        width: 150%;
+        right: auto;
+        left: 0;
+    }
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-2 li:nth-child(n+3) {
+        margin-top: 20px;
+    }
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-3 li:nth-child(3n+4) .skew-bg {
+        margin-left: 0;
+    }
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-3 li:nth-child(3n+4) .skew-bg:before {
+        width: 150%;
+        right: 0;
+        left: auto;
+    }
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-3 li:nth-child(3n+3) .skew-bg {
+        margin-right: 0;
+    }
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-3 li:nth-child(3n+3) .skew-bg:before {
+        width: 150%;
+        right: auto;
+        left: 0;
+    }
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-3 li:nth-child(n+4) {
+        margin-top: 20px;
+    }
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-4 li:nth-child(4n+5) .skew-bg {
+        margin-left: 0;
+    }
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-4 li:nth-child(4n+5) .skew-bg:before {
+        width: 150%;
+        right: 0;
+        left: auto;
+    }
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-4 li:nth-child(4n+4) .skew-bg {
+        margin-right: 0;
+    }
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-4 li:nth-child(4n+4) .skew-bg:before {
+        width: 150%;
+        right: auto;
+        left: 0;
+    }
+    .icon-box-modern-wrap .icon-box-modern.child-width-1-4 li:nth-child(n+5) {
+        margin-top: 20px;
+    }
+    .icon-box-modern-wrap.style-1 .child-width-1-4 .icon-box-modern-item .skew-bg {
+        -webkit-transform: skew(18deg);
+        -moz-transform: skew(18deg);
+        -o-transform: skew(18deg);
+        transform: skew(18deg);
+    }
+    .icon-box-modern-wrap.style-2 .child-width-1-4 .icon-box-modern-item .skew-bg {
+        -webkit-transform: skew(-18deg);
+        -moz-transform: skew(-18deg);
+        -o-transform: skew(-18deg);
+        transform: skew(-18deg);
+    }
+}
+@media only screen and (max-width: 640px) {
+    .icon-box-modern-wrap .icon-box-modern-item {
+        padding: 40px;
+    }
+    .icon-box-modern-wrap .icon-box-modern-item:first-child {
+        padding-left: 40px;
+    }
+    .icon-box-modern-wrap .icon-box-modern-item:last-child {
+        padding-right: 40px;
+    }
+}

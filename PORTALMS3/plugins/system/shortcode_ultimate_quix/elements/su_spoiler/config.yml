@@ -1,0 +1,85 @@
+name: Spoiler
+slug: bdt_spoiler
+groups: ["Shortcode Ultimate", "content"]
+form:
+  general:
+    - name: title
+      value: Spoiler Title
+
+    - name: open
+      type: switch
+
+    - name: anchor
+
+    - name: content
+      type: editor
+      value: Spoiler content 
+
+  Icon:
+    - name: icon
+      type: select
+      options:
+        none: No Icon           
+        plus: Plus           
+        plus-circle: Plus-Circle
+        plus-square-1: Plus-Square-1
+        plus-square-2: Plus-Square-2
+        arrow: Arrow          
+        arrow-circle-1: Arrow-Circle-1
+        arrow-circle-2: Arrow-Circle-2
+        chevron: Chevron        
+        chevron-circle: Chevron-Circle
+        caret: Caret          
+        caret-square: Caret-Square
+        folder-1: Folder-1
+        folder-2: Folder-2
+      value: plus
+
+  styles:
+    - name: style
+      type: select
+      options:
+        default: Default
+        1: Style 1
+        2: Style 2
+        3: Style 3
+        4: Style 4
+        5: Style 5
+        fancy: Fancy
+        simple: Simple
+        carbon: Carbon
+        sharp: Sharp
+        grid: Grid
+        wood: Wood
+        fabric: Fabric
+        modern-dark: Modern-Dark
+        modern-light: Modern-Light
+        modern-violet: Modern-Violet
+        modern-orange: Modern-Orange
+        glass-dark: Glass-Dark
+        glass-light: Glass-Light
+        glass-blue: Glass-Blue
+        glass-green: Glass-Green
+        glass-gold: Glass-Gold
+      value: default
+
+    - name: align
+      type: select
+      value: left
+      options:
+        left: Left
+        right: Right
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

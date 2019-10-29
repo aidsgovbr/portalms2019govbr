@@ -1,0 +1,10 @@
+/*		Icon
+---------------------------------------------------------------*/
+
+.su-livicon {
+	display: inline-block;
+	text-decoration: none !important;
+	box-sizing: initial;
+	vertical-align: bottom;
+}
+/*.su-livicon-text { margin-left: 0.5em; }*/

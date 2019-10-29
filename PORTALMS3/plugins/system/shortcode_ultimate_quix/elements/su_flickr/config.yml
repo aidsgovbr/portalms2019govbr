@@ -1,0 +1,36 @@
+name: Flickr
+slug: bdt_flickr
+groups: Shortcode Ultimate
+form:
+  general:
+    - name: flickr_id
+      label: Flickr ID
+      help: Enter your flickr ID, To find your flickID visit http://idgettr.com/
+      value: 95572727@N00
+
+    - name: limit
+      type: slider
+      max: 100
+      value: 9
+
+    - name: lightbox
+      type: switch
+
+    - name: radius
+      help: "You can set border radius from here, for example: 3px 10px 25px also you can set value as em, % etc if you need."
+      value: 0px
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation
+      

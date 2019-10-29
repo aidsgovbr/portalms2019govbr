@@ -1,0 +1,108 @@
+name: Countdown
+slug: bdt_countdown
+groups: ["Shortcode Ultimate", "content"]
+
+form:
+  general:
+    - name: count_date
+      help: "You can set countdown date here as YYYY/MM/DD, for example: 2020/12/25"
+      label: Countdown Date
+
+    - name: count_time
+      help: "You can set countdown time here as HH:MM:SS, for example: 10:30:35"
+      label: Countdown Time
+
+    - name: divider
+      label: Countdown Divider
+      type: select
+      value: none
+      options:
+        none: None
+        spacer: Spacer
+        dot: Dot
+        comma: Comma
+        colon: Colon
+        vertical_line: Vertical Line
+        horizontal_line: Horizontal Line
+
+    - name: content
+      type: editor
+      value: This offer has expired!
+
+  styles:
+    - name: align
+      type: select
+      label: Countdown Align
+      value: left
+      options:
+        left: Left
+        right: Right
+        center: Center
+
+    - name: count_size
+      label: Countdown Size
+      type: slider
+      min: 8
+      max: 128
+      step: 2
+      value: 32
+
+    - name: count_color
+      type: color
+      label: Countdown Color
+      value: #666666
+
+    - name: background
+      type: color
+      label: Background Color
+      value: #ffffff
+
+    - name: text_color
+      type: color
+      label: Countdown Text Color
+      value: #999999
+
+    - name: text_align
+      type: select
+      label: Countdown Text Align
+      value: default
+      options:
+        right: Default
+        bottom: Bottom
+
+    - name: text_size
+      label: Countdown Text Size
+      type: slider
+      min: 8
+      max: 72
+      step: 2
+      value: 14
+
+    - name: padding
+      type: padding
+
+    - name: margin
+      type: margin
+
+    - name: radius
+      help: You can set value as em, % etc if you need
+      value: 0px
+
+    - name: divider_color
+      label: Divider Color
+      type: color
+      value: rgba(100,100,100,.1)
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

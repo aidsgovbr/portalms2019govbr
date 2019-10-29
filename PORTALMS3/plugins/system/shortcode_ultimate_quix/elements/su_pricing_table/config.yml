@@ -1,0 +1,117 @@
+name: Pricing Table
+slug: bdt_pricing_table
+groups: ["Shortcode Ultimate", "content"]
+
+form:
+  general:
+    - name: pricing_plan 
+      type: group-repeater
+      schema:
+        - name: title
+          value: Standard
+
+        - name: price
+          value: 19.99
+
+        - name: before
+          label: Before Price
+          value: $
+
+        - name: after
+          label: After Price
+
+        - name: period
+          value: per month
+
+        - name: featured
+          help: Show this plan as featured
+          type: switch
+
+        - name: icon
+          help: 'Type your icon name here. Example- "icon: home" or "licon: home"'
+          value: 'icon: heart'
+
+        - name: icon_color
+          label: Icon Color
+          type: color
+          value: #333333
+
+        - name: btn_url
+          label: Button URL
+          value: #
+
+        - name: btn_target
+          label: Button Link target
+          type: select
+          options:
+            self: Self
+            blank: Blank
+          value: self
+
+        - name: btn_text
+          label: Button Text
+          value: Sign up now
+
+        - name: btn_color
+          label: Button Color
+          type: color
+          value: #ffffff
+
+        - name: btn_background
+          label: Button Background
+          type: color
+          value: #4FC1E9
+
+        - name: btn_background_hover
+          label: Button Hover Background
+          type: color
+          value: #1AA0D1
+
+        - name: badge
+          help: you can set badge text from here.
+        
+        - name: badge_background
+          label: Badge Background
+          type: color
+          value: #999999
+
+        - name: text_color
+          label: Text Color
+          type: color
+          value: #444444
+
+        - name: background
+          help: "Plan background color, recommended value hex color. Example: #eeeeee"
+          label: Plan Background
+          type: color
+          value: #FFFFFF
+
+        - name: content
+          type: editor
+          value: <ul><li>Option 1</li><li>Option 2</li><li>Option 3</li></ul>
+      value:
+        - title: Standard
+      
+  styles:
+    - name: style
+      type: select
+      options:
+        1: Style 1
+        2: Style 2
+        3: Style 3
+        4: Style 4
+      value: 1
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

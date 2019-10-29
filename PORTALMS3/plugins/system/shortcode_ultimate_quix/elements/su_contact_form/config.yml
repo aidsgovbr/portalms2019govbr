@@ -1,0 +1,47 @@
+name: Contact Form
+slug: bdt_contact_form
+groups: Shortcode Ultimate
+
+form:
+  general:
+    - name: email
+      help: Enter your admin email for get email
+
+    - name: name
+      help: Show/Hide name field in contact form
+      type: switch
+      value: true
+
+    - name: reset
+      help: Show/Hide reset button in contact form
+      label: Reset Form
+      type: switch
+
+    - name: submit_button_text
+      label: Submit Button Text
+      value: Send Message
+
+  styles:
+    - name: style
+      type: select
+      value: light
+      options:
+        light: Light
+        dark: Dark
+
+    - name: margin
+      type: margin
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

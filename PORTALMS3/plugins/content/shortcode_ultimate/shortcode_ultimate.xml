@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+	<name>plg_content_shortcode_ultimate</name>
+	<author>BdThemes Ltd</author>
+	<creationDate>10th January 2017</creationDate>
+	<authorEmail>info@bdthemes.com</authorEmail>
+	<authorUrl>http://www.bdtheme.com</authorUrl>
+	<copyright>(C) 2012 - 2017 BDThemes Ltd. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyright/gpl.html GNU/GPL</license>
+	<version>1.0.0</version>
+	<description>PLG_CONTENT_SHORTCODE_ULTIMATE_DESC</description>
+	<files>
+		<filename plugin="shortcode_ultimate">shortcode_ultimate.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_content_shortcode_ultimate.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_shortcode_ultimate.sys.ini</language>
+	</languages>
+</extension>

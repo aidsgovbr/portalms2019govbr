@@ -1,0 +1,167 @@
+.su-progress-bar {
+	margin-bottom: 1.5em;
+	background-color: #f0f0f0;
+	border-color: rgba(0,0,0,0.05);
+	text-align: left;
+}
+.su-progress-bar .su-pb-fill {
+	background-color: #4fc1e9;
+	width: 0;
+	color: #fff;
+}
+.su-progress-bar-style-1, .su-progress-bar-style-5 {
+	font-size: 14px;
+}
+.su-progress-bar-style-1 > span, .su-progress-bar-style-5 > span , .su-progress-bar-style-4  > span {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	height: 100%;
+	line-height: 30px;
+	height: 30px;
+}
+.su-progress-bar-style-1 .su-pb-text, .su-progress-bar-style-5 .su-pb-text, .su-progress-bar-style-4 .su-pb-text {
+	padding: 4px 5px;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+.su-progress-bar-style-5 .su-pb-text, .su-progress-bar-style-4 .su-pb-text {
+	background: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	line-height: 14px;
+	font-size: 14px;
+	margin-top: 4px;
+}
+.su-progress-bar-style-1 .su-pb-percent, .su-progress-bar-style-5 .su-pb-percent, .su-progress-bar-style-4 .su-pb-percent  {
+	line-height: 14px;
+	padding: 4px 5px;
+	text-align: center;
+	margin-top: 4px;
+	margin-bottom: 5px;
+	margin-right: 1px;
+}
+.su-progress-bar-style-5 .su-pb-percent, .su-progress-bar-style-4 .su-pb-percent  {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.su-progress-bar .su-pb-percent {
+	position: absolute;
+	right: 4px;
+	margin-right: 100px;
+	opacity: 0;
+}
+.su-progress-bar-style-2 {
+	padding: 3px;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	border-width: 1px;
+	border-style: solid;
+	-webkit-border-radius: 17px;
+	border-radius: 17px;
+	font-size: 11px;
+	line-height: 11px;
+}
+.su-progress-bar-style-2 span.su-pb-fill {
+	position: relative;
+	overflow: visible !important;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	background-image: url('../images/gradient.png');
+	background-repeat: repeat-x;
+	height: 25px;
+	line-height: 25px;
+	min-width: 1%;
+}
+.su-progress-bar-style-2 span.su-pb-text {
+	margin-left: 10px;
+	text-transform: uppercase;
+}
+.su-progress-bar-style-2 span.su-pb-percent {
+	right: 10px;
+}
+.su-progress-bar-style-3 {
+	height: 4px;
+	margin-top: 40px;
+	margin-bottom: 0;
+	font-size: 13px;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+.su-progress-bar-style-3 > span {
+	position: relative;
+	display: block;
+	height: 4px;
+	overflow: visible !important;
+}
+.su-progress-bar-style-3 .su-pb-text {
+	position: absolute;
+	top: -23px;
+	font-weight: 700;
+	color: #444;
+	min-width: 220px;
+}
+.su-progress-bar-style-3 .su-pb-percent {
+	position: absolute;
+	top: -28px;
+	right: 0;
+	background-color: #333;
+	color: #f9f9f9;
+	height: 22px;
+	line-height: 22px;
+	padding: 0 5px;
+	font-size: 11px;
+	border-radius: 2px;
+}
+.su-progress-bar-style-3 .su-pb-percent:before, .su-progress-bar-style-3 .su-pb-percent:after {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.su-progress-bar-style-3 .su-pb-percent:before {
+	border-top-color: #333;
+	border-width: 5px;
+	left: 50%;
+	margin-left: -5px;
+}
+.su-progress-bar-style-3 .su-pb-percent:after {
+	border-top-color: #333;
+	border-width: 4px;
+	left: 50%;
+	margin-left: -4px;
+} 
+@-webkit-keyframes progress-bar-stripes {
+   100% { background-position: -40px 0px; }
+}
+
+@keyframes progress-bar-stripes {
+   100% { background-position: -40px 0px; }
+}
+.su-progress-bar-style-5 {
+	width:100%;
+	display:block;
+	background: rgba(200,200,200,0.1);
+	margin-bottom:10px;
+	border-radius: 3px;
+}
+.su-progress-bar-style-5 > span {
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	-webkit-background-size:40px 40px;
+	background-size:40px 40px;
+	-webkit-animation:progress-bar-stripes 2s linear infinite;
+	animation:progress-bar-stripes 2s linear infinite;
+	border-radius: 3px;
+}
+.su-progress-bar-style-4 > span {
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	-webkit-background-size:40px 40px;
+	background-size:40px 40px;
+	border-radius: 2px;
+}
+.su-progress-bar-style-4 > span span, .su-progress-bar-style-5 > span span{ border-radius: 2px; }

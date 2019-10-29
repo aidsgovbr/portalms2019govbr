@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="module" version="3.0.3" client="site" method="upgrade">
+	<name>mod_campanhas_ms</name>
+	<author>Fábio Nery Pinto</author>
+	<creationDate>Janeiro 2015</creationDate>
+	<copyright>Copyright (C) 2013 FabioNeryPinto, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>contato@fabionery.com.br</authorEmail>
+	<authorUrl>http://www.fabionery.com.br</authorUrl>
+	<version></version>
+	<description>MOD_CAMPANHAS_MS_XML_DESCRIPTION</description>
+	<scriptfile />
+	<files>
+		<filename module="mod_campanhas_ms">mod_campanhas_ms.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_campanhas_ms.xml</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+		<language tag="pt-BR">pt-BR/pt-BR.mod_campanhas_ms.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_campanhas_ms.sys.ini</language>
+	</languages>
+	<config>
+		<fields
+			name="params">
+			<fieldset name="basic">
+				<field name="category_id" type="category" extension="com_content" label="MOD_FIELD_CATEGORY" description="MOD_FIELD_CATEGORY_DESC" />
+				<field name="qtde" type="text" label="MOD_FIELD_QTDE" description="MOD_FIELD_QTDE_DESC" />
+				<field
+					name="mostrar_leia_mais"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="Mostrar Leia mais"
+					description="Exibe link abaixo das imagens">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field name="text_leia_mais" type="text" label="MOD_FIELD_TEXT_LEIA_MAIS" description="MOD_FIELD_TEXT_LEIA_MAIS_DESC" />
+				<field name="link_leia_mais" type="text" label="MOD_FIELD_LINK_LEIA_MAIS" description="MOD_FIELD_LINK_LEIA_MAIS_DESC" />
+				<field
+					name="mostrar_navegacao"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="Mostrar Navegação"
+					description="Exibe navegação de anterior e próximo por setas">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="mostrar_controle"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="Mostrar Controle"
+					description="Exibe controle de navegação">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field name="altura" type="text" label="Altura" description="Utilizar apenas o numeral. Cálculo em Pixels. ex: 230" />
+				<field name="largura" type="text" label="Largura" description="Utilizar apenas o numeral. Cálculo em Pixels. ex: 230" />
+				<field name="spacer1" type="spacer" hr="true" />
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+					<field
+						name="moduleclass_sfx"
+						type="text"
+						label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+						description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+						<field
+							name="cache"
+							type="list"
+							default="1"
+							label="COM_MODULES_FIELD_CACHING_LABEL"
+							description="COM_MODULES_FIELD_CACHING_DESC">
+							<option value="1">JGLOBAL_USE_GLOBAL</option>
+							<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+						</field>
+						<field
+							name="cache_time"
+							type="text"
+							default="900"
+							label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+							description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+							<field
+								name="cachemode"
+								type="hidden"
+								default="itemid">
+								<option value="itemid" />
+							</field>
+						</fieldset>
+					</fields>
+				</config>
+			</extension>

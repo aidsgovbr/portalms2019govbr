@@ -1,0 +1,14 @@
+#photomax-video-list-div, .photomax {
+    padding: 0 !important;
+    background: none !important;
+}
+#photomax-video-list-div #tiles {
+    margin-left: -1%;
+    margin-right: -1%;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    
+}
+@media only screen and (max-width: 479px) {
+}

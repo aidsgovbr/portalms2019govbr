@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.6" type="plugin" group="sppagebuilder" method="upgrade">
+	<name>Shortcode Ultimate SP Page Builder Addon</name>
+	<author>BdThemes Ltd</author>
+	<version>1.1.0</version>
+	<creationDate>28 April 2017</creationDate>
+	<authorEmail>info@bdthemes.com</authorEmail>
+	<authorUrl>http://www.bdtheme.com</authorUrl>
+	<copyright>(C) 2017 BDThemes Ltd. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyright/gpl.html GNU/GPL</license>
+	<description>SP Page Builder Addon for support Shortcode Ultimate Plugin. Special Thanks to Kawshar Ahmed - CEO &amp; Founder of JoomShaper.</description>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="Shortcode Ultimate"><![CDATA[https://www.bdthemes.com/updates/shortcode-ultimate.xml]]></server>
+	</updateservers>
+
+	<files>
+		<filename plugin="shortcode_ultimate">shortcode_ultimate.php</filename>
+		<folder>addons</folder>
+	</files>
+
+	<scriptfile>script.php</scriptfile>
+</extension>

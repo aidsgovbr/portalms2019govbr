@@ -1,0 +1,30 @@
+// Todos os arquivos que folram alterados da versao 3.0.3
+
+\administrator\components\com_categories\categories.php
+\administrator\components\com_content\helpers\html\contentadministrator.php
+\administrator\components\com_content\models\forms\article.xml
+\administrator\components\com_content\models\articles.php
+\administrator\components\com_content\views\article\tmpl\edit_metadata.php \administrator\components\com_content\views\article\tmpl\pagebreak.php
+\administrator\components\com_media\controller.php
+\administrator\modules\mod_menu\
+
+\components\com_content\models\article.php
+\components\com_content\models\articles.php
+\components\com_content\views\category\tmpl\blog.php
+\components\com_content\views\category\view.feed.php
+\components\com_content\views\category\view.html.php
+\libraries\cms\html\bootstrap.php
+\libraries\joomla\application\web.php
+\libraries\legacy\application\application.php
+\libraries\legacy\model\form.php
+\media\editors\tinymce\jscripts\tiny_mce\tiny_mce.js
+\modules\mod_articles_news\helper.php
+\modules\mod_articles_news\mod_articles_news.xml
+\modules\mod_finder\tmpl\default.php
+\modules\mod_menu\tmpl\default.php
+\modules\mod_menu\helper.php
+\modules\mod_search\tmpl\default.php
+\modules\mod_wrapper\tmpl\default.php
+\plugins\editors\tinymce\tinymce.php
+
+

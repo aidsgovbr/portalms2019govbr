@@ -1,0 +1,59 @@
+name : Image Zoom
+slug : bdt_image_zoom
+groups : Shortcode Ultimate
+form :
+  general :
+    - name: photo
+      type: image
+
+    - name: type
+      type: select
+      options:
+        inner: Inner
+        standard: Standard
+        follow: Follow
+      value: inner
+
+    - name: smooth_move
+      label: Smooth Move
+      type: switch
+      value: true
+
+    - name: preload
+      type: switch
+      value: true
+
+    - name: zoom_size
+      label: Zoom Size
+      value: "400,400"
+
+    - name: offset
+      value: "10,0"
+
+    - name: position
+      type: select
+      options:
+        right: Right
+        left: Left
+      value: right
+
+    - name: description
+      label: Image Description
+
+    - name: width
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation
+
+        

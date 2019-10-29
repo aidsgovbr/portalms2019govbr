@@ -1,0 +1,77 @@
+name : Testimonial
+slug : bdt_testimonial
+groups : [Shortcode Ultimate, content]
+form :
+  general :
+    - name: name
+      value: John Doe
+
+    - name: title
+      value: Manager
+
+    - name: photo
+      type: image
+
+    - name: company
+      value: BdThemes Ltd.
+
+    - name: url
+      label: Website URL
+      value: http://bdthemes.com
+
+    - name: target
+      type: select
+      options:
+        self: Self
+        blank: Blank
+      value: blank
+
+    - name: italic
+      type: switch
+
+    - name: content
+      type: editor
+      value: Testimonial text
+
+  Style :
+    - name: style
+      type: select
+      options:
+        1: Style 1
+        2: Style 2
+        3: Style 3
+        4: Style 4
+        5: Style 5
+      value: 1
+
+    - name: radius
+      help: "You can set border radius from here, for example: 3px 10px 25px also you can set value as em, % etc if you need"
+
+    - name: color
+      type: color
+      value: #444444
+
+    - name: background
+      type: color
+      value: #ffffff
+
+    - name: border_color
+      label: Border Color
+      type: color
+      value: #eeeeee
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation
+
+        

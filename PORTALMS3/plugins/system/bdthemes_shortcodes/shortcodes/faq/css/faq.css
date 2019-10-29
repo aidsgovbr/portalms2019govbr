@@ -1,0 +1,14 @@
+.cbp-search input[type="text"] {
+    height: 36px;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    margin: 0;
+}
+.cbp-caption-expand .cbp-caption-defaultWrap .fa {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 16px;
+    text-align: center;
+    font-size: 14px;
+}

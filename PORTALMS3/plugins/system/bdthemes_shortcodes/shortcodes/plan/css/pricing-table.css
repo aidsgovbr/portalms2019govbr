@@ -1,0 +1,416 @@
+/*		Pricing table + plan
+---------------------------------------------------------------*/
+
+.su-pricing-table { 
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+}
+
+.su-pricing-table + .su-pricing-table { 
+	margin-top: 60px;
+}
+
+.su-plan {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: #fff;
+	text-align: center;
+	width: 100%;
+	-webkit-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+}
+.su-plan-head {
+	padding: 20px 0;
+	overflow: hidden;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+.su-plan-icon {
+	margin-top: 15px;
+}
+.su-plan-icon img {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	max-width: 95%;
+}
+.su-plan-name {
+	margin-bottom: 15px;
+	font-size: 1.3em;
+}
+.su-plan-price {
+	font-weight: bold;
+	font-size: 2.3em;
+	line-height: normal;
+}
+.su-plan-old-price {
+	font-weight: normal;
+    display: inline-block;
+    font-size: 20px;
+    opacity: 0.6;
+    margin-right: 10px;
+}
+.su-pricing-style-3 .su-plan-old-price {
+    display: block;
+    margin: 5px 0 -5px 0;
+}
+.su-plan-old-price .su-plan-price-value,
+.su-plan-old-price .su-plan-price-before,
+.su-plan-old-price .su-plan-price-after {
+	font-size: 20px;
+	text-decoration: line-through;
+	margin: 0;
+}
+/* .su-plan-old-price:after {
+	content: '';
+    background: #8a8a8a;
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    top: 50%;
+    left: 0;
+} */
+.su-plan-price-value {
+	display: inline-block;
+	margin: 0 3px;
+	vertical-align: middle;
+}
+.su-plan-price-before,
+.su-plan-price-after {
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: normal;
+	font-size: 0.7em;
+}
+.su-plan-period {
+	margin-top: 5px;
+	font-size: 0.9em;
+	opacity: 0.7;
+}
+.su-plan-options ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.su-plan-options ul li {
+	margin: 0;
+	padding: 0.5em 0.2em;
+	border-top: 1px dotted rgba(221, 221, 221, 0.5);
+	list-style: none;
+	-webkit-transform: translateZ(0);
+}
+.su-plan-options ul li:first-child { border: none; }
+
+.su-pricing-table .su-plan-footer {
+	padding: 30px 0;
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+.su-plan-footer a {
+	display: inline-block;
+	text-decoration: none !important;
+	padding: 10px 15px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+	-webkit-transform: translateZ(0);
+}
+.su-plan-footer a:active,
+.su-plan-footer a:focus,
+.su-plan-footer a:hover {
+
+}
+.su-pricing-table .su-plan {
+	float: left;
+	border-left-width: 0;
+}
+
+.su-plan-featured {
+	z-index: 2;
+}
+
+.su-plan .su-tooltip {
+	border-bottom: 1px dotted rgba(0,0,0,0.2);
+	padding-bottom: 2px;
+	margin-bottom: -3px;
+}
+
+
+#su-generator-preview .su-plan {
+	position: relative;
+	min-width: 240px;
+	margin: 0 auto;
+}
+.su-pricing-table .su-plan {
+	position: relative;
+	overflow: hidden;
+}
+
+/*=================================
+	Pricing style1
+===================================*/
+.su-pricing-table.su-pricing-style-1 .su-plan {
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	margin-right: 15px;
+}
+
+.su-pricing-table.su-pricing-style-1 .su-plan:last-child {
+	margin-right: 0;
+}
+.su-pricing-table.su-pricing-style-1 .su-plan .su-plan-head {
+	padding-top: 0;
+}
+.su-pricing-table.su-pricing-style-1 .su-plan-featured, .su-pricing-table.su-pricing-style-2 .su-plan-featured, .su-pricing-table.su-pricing-style-3 .su-plan-featured {
+	margin-top: -30px;
+}
+.su-pricing-table.su-pricing-style-1 .su-plan-featured .su-plan-badge {
+	z-index: 1;
+}
+.su-pricing-table.su-pricing-style-1  .su-plan-name {
+	padding: 20px 0;
+	background: rgba(0, 0, 0, 0.03);
+}
+.su-pricing-table.su-pricing-style-1 .su-plan-icon i {
+	font-size: 48px;
+}
+.su-pricing-table.su-pricing-style-1 .su-plan-featured div.su-plan-options {
+	margin-top: 30px;
+}
+.su-pricing-table.su-pricing-style-1 .su-plan-options ul li {
+	padding: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	border-top:	none; 
+}
+
+.su-pricing-table.su-pricing-style-3 .su-plan .su-plan-button,
+.su-pricing-table.su-pricing-style-2 .su-plan .su-plan-button,
+.su-pricing-table.su-pricing-style-1 .su-plan .su-plan-button {
+	min-width: 60%;
+}
+
+.su-pricing-table.su-pricing-style-3 .su-plan .su-plan-badge,
+.su-pricing-table.su-pricing-style-2 .su-plan .su-plan-badge,
+.su-pricing-table.su-pricing-style-1 .su-plan .su-plan-badge {
+	position: absolute;
+	right: -35px;
+	top: 23px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	padding: 5px 8px;
+	width: 125px;
+	color: #FFF;
+	border-style: solid;
+	border-width: 2px;
+	text-align: center;
+	font-size: 10px;
+	line-height:10px;
+}
+.su-pricing-table.su-pricing-style-3 .su-plan .su-plan-badge {
+	left: -35px !important;
+	right: auto;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+/*===============================
+	Pricing style2
+===============================*/
+.su-pricing-table.su-pricing-style-2 .su-plan:hover, .su-pricing-table.su-pricing-style-3 .su-plan:hover {
+	-webkit-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+.su-pricing-table.su-pricing-style-2 .su-plan-head {
+	padding-top: 160px;
+	position: relative;
+}
+.su-pricing-table.su-pricing-style-2 .su-plan-featured .su-plan-head {
+	padding-top: 190px;
+	position: initial;
+}
+.su-pricing-table.su-pricing-style-3 .su-plan-featured .su-plan-head {
+	padding-top: 50px;
+	position: initial;
+}
+.su-pricing-table.su-pricing-style-2 .su-plan-featured .su-plan-icon {
+	top: 50px;
+}
+.su-pricing-table.su-pricing-style-2 .su-plan-icon i {
+	font-size: 60px !important;
+	line-height: 100px;
+}
+	
+.su-pricing-table.su-pricing-style-2 .su-plan-footer {
+	border-top: none;
+}
+.su-pricing-table.su-pricing-style-2 .su-plan-head {
+	border-bottom: none;
+}
+.su-pricing-table.su-pricing-style-2 .su-plan-icon {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -50px;
+	background: rgba(0, 0, 0, 0.03);
+	width: 100px;
+	border-radius: 50%;
+	height: 100px;
+}
+
+
+.su-pricing-table.su-pricing-style-2 .su-plan-options ul li {
+	border-top: 1px dotted rgba(221, 221, 221, 0.4);
+}
+
+/*===============================
+	Pricing style3
+===============================*/
+.su-pricing-table.su-pricing-style-3 .su-plan-head {
+	position: relative;
+	text-align: left;
+	padding-left: 120px;
+	border-bottom-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.su-pricing-table.su-pricing-style-3 .su-plan-icon i {
+	font-size: 30px !important;
+	line-height: 80px;
+	text-align: center;
+}
+.su-pricing-table.su-pricing-style-3 .su-plan-name {
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+.su-pricing-table.su-pricing-style-3 .su-plan-icon {
+	display: inline-block;
+	position: absolute;
+	left: 25px;
+	top: 40px;
+	background: rgba(0,0,0,0.1);
+	width: 80px;
+	border-radius: 50%;
+	height: 80px;
+	text-align: center;
+}
+.su-pricing-table.su-pricing-style-3 .su-plan-price {
+	font-size: 3em;
+}
+.su-pricing-table.su-pricing-style-3 .su-plan-featured .su-plan-icon {
+	top: 60px;
+}
+/*===============================
+	Pricing style4
+=================================*/
+
+.su-pricing-table.su-pricing-style-4 .su-plan{
+	border-right: 1px solid rgba(0, 0, 0, 0.06);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+	border-left: 1px solid rgba(0, 0, 0, 0.06);
+	margin-right: -1px;
+}
+
+.su-pricing-table.su-pricing-style-4 .su-plan .su-plan-name {
+	margin-bottom: 0px;
+	margin-top: 15px;
+}
+
+.su-pricing-table.su-pricing-style-4 .su-plan-featured {
+	margin-top: -30px;
+	box-shadow: 0px -5px 0px #e54c4c;
+}
+
+.su-pricing-table.su-pricing-style-4 .su-plan-featured .su-plan-badge {
+	position: absolute;
+	left: 50%;
+	top: 18px;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.su-pricing-table.su-pricing-style-4 .su-plan .su-plan-badge {
+	color: #fff;
+	font-size: 10px;
+	border-radius: 10px;
+	padding: 0px 8px;
+	display: inline-block;
+}
+
+.su-pricing-table.su-pricing-style-4 .su-plan-head {
+	padding: 45px 0;
+	border-bottom: 1px solid #eee !important;
+	margin-bottom: 40px;
+}
+
+.su-pricing-table.su-pricing-style-4 .su-plan-head .su-plan-price {
+	display: inline-block;
+}
+.su-pricing-table.su-pricing-style-4 .su-plan-head .su-plan-period:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '/';
+}
+.su-pricing-table.su-pricing-style-4 .su-plan-head .su-plan-period {
+	top: 4px;
+	display: inline-block;
+	padding-left: 5px; 
+}
+.su-pricing-table.su-pricing-style-4 .su-plan-price, 
+.su-pricing-table.su-pricing-style-4 .su-plan-period, 
+.su-pricing-table.su-pricing-style-4 .su-plan-badge, 
+.su-pricing-table.su-pricing-style-4 .su-plan-name, 
+.su-pricing-table.su-pricing-style-4 .su-plan-head {position: relative;z-index: 2;}
+.su-pricing-table.su-pricing-style-4 .su-plan-head .su-plan-icon i {
+	font-size: 150px;
+	position: absolute;
+	top: 50%;
+	opacity: 0.2;
+	margin-top: -75px;
+	left: 50%;
+	margin-left: -56px;
+}
+.su-pricing-table.su-pricing-style-4 .su-plan ul li {
+	border: none;
+}
+.su-pricing-table.su-pricing-style-4 .su-plan-footer {
+	border-top: 1px solid #eeeeee !important;
+	padding: 40px 0px;
+	margin-top: 20px;
+}
+.su-pricing-table.su-pricing-style-4 .su-plan-featured .su-plan-footer {
+	margin-top: 50px;
+}
+
+/*// Mobile Modes*/
+@media (max-width: 767px) {
+	.su-pricing-table {display: block;}
+	.su-pricing-table .su-plan {
+		clear: both;
+		margin-bottom: 30px;
+	}
+	.su-pricing-table .su-plan:last-child {
+		clear: both;
+		margin-bottom: 0;
+	}
+	.su-plan-featured .su-plan-head {padding: 20px 0; }
+	.su-plan-featured .su-plan-footer {padding: 15px 0;}
+	.su-pricing-table.su-pricing-style-1 .su-plan-featured, 
+	.su-pricing-table.su-pricing-style-2 .su-plan-featured, 
+	.su-pricing-table.su-pricing-style-3 .su-plan-featured, 
+	.su-pricing-table.su-pricing-style-4 .su-plan-featured {
+		margin-top: 0;
+	}
+}

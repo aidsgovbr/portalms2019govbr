@@ -1,0 +1,34 @@
+
+.su-responsive-media-yes {
+
+	position: relative;
+
+	padding-bottom: 56.25%;
+
+	height: 0;
+
+	overflow: hidden;
+
+}
+
+.su-responsive-media-yes iframe,
+
+.su-responsive-media-yes object,
+
+.su-responsive-media-yes embed {
+
+	position: absolute;
+
+	top: 0;
+
+	left: 0;
+
+	width: 100%;
+
+	height: 100%;
+
+}
+
+.su-document { margin: 0 0 1.5em 0 }
+
+.su-document iframe { border: none !important }

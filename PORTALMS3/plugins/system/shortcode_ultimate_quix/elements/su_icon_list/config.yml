@@ -1,0 +1,195 @@
+name: Icon List
+slug: bdt_icon_list
+groups: ["Shortcode Ultimate", "content"]
+
+form:
+  general:
+    - name: title
+      label: Icon List Title
+
+    - name: connector
+      type: switch
+      label: Icon to Icon Connector
+      
+    - name: url
+      help: URL/Link of the author. Leave empty to disable link
+      label: URL
+
+    - name: target
+      label: Open new window?
+      type: switch
+      
+    - name: linkto
+      label: Link To
+      type: select
+      value: title
+      options:
+        title: Title
+        icon: Icon
+        all: All
+
+    - name: content
+      type: editor
+      value: Lorem ipsum dolor sit amet timeam deleniti mnesarchum ex sed alii hinc dolores ad cum. Urbanitas similique ex nam paulo temporibus ea vis id odio adhuc nostrum eos.
+
+  Icon:
+    - name: icon
+      help: 'Type your icon name here. Example- "icon: home" or "licon: home"'
+      value: 'icon: heart'
+      
+    - name: icon_align
+      label: Icon Alignment
+      type: select
+      value: left
+      options:
+        left: Left
+        right: Right
+        top: Top
+        title: Title
+        top_left: Top Left
+        top_right: Top Right
+
+    - name: icon_color
+      label: Icon Color
+      type: color
+      value: #333333
+
+    - name: icon_background
+      label: Icon Background
+      type: color
+      value: rgba(0,0,0,0)
+
+    - name: icon_size
+      type: slider
+      label: Icon Size
+      value: 24
+      min : 4
+      max : 128
+
+    - name: icon_animation
+      help: Select icon hover animation
+      label: Icon Animation
+      type: select
+      options:
+        1: Animation 1
+        2: Animation 2
+        3: Animation 3
+        4: Animation 4
+        5: Animation 5
+        6: Animation 6
+
+    - name: border
+      type: switch
+      label: Icon Border
+
+    - name: border_width
+      label: Border Width
+      type: slider
+      depends: 
+        border : true
+
+    - name: border_style
+      label: Border Style
+      type: select
+      options:
+        none: None
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+      value: solid
+      depends: 
+        border : true
+
+    - name: border_color
+      label: Border Color
+      type: color
+      value: #cccccc
+      depends: 
+        border : true
+
+    - name: icon_radius
+      help: You can set value as px, em, % etc if you need
+      label: Icon Radius
+      value: 0px
+
+    - name: icon_shadow
+      label: Icon Shadow
+
+    - name: icon_padding
+      label: Icon Padding
+      type: padding
+
+    - name: icon_gap
+      label: Icon Gap
+      help: Icon to Text Space
+
+  styles:
+    - name: background
+      type: color
+      label: Icon List Background
+
+    - name: title_color
+      label: Title Color
+      type: color
+      value: #444444
+      
+    - name: title_size
+      label: Title Size
+      value: 16px
+
+    - name: color
+      label: Text Color
+      type: color
+      value: #333333
+
+    - name: icon_list_padding
+      label: Icon List Padding
+      type: padding
+
+    - name: icon_list_border
+      type: switch
+      label: Icon List Border
+
+    - name: icon_list_border_width
+      label: Border Width
+      type: slider
+      depends: 
+        icon_list_border : true
+
+    - name: icon_list_border_style
+      label: Border Style
+      type: select
+      options:
+        none: None
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+      value: solid
+      depends: 
+        icon_list_border : true
+
+    - name: icon_list_border_color
+      label: Border Color
+      type: color
+      depends: 
+        icon_list_border : true
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

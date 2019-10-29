@@ -1,0 +1,48 @@
+name: Box
+slug: bdt_box
+groups: ["Shortcode Ultimate", "content"]
+form:
+  general:
+    - name: title
+      value: Box Title
+
+    - name: content
+      type: editor
+      value: Box content
+
+  styles:
+    - name: style
+      type: select
+      options:
+        default: Default
+        soft: Soft
+        glass: Glass
+        bubbles: Bubbles
+        noise: Noise
+      value: default
+
+    - name: title_color
+      label: Title Color
+      type: color
+
+    - name: box_color
+      label: Box Color
+      type: color
+
+    - name: radius
+      type: slider
+      max: 20
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

@@ -1,0 +1,30 @@
+name: Frame
+slug: bdt_frame
+groups: Shortcode Ultimate
+form:
+  general:
+    - name: align
+      type: select
+      options:
+        left: Left
+        center: Center
+        right: Right
+      value: left
+
+    - name: content
+      type: editor
+      value: <img src="http://lorempixel.com/g/400/200/" />
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

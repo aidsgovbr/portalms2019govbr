@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="system" method="upgrade">
+	<name>plg_system_betterpreview</name>
+	<description>PLG_SYSTEM_BETTERPREVIEW_DESC</description>
+	<version>6.0.6</version>
+	<creationDate>December 2017</creationDate>
+	<author>Regular Labs (Peter van Westen)</author>
+	<authorEmail>info@regularlabs.com</authorEmail>
+	<authorUrl>https://www.regularlabs.com</authorUrl>
+	<copyright>Copyright © 2017 Regular Labs - All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Regular Labs - Better Preview">
+			https://download.regularlabs.com/updates.xml?e=betterpreview&amp;type=.xml
+		</server>
+	</updateservers>
+
+	<files>
+		<filename plugin="betterpreview">betterpreview.php</filename>
+		<filename>script.install.helper.php</filename>
+		<folder>language</folder>
+		<folder>src</folder>
+		<folder>vendor</folder>
+	</files>
+
+	<media folder="media" destination="betterpreview">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+	</media>
+
+	<config>
+		<fields name="params" addfieldpath="/libraries/regularlabs/fields">
+			<fieldset name="description">
+				<field name="@loadlanguage_regularlabs" type="rl_loadlanguage" extension="plg_system_regularlabs" />
+				<field name="@loadlanguage" type="rl_loadlanguage" extension="plg_system_betterpreview" />
+				<field name="@license" type="rl_license" extension="BETTER_PREVIEW" />
+				<field name="@version" type="rl_version" extension="BETTER_PREVIEW" />
+				<field name="@dependency" type="rl_dependency"
+					   label="BP_THE_EDITOR_BUTTON"
+					   file="/plugins/editors-xtd/betterpreview/betterpreview.php" />
+				<field name="@header" type="rl_header"
+					   label="BETTER_PREVIEW"
+					   description="BETTER_PREVIEW_DESC"
+					   url="https://www.regularlabs.com/betterpreview" />
+			</fieldset>
+			<fieldset name="BP_SETTINGS_LINK">
+				<field name="display_title_link" type="radio" class="btn-group" default="1"
+					   label="BP_DISPLAY_TITLE_LINK"
+					   description="BP_DISPLAY_TITLE_LINK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="display_status_link" type="radio" class="btn-group" default="1"
+					   label="BP_DISPLAY_STATUS_LINK"
+					   description="BP_DISPLAY_STATUS_LINK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@toggler_display_status_link_a" type="rl_toggler" param="display_status_link" value="1" />
+				<field name="reverse_status_link" type="radio" class="btn-group" default="1"
+					   label="BP_REVERSE_STATUS_LINK"
+					   description="BP_REVERSE_STATUS_LINK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@toggler_display_status_link_b" type="rl_toggler" />
+				<field name="@toggler_display_title_link_a" type="rl_toggler" param="display_title_link" value="1" />
+				<field name="@notice_show_link_type" type="rl_plaintext"
+					   label="BP_SHOW_LINK_TYPE"
+					   description="BP_SHOW_LINK_TYPE_DESC"
+					   default="RL_ONLY_AVAILABLE_IN_PRO" />
+				
+				<field name="@notice_show_url_details" type="rl_plaintext"
+					   label="BP_SHOW_URL_DETAILS"
+					   description="BP_SHOW_URL_DETAILS_DESC"
+					   default="RL_ONLY_AVAILABLE_IN_PRO" />
+				<field name="@toggler_display_title_link_b" type="rl_toggler" />
+			</fieldset>
+
+			<fieldset name="BP_SETTINGS_PREVIEW">
+				<field name="display_editor_button" type="radio" class="btn-group" default="1"
+					   label="RL_DISPLAY_EDITOR_BUTTON"
+					   description="RL_DISPLAY_EDITOR_BUTTON_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="display_toolbar_button" type="radio" class="btn-group" default="1"
+					   label="RL_DISPLAY_TOOLBAR_BUTTON"
+					   description="RL_DISPLAY_TOOLBAR_BUTTON_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="button_text" type="text" default="Preview"
+					   label="RL_BUTTON_TEXT"
+					   description="RL_BUTTON_TEXT_DESC" />
+				<field name="button_icon" type="radio" class="btn-group" default="betterpreview"
+					   label="RL_BUTTON_ICON"
+					   description="RL_BUTTON_ICON_DESC">
+					<option value="betterpreview">&lt;span class="icon-reglab icon-betterpreview">&lt;/span></option>
+					<option value="search">&lt;span class="icon-search">&lt;/span></option>
+					<option value="eye">&lt;span class="icon-eye">&lt;/span></option>
+				</field>
+				<field name="button_primary" type="radio" default="1" class="btn-group"
+					   label="BP_BUTTON_PRIMARY"
+					   description="BP_BUTTON_PRIMARY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="preview_window_width" type="text" default="" size="5" class="input-mini"
+					   label="BP_PREVIEW_WINDOW_WIDTH"
+					   description="BP_PREVIEW_WINDOW_WIDTH_DESC" />
+				<!--field name="enable_frontend" type="radio" class="btn-group" default="1"
+label="RL_ENABLE_IN_FRONTEND"
+description="RL_ENABLE_IN_FRONTEND_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field-->
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="index_timeout" type="text" default="24" size="5" class="input-mini"
+					   label="BP_INDEX_TIMEOUT"
+					   description="BP_INDEX_TIMEOUT_DESC" />
+				<field name="@purgesefs" type="rl_ajax" url="index.php?bp_purgesefs=1" text="BP_PURGE"
+					   label="BP_PURGE_INDEX"
+					   description="BP_PURGE_INDEX_DESC" />
+				<field name="purge_component_cache" type="radio" default="1" class="btn-group"
+					   label="BP_PURGE_COMPONENT_CACHE"
+					   description="BP_PURGE_COMPONENT_CACHE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="list_layout" type="radio" default="blog"
+					   label="BP_OPEN_CATEGORIES_AS"
+					   description="BP_OPEN_CATEGORIES_AS_DESC">
+					<option value="blog">BP_BLOG</option>
+					<option value="default">RL_LIST</option>
+				</field>
+				<field name="@toggler_comp_a" type="rl_toggler" param="list_layout" value="default" />
+				<field name="@text_comp" type="rl_plaintext"
+					   description="&#60;&#99;&#101;&#110;&#116;&#101;&#114;&#62;&#60;&#105;&#109;&#103;&#32;&#115;&#114;&#99;&#61;&#34;&#46;&#46;&#47;&#109;&#101;&#100;&#105;&#97;&#47;&#98;&#101;&#116;&#116;&#101;&#114;&#112;&#114;&#101;&#118;&#105;&#101;&#119;&#47;&#105;&#109;&#97;&#103;&#101;&#115;&#47;&#112;&#114;&#101;&#118;&#105;&#101;&#119;&#46;&#103;&#105;&#102;&#34;&#32;&#47;&#62;&#60;&#47;&#99;&#101;&#110;&#116;&#101;&#114;&#62;" />
+				<field name="@toggler_comp_b" type="rl_toggler" />
+				<field name="default_menu_id" type="menuitem" default="0"
+					   label="BP_DEFAULT_MENU_ID"
+					   description="BP_DEFAULT_MENU_ID_DESC">
+					<option value="-1">JNONE</option>
+					<option value="0">BP_DEFAULT_HOME_MENU</option>
+				</field>
+				<field name="disabled_components" type="rl_components" multiple="1" default="com_adagency" admin="1"
+					   label="RL_DISABLE_ON_COMPONENTS"
+					   description="RL_DISABLE_ON_COMPONENTS_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

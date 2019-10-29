@@ -1,0 +1,62 @@
+name : QR Code
+slug : bdt_qrcode
+groups : Shortcode Ultimate
+form :
+  general :
+    - name: data
+
+    - name: title
+
+    - name: size
+      type: slider
+      min: 10
+      max: 1000
+      step: 20
+      value: 200
+
+    - name: link
+
+    - name: target
+      type: select
+      options:
+        self: Self
+        blank: Blank
+      value: blank
+
+  Style:
+    - name: margin
+      type: slider
+      max: 50
+      step: 5
+
+    - name: align
+      type: select
+      options:
+        none: None
+        left: Left
+        center: Center
+        right: Right
+      value: none
+
+    - name: color
+      label: Code Color
+      type: color
+      value: #000000
+
+    - name: background
+      type: color
+      value: #ffffff
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

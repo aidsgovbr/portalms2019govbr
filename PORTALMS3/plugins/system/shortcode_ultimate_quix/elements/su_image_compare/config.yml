@@ -1,0 +1,74 @@
+name : Image Compare
+slug : bdt_image_compare
+groups : Shortcode Ultimate
+form :
+  general :
+    - name: before_image
+      label: Before Image
+      type: image
+
+    - name: after_image
+      label: After Image
+      type: image
+
+    - name: before_text
+      label: Before Text
+      value: Original
+
+    - name: after_text
+      label: After Text
+      value: Modified
+
+    - name: width
+      type: slider
+      min: 100
+      max: 1600
+      step: 10
+      value: 600
+
+    - name: height
+      type: slider
+      min: 50
+      max: 1200
+      step: 10
+      value: 350
+
+    - name: orientation
+      type: select
+      options:
+        horizontal: Horizontal
+        vertical: Vertical
+      value: horizontal
+
+    - name: slide_on
+      label: Slide On
+      type: select
+      help: Select your slide on method.
+      options:
+        click: Click
+        hover: Hover
+      value: click
+
+    - name: border
+      type: switch
+      value: true
+
+    - name: arrows
+      type: switch
+      value: true
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation
+
+        

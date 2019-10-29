@@ -1,0 +1,45 @@
+/* Tick style override */
+
+.tick-default {
+  font-size: 2.5em;
+} 
+.tick-small {
+  font-size: 1em;
+} 
+.tick-medium {
+  font-size: 1.5em;
+} 
+.tick-large {
+  font-size: 3.5em;
+} 
+.tick .tick-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.tick .tick-group:last-child {
+    margin-right: 0;
+}
+.tick-light .tick-flip-panel {
+    color:#34383b !important;
+    background:#e8ecf0 !important;
+}
+.su-countdown.su-layout-horizontal .tick .tick-group {
+    margin: 0 .5em 0 0;
+}
+.su-countdown.su-text-light .su_prefix-text,
+.su-countdown.su-text-light .su_suffix-text,
+.su-countdown.su-text-light .tick-text {
+  color: #ffffff;
+}
+.su-countdown.su-align-left {
+  text-align: left;
+}
+.su-countdown.su-align-right {
+  text-align: right;
+}
+.su-countdown.su-align-center {
+  text-align: center;
+}
+.su-countdown .su_suffix-text {
+  margin-top: 20px;
+}

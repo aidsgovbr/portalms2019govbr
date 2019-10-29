@@ -1,0 +1,104 @@
+name : Trailer Box
+slug : bdt_trailer_box
+groups : [Shortcode Ultimate, content]
+form :
+  general :
+    - name: image
+      label: Background Image
+      type: image
+
+    - name: title
+      value: Trailer Box Title
+
+    - name: url
+      label: URL
+      value: "#"
+
+    - name: target
+      type: select
+      options:
+        self: Self
+        blank: Blank
+      value: self
+
+    - name: content
+      type: editor
+      value: Write your trailer box text here, it will show on mouse hover
+
+  Style :
+    - name: style
+      type: select
+      options:
+        1: Style 1
+        2: Style 2
+        3: Style 3
+        4: Style 4
+        5: Style 5
+        6: Style 6
+        7: Style 7
+        8: Style 8
+        9: Style 9
+        10: Style 10
+        11: Style 11
+        12: Style 12
+        13: Style 13
+        14: Style 14
+        15: Style 15
+        16: Style 16
+        17: Style 17
+        18: Style 18
+        19: Style 19
+        20: Style 20
+        21: Style 21
+        22: Style 22
+        23: Style 23
+        24: Style 24
+        25: Style 25
+      value: 1
+      
+    - name: color
+      label: Content Color
+      type: color
+      value: #ffffff
+
+    - name: background
+      label: Background Color
+      type: color
+      value: #000000
+
+    - name: title_color
+      label: Title Color
+      type: color
+      value: #ffffff
+
+    - name: title_size
+      label: Title Size
+
+    - name: align
+      type: select
+      options:
+        default: Default
+        left: Left
+        right: Right
+        center: Center
+      value: default
+
+    - name: radius
+      value: 0px
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation
+
+
+        

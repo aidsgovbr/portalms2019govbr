@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="seo">
+
+        <fieldset name="advanced_og">
+            <field type="spacer" name="canonical_word_spacer" hr="true" />
+
+            <field
+                    name="override_canonical"
+                    type="list"
+                    label="PLG_SYSTEM_PWTSEO_FORM_OVERRIDE_CANONICAL_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_FORM_OVERRIDE_CANONICAL_DESC"
+                    class=""
+                    filter="intval"
+                    size="1"
+                    default="1" >
+                <option value="1">
+                    PLG_SYSTEM_PWTSEO_FORM_PLUGIN_SETTINGS_LABEL
+                </option>
+                <option value="0">
+                    JNONE
+                </option>
+                <option value="2">
+                    PLG_SYSTEM_PWTSEO_FORM_CANONICAL_SELF_LABEL
+                </option>
+                <option value="3">
+                    PLG_SYSTEM_PWTSEO_FORM_CANONICAL_CUSTOM_LABEL
+                </option>
+            </field>
+
+            <field
+                    type="url"
+                    name="canonical"
+                    label="PLG_SYSTEM_PWTSEO_FORM_CANONICAL_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_FORM_CANONICAL_DESC"
+                    showon="override_canonical:3"
+            />
+
+            <field type="spacer" name="adv_open_graph_spacer" class="pwtseo__opengraph" label="PLG_SYSTEM_PWTSEO_FORM_SPACER_OPENGRAPH" />
+
+            <field name="adv_open_graph"
+                   type="repeatable"
+                   icon="list"
+                   label="PLG_SYSTEM_PWTSEO_FORM_ADV_OPEN_GRAPH_LABEL"
+                   description="PLG_SYSTEM_PWTSEO_FORM_ADV_OPEN_GRAPH_DESC" >
+                <fieldset hidden="true" name="adv_open_graph_modal" repeat="true">
+                    <field
+                            name="og_title"
+                            label="PLG_SYSTEM_PWTSEO_FORM_ADV_OPEN_GRAPH_TITLE_LABEL"
+                            description="PLG_SYSTEM_PWTSEO_FORM_ADV_OPEN_GRAPH_TITLE_DESC"
+                            type="text"
+                            default="og:" />
+
+                    <field
+                            name="og_content"
+                            label="PLG_SYSTEM_PWTSEO_FORM_ADV_OPEN_GRAPH_CONTENT_LABEL"
+                            description="PLG_SYSTEM_PWTSEO_FORM_ADV_OPEN_GRAPH_CONTENT_DESC"
+                            type="text" />
+                </fieldset>
+            </field>
+        </fieldset>
+
+        <fieldset name="basic_og">
+            <!-- todo: extend this with images and defaults which should come from the article -->
+            <!-- todo: this should be JS'd so only 1 of the 3 is visible to not overload the user -->
+            <field
+                    name="expand_og"
+                    type="list"
+                    label="PLG_SYSTEM_PWTSEO_FORM_EXPAND_OG_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_FORM_EXPAND_OG_DESC"
+                    class=""
+                    filter="intval"
+                    size="1"
+                    default="0" >
+                <option value="1">
+                    JYES
+                </option>
+                <option value="0">
+                    JNO
+                </option>
+            </field>
+
+            <field name="facebook_spacer" type="spacer" class="pwtseo__facebook" label="PLG_SYSTEM_PWTSEO_FORM_SPACER_FACEBOOK" showon="expand_og:1" />
+
+            <field
+                    name="facebook_title"
+                    type="text"
+                    label="PLG_SYSTEM_PWTSEO_FORM_OPEN_GRAPH_FACEBOOK_TITLE_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_FORM_OPEN_GRAPH_FACEBOOK_TITLE_DESC"
+                    showon="expand_og:1"
+            />
+
+            <field
+                    name="facebook_description"
+                    type="textarea"
+                    label="PLG_SYSTEM_PWTSEO_FORM_OPEN_GRAPH_FACEBOOK_DESCRIPTION_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_FORM_OPEN_GRAPH_FACEBOOK_DESCRIPTION_DESC"
+                    showon="expand_og:1"
+            />
+
+            <field
+                    name="facebook_image"
+                    type="media"
+                    preview="tooltip"
+                    directory="/"
+                    label="PLG_SYSTEM_PWTSEO_FORM_IMAGE_LABEL"
+                    description=""
+                    showon="expand_og:1"/>
+
+            <field name="twitter_spacer" type="spacer" class="pwtseo__twitter" label="PLG_SYSTEM_PWTSEO_FORM_SPACER_TWITTER"  showon="expand_og:1" />
+
+            <field
+                    name="twitter_title"
+                    type="text"
+                    label="PLG_SYSTEM_PWTSEO_FORM_OPEN_GRAPH_TWITTER_TITLE_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_FORM_OPEN_GRAPH_TWITTER_TITLE_DESC"
+                    showon="expand_og:1"
+            />
+
+            <field
+                    name="twitter_description"
+                    type="textarea"
+                    label="PLG_SYSTEM_PWTSEO_FORM_OPEN_GRAPH_TWITTER_DESCRIPTION_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_FORM_OPEN_GRAPH_TWITTER_DESCRIPTION_DESC"
+                    showon="expand_og:1"
+            />
+
+            <field
+                    name="twitter_image"
+                    type="media"
+                    preview="tooltip"
+                    directory="/"
+                    label="PLG_SYSTEM_PWTSEO_FORM_IMAGE_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_FORM_OPEN_GRAPH_TWITTER_DESCRIPTION_DESC"
+                    showon="expand_og:1"
+            />
+
+            <field name="google_spacer" type="spacer" class="pwtseo__google" label="PLG_SYSTEM_PWTSEO_FORM_SPACER_GOOGLE" showon="expand_og:1" />
+
+            <field
+                    name="google_title"
+                    type="text"
+                    label="PLG_SYSTEM_PWTSEO_FORM_OPEN_GRAPH_GOOGLE_TITLE_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_FORM_OPEN_GRAPH_GOOGLE_TITLE_DESC"
+                    showon="expand_og:1"
+            />
+
+            <field
+                    name="google_description"
+                    type="textarea"
+                    label="PLG_SYSTEM_PWTSEO_FORM_OPEN_GRAPH_GOOGLE_DESCRIPTION_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_FORM_OPEN_GRAPH_GOOGLE_DESCRIPTION_DESC"
+                    showon="expand_og:1"
+            />
+
+            <field
+                    name="google_image"
+                    type="media"
+                    preview="tooltip"
+                    directory="/"
+                    label="PLG_SYSTEM_PWTSEO_FORM_IMAGE_LABEL"
+                    description=""
+                    showon="expand_og:1"
+            />
+        </fieldset>
+
+        <fieldset name="left-side">
+            <field
+                    name="focus_word"
+                    type="text"
+                    label="PLG_SYSTEM_PWTSEO_FORM_FOCUS_WORD_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_FORM_FOCUS_WORD_DESC"
+                    class="input-xxlarge input-large-text"
+                    hint="PLG_SYSTEM_PWTSEO_FORM_FOCUS_WORD_HINT"
+                    onchange="" />
+
+            <field type="spacer" name="focus_word_spacer" hr="true" />
+
+            <field
+                    name="override_page_title"
+                    type="list"
+                    label="PLG_SYSTEM_PWTSEO_FORM_OVERRIDE_PAGE_TITLE_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_FORM_OVERRIDE_PAGE_TITLE_DESC"
+                    class=""
+                    filter="intval"
+                    size="1"
+                    default="0" >
+                <option value="1">
+                    JYES
+                </option>
+                <option value="0">
+                    JNO
+                </option>
+            </field>
+
+            <field
+                    type="text"
+                    name="page_title"
+                    label="PLG_SYSTEM_PWTSEO_FORM_TITLE_LABEL"
+                    description="PLG_SYSTEM_PWTSEO_FORM_TITLE_DESC"
+                    showon="override_page_title:1"
+            />
+        </fieldset>
+    </fields>
+</form>

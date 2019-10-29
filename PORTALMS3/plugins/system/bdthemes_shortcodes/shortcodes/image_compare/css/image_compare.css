@@ -1,0 +1,229 @@
+.su-image-compare {
+	position:relative;
+	overflow:hidden;
+	margin:0 auto;
+	width:100%
+}
+.su-image-compare.slide-on-click,
+.su-image-compare.slide-on-hover {
+	cursor:move
+}
+.su-image-compare,
+.su-image-compare * {
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none
+}
+.su-image-compare .image-after,
+.su-image-compare .image-after-container,
+.su-image-compare .image-before {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-size:cover;
+	background-position:center;
+	z-index:1;
+	overflow:hidden
+}
+.su-image-compare .image-after,
+.su-image-compare .image-after-container,
+.su-image-compare .image-after-content {
+	z-index:2;
+	-webkit-font-smoothing:subpixel-antialiased;
+	-moz-font-smoothing:subpixel-antialiased;
+	font-smoothing:subpixel-antialiased;
+	-webkit-perspective:0;
+	-ms-perspective:0;
+	-o-perspective:0;
+	perspective:0;
+	-webkit-backface-visibility:hidden;
+	-ms-backface-visibility:hidden;
+	-o-backface-visibility:hidden;
+	backface-visibility:hidden;
+	-webkit-transform-style:preserve-3d;
+	-ms-transform-style:preserve-3d;
+	-o-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+	-webkit-transform-origin:center center;
+	-ms-transform-origin:center center;
+	transform-origin:center center;
+	outline:transparent solid 1px
+}
+.su-image-compare .image-after-content,
+.su-image-compare .image-before-content {
+	position:absolute;
+	-webkit-transform:translate3d(0,0,0)!important;
+	-ms-transform:translate3d(0,0,0)!important;
+	transform:translate3d(0,0,0)!important
+}
+.su-image-compare .baa-content-wrapper {
+	position:relative;
+	width:100%;
+	height:100%
+}
+.su-image-compare .su-image-compare-slider,
+.su-image-compare .su-image-compare-slider-button {
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	height:10px;
+	background:rgba(255,255,255,.3);
+	z-index:3;
+	cursor:pointer
+}
+.su-image-compare .su-image-compare-slider-button {
+	width:30px;
+	background:#fff;
+	z-index:4;
+	cursor:move
+}
+.su-image-compare[data-slider-location=top] .su-image-compare-slider,
+.su-image-compare[data-slider-location=top] .su-image-compare-slider-button {
+	bottom:auto;
+	top:0
+}
+.su-image-compare[data-slider-location=left] .su-image-compare-slider,
+.su-image-compare[data-slider-location=left] .su-image-compare-slider-button,
+.su-image-compare[data-slider-location=right] .su-image-compare-slider,
+.su-image-compare[data-slider-location=right] .su-image-compare-slider-button {
+	height:auto;
+	left:auto;
+	bottom:0;
+	top:0;
+	right:0;
+	width:10px
+}
+.su-image-compare[data-slider-location=left] .su-image-compare-slider-button,
+.su-image-compare[data-slider-location=right] .su-image-compare-slider-button {
+	height:30px
+}
+.su-image-compare[data-slider-location=left] .su-image-compare-slider,
+.su-image-compare[data-slider-location=left] .su-image-compare-slider-button {
+	right:auto;
+	left:0
+}
+.su-image-compare .su-image-compare-arrow-down,
+.su-image-compare .su-image-compare-arrow-left,
+.su-image-compare .su-image-compare-arrow-right,
+.su-image-compare .su-image-compare-arrow-up {
+	width:0;
+	height:0;
+	position:absolute;
+	left:50%;
+	top:50%;
+	z-index:4
+}
+.su-image-compare .su-image-compare-arrow-left,
+.su-image-compare .su-image-compare-arrow-right {
+	margin-left:0;
+	left:0;
+	-webkit-transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	transform:translateY(-50%);
+	border-top-color:transparent!important;
+	border-bottom-color:transparent!important
+}
+.su-image-compare .su-image-compare-arrow-left {
+	border-top:7px solid transparent;
+	border-bottom:7px solid transparent;
+	border-right:7px solid #fff
+}
+.su-image-compare .su-image-compare-arrow-right {
+	border-top:7px solid transparent;
+	border-bottom:7px solid transparent;
+	border-left:7px solid #fff
+}
+.su-image-compare .su-image-compare-arrow-down,
+.su-image-compare .su-image-compare-arrow-up {
+	margin-top:0;
+	top:0;
+	-webkit-transform:translateX(-50%);
+	-ms-transform:translateX(-50%);
+	transform:translateX(-50%);
+	border-left-color:transparent!important;
+	border-right-color:transparent!important;
+	border-left:7px solid transparent;
+	border-right:7px solid transparent
+}
+.su-image-compare .su-image-compare-arrow-up {
+	border-bottom:7px solid #fff
+}
+.su-image-compare .su-image-compare-arrow-down {
+	border-top:7px solid #fff
+}
+.image-before:before,
+.image-after:after {
+    content: attr(data-alt);
+    top: 50%;
+    position: absolute;
+    color: white;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity .3s ease;
+    background: rgba(255, 255, 255, 0.2);
+    line-height: 38px;
+    padding: 0 20px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    box-sizing: border-box;
+}
+.image-before:before {
+    right: 5%;
+} 
+.image-after:after {
+    left: 5%;	
+}
+.su-image-compare[data-direction="vertical"] .image-before:before,
+.su-image-compare[data-direction="vertical"] .image-after:after {
+	left: 50%; right: auto;
+    -webkit-transform: translateX(-50%) translateY(0%);
+    transform: translateX(-50%) translateY(0%);
+}
+.su-image-compare[data-direction="vertical"] .image-before:before {
+	top:auto;
+    bottom: 5%;	
+} 
+.su-image-compare[data-direction="vertical"] .image-after:after {
+    top: 5%;
+    bottom:auto;
+}
+.su-image-compare:hover .image-before:before,
+.su-image-compare:hover .image-after:after {
+	opacity: 1;
+}
+
+@media (max-width: 767px) {
+	.image-before:before {
+	    right: 0;
+	    /* text-align: right; */
+	} 
+	.image-after:after {
+	    left: 0;	
+	}
+	.image-before:before,
+	.image-after:after {
+	    -webkit-transform: translateY(0%);
+	    transform: translateY(0%);
+	    width: 150px;
+	    top: auto;
+	    bottom: 0;
+	    opacity: 1;
+	    text-align: center;
+	}
+	.su-image-compare[data-direction="vertical"] .image-before:before {
+	    bottom: 0;	
+	} 
+	.su-image-compare[data-direction="vertical"] .image-after:after {
+	    top: 0;
+	}
+}

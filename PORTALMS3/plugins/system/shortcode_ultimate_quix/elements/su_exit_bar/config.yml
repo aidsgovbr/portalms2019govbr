@@ -1,0 +1,52 @@
+name: Exit Bar
+slug: bdt_exit_bar
+groups: Shortcode Ultimate
+form:
+  general:
+    - name: title
+      help: Enter text here that you want to show for title
+
+    - name: width
+      type: slider
+      max: 2400
+      step: 10
+      value: 1200
+
+    - name: expiration_day
+      label: Expiration Days
+      type: slider
+      help: You can display elements with nth days interval by using Expiration Days option.
+      max: 365
+      step: 1
+      value: 7
+
+    - name: always_visible
+      label: Always Visible
+      help: You can always show element by using alwaysVisible option. Just create new shortcode with options
+      type: switch
+      value: false
+
+    - name: auto
+      help: By default, user must close notification/element, in another case on next visit it will be still visible. You can change it by using auto option.
+      type: switch
+      value: false
+
+    - name: cycle
+      help: You can re-show element after nth visits by using cycle option.
+      type: slider
+      value: 0
+
+    - name: content
+      type: editor
+      value: We hope you  <strong>visit us again!</strong>  You can also find us here:<a href='http://www.facebook.com/bdthemes'><i class='fa fa-facebook'></i></a><a href='https://plus.google.com/+Bdthemes'><i class='fa fa-google-plus'></i></a><a href='https://twitter.com/bdthemes'><i class='fa fa-twitter'></i></a><a href='http://github.com/bdthemes'><i class='fa fa-github'></i></a>
+
+  style:
+    - name: background
+      type: color
+
+    - name: color
+      type: color
+
+    - name: title_color
+      label: Title Color
+      type: color

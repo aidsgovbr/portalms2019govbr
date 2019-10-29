@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title></title>
+  
+  <script type='text/javascript' src='/js/lib/dummy.js'></script>
+  
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+  <style type='text/css'>
+    
+  </style>
+  
+</head>
+<body>
+  <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>
+<div id="pizza" style="width: 500px; height: 250px;"></div>
+<div id="linha" style="width: 500px; height: 250px;"></div> 
+
+
+<script type='text/javascript'>//<![CDATA[ 
+
+			google.setOnLoadCallback(drawChart);
+      google.setOnLoadCallback(drawVisualization);
+      
+      function drawChart() {
+
+          var data = google.visualization.arrayToDataTable([
+              ['Tipo', 'Qtd'],
+              ['Normal', 65],
+              ['Cesária', 120]
+          ]);
+
+          var options = {
+              title: 'Partos AIH - Total Geral',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('pizza'));
+        chart.draw(data, options);
+      }
+      
+				function drawVisualization() {
+				  // Some raw data (not necessarily accurate)
+				  var data = google.visualization.arrayToDataTable([
+				    ['Ano', 'Normal', 'Cesária'],
+				    ['2012',  15,      20,],
+				    ['2013',  20,      40],
+				    ['2014',  30,      60],
+				  ]);
+				
+				  var options = {
+				    title : 'Partos AIH - Total Ano',
+				    vAxis: {title: "Qtd"},
+				    hAxis: {title: "Ano"},
+				    seriesType: "line",
+				  };
+				
+				  var chart = new google.visualization.ComboChart(document.getElementById('linha'));
+				  chart.draw(data, options);
+				} 
+//]]>  
+
+</script>
+
+
+</body>
+
+
+</html>
+

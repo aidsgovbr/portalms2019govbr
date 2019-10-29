@@ -1,0 +1,92 @@
+name: Button
+slug: bdt_button
+groups: ["Shortcode Ultimate", "content"]
+form:
+  general:
+    - name: url
+      label: URL
+      value: "#"
+
+    - name: target
+      type: select
+      options:
+        self: Self
+        blank: Blank
+      value: self
+
+    - name: size
+      type: slider
+      min: 1
+      min: 20
+      value: 3
+
+    - name: wide
+      label: Fluid
+      type: switch
+
+    - name: center
+      type: switch
+
+    - name: desc
+      label: Description
+
+    - name: onclick
+
+    - name: content
+      type: editor
+      value: Button text
+    
+  Icon:
+    - name: icon
+      type: icon
+
+    - name: icon_color
+      label: Icon Color
+      type: color
+
+  styles:
+    - name: style
+      type: select
+      options:
+        default: Default
+        soft: Soft
+        glass: Glass
+        bubbles: Bubbles
+        noise: Noise
+        stroked: Stroked
+        border: Border
+        3d: 3d
+      value: default
+
+    - name: color
+      type: color
+
+    - name: background
+      type: color
+
+    - name: background_hover
+      label: Hover Background
+      type: color
+
+    - name: radius
+      help: "You can set border radius from here, for example: 3px 10px 25px also you can set value as em, % etc if you need"
+
+    - name: padding
+      type: padding
+
+    - name: margin
+      type: margin
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

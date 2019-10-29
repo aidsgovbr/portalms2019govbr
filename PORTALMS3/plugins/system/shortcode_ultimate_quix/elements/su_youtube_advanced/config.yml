@@ -1,0 +1,102 @@
+name: YouTube Advanced
+slug: bdt_youtube_advanced
+groups: Shortcode Ultimate
+
+form:
+  general:
+    - name: url
+      help: "URL of YouTube page with video. Ex: https://www.youtube.com/watch?v=v3f-2WG7ONc"
+      label: URL
+
+    - name: playlist
+      help: Value is a comma-separated list of video IDs to play. If you specify a value, the first video that plays will be the VIDEO_ID specified in the URL path, and the videos specified in the playlist parameter will play thereafter
+
+    - name: controls
+      help: This parameter indicates whether the video player controls will display
+      type: select
+      options:
+        no: 0 - Hide controls
+        yes: 1 - Show controls
+        alt: 2 - Show controls when playback is started
+      value: yes
+
+    - name: autohide
+      help: This parameter indicates whether the video controls will automatically hide after a video begins playing
+      type: select
+      options:
+        no: 0 - Do not hide controls
+        yes: 1 - Hide all controls on mouse out
+        alt: 2 - Hide progress bar on mouse out
+      value: alt
+
+    - name: showinfo
+      label: Show Title Bar
+      type: switch
+      value: true
+
+    - name: responsive
+      type: switch
+      value: true
+
+    - name: autoplay
+      type: switch
+
+    - name: loop
+      type: switch
+
+    - name: rel
+      label: Related Videos
+      type: switch
+      value: true
+
+    - name: fs
+      label: Show Full-Screen Button
+      type: switch
+      value: true
+
+    - name: modestbranding
+      help: This parameter lets you use a YouTube player that does not show a YouTube logo. Set the parameter value to Yes to prevent the YouTube logo from displaying in the control bar. Note that a small YouTube text label will still display in the upper-right corner of a paused video when the user\'s mouse pointer hovers over the player
+      type: switch
+
+    - name: theme
+      label: Choose Theme
+      type: select
+      options:
+        dark: dark
+        light: Light
+      value: dark
+
+    - name: wmode
+      help: "Here you can specify wmode value for the embed URL. Example values: transparent, opaque"
+      label: WMode
+
+  styles:
+    - name: width
+      help: Set player width, it will set as pixel
+      type: slider
+      min: 200
+      max: 1600
+      step: 20
+      value: 600
+
+    - name: height
+      help: Set player height, it will set as pixel
+      type: slider
+      min: 200
+      max: 1600
+      step: 20
+      value: 400
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

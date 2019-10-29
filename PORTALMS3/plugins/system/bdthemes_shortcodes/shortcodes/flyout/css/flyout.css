@@ -1,0 +1,391 @@
+/* ========= INFORMATION ============================
+
+- document:  FlyOut website banners positions
+- author:    Capelle @ Codecanyon
+- profile:   http://codecanyon.net/user/Capelle
+- version:   1.0
+
+==================================================== */
+
+/* ========================
+   1. Basics
+   ======================== */
+
+.su-flyout {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: #fff;
+	position: fixed;
+	z-index: 999; /* Banner must have the highest z-index, so it doesn't hide behind the other elements on the website */
+}
+input.hiddenBtn {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+}
+
+/* ========================
+   2. Banners dimensions
+   ======================== */
+
+/* Horizontal Banners */
+.su-flyout.dim-234x60 {
+	width: 234px;
+	height: 60px;
+}
+.su-flyout.dim-468x60 {
+	width: 468px;
+	height: 60px;
+}
+.su-flyout.dim-728x90 {
+	width: 728px;
+	height: 90px;
+}
+
+/* Vertical Banners */
+.su-flyout.dim-120x240 {
+	width: 120px;
+	height: 240px;
+}
+.su-flyout.dim-120x600 {
+	width: 120px;
+	height: 600px;
+}
+.su-flyout.dim-160x600 {
+	width: 160px;
+	height: 600px;
+}
+.su-flyout.dim-300x600 {
+	width: 300px;
+	height: 600px;
+}
+
+/* Rectangular Banners */
+.su-flyout.dim-88x31 {
+	width: 88px;
+	height: 31px;
+}
+.su-flyout.dim-180x150 {
+	width: 180px;
+	height: 150px;
+}
+.su-flyout.dim-300x250 {
+	width: 300px;
+	height: 250px;
+}
+.su-flyout.dim-336x280 {
+	width: 336px;
+	height: 280px;
+}
+
+/* Square Banners */
+.su-flyout.dim-125x125 {
+	width: 125px;
+	height: 125px;
+}
+.su-flyout.dim-200x200 {
+	width: 200px;
+	height: 200px;
+}
+.su-flyout.dim-250x250 {
+	width: 250px;
+	height: 250px;
+}
+
+/* Your custom dimension */
+.su-flyout.dim-custom {
+	width: auto; /* Add your custom width in px here */
+	height: auto; /* Add your custom height in px here */
+}
+
+/* Fixers */
+.su-flyout iframe {
+	width: 100%;
+	height: 100%;
+}
+
+/* ========================
+   3. Banners positions
+   ======================== */
+
+/* Common positions */
+.su-flyout.top-left {
+	top: 0;
+	left: 0;
+}
+.su-flyout.top-middle {
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.su-flyout.top-right {
+	top: 0;
+	right: 0;
+}
+.su-flyout.bottom-right {
+	bottom: 0;
+	right: 0;
+}
+.su-flyout.bottom-middle {
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+.su-flyout.bottom-left {
+	bottom: 0;
+	left: 0;
+}
+.su-flyout.center {
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto !important;
+}
+.su-flyout.center,
+.su-flyout.top-middle,
+.su-flyout.bottom-middle {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+/* Your custom position */
+.su-flyout.position-custom {
+	top: auto; /* Add a value in px for the top position eg. deviation from the top */
+	right: auto; /* Add a value in px for the right position eg. deviation from the right */
+	bottom: auto; /* Add a value in px for the bottom position eg. deviation from the bottom */
+	left: auto; /* Add a value in px for the left position eg. deviation from the left */
+}
+
+/* ========================
+   5. Visual effects
+   ======================== */
+
+.su-flyout.shadow {
+	box-shadow: 0 0 16px rgba(0,0,0,0.3); /* Adjust the rgba value and opacity at the end (default is 0.3) along with shadow spread (default is 16px) */
+}
+.su-flyout.border {
+	outline: solid 2px #6783cb; /* Adjust the width and HEX color of the border here */
+}
+.su-flyout.transparent {
+	background: transparent;
+}
+
+
+
+/* ========================
+   7. Close button
+   ======================== */
+
+.su-flyout .su-fo-close {
+	position: absolute;
+	cursor: pointer;
+	z-index: 10;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	-webkit-transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	-ms-transition: all 0.1s ease;
+	transition: all 0.1s ease;
+	text-decoration: none;
+}
+
+/* Circled button 1 */
+.su-flyout .su-fo-close.circle-1:before {
+	color: #ddd;
+	content: "\00d7";
+	text-align: center;
+	font-size: 1em;
+	background: #000;
+	border-radius: 50%;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	display: block;
+}
+.su-flyout .su-fo-close.circle-1:hover:before {
+	color: #fff;
+}
+
+/* Circled button 2 */
+.su-flyout .su-fo-close.circle-2:before {
+	color: #000;
+	content: "\00d7";
+	text-align: center;
+	font-size: 13px;
+	background: none;
+	background: transparent;
+	border-radius: 50%;
+	border: solid 2px #000;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	display: block;
+}
+.su-flyout .su-fo-close.circle-2:after {
+	color: #000;
+    content: "close";
+    font-size: 10px;
+    right: 30px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 1px;
+}
+.su-flyout .su-fo-close.circle-2 {
+	opacity: 0.3;
+}
+.su-flyout .su-fo-close.circle-2:hover {
+	opacity: 1;
+}
+.su-flyout .su-fo-close.circle-2:hover:before {
+	background: #000;
+	color: #fff;
+}
+
+/* Labeled */
+.su-flyout .su-fo-close.labeled:before {
+	color: #fff;
+	content: "close";
+	font-size: 8px;
+	text-transform: uppercase;
+	background: #000;
+	padding: 6px 12px;
+}
+.su-flyout .su-fo-close.labeled {
+	opacity: 0.3;
+}
+.su-flyout .su-fo-close.labeled:hover {
+	opacity: 1;
+}
+
+/* Text button */
+.su-flyout .su-fo-close.text:before {
+	color: #000;
+	content: "Close window";
+	font-size: 8px;
+	text-transform: uppercase;
+	background: transparent;
+	display: block;
+	opacity: 0.5;
+}
+.su-flyout .su-fo-close.text:hover:before {
+	opacity: 1;
+}
+
+/* Button positions depending on choosen banner position */
+.su-flyout.top-left > .su-fo-close.circle-1,
+.su-flyout.top-middle > .su-fo-close.circle-1 {
+	bottom: -13px;
+	right: -13px;
+}
+.su-flyout.bottom-middle > .su-fo-close.circle-1,
+.su-flyout.bottom-left > .su-fo-close.circle-1,
+.su-flyout.center > .su-fo-close.circle-1 {
+	top: -13px;
+	right: -13px;
+}
+.su-flyout.top-left > .su-fo-close.circle-2,
+.su-flyout.top-middle > .su-fo-close.circle-2 {
+	bottom: -32px;
+	right: 0;
+}
+.su-flyout.bottom-middle > .su-fo-close.circle-2,
+.su-flyout.bottom-left > .su-fo-close.circle-2,
+.su-flyout.center > .su-fo-close.circle-2 {
+	top: -32px;
+	right: 0;
+}
+.su-flyout.top-left > .su-fo-close.labeled,
+.su-flyout.top-middle > .su-fo-close.labeled {
+	bottom: -30px;
+	right: 0;
+}
+.su-flyout.bottom-middle > .su-fo-close.labeled,
+.su-flyout.bottom-left > .su-fo-close.labeled,
+.su-flyout.center > .su-fo-close.labeled {
+	top: -30px;
+	right: 0;
+}
+.su-flyout.top-left > .su-fo-close.text,
+.su-flyout.top-middle > .su-fo-close.text {
+	bottom: -18px;
+	right: 0px;
+}
+.su-flyout.bottom-middle > .su-fo-close.text,
+.su-flyout.bottom-left > .su-fo-close.text,
+.su-flyout.center > .su-fo-close.text {
+	top: -18px;
+	right: 10px;
+}
+
+.su-flyout.top-right > .su-fo-close.circle-1,
+.su-flyout.top-right > .su-fo-close.circle-2 {
+	bottom: -13px;
+	left: -13px;	
+}
+
+.su-flyout.bottom-right > .su-fo-close.circle-1,
+.su-flyout.bottom-right > .su-fo-close.circle-2 {
+	top: -13px;
+	left: -13px;	
+}
+
+.su-flyout.top-right > .su-fo-close.labeled {
+	bottom: -30px;
+	left: 0px;		
+}
+.su-flyout.bottom-right > .su-fo-close.labeled {
+	top: -30px;
+	left: 0px;	
+}
+
+.su-flyout.top-right > .su-fo-close.text {
+	bottom: -20px;
+	left: 0px;	
+}
+.su-flyout.bottom-right > .su-fo-close.text {
+	top: -20px;
+	left: 0px;	
+}
+
+
+.su-adb-message-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.9);
+}
+
+.su-adb-message-container .su-adb-message {
+    width: 540px;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 1px solid rgba(255, 149, 149, 0.53);
+    padding: 20px;
+    color: #000;
+    background-color: #FFEFEF;
+    font-family: monospace;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 960px) {
+	.su-adb-message-container .su-adb-message {
+		width: 90%;
+	}
+}

@@ -1,0 +1,22 @@
+name: Guests
+slug: bdt_guests
+groups: Shortcode Ultimate
+form:
+  general:
+    - name: content
+      type: editor
+      value: Content for guests
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

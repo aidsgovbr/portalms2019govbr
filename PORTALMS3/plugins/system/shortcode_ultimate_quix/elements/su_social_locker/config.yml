@@ -1,0 +1,86 @@
+name: Social Locker
+slug: bdt_social_locker
+groups: ["Shortcode Ultimate", "content"]
+
+form:
+  general:
+    - name: overlap
+      type: select
+      options:
+        full: full
+        transparence: transparence
+        blurring: blurring
+      value: full
+
+    - name: title
+      label: Locker Title
+      value: This content is locked!
+
+    - name: message
+      value: Please support us, use one of the buttons below to unlock the content.
+
+    - name: timer
+      type: slider
+      max: 1000
+      step: 10
+
+    - name: content
+      type: editor
+      value: Your Content Here
+      
+    - name: close
+      label: Close Button
+      type: switch
+
+    - name: mobile
+      label: Mobile View
+      type: switch
+
+    - name: demo_mode
+      label: Demo Mode
+      type: switch
+
+    - name: guest_only
+      label: Guest Only
+      type: switch
+
+    - name: facebook
+      type: switch
+      value: true
+
+    - name: google_plus
+      label: Google Plus
+      type: switch
+      value: true
+
+    - name: twitter
+      type: switch
+      value: true
+
+    - name: url
+      label: Custom Url
+
+  style:
+    - name: style
+      type: select
+      options:
+        starter: Starter
+        secrets: Secrets
+        dandyish: Dandyish
+        glass: Glass
+        flat: Flat
+      value: starter
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

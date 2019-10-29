@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+    <name>System - Shortcode Ultimate Quix Addon</name>
+    <version>1.1.0</version>
+    <creationDate>28 April 2017</creationDate>
+    <description>Shortcode Ultimate Quix Addon for support shortcode element in quix</description>
+    <copyright>Copyright (C) BdThemes</copyright>
+    <license>GNU General Public License</license>
+    <author>BdThemes</author>
+    <authorEmail>info@bdthemes.com</authorEmail>
+    <authorUrl>www.bdthemes.com</authorUrl>
+	<scriptfile>script.php</scriptfile>
+    <files>
+        <filename plugin="shortcode_ultimate_quix">shortcode_ultimate_quix.php</filename>
+        <folder>elements</folder>
+    </files>
+
+    <scriptfile>script.php</scriptfile>
+</extension>

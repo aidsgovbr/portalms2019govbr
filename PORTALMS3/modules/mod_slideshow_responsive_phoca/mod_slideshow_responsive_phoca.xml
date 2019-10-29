@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="1" client="site" method="upgrade">
+	<name>Galeria de Imagens - Slide Show Responsive</name>
+	<author>Tiago Garcia</author>
+	<creationDate>Setembro 2014</creationDate>
+	<copyright></copyright>
+	<license>GNU General Public License version 2 ou later</license>
+	<authorEmail>tiagovtg@gmail.com</authorEmail>
+	<version>3.x</version>
+	<description>Modulo para imagens do PhocaGalerry no formato slide show responsive.</description>
+
+	<files>
+		<folder>assets</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename module="mod_slideshow_responsive_phoca">mod_slideshow_responsive_phoca.php</filename>
+		<filename>mod_slideshow_responsive_phoca.xml</filename>
+	</files>
+
+	<languages folder="language">
+		<language tag="pt-BR">pt-BR/pt-BR.mod_slideshow_responsive_phoca.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_slideshow_responsive_phoca.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MOST_READ" />
+
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_slideshow_responsive_phoca/models/fields">
+			<fieldset name="basic">
+
+			<field name="phocahead1" type="phocahead" default="MOD_PHOCAGALLERY_IMAGE_CONFIG_GENERAL_SETTINGS_LABEL" label="" description=""/>
+
+				<field name="category_id" type="phocagallerycategory" section="com_phocagallery" default="0" label="MOD_PHOCAGALLERY_IMAGE_FIELD_SELECT_CATEGORY_LABEL" description="MOD_PHOCAGALLERY_IMAGE_FIELD_SELECT_CATEGORY_DESC" multiple="true"  />
+
+				<field name="image_ordering" type="list" default="1" label="MOD_PHOCAGALLERY_IMAGE_FIELD_IMAGE_ORDERING_LABEL" description="MOD_PHOCAGALLERY_IMAGE_FIELD_IMAGE_ORDERING_DESC">
+					<option value="1">MOD_PHOCAGALLERY_IMAGE_ORDERING_ASC</option>
+					<option value="2">MOD_PHOCAGALLERY_IMAGE_ORDERING_DESC</option>
+					<option value="3">MOD_PHOCAGALLERY_IMAGE_TITLE_ASC</option>
+					<option value="4">MOD_PHOCAGALLERY_IMAGE_TITLE_DESC</option>
+					<option value="5">MOD_PHOCAGALLERY_IMAGE_DATE_ASC</option>
+					<option value="6">MOD_PHOCAGALLERY_IMAGE_DATE_DESC</option>
+					<option value="7">MOD_PHOCAGALLERY_IMAGE_ID_ASC</option>
+					<option value="8">MOD_PHOCAGALLERY_IMAGE_ID_DESC</option>
+					<option value="9">MOD_PHOCAGALLERY_RANDOM</option>
+					<option value="11">MOD_PHOCAGALLERY_IMAGE_COUNT_ASC</option>
+				   <option value="12">MOD_PHOCAGALLERY_IMAGE_COUNT_DESC</option>
+				   <option value="13">MOD_PHOCAGALLERY_IMAGE_AVERAGE_ASC</option>
+				   <option value="14">MOD_PHOCAGALLERY_IMAGE_AVERAGE_DESC</option>
+				   <option value="15">MOD_PHOCAGALLERY_IMAGE_HITS_ASC</option>
+					<option value="16">MOD_PHOCAGALLERY_IMAGE_HITS_DESC</option>
+				</field>
+
+				<field name="limit_start" default="0" size="4" type="text" label="MOD_PHOCAGALLERY_IMAGE_FIELD_LIMIT_START_LABEL" description="MOD_PHOCAGALLERY_IMAGE_FIELD_LIMIT_START_DESC" />
+
+				<field name="limit_count" default="1" size="4" type="text" label="MOD_PHOCAGALLERY_IMAGE_FIELD_LIMIT_COUNT_LABEL" description="MOD_PHOCAGALLERY_IMAGE_FIELD_LIMIT_COUNT_DESC" />
+
+			<field name="phocahead5" type="phocahead" default="Imagens com minimo de 266x165" label="" description=""/>
+
+
+				<!-- <field name="spacer1" type="spacer" hr="true" /> -->
+
+				<field name="font_color" default="#b36b00" size="10" type="color" label="MOD_PHOCAGALLERY_IMAGE_FIELD_FONT_COLOR_LABEL" description="MOD_PHOCAGALLERY_IMAGE_FIELD_FONT_COLOR_DESC_DESC"/>
+
+				<field name="font_size_name" default="12" size="4" type="phocatext" label="MOD_PHOCAGALLERY_IMAGE_FIELD_FONT_SIZE_NAME_LABEL" description="MOD_PHOCAGALLERY_IMAGE_FIELD_FONT_SIZE_NAME_DESC"/>
+
+			<field name="phocahead4" type="phocahead" default="Links" label="" description=""/>
+
+				<field name="phocahead1" type="phocahead" default="MOD_PHOCAGALLERY_IMAGE_CONFIG_GENERAL_SETTINGS_LABEL" label="" description=""/>
+
+				<field name="uselinks" class="btn-group"
+					type="radio"
+					default="1" label="Usar links das imagens?" description="Turn on ou off ability to link slides">
+					<option	value="1">JYES</option>
+					<option	value="0">JNO</option>
+				</field>
+
+				<field name="item_title" class="btn-group"
+					type="radio"
+					default="1" label="Usar Titulo?" description="Liga/Desliga titulo no slideshow">
+					<option	value="1">JYES</option>
+					<option	value="0">JNO</option>
+				</field>
+
+			<field
+				name="link_categoria"
+				class="btn-group"
+				type="radio"
+				default="1"
+				label="Mostrar link Outras"
+				description="">
+				<option
+					value="1">JYES</option>
+				<option
+					value="0">JNO</option>
+			</field>
+
+			<field
+				name="titulo_mais_conteudo"
+				type="text"
+				label="Titulo Outras"
+				description="" />
+
+			</fieldset>
+
+			<fieldset name="moreoptions" label="Personalizadas">
+				<field name="moduleclass_sfx" type="text" label="moduleclass_sfx"
+						description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+				<field
+					name="fadeorslide" class="btn-group" type="radio"
+					default="0" label="Fade ou Slide?" description="Choose whether the slider will fade ou slide between slides">
+					<option value="0">Slide</option>
+					<option value="1">Fade</option>
+				</field>
+				<field name="directionNav" class="btn-group"
+					type="radio"
+					default="0" label="Usar navegadores de direção?" description="Turn on ou off left/right buttons">
+					<option	value="1">JYES</option>
+					<option	value="0">JNO</option>
+				</field>
+
+				<field
+					name="controlNav"
+					class="btn-group"
+					type="radio"
+					default="1"
+					label="Usar controle de navegação?"
+					description="Turn on ou off underside control blobs">
+					<option	value="1">JYES</option>
+					<option	value="0">JNO</option>
+				</field>
+
+				<field name="keyboardNav" class="btn-group"
+					type="radio"
+					default="0" label="Usar teclado de navegação?" description="Turn on ou off left and right arrow control of slider">
+					<option	value="1">JYES</option>
+					<option	value="0">JNO</option>
+				</field>
+
+				<field name="direction" class="btn-group"
+					type="radio"
+					default="0" label="Direção: Vertical ou Horizontal" description="Slider images go veritcally ou horizontally">
+					<option value="1">Vertical</option>
+					<option value="0">Horizontal</option>
+				</field>
+
+				<field name="slidespeed" type="text" default="7000" label="Tempo do slide na tela em ms" description="Amount of time a slide remains on screen in milliseconds"/>
+				<field name="animatespeed" type="text" default="600" label="Velocidade de animação do slide em ms" description="Amount of time a slide transition takes in milliseconds"/>
+
+				<field name="randomorder" class="btn-group"
+					type="radio"
+					default="0" label="Ordem randômica?" description="Slider images in random order?">
+					<option	value="1">JYES</option>
+					<option	value="0">JNO</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+				<field name="cachemode" type="hidden" default="itemid">
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

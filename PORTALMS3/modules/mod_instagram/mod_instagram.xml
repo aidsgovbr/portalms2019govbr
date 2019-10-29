@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	version="3.1"
+	type="module"
+	client="site"
+	method="upgrade">
+	<name>mod_instagram</name>
+	<author>Andre Feitosa</author>
+	<creationDate>Julho 2015</creationDate>
+	<copyright>Copyright (C) 2015 Blog da Saúde, Inc. All rights reserved.</copyright>
+	<license>Ministério da Saude - BR</license>
+	<version>1.0</version>
+	<description>MOD_INSTAGRAM_XML_DESCRIPTION</description>
+	<scriptfile />
+	<files>
+		<filename module="mod_instagram">mod_instagram.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_instagram.xml</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+		<language tag="pt-BR">pt-BR/pt-BR.mod_instagram.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_instagram.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="usuario"
+					type="text"
+					class="inputbox"
+					label="COM_FORMULARIO_FIELD_USUARIO_LABEL"
+					description="COM_FORMULARIO_FIELD_USUARIO_DESC"
+					size="40" />
+
+					<field
+						name="chave_key"
+						type="text"
+						class="span6"
+						label="COM_FORMULARIO_FIELD_CHAVE-KEY_LABEL"
+						description="COM_FORMULARIO_FIELD_CHAVE-KEY_DESC"
+						size="40" />
+
+					<field
+						name="link"
+						type="radio"
+						label="COM_FORMULARIO_FIELD_LINK_LABEL"
+						description="COM_FORMULARIO_FIELD_LINK_DESC"
+						default="0"
+						class="btn-group btn-group-yesno"
+						filter="integer">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+					</field>
+
+					<field
+						name="largura"
+						type="text"
+						class="span2"
+						label="COM_FORMULARIO_FIELD_LARGURA_LABEL"
+						description="COM_FORMULARIO_FIELD_LARGURA_DESC"
+						size="40" />
+
+					<field
+						name="altura"
+						type="text"
+						class="span2"
+						label="COM_FORMULARIO_FIELD_ALTURA_LABEL"
+						description="COM_FORMULARIO_FIELD_ALTURA_DESC"
+						size="40" />
+
+						<field
+							name="span"
+							type="text"
+							class="span2"
+							label="COM_FORMULARIO_FIELD_SPAN_LABEL"
+							description="COM_FORMULARIO_FIELD_SPAN_DESC"
+							size="40" />
+
+					<field
+						name="qtd_imagens"
+						type="text"
+						class="span2"
+						label="COM_FORMULARIO_FIELD_QTD_IMAGENS_LABEL"
+						description="COM_FORMULARIO_FIELD_QTD_IMAGENS_DESC"
+						size="40" />
+
+					<field
+						name="miniatura"
+						type="list"
+						default="1"
+						label="COM_FORMULARIO_FIELD_MINIATURA_LABEL"
+						description="COM_FORMULARIO_FIELD_MINIATURA_DESC"
+						class="inputbox"
+						>
+						<option value="thumbnail">Pequena</option>
+						<option value="low_resolution">Média</option>
+						<option value="standard_resolution">Grande</option>
+					</field>
+					<field
+						name="cor_background"
+						type="color"
+						class="inputbox"
+						label="COM_FORMULARIO_FIELD_COR_BACKGROUND_LABEL"
+						description="COM_FORMULARIO_FIELD_COR_BACKGROUND_DESC"
+						default="#FFFFFF"
+						validate="color" />
+					<field
+						name="cor_borda"
+						type="color"
+						class="inputbox"
+						label="COM_FORMULARIO_FIELD_COR_BORDA_LABEL"
+						description="COM_FORMULARIO_FIELD_COR_BORDA_DESC"
+						default="#FFFFFF"
+						validate="color" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					rows="3" />
+				<field
+					name="cache"
+					type="list"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+					default="1">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					default="900" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option value="static" />
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

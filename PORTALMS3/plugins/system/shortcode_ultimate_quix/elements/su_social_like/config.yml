@@ -1,0 +1,41 @@
+name: Social Like
+slug: bdt_social_like
+groups: Shortcode Ultimate
+
+form:
+  general:
+    - name: button
+      label: Like Button
+      type: select
+      options:
+        facebook: Facebook
+        linkedin: Linkedin
+        twitter: Twitter
+        google: Google
+        vk: Vk
+      value: google
+      
+  styles: 
+    - name: button_animation
+      label: Button Animation
+      type: select
+      options:
+        to_left: To Left
+        to_top: To Top
+        to_bottom: To Bottom
+        to_right: To Right
+      value: to_left
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

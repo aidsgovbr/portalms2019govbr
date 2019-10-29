@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site"
+	method="upgrade">
+	<name>mod_articles_news_datasus</name>
+	<author>Datasus</author>
+	<creationDate>July 2014</creationDate>
+	<copyright></copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>felipe.faria@saude.gov.br</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_ARTICLES_NEWS_DATASUS_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_articles_news_datasus">mod_articles_news_datasus.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<folder>css</folder>
+		<folder>img</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_articles_news_datasus.xml</filename>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_articles_news_datasus.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_articles_news_datasus.sys.ini</language>
+	</languages>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_ARTICLES_NEWSFLASH" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="catid"
+					type="category"
+					extension="com_content"
+					default=""
+					size="10"
+					label="JCATEGORY"
+					description="MOD_ARTICLES_NEWS_DATASUS_FIELD_CATEGORY_DESC" >
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+				<field
+					name="image"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="Exibir Imagens"
+					description="Exibir imagens no artigo">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="count"
+					type="text"
+					label="# Artigos a exibir"
+					default="3"
+					description="Informe a quantidade de itens que deve aparecer" />
+				<field
+					name="item_title"
+					class="btn-group btn-group-yesno"
+					type="radio"
+					default="0"
+					label="Título do artigo"
+					description="Habilitado para o layout alternativo modeloB">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="field_title"
+					class="btn-group"
+					type="radio"
+					default="title"
+					label="Mostrar como Título"
+					description="Opção para mostrar como título a chamada da notícia">
+					<option
+						value="title">Título do artigo</option>
+					<option
+						value="chamada_noticia">Chamada da Notícia</option>
+				</field>
+
+				<field
+					name="exibe_leia_mais"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="Mostrar Leia mais"
+					description="Mostrar Leia mais">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field
+					name="readmore"
+					type="text"
+					label="MOD_ARTICLES_NEWS_DATASUS_FIELD_READMORE_LABEL"
+					description="MOD_ARTICLES_NEWS_DATASUS_FIELD_READMORE_DESC" />
+				<field
+					name="artigoinicial"
+					type="text"
+					label="# Artigo inicial"
+					description="Informe o número inicial do artigo Exemplo: 0" />
+
+
+				<field
+					name="readmoretext"
+					type="text"
+					class="btn-group btn-group-yesno"
+					default="+NOTÍCIAS"
+					label="MOD_ARTICLES_NEWS_DATASUS_FIELD_MORE_NEWS_TEXT_LABEL"
+					description="MOD_ARTICLES_NEWS_DATASUS_FIELD_MORE_NEWS_TEXT_DESC">
+				</field>
+				<field
+					name="anotheranchor"
+					type="text"
+					label="MOD_ARTICLES_NEWS_DATASUS_FIELD_ANOTHERANCHOR_LABEL"
+					description="MOD_ARTICLES_NEWS_DATASUS_FIELD_ANOTHERANCHOR_DESC" />
+
+
+				<field
+					name="anotheranchortext"
+					type="text"
+					class="btn-group btn-group-yesno"
+					default="AGENDA DAS AUTORIDADES"
+					label="MOD_ARTICLES_NEWS_DATASUS_FIELD_ANOTHERANCHOR_TEXT_LABEL"
+					description="MOD_ARTICLES_NEWS_DATASUS_FIELD_ANOTHERANCHOR_TEXT_DESC">
+				</field>
+				<field
+					name="ordering"
+					type="list"
+					default="a.publish_up"
+					label="MOD_ARTICLES_NEWS_DATASUS_FIELD_ORDERING_LABEL"
+					description="MOD_ARTICLES_NEWS_DATASUS_FIELD_ORDERING_DESC">
+					<option
+						value="a.publish_up">MOD_ARTICLES_NEWS_DATASUS_FIELD_ORDERING_PUBLISHED_DATE</option>
+					<option
+						value="a.created">MOD_ARTICLES_NEWS_DATASUS_FIELD_ORDERING_CREATED_DATE</option>
+					<option
+						value="a.ordering">MOD_ARTICLES_NEWS_DATASUS_FIELD_ORDERING_ORDERING</option>
+					<option
+						value="rand()">MOD_ARTICLES_NEWS_DATASUS_FIELD_ORDERING_RANDOM</option>
+				</field>
+
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<extension group="system" method="upgrade" type="plugin" version="3.1">
+	<name>plg_system_bdthemes_shortcodes</name>
+	<author>BdThemes Ltd</author>
+	<creationDate>21 September 2017</creationDate>
+	<authorEmail>info@bdthemes.com</authorEmail>
+	<authorUrl>http://www.bdtheme.com</authorUrl>
+	<copyright>(C) 2012 - 2017 BDThemes Ltd all rights reserved.</copyright>
+	<license>http://www.gnu.org/copyright/gpl.html GNU/GPL</license>
+	<version>3.8.0</version>
+	<description>PLG_SYSTEM_BDTHEMES_SHORTCODES_DESC</description>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="Shortcode Ultimate"><![CDATA[https://www.bdthemes.com/updates/shortcode-ultimate.xml]]></server>
+	</updateservers>
+	
+	<files>
+		<filename plugin="bdthemes_shortcodes">bdthemes_shortcodes.php</filename>
+		<folder>config</folder>
+		<folder>css</folder>
+		<folder>fonts</folder>
+ 		<folder>helper</folder>
+        <folder>images</folder>
+		<folder>js</folder>
+		<folder>other</folder>
+		<folder>shortcodes</folder>
+		<filename>README.md</filename>
+		<filename>index.html</filename>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_bdthemes_shortcodes.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_system_bdthemes_shortcodes.ini</language>
+		<language tag="ja-JP">ja-JP/ja-JP.plg_system_bdthemes_shortcodes.ini</language>
+		<language tag="uk-UA">uk-UA/uk-UA.plg_system_bdthemes_shortcodes.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/plugins/system/bdthemes_shortcodes/config/fields">
+				<field type="extensionversion" version="3.8.0 (Pro)" />
+
+				<field type="section" tag="start" title="PLG_SYSTEM_BDTHEMES_SHORTCODES_ADMIN_BASIC_SETTINGS"  class="su-basic-settings"  />
+					<field type="spacer" label="&lt;strong&gt;Site Settings&lt;&#47;strong&gt; &lt;hr &#47;&gt;" />
+					<field name="font-awesome" type="radio" default="local" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_FONT_AWESOME" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_FONT_AWESOME_DESC" class="btn-group" >
+					    <option value="0">PLG_SYSTEM_BDTHEMES_SHORTCODES_DO_NOT_LOAD</option>
+					    <option value="local">PLG_SYSTEM_BDTHEMES_SHORTCODES_BUILT_IN</option>
+					    <option value="cdn">PLG_SYSTEM_BDTHEMES_SHORTCODES_LOAD_CDN</option>
+					</field>
+
+					<!-- <field type="message" style="warning" text="You Selected CDN Based Fontawesome!" showon="font-awesome:cdn" /> -->
+					
+					<field name="tmpl_shortcode" type="templatelist" default="" description="Grab extra shortcode from template which you select" label="Extra Shortcode" />
+
+					<field name="shortcode_intro" type="radio" default="1" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_INTRO" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_INTRO_DESC" class="btn-group" >
+					    <option value="0">Don't Bother Me</option>
+					    <option value="1">Yes! Please</option>
+					</field>
+
+				<field type="section" tag="end" />
+
+			</fieldset>
+
+			<fieldset name="advanced" addfieldpath="/plugins/system/bdthemes_shortcodes/config/fields">
+				<field type="section" tag="start" title="PLG_SYSTEM_BDTHEMES_SHORTCODES_ADMIN_ADVANCED_SETTINGS"  class="su-advanced-settings"  />
+					<field name="font-awesome-admin" type="radio" default="local" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_FONT_AWESOME" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_FONT_AWESOME_DESC" class="btn-group" >
+					    <option value="0">PLG_SYSTEM_BDTHEMES_SHORTCODES_DO_NOT_LOAD</option>
+					    <option value="local">PLG_SYSTEM_BDTHEMES_SHORTCODES_BUILT_IN</option>
+					    <option value="cdn">PLG_SYSTEM_BDTHEMES_SHORTCODES_LOAD_CDN</option>
+					</field>	
+					<field  name="shortcode_pre" type="text" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_PRE_TITLE" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_PRE_DESC" default=""/>
+				<field type="section" tag="end" />
+					
+			</fieldset>
+
+			<fieldset name="api_settings" addfieldpath="/plugins/system/bdthemes_shortcodes/config/fields">
+				<field type="section" tag="start" title="PLG_SYSTEM_BDTHEMES_SHORTCODES_ADMIN_FACEBOOK_SETTINGS"  class="su-facebook-settings"  />
+					<field name="facebook_id" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_FB_ID" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_FB_ID_DESC" />
+					<field name="facebook_token" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_FACEBOOK_TOKEN" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_FACEBOOK_TOKEN_DESC" />
+					<field type="message" style="info" text="PLG_SYSTEM_BDTHEMES_SHORTCODES_ADMIN_HELP_FACEBOOK" />
+					<field name="facebook_app_id" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_FACEBOOK_APP_ID" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_FACEBOOK_APP_ID_DESC" />
+				<field type="section" tag="end" />
+				
+				<field type="section" tag="start" title="PLG_SYSTEM_BDTHEMES_SHORTCODES_ADMIN_GOOGLE_MAP_SETTINGS"  class="su-google-map-settings"  />
+					<field name="gmap_api_key" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_GMAP_API_KEY" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_GMAP_API_KEY_DESC" />
+					<field type="spacer" label="Here you retrive your api key: &lt;a class=&quot;external&quot; href=&quot;https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key&quot; target=&quot;_blank&quot;&gt;https://developers.google.com/maps/documentation/javascript/get-api-key&lt;/a&gt;" />
+				<field type="section" tag="end" />
+						
+				<field type="section" tag="start" title="PLG_SYSTEM_BDTHEMES_SHORTCODES_ADMIN_GOOGLE_PLUS_SETTINGS"  class="su-google-plus-settings"  />
+					<field name="google_api" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_GOOGLE_PLUS_API" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_GOOGLE_PLUS_API_DESC" />
+				<field type="section" tag="end" />
+
+				<field type="section" tag="start" title="PLG_SYSTEM_BDTHEMES_SHORTCODES_ADMIN_INSTAGRAM_SETTINGS"  class="su-instagram-settings"  />
+					<field name="instagram_id" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_INSTAGRAM_ID" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_INSTAGRAM_ID_DESC" />
+					<field name="instagram_token" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_INSTAGRAM_ACCESS_TOKEN" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_INSTAGRAM_ACCESS_TOKEN_DESC" />
+					<field type="message" style="info" text="PLG_SYSTEM_BDTHEMES_SHORTCODES_ADMIN_HELP_INSTAGRAM" />
+				<field type="section" tag="end" />
+				
+				<field type="section" tag="start" title="PLG_SYSTEM_BDTHEMES_SHORTCODES_ADMIN_MAILCHIMP_SETTINGS"  class="su-mailchimp-settings"  />
+					<field name="mailchimp_key" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_MAILCHIMP_KEY" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_MAILCHIMP_KEY_DESC" />
+				<field type="section" tag="end" />
+				
+				<field type="section" tag="start" title="PLG_SYSTEM_BDTHEMES_SHORTCODES_ADMIN_OPEN_WEATHER_SETTINGS"  class="su-open-weather-settings"  />
+					<field name="owa_key" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_OWAK" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_OWAK_DESC" />
+				<field type="section" tag="end" />
+			
+				<field type="section" tag="start" title="PLG_SYSTEM_BDTHEMES_SHORTCODES_ADMIN_PINTEREST_SETTINGS"  class="su-pinterest-settings"  />
+					<field name="pinterest_id" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_PINTEREST_ID" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_PINTEREST_ID_DESC" />
+				<field type="section" tag="end" />
+				
+				<field type="section" tag="start" title="PLG_SYSTEM_BDTHEMES_SHORTCODES_ADMIN_TWITTER_SETTINGS"  class="su-twitter-settings"  />
+					<field name="twitter_id" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_TWITTER_ID" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_TWITTER_ID_DESC" />
+					<field name="twitter_consumer_key" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_CONSUMER_KEY" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_CONSUMER_KEY_DESC" />
+					<field name="twitter_consumer_secret" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_CONSUMER_SECRET" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_CONSUMER_SECRET_DESC" />
+					<field name="twitter_access_token" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_ACCESS_TOKEN" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_ACCESS_TOKEN_DESC" />
+					<field name="twitter_access_secret" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_ACCESS_SECRET" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_ACCESS_SECRET_DESC" />
+					<field type="message" style="info" text="PLG_SYSTEM_BDTHEMES_SHORTCODES_ADMIN_HELP_TWITTER" />
+				<field type="section" tag="end" />
+				
+				<field type="section" tag="start" title="PLG_SYSTEM_BDTHEMES_SHORTCODES_ADMIN_VKONTAKTE_SETTINGS"  class="su-vkontakte-settings"  />
+					<field name="vkontakte_id" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_VK_ID" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_VK_ID_DESC" />
+				<field type="section" tag="end" />			
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

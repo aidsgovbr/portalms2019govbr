@@ -1,0 +1,54 @@
+.su-download-btn {
+  background-color: rgb(73, 73, 255);
+  color: #ddd;
+  padding: 9px 20px;
+  border: none;
+  outline: none;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-decoration: none !important;
+}
+.su-download-btn:hover, .su-download-btn:active, .su-download-btn:focus {
+  text-decoration: none;
+  color: #fff;
+}
+
+.su-download-btn i {
+  margin-right: 2px;
+}
+
+.su-download {
+  text-align: center;
+}
+
+
+.su-download-counter {
+  font-size: 12px;
+  line-height: 12px;
+  cursor: default;
+  margin-top: 8px;
+}
+.su-download-counter > span {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.su-dwn-like {
+  cursor: pointer;
+}
+.su-fd-like {
+  color: #F35168;
+}
+
+.su-file-name {
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.su-download-counter > span  i {
+  margin-right: 6px;
+}

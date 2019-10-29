@@ -1,0 +1,347 @@
+div#editor input + label {
+    margin: 0 0 0 5px;
+}
+
+#resize_constrain {
+    left: 125px;
+}
+
+div#editor {
+    width: 100%;
+    height: 100%;
+}
+
+div#editor.offleft {
+    position: absolute;
+    left: -10000px;
+}
+
+div#editor div.row {
+    margin: 5px 0;
+    position: relative;
+}
+
+div#editor button.save, div#editor button.revert {
+    position: relative;
+}
+
+#editor-tools {
+    margin: 0 5px;
+    width: 300px;
+    position: relative;
+    height: 100%;
+    float: left;
+}
+#editor-tools label {
+    min-width: 50px;
+}
+
+#editor-tools label[for="crop_x"], #editor-tools label[for="crop_y"] {
+    min-width : 25px;
+}
+
+#editor-tools div.actions {
+    margin: 10px auto;
+    position: relative;
+    text-align: center;
+}
+
+#editor-tools div.toolbox {
+    clear: both;
+    float:  left;
+    margin: 5px 0;
+    padding: 0 5px;
+}
+
+#editor-options {
+    width: 100px;
+}
+
+div#editor #resize-width, div#editor #resize-height {
+
+}
+
+div#editor-image {
+    position : relative;
+    float: left;
+    background: url("../img/ios_texture.png") repeat 0 0 transparent;
+    box-shadow: 0 0 2px #000000 inset;
+    -moz-box-shadow: 0 0 2px #000000 inset;
+    -webkit-box-shadow: 0 0 1.5px #000000 inset;
+    padding: 9px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    overflow: hidden;
+}
+
+div#editor-image div.loading {
+    background: #000 url('../img/loader.gif') no-repeat center;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    position : absolute;
+    margin : auto;
+}
+
+div#editor-image > img, div#editor-image > canvas, div#crop-container > canvas, div#resize-container canvas {
+    position: relative;
+    box-shadow: 0 0 5px #000000;
+    -moz-box-shadow: 0 0 5px #000000;
+    -webkit-box-shadow: 0 0 5px #000000;
+    margin: auto;
+    display: block;
+}
+
+div#editor-image > canvas, div#crop-container > canvas, div#resize-container canvas {
+    image-rendering: optimizeQuality;
+    -ms-interpolation-mode: bicubic;
+}
+
+div#editor button span.ui-icon.ui-icon-resize, div#editor button span.ui-icon.ui-icon-crop, div#editor button span.ui-icon.ui-icon-rotate {
+    background: url('../img/icons.png') no-repeat 0 -40px;
+    height: 20px;
+    width: 20px;
+    margin-top: -10px;
+    left: 0.2em;
+}
+div#editor button span.ui-icon.ui-icon-crop {
+    background-position: 0 -60px;
+}
+div#editor button span.ui-icon.ui-icon-rotate {
+    background-position: 0 -80px;
+}
+
+input.width, input.height, input.quality {
+    width: 60px;
+    text-align: center;
+}
+input.quality {
+    width: 30px;
+    text-align: center;
+}
+div.slider {
+    width: 100px;
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: middle;
+}
+div.constrain {
+    position: absolute;
+    height: 40px;
+    left: 150px;
+    position: absolute;
+    top: 4px;
+    width: 10px;
+    border: 1px solid #ccc;
+    border-left-width: 0;
+
+}
+div.constrain span.checkbox {
+    background: url('../img/chain.png') no-repeat 100% -20px;
+    top: 10px;
+    left: 1px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+div.constrain span.checkbox.checked {
+    background-position: 100% 0;
+}
+
+#rotate_angle, #rotate_flip {
+    margin: auto;
+    width: 100%;
+    height : 100px;
+}
+
+#rotate_flip span.label {
+    line-height : 30px;
+}
+
+#rotate_angle span.label {
+    line-height : 40px;
+}
+#rotate_angle canvas, #rotate_flip canvas {
+    margin: auto;
+    display: block;
+    border: 1px solid #CCCCCC;
+    padding: 2px;
+}
+#rotate_angle div, #rotate_flip div {
+    float: left;
+    width: 85px;
+    cursor: pointer;
+    margin: 2px 18px;
+}
+#editor_effects {
+    height: 100%;
+    margin: auto;
+    width: 100%;
+}
+#editor_effects hr {
+    clear: both;
+    margin: 1.5em;
+}
+#editor_effects div.editor_effect {
+    float: left;
+    margin: 2px 27px;
+    cursor: pointer;
+    width: 85px;
+    position: relative;
+}
+
+#editor_effects div.editor_effect span.preview {
+    border : 1px solid #ccc;
+    display : inline-block;
+}
+
+#editor_effects div.editor_effect span.label {
+    max-width : 76px;
+}
+
+#editor_effects div.editor_effect div.editor_effect_unit {
+    background: none #000000;
+    bottom: 19px;
+    height: 16px;
+    left: 3px;
+    opacity: 0.6;
+    padding: 0;
+    position: absolute;
+    width: 70px;
+}
+#editor_effects div.editor_effect div.editor_effect_unit span {
+    color: #FFF;
+    font-size: 11px;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    padding: 0;
+    display: inline-block;
+    text-align: center;
+}
+#editor_effects div.editor_effect div.editor_effect_unit span.minus {
+    float: left;
+    display: none;
+}
+#editor_effects div.editor_effect div.editor_effect_unit span.plus {
+    float: right;
+    display: none;
+}
+#editor_effects div.editor_effect div.editor_effect_unit span.unit {
+    left	: 27px;
+    position: absolute;
+}
+#editor_effects div.editor_effect img, #editor_effects div.editor_effect canvas {
+    padding: 2px;
+    display: block;
+    margin: auto;
+}
+
+#editor_effects div.editor_effect span, #rotate_angle span, #rotate_flip, span {
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+#image_quality {
+    margin: 0 0 0 5px;
+}
+
+#editor_image_slider {
+    margin: 15px 100px;
+    display:none;
+}
+#editor_image_slider span {
+    width : 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    border: 1px solid #ccc;
+}
+#editor_image_slider span.slider-image-left {
+    background: url('../img/icons.png') no-repeat center -80px;
+    left: -30px;
+}
+#editor_image_slider span.slider-image-right {
+    background: url('../img/icons.png') no-repeat center -100px;
+    right: -30px;
+}
+input[type="checkbox"] {
+    vertical-align: middle;
+    margin: 2px 2px 4px;
+    border: 0 none;
+}
+
+/* Css Transforms */
+.flip-vertical {
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
+}
+.flip-horizontal {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+.rotate270 {
+    transform: rotate(270deg);
+    -moz-transform : rotate(270deg);
+    -webkit-transform : rotate(270deg);
+    -o-transform : rotate(270deg);
+    -ms-transform : rotate(270deg);
+}
+.rotate-90 {
+    transform: rotate(270deg);
+    -moz-transform : rotate(270deg);
+    -webkit-transform : rotate(270deg);
+    -o-transform : rotate(270deg);
+    -ms-transform : rotate(270deg);
+}
+.rotate90, .rotate-270  {
+    transform: rotate(90deg);
+    -moz-transform : rotate(90deg);
+    -webkit-transform : rotate(90deg);
+    -o-transform : rotate(90deg);
+    -ms-transform : rotate(90deg);
+}
+.rotate180, .rotate-180 {
+    transform: rotate(180deg);
+    -moz-transform : rotate(180deg);
+    -webkit-transform : rotate(180deg);
+    -o-transform : rotate(180deg);
+    -ms-transform : rotate(180deg);
+}
+.rotate360, .rotate-360 {
+    transform: rotate(0);
+    -moz-transform : rotate(0);
+    -webkit-transform : rotate(0);
+    -o-transform : rotate(0);
+    -ms-transform : rotate(0);
+}
+.thumbnail {
+    transform: scale(0.1);
+    -moz-transform : scale(0.1);
+    -webkit-transform : scale(0.1);
+    -o-transform : scale(0.1);
+    -ms-transform : scale(0.1);
+}
+
+#svg-fx {
+    width : 0;
+    height : 0;
+    display : block;
+}

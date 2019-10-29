@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="editors-xtd" method="upgrade">
+	<name>Button - Shortcodes Ultimate</name>
+	<author>BdThemes Ltd</author>
+	<creationDate>5th August 2016</creationDate>
+	<authorEmail>info@bdthemes.com</authorEmail>
+	<authorUrl>http://www.bdthemes.com</authorUrl>
+	<copyright>(C) 2012 BDThemes Ltd. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyright/gpl.html GNU/GPL</license>
+	<version>2.0.1</version>
+	<description>This is the Shortcodes system buttom that enables the use of shortcodes in the entire site. it's work like wordpress shortcodes system.</description>
+	<files>
+		<filename plugin="shortcode_ultimate">shortcode_ultimate.php</filename>
+		<filename>index.html</filename>	
+	</files>
+</extension>

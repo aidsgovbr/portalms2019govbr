@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6.0" type="plugin" group="system" method="upgrade" client="site">
+	<name>System - Accordion Plant Light</name>
+	<author>J-Plant</author>
+	<creationDate>14 May 2017</creationDate>
+	<copyright>Copyright (C) 2012 J-Plant. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>support@j-plant.com</authorEmail>
+	<authorUrl>www.j-plant.com</authorUrl>	
+	<version>1.2.6</version>
+	<description>ACCORDION_PLANT_LIGHT</description>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/plugins/system/accordionplantlight/accordionplantlight/fields">
+				<field type="list" name="mode" default="content" label="L_MODE" description="D_MODE">
+					<option value="content">L_ARTICLES</option>
+					<option value="any">L_ANY</option>
+				</field>
+				<field type="text" name="secret" size="20" default="" label="L_SECRET" description="D_SECRET" />
+
+				<field name="loadJQ" type="list" default="1" label="L_LOADJQ" description="D_LOADJQ">
+					<option value="0">L_NO</option>
+					<option value="1">L_YES</option>
+				</field>
+				<field name="jqNC" type="list" default="1" label="L_JQNC" description="D_JQNC">
+					<option value="0">L_NO</option>
+					<option value="1">L_YES</option>
+				</field>
+				<field type="header" name="hdStyle" default="L_ACCORDION_STYLES" label="" description="" />
+				<field name="theme" type="folderlist" default="ui-lightness" directory="plugins/system/accordionplantlight/accordionplantlight/assets/css" hide_none="1" hide_default="0" filter="^[^_]" label="L_THEME" description="D_THEME" />
+				<field type="text" name="cssClass" size="50" default="" label="L_CSSCLASS" description="D_CSSCLASS" />
+				<field type="text" name="width" size="10" default="" label="L_WIDTH" description="D_WIDTH" />
+				<field type="header" name="hdAccordion" default="L_ACCORDION_PARAMETERS" label="" description="" />
+				<field name="js-single" type="list" default="0" label="L_JS_SINGLEMODE" description="D_JS_SINGLEMODE">
+					<option value="0">L_NO</option>
+					<option value="1">L_YES</option>
+				</field>
+				<field type="text" name="js-activeIndex" size="50" default="" label="L_JS_ACTIVEINDEX" description="D_JS_ACTIVEINDEX" />
+				<field type="text" name="js-hideSpeed" size="10" default="300" label="L_JS_HIDESPEED" description="D_JS_HIDESPEED" />
+				<field type="list" name="js-onOver" default="0" label="L_JS_ONOVER" description="D_JS_ONOVER">
+					<option value="0">L_NO</option>
+					<option value="1">L_YES</option>
+				</field>
+				<field type="text" name="js-showSpeed" size="10" default="300" label="L_JS_SHOWSPEED" description="D_JS_SHOWSPEED" />
+			</fieldset>
+		</fields>
+	</config>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_accordionplantlight.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_accordionplantlight.sys.ini</language>
+	</languages>
+	<files>
+		<filename plugin="accordionplantlight">accordionplantlight.php</filename>
+		<filename>accordionplantlight.xml</filename>
+ 		<folder>accordionplantlight</folder>
+	</files>
+</extension>

@@ -1,0 +1,127 @@
+.su-divider { 
+	clear: both;
+	position: relative;
+	overflow: hidden;
+	margin: 35px 0;
+}
+.su-divider.has-toplink {
+	min-height: 12px;
+}
+
+.su-icon-style-3.su-divider > span {
+	border-width: 1px;
+	border-radius: 50%;
+}
+.su-divider-style-1.su-icon-style-3 > span, .su-divider-style-2.su-icon-style-3 > span {border-style:solid;}
+.su-divider-style-3.su-icon-style-3 > span, .su-divider-style-4.su-icon-style-3 > span {border-style:dashed;}
+.su-divider-style-5.su-icon-style-3 > span, .su-divider-style-6.su-icon-style-3 > span {border-style:dotted;}
+
+.su-divider span i {
+	display: inline-block;
+	text-align: center;
+}
+
+.su-divider > span {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+span.divider-left:before, span.divider-right:before {
+	content: '';
+	width: 2000px;
+	position: absolute;
+	top: 50%;
+	margin-top: -1px;
+	border-top-width: 1px;
+}
+
+span.divider-left:before, span.divider-left:after {right: 100%;}
+span.divider-right:before, span.divider-right:after {left: 100%;}
+
+
+/*=====================
+Single line style
+=====================*/
+.su-divider-style-1 span.divider-left:before, .su-divider-style-1 span.divider-right:before{border-top-style: solid;}
+.su-divider-style-1 span.divider-left:after, .su-divider-style-1 span.divider-right:after{border-top-style: solid;}
+
+.su-divider-style-3 span.divider-left:before, .su-divider-style-3 span.divider-right:before{border-top-style: dashed;}
+.su-divider-style-3 span.divider-left:after, .su-divider-style-3 span.divider-right:after{border-top-style: dashed;}
+
+.su-divider-style-5 span.divider-left:before, .su-divider-style-5 span.divider-right:before{border-top-style: dotted;}
+.su-divider-style-5 span.divider-left:after, .su-divider-style-5 span.divider-right:after{border-top-style: dotted;}
+
+/*=====================
+Double line style
+=====================*/
+.su-divider-style-2 span.divider-left:after, .su-divider-style-2 span.divider-right:after, 
+.su-divider-style-4 span.divider-left:after, .su-divider-style-4 span.divider-right:after,
+.su-divider-style-6 span.divider-left:after, .su-divider-style-6 span.divider-right:after {
+	content: '';
+	width: 2000px;
+	position: absolute;
+	top: 50%;
+	border-top-width: 1px;
+	margin-top: 2px;
+}
+.su-divider-style-2 span.divider-left:before, .su-divider-style-2 span.divider-right:before, 
+.su-divider-style-4 span.divider-left:before, .su-divider-style-4 span.divider-right:before,
+.su-divider-style-6 span.divider-left:before, .su-divider-style-6 span.divider-right:before {margin-top: -2px;}
+
+.su-divider-style-2 span.divider-left:before, .su-divider-style-2 span.divider-right:before{border-top-style: solid;}
+.su-divider-style-2 span.divider-left:after, .su-divider-style-2 span.divider-right:after{border-top-style: solid;}
+
+.su-divider-style-4 span.divider-left:before, .su-divider-style-4 span.divider-right:before{border-top-style: dashed;}
+.su-divider-style-4 span.divider-left:after, .su-divider-style-4 span.divider-right:after{border-top-style: dashed;}
+
+.su-divider-style-6 span.divider-left:before, .su-divider-style-6 span.divider-right:before{border-top-style: dotted;}
+.su-divider-style-6 span.divider-left:after, .su-divider-style-6 span.divider-right:after{border-top-style: dotted;}
+
+.su-divider.su-divider-align-left {margin-left: 0 !important;}
+.su-divider.su-divider-align-right {margin-right: 0 !important;}
+
+.su-divider-style-7 span.divider-left, .su-divider-style-7 span.divider-right {
+	display: block;
+	width: 100%;
+	background-size: 6px 6px;
+	width: 12000px;
+	height: 4px;
+	position: absolute;
+	top: 50%;
+	margin-top: -2px;
+
+}
+/*.su-divider-align-left .divider-left, 
+.su-divider-align-right .divider-right {
+	display: none;
+}*/
+
+.su-divider-style-7 span.divider-left {
+	right: 100%;
+}
+
+.su-divider-style-7 span.divider-right {
+	left: 100%;
+}
+.su-divider-style-7 span.divider-right:before, .su-divider-style-7 span.divider-left:before {
+	display: none;
+}
+
+.su-divider-style-7.su-icon-style-3 > span {
+	border-style: solid;
+}
+
+.su-divider-ffw {
+	overflow: visible !important;
+}
+
+
+
+/* 3rd party style fix */
+
+.t3-content .su-divider i {
+	-webkit-box-sizing: initial !important;
+	-moz-box-sizing: initial !important;
+	box-sizing: initial !important;
+}

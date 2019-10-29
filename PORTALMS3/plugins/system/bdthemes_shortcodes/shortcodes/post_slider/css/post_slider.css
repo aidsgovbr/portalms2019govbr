@@ -1,0 +1,184 @@
+.su-post-slider-slides {
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.su-post-slider-slides .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.su-post-slider-slides .owl-nav [class*='owl-']:hover {
+  color: #5bb300;
+  text-decoration: none;
+}
+.su-post-slider-slides .owl-nav .disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.su-post-slider-slides .owl-dots .owl-dot {
+  display: inline-block;
+}
+.su-post-slider-slides .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 20px 5px 5px 5px;
+  background: #d6d6d6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  -webkit-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  -webkit-border-radius: 30px;
+}
+.su-post-slider-slides .owl-dots .owl-dot.active span, .su-post-slider-slides .owl-dots .owl-dot:hover span {
+  background: #5bb300;
+}
+/* L/R arrows */
+.su-post-slider .su-post-slider-slides .owl-nav [class*='owl-'] {
+    width: 26px;
+    height: 48px;
+    line-height: 46px;
+    margin: 0;
+    overflow: initial;
+    display: inline-block;
+    position: absolute;
+}
+.su-post-slider-slides .owl-prev { left: 0; }
+.su-post-slider-slides .owl-next { right: 0; }
+.su-post-slider .owl-nav {
+    position: absolute;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    right: 0;
+    top: -60px;
+    width: 70px;
+    height: 48px;
+    overflow: hidden;
+}
+.su-post-slider .owl-dots {
+    position: absolute;
+    right: 80px;
+    top: -40px;
+}
+.su-post-slider-slides .owl-prev:before,
+.su-post-slider-slides .owl-next:before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size: 12px;
+    width: 100%;
+    display: inline-block;
+}
+.su-post-slider-slides .owl-prev:after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background: #dddddd;
+    position: absolute;
+    right: -10px;
+    top: 14px;
+    z-index: 1;
+}
+.su-post-slider-slides .owl-prev:before {
+  content: "\f060";
+  text-align: right;
+}
+.su-post-slider-slides .owl-next:before {
+  content: "\f061";
+  text-align: left;
+}
+.su-post-slider-image {
+    position: relative;
+    width: 50%;
+}
+.su-post-slider .post-slider-category {
+  float: left;
+}
+.su-post-slider .post-slider-view-more {
+  float: right;
+}
+.su-post-slider .post-slider-category,
+.su-post-slider .post-slider-view-more {
+  display: inline-block;
+  color: #555555;
+  font-weight: 900;
+}
+/*=======================
+    Caption style
+=======================*/
+.su-post-slider-caption {
+    padding: 5px 20px 0;
+    width: 50%;
+}
+.su-post-slider-item-text {
+    margin: 15px 0;
+}
+.su-post-slider-slide-title {
+    margin: 0;
+    font-weight: 900;
+    font-size: 26px;
+    -webkit-transition: all .2s linear;
+    transition: all .4s linear;
+    letter-spacing: 1px;
+}
+.su-post-slider-slide-title a {
+    color: #333333;
+}
+.su-post-slider .owl-nav [class*='owl-'],
+.su-post-slider a {
+    -webkit-transition: all .25s;
+    transition: all .25s;
+}
+.su-post-slider a {text-decoration: none !important;}
+.su-post-slider .su-cdate {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: #5bb300;
+    margin-bottom: 10px;
+}
+.su-post-slider .su-cdate span {
+    font-size: 38px;
+    font-weight: 900;
+}
+.su-post-slider-slide {
+    display: flex;
+}
+.su-post-slider.su-post-slider-style-dark .owl-nav [class*='owl-'],
+.su-post-slider.su-post-slider-style-dark .su-post-slider-item-text,
+.su-post-slider.su-post-slider-style-dark .post-slider-category,
+.su-post-slider.su-post-slider-style-dark a {
+    color: #ffffff;
+}
+.su-post-slider.su-post-slider-style-light .su-post-slider-slides .owl-nav,
+.su-post-slider.su-post-slider-style-light .su-post-slider-slides {
+    background: #ffffff;
+}
+.su-post-slider.su-post-slider-style-dark .su-post-slider-slides .owl-nav,
+.su-post-slider.su-post-slider-style-dark .su-post-slider-slides {
+    background: transparent;
+}
+.su-post-slider .owl-nav [class*='owl-']:hover,
+.su-post-slider a:hover {
+    color:#5bb300;
+}
+@media (max-width: 767px) {
+    .su-post-slider .su-post-slider-slide {
+        display: block;
+    }
+    .su-post-slider-image,
+    .su-post-slider-caption {
+        width: 100%;
+    }
+    .su-post-slider-caption {
+        padding: 30px 30px 0 0;
+    }
+    .su-post-slider .owl-dots {
+        display: none;
+    }
+}
+
+

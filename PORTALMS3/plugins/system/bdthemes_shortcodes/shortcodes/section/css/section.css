@@ -1,0 +1,64 @@
+.su-section-wrapper {
+	position: relative;
+}
+.su-section {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background-position: top center;
+	background-repeat: repeat;
+	background-color: #FFF;
+	background-attachment: scroll;
+	background-size: cover;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+}
+.su-section-overlay {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 2;
+}
+.su-sp-transition {
+	-webkit-transition: background-position 1s cubic-bezier(0, 0, 0, 0.93);
+	-moz-transition: background-position 1s cubic-bezier(0, 0, 0, 0.93);
+	-ms-transition: background-position 1s cubic-bezier(0, 0, 0, 0.93);
+	-o-transition: background-position 1s cubic-bezier(0, 0, 0, 0.93);
+	transition: background-position 1s cubic-bezier(0, 0, 0, 0.93);
+}
+.su-section-content {
+	max-width: 90%;
+	margin: 0 auto;
+	position: relative;
+	z-index: 3;
+	padding: 30px 10px;
+}
+.su-section-forcefullwidth {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+.su-section-content h1,
+.su-section-content h2,
+.su-section-content h3,
+.su-section-content h4,
+.su-section-content h5,
+.su-section-content h6 { 
+	color: inherit;
+}
+
+.su-section-video {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+}
+.su-section.su-section-clickable {
+  cursor: pointer;
+}

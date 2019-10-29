@@ -1,0 +1,24 @@
+name: Load Module
+slug: bdt_load_module
+groups: Shortcode Ultimate
+form:
+  general:
+    - name: id
+      label: Module ID
+
+    - name: module_name
+      label: Module Name
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

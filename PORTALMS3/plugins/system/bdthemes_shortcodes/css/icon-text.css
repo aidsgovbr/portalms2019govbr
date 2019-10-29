@@ -1,0 +1,33 @@
+/*		Icon text
+---------------------------------------------------------------*/
+
+.su-icon-text {
+	position: relative;
+	margin-bottom: 1.5em;
+}
+.su-icon-text-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.su-icon-text-icon i {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 1;
+}
+.su-icon-text-icon img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}

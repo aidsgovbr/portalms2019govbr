@@ -1,0 +1,82 @@
+name: Social Feed
+slug: bdt_social_feed
+groups: Shortcode Ultimate
+
+form:
+  general:
+    - name: facebook
+      label: Show Facebook
+      type: switch
+      value: true
+
+    - name: twitter
+      label: Show Twitter
+      type: switch
+      value: true
+
+    - name: instagram
+      label: Show Instagram
+      type: switch
+      value: true
+
+    - name: vkontakte
+      label: Show VKontakte
+      type: switch
+      value: true
+
+    - name: pinterest
+      label: Show Pinterest
+      type: switch
+      value: true
+
+    - name: order
+
+    - name: active_tab
+      label: Active Tab
+      type: select
+      options:
+        facebook: Facebook
+        twitter: Twitter
+        instagram: Instagram
+        vkontakte: VKontakte
+        pinterest: Pinterest
+      value: facebook
+
+    - name: link_text
+      label: Link Text
+      
+    - name: limit
+      help: Maximum number of item that you want to display
+      type: slider
+      min: 4
+      max: 40
+      value: 10
+
+  styles:
+    - name: width
+      value: 320
+     
+    - name: height
+      value: 480
+
+    - name: position
+      type: select
+      options:
+        default: Default
+        left: Left
+        right: Right
+      value: default
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

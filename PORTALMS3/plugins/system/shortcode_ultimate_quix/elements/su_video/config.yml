@@ -1,0 +1,63 @@
+name: Video
+slug: sdsdbdt_video
+groups: Shortcode Ultimate
+form:
+  general:
+    - name: url
+      help: URL to mp4/flv video-file
+      label: URL
+
+    - name: poster
+      type: image
+
+    - name: title
+
+    - name: controls
+      type: switch
+      value: true
+
+    - name: autoplay
+      type: switch
+
+    - name: loop
+      type: switch
+
+    - name: volume
+      type: slider
+      value: 50
+    
+  Style:
+    - name: style
+      type: select
+      value: dark
+      options:
+        dark: Dark
+        light: Light
+
+    - name: width
+      type: slider
+      min: 200
+      max: 1600
+      step: 5
+      value: 600
+
+    - name: height
+      type: slider
+      min: 200
+      max: 1600
+      step: 5
+      value: 300
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

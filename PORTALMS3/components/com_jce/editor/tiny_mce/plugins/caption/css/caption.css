@@ -1,0 +1,64 @@
+/**
+* @package JCE Captions
+* @copyright Copyright (C) 2005 - 2010 Ryan Demmer. All rights reserved.
+* @license http://www.gnu.org/copyleft/gpl.html GNU/GPL, see licence.txt
+* JCE Captions is free software. This version may have been modified pursuant
+* to the GNU General Public License, and as distributed it includes or
+* is derivative of works licensed under the GNU General Public License or
+* other free or open source software licenses.
+*/
+.ui-tabs-panel {
+    height: 285px;
+    overflow: auto;
+}
+div#preview fieldset {
+    background: white;
+}
+#margin_top, #margin_right, #margin_bottom, #margin_left, 
+#padding_top, #padding_right, #padding_bottom, #padding_left, 
+#text_padding_top, #text_padding_right, #text_padding_bottom, #text_padding_left,
+#text_margin_top, #text_margin_right, #text_margin_bottom, #text_margin_left {
+    margin: 0px 5px;
+    text-align: center;
+}
+#border_style {
+    margin: 0 0 0 5px;
+}
+#border {
+    margin-left: 0px;
+}
+#border_width {
+    width : 80px;
+}
+#text_color {
+    margin-right: 5px;
+}
+span#caption {
+    border: 1px dotted #cc0000;
+    position: relative;
+    display: inline-block;
+}
+span#caption span#caption_text {
+    margin: 0;
+    padding: 0;
+}
+span#caption_text {
+    display: block;
+    position: relative;
+}
+#text_color_pickcontainer, #bgcolor_pickcontainer, #text_bgcolor_pickcontainer, #border_color_pickcontainer {
+    width: 20px;
+    text-align: left;
+}
+#classes, #text_classes, #text {
+    width: 99%;
+}
+label[for^="margin_"], label[for^="padding_"], label[for^="border_"], label[for^="text_margin_"], label[for^="text_padding_"], label[for^="text_border_"] {
+    min-width: 40px;
+}
+legend label {
+    min-width: 40px;
+}
+#margin_check + label, #padding_check + label, #text_margin_check + label, #text_padding_check + label {
+    min-width: 40px;
+}

@@ -1,0 +1,119 @@
+name: Heading
+slug: bdt_heading
+groups: ["Shortcode Ultimate", "content"]
+form:
+  general:
+    - name: heading
+      label: Heading Tag
+      type: select
+      value: h3
+      options:
+        h1: H1
+        h2: H2
+        h3: H3
+        h4: H4
+        h5: H5
+        h6: H6
+
+    - name: content
+      label: Heading Text
+      value: This is a heading text
+
+  styles:
+    - name: style
+      type: select
+      value: 1
+      options:
+        default: Default
+        1: Style 1
+        2: Style 2
+        3: Style 3
+        4: Style 4
+        5: Style 5
+        6: Style 6
+        7: Style 7
+        8: Style 8
+        9: Style 9
+        10: Style 10
+        modern-1-dark: Modern 1 dark
+        modern-1-light: Modern 1 Light
+        modern-1-blue: Modern 1 Blue
+        modern-1-orange: Modern 1 Orange
+        modern-1-violet: Modern 1 Violet
+        modern-2-dark: Modern 2 Dark
+        modern-2-light: Modern 2 Light
+        modern-2-blue: Modern 2 Blue
+        modern-2-orange: Modern 2 Orange
+        modern-2-violet: Modern 2 Violet
+        line-dark: Line Dark
+        line-light: Line Light
+        line-blue: Line Blue
+        line-orange: Line Orange
+        line-violet: Line Violet
+        dotted-line-dark: Dotted line dark
+        dotted-line-light: Dotted Line Light
+        dotted-line-blue: Dotted line Blue
+        dotted-line-orange: Dotted Line Orange
+        dotted-line-violet: Dotted Line Violet
+        flat-dark: Flat Dark
+        flat-light: Flat Light
+        flat-blue: Flat Blue
+        flat-green: Flat Green
+        small-line: Small Line
+        fancy: Fancy
+
+    - name: style_color
+      type: color
+      label: Style Color
+      value: #dddddd
+
+    - name: color
+      type: color
+      label: Text Color
+      value: #666666
+
+    - name: align
+      type: select
+      value: center
+      options:
+        left: Left
+        right: Right
+        center: Center
+
+    - name: width
+      help: set the width in % to your heading. The possible value should be 50 to 100.
+      label: Width
+      type: slider
+      min: 50
+      max: 100
+      step: 5
+      value: 100
+
+    - name: size
+      type: slider
+      min: 7
+      max: 100
+      step: 1
+      value: 16
+      label: Size
+
+    - name: margin
+      help: If you need to heading bottom margin so, select from here. It's applied only heading bottom as pixel units.
+      type: slider
+      max: 200
+      step: 5
+      value: 20
+    
+  Animation:
+    - name: animation
+      label: Page Loading Animation
+      type: select
+      value: fadeIn
+      options:
+        fadeIn: Fade In
+        fadeInLeft: Left To Right
+        fadeInRight: Right To Left
+        fadeInUp: Bottom To Top
+        fadeInDown: Top To Bottom
+        zoomIn: Zoom In
+        0: No Animation

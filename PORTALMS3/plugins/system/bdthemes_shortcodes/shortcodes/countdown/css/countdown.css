@@ -1,0 +1,117 @@
+.su-countdown-wrapper {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.su-countdown-content .su-cd-timer span > span:nth-child(1) {
+	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+	font-weight: bold;
+}
+
+.su-countdown-left {
+	text-align: left;
+}
+.su-countdown-right {
+	text-align: right;
+}
+.su-countdown-center {
+	text-align: center;
+}
+.su-countdown-wrapper .su-cd-day-data {color: #444444;}
+/*text style*/
+.su-countdown-text-bottom .su-countdown-content .su-cd-timer > span {
+	display: inline-block;
+	text-align: center;
+}
+
+.su-countdown-text-bottom .su-countdown-content .su-cd-timer > span > span:nth-child(1){
+	display: block;
+}
+.su-countdown-text-bottom .su-countdown-content .su-cd-timer > span span[class*="text"] {
+	line-height: normal !important;
+}
+
+/*divider style*/
+.su-cd-divider-vertical_line .su-countdown-content .su-cd-timer > span, 
+.su-cd-divider-comma .su-countdown-content .su-cd-timer > span,
+.su-cd-divider-colon .su-countdown-content .su-cd-timer > span, 
+.su-cd-divider-dot .su-countdown-content .su-cd-timer > span,
+.su-cd-divider-horizontal_line .su-countdown-content .su-cd-timer > span {
+	position: relative;
+	margin-right: 25px;
+	padding-right: 25px;
+}
+
+.su-countdown-content .su-cd-timer > span:last-child {
+	margin-right: 0;
+	padding-right: 0;
+}
+.su-countdown-content .su-cd-timer > span:last-child::after {
+	display: none;
+}
+
+/*spacer divider*/
+.su-cd-divider-spacer .su-countdown-content .su-cd-timer > span {
+	margin-right: 25px;
+}
+.su-cd-divider-spacer .su-countdown-content .su-cd-timer > span:last-child {
+	margin-right: 0;
+}
+
+
+/*comma divider*/
+div[class*="divider"] .su-countdown-content .su-cd-timer > span:after {
+	position: absolute;
+	font-weight: bold;
+}
+
+.su-cd-divider-comma .su-countdown-content .su-cd-timer > span:after {
+	content: ',';
+	right: -10px;
+	bottom: 0px;
+
+}
+/*dot divider*/
+.su-cd-divider-dot .su-countdown-content .su-cd-timer > span:after {
+	content: '.';
+	right: -10px;
+	bottom: -6px;
+
+}
+
+/*colon divider*/
+.su-cd-divider-colon .su-countdown-content .su-cd-timer > span:after {
+	content: ':';
+	bottom: 25% !important;
+	right: -10px;
+	margin-bottom: -3%;
+}
+
+/*vertical line*/
+.su-cd-divider-vertical_line .su-countdown-content .su-cd-timer > span:after {
+	position: absolute;
+	content: '';
+	right: 3px;
+	top: 0;
+	height: 100%;
+	width: 1px;
+	background: rgba(0,0,0,0.1);
+}
+
+/*horizontal line*/
+.su-cd-divider-horizontal_line .su-countdown-content .su-cd-timer > span:after {
+	content: '';
+	height: 2px;
+	width: 15px;
+	right: -10px;
+	background: rgba(0,0,0,0.1);
+	bottom: 25% !important;
+	margin-bottom: 2%;
+}
+.su-cdem {
+	display: none;
+}
+.cdemshow {
+	display: block;
+}
