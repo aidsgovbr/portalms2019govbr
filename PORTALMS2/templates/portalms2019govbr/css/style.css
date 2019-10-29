@@ -1200,6 +1200,7 @@ div#viewlet-below-content {
 	position: relative;
 	padding: 20px 0;
 	border-top: .5px solid #ccc;
+	border-bottom: .5px solid #ccc;
 	max-width: 1152px;
 	clear: both;
 	margin-bottom: 100px;
@@ -1208,7 +1209,7 @@ div#viewlet-below-content {
 .voltar-topo {
 	position: absolute;
 	right: 0;
-	top: 30px;
+	top: 10px;
 }
 
 .voltar-topo a {
