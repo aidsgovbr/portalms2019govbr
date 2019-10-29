@@ -1,4 +1,4 @@
-﻿/*! 
+﻿/*! PORTALMS2
  * 2019 v1.0.0 
  * Copyright 2019.
  */
@@ -126,6 +126,7 @@ a {
 
 a:hover {
 	color: #0094ff;
+	/*text-decoration:none;*/
 }
 h1,
 h2,
@@ -1868,7 +1869,75 @@ body.capa-azul .documentFirstHeading {
 }
 
 
+
+
+
+
 /*INTERNA*/
+
+
+/*LISTAGEM ----------------------------------- */
+#interna .conteudo-interna .tileContent .tileImage{
+	float:right;	
+	margin: 0 1em 0.5em 1em;
+}
+
+#interna .conteudo-interna .tileContent .subtitle{
+    font-size: 16px;
+    color: #555;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: inherit;
+}
+
+#interna .conteudo-interna .tileContent h2.tileHeadline {
+   font-weight: 600;
+   font-family: inherit;
+   font-size: 24px;
+   margin-bottom: 0;
+}
+
+#interna .conteudo-interna .tileContent h2.tileHeadline a {
+    color: #0c326f!important;
+	font-weight: 600;
+}
+
+#interna .conteudo-interna .tileContent .tileBody .description, 
+#interna .conteudo-interna .tileContent .tileBody .description p{
+	font-size: 21px;
+    line-height: 30px;
+}
+
+#interna .content-core .documentByLine {
+	border-top:none !important;
+	border-color:#ccc;	
+}
+
+#viewlet-below-content-title .documentByLine {
+    font-size:16px;
+}
+
+#interna .content-core .documentByLine{
+	color: #a6a6a6;
+    font-family: inherit!important;
+    text-align: left;
+    font-size: 17px;
+	text-transform:capitalize;
+}
+
+#interna .content-core .documentByLine .hiddenStructure {
+	display:none;	
+}
+
+#interna .conteudo-interna .documentFirstHeading {
+	font-family: inherit!important;
+	margin:0;
+	padding: 15px 0 16px 0; 
+	font-size:26px;
+	font-weight:600;
+}
+
+/*LISTAGEM*/
 
 
 /* PAGINAÇÃO */
