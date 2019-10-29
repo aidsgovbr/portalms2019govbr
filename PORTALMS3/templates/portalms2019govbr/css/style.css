@@ -1,7 +1,154 @@
-/*! PORTALMS3
+﻿/*! PORTALMS3
  * 2019 v1.0.0 
  * Copyright 2019.
  */
+
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-100.eot);
+	src: url(../fonts/rawline-100.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-100.woff2) format("woff2"), url(../fonts/rawline-100.woff) format("woff"), url(../fonts/rawline-100.ttf) format("truetype"), url(../fonts/rawline-100.svg) format("svg");
+	font-weight: 100;
+	font-style: normal
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-100i.eot);
+	src: url(../fonts/rawline-100i.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-100i.woff2) format("woff2"), url(../fonts/rawline-100i.woff) format("woff"), url(../fonts/rawline-100i.ttf) format("truetype"), url(../fonts/rawline-100i.svg) format("svg");
+	font-weight: 100;
+	font-style: italic
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-200.eot);
+	src: url(../fonts/rawline-200.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-200.woff2) format("woff2"), url(../fonts/rawline-200.woff) format("woff"), url(../fonts/rawline-200.ttf) format("truetype"), url(../fonts/rawline-200.svg) format("svg");
+	font-weight: 200;
+	font-style: normal
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-200i.eot);
+	src: url(../fonts/rawline-200i.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-200i.woff2) format("woff2"), url(../fonts/rawline-200i.woff) format("woff"), url(../fonts/rawline-200i.ttf) format("truetype"), url(../fonts/rawline-200i.svg) format("svg");
+	font-weight: 200;
+	font-style: italic
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-300-.eot);
+	src: url(../fonts/rawline-300-.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-300.woff2) format("woff2"), url(../fonts/rawline-300.woff) format("woff"), url(../fonts/rawline-300.ttf) format("truetype"), url(../fonts/rawline-300.svg) format("svg");
+	font-weight: 300;
+	font-style: normal
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-300i.eot);
+	src: url(../fonts/rawline-300i.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-300i.woff2) format("woff2"), url(../fonts/rawline-300i.woff) format("woff"), url(../fonts/rawline-300i.ttf) format("truetype"), url(../fonts/rawline-300i.svg) format("svg");
+	font-weight: 300;
+	font-style: italic
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-400.eot);
+	src: url(../fonts/rawline-400.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-400.woff2) format("woff2"), url(../fonts/rawline-400.woff) format("woff"), url(../fonts/rawline-400.ttf) format("truetype"), url(../fonts/rawline-400.svg) format("svg");
+	font-weight: 400;
+	font-style: normal
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-400i.eot);
+	src: url(../fonts/rawline-400i.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-400i.woff2) format("woff2"), url(../fonts/rawline-400i.woff) format("woff"), url(../fonts/rawline-400i.ttf) format("truetype"), url(../fonts/rawline-400i.svg) format("svg");
+	font-weight: 400;
+	font-style: italic
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-500.eot);
+	src: url(../fonts/rawline-500.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-500.woff2) format("woff2"), url(../fonts/rawline-500.woff) format("woff"), url(../fonts/rawline-500.ttf) format("truetype"), url(../fonts/rawline-500.svg) format("svg");
+	font-weight: 500;
+	font-style: normal
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-500i.eot);
+	src: url(../fonts/rawline-500i.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-500i.woff2) format("woff2"), url(../fonts/rawline-500i.woff) format("woff"), url(../fonts/rawline-500i.ttf) format("truetype"), url(../fonts/rawline-500i.svg) format("svg");
+	font-weight: 500;
+	font-style: italic
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-600.eot);
+	src: url(../fonts/rawline-600.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-600.woff2) format("woff2"), url(../fonts/rawline-600.woff) format("woff"), url(../fonts/rawline-600.ttf) format("truetype"), url(../fonts/rawline-600.svg) format("svg");
+	font-weight: 600;
+	font-style: normal
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-600i.eot);
+	src: url(../fonts/rawline-600i.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-600i.woff2) format("woff2"), url(../fonts/rawline-600i.woff) format("woff"), url(../fonts/rawline-600i.ttf) format("truetype"), url(../fonts/rawline-600i.svg) format("svg");
+	font-weight: 600;
+	font-style: italic
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-700.eot);
+	src: url(../fonts/rawline-700.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-700.woff2) format("woff2"), url(../fonts/rawline-700.woff) format("woff"), url(../fonts/rawline-700.ttf) format("truetype"), url(../fonts/rawline-700.svg) format("svg");
+	font-weight: 700;
+	font-style: normal
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-700i.eot);
+	src: url(../fonts/rawline-700i.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-700i.woff2) format("woff2"), url(../fonts/rawline-700i.woff) format("woff"), url(../fonts/rawline-700i.ttf) format("truetype"), url(../fonts/rawline-700i.svg) format("svg");
+	font-weight: 700;
+	font-style: italic
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-800.eot);
+	src: url(../fonts/rawline-800.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-800.woff2) format("woff2"), url(../fonts/rawline-800.woff) format("woff"), url(../fonts/rawline-800.ttf) format("truetype"), url(../fonts/rawline-800.svg) format("svg");
+	font-weight: 800;
+	font-style: normal
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-800i.eot);
+	src: url(../fonts/rawline-800i.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-800i.woff2) format("woff2"), url(../fonts/rawline-800i.woff) format("woff"), url(../fonts/rawline-800i.ttf) format("truetype"), url(../fonts/rawline-800i.svg) format("svg");
+	font-weight: 800;
+	font-style: italic
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-900.eot);
+	src: url(../fonts/rawline-900.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-900.woff2) format("woff2"), url(../fonts/rawline-900.woff) format("woff"), url(../fonts/rawline-900.ttf) format("truetype"), url(../fonts/rawline-900.svg) format("svg");
+	font-weight: 900;
+	font-style: normal
+}
+
+@font-face {
+	font-family: rawline;
+	src: url(../fonts/rawline-900i.eot);
+	src: url(../fonts/rawline-900i.eot?#iefix) format("embedded-opentype"), url(../fonts/rawline-900i.woff2) format("woff2"), url(../fonts/rawline-900i.woff) format("woff"), url(../fonts/rawline-900i.ttf) format("truetype"), url(../fonts/rawline-900i.svg) format("svg");
+	font-weight: 900;
+	font-style: italic
+}
+
+
 
 ::selection {
 	background: #2969BD;
@@ -1307,6 +1454,10 @@ div#viewlet-below-content {
 	line-height: 1.4;
 }
 
+.footer .box-menu.menu-ativo a:link {
+    text-decoration: none;
+}
+
 .footer .box-menu .container:before {
 	display: none;
 }
@@ -1450,6 +1601,10 @@ span.separator {
 
 #interna .box-menu {
 	top: 8.7rem;
+}
+
+#interna .box-menu.menu-ativo {
+    top:65px;
 }
 
 #interna .super-destaque {
@@ -3806,3 +3961,122 @@ body .ui-datepicker .ui-state-default {
 #barra-brasil {
 	height: 31px !important;
 }
+
+/*
+* custom css overrides from
+* http://saude.gov.br/templates/padraogoverno01/css/custom2.css?version=4.2
+*
+*/
+
+/***BOX DESTAQUE***/
+
+.su-note.su-note-warning.su-note-style4 {
+    background: #eee;
+    padding: 1em;
+    border-left: 1em solid #ccc;
+    clear: both;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.875rem;
+    color: #282828;
+    font-family: rawline,sans-serif;
+}
+
+/***ACCORDION***/
+
+/***TABS***/
+
+.su-tabs {
+    margin: 0 0 1.5em 0;
+    padding: 40px;
+    display: flex;
+    border-radius: 3px;
+    background: #f8f8f8;
+}
+
+.su-tabs-align-left .su-tabs-nav {
+    width: 65px;
+    z-index: 3;
+}
+
+/***PERGUNTAS FREQUENTES***/
+
+/***CONTEUDO RELACIONADO***/
+
+#content.internas h2, {
+    margin-bottom: .8em;
+    margin-top: .8em;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0 12px;
+    white-space: nowrap;
+    color: #555;
+}
+
+main #content.internas blockquote,
+main #content.internas .itens-relacionados {
+	/* border: none;
+	background: #EEEFF2;*/
+	padding: 0 !important;
+	/* border: 1px solid #cfcdcd !important;
+	border-radius: 3px; */
+	float: left;
+	margin-left: 0 !important;
+}
+main #content.internas blockquote.pull-right {
+	float: right;
+	margin-right: 0 !important;
+	margin-left: 1.6em!important;
+}
+#content.internas blockquote span {
+    align-items: center;
+    -webkit-box-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    margin: 32px 0 24px;
+}
+
+#content.internas blockquote span:after {
+    background: #ccc;
+    content: "";
+    height: 1px;
+    width: 100%;
+}
+
+#content.internas blockquote span:before {
+    background: #ccc;
+    content: "";
+    height: 1px;
+    width: 100%;
+}
+
+#content.internas blockquote ul,
+#content.internas .itens-relacionados ul {
+	margin: 0 !important;
+	padding: 0;	
+}
+
+#content.internas blockquote ul li, #content.internas .itens-relacionados ul li {
+    list-style: none !important;
+    /* margin-left: 0!important; */
+    /* padding: 7px 8px 5px 10px; */
+    /* line-height: 1em !important; */
+    /* border-top: 1px solid #cfcdcd !important; */
+	color: #0c326f!important;
+    font-size: 20px!important;
+}
+#content.internas blockquote ul li a
+ {
+	color: #355075;
+	font-size: 0.78em !important;
+	letter-spacing: 0px !important;
+}
+#content.internas blockquote ul li a em {
+	font-style: normal !important;
+}
+
+
+/***SAIBA MAIS***/
