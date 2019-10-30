@@ -4503,20 +4503,20 @@ html .ui-button.ui-state-disabled:active {
 
 .su-tabs-style-flat-blue .su-tabs-nav span {
 	margin: 0;
-	background: #71CDEC;
-	color: #D4F4FF;
+	background: #ededed;
+	color: #555;
 	font-weight: bold;
 }
 
 .su-tabs-style-flat-blue .su-tabs-nav span:hover {
-	background: #71CDEC;
+	background: #2670e8;
 	color: #fff;
 }
 
 .su-tabs-style-flat-blue .su-tabs-nav span.su-tabs-current {
 	padding-right: 20px;
 	padding-left: 20px;
-	background: #1DABDA;
+	background: #2670e8;
 	color: #fff;
 }
 
@@ -5175,6 +5175,7 @@ main #content.internas blockquote.pull-right {
     border-left: 0px!important;
     padding: 10px;
     font-weight: bold;
+	font-family: rawline,sans-serif!important;
 }
 
 a.link2-egov {
@@ -5196,6 +5197,7 @@ a.link2-egov {
     font-size: 24px;
     font-weight: 600;
     color: #0c326f!important;
+	font-family: rawline,sans-serif!important;
 }
 
 a.link2-egov:after {
@@ -5209,4 +5211,5 @@ a.link2-egov:after {
 	-ms-transform: rotate(50deg);
 	transform: rotate(50deg);
 	font-weight: 900;
+	font-size: 16px!important;
 }
