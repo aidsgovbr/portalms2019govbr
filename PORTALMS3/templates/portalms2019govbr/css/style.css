@@ -5114,7 +5114,31 @@ html .ui-button.ui-state-disabled:active {
 
 /***CONTEUDO RELACIONADO***/
 
-#content.internas h2 {
+.conteudo-interna blockquote span {
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 auto;
+    width: auto;
+    display: table;
+	margin-bottom: 35px;
+}
+
+.conteudo-interna blockquote span:after {
+	background: #ccc;
+	content: "";
+	height: 1px;
+	width: 100%;
+}
+
+.conteudo-interna blockquote span:before {
+	background: #ccc;
+	content: "";
+	height: 1px;
+	width: 100%;
+}
+
+#conteudo-interna h2 {
 	margin-bottom: .8em;
 	margin-top: .8em;
 	font-size: 16px;
@@ -5125,8 +5149,8 @@ html .ui-button.ui-state-disabled:active {
 	color: #555;
 }
 
-main #content.internas blockquote,
-main #content.internas .itens-relacionados {
+main #conteudo-interna blockquote,
+main #conteudo-interna .itens-relacionados {
 	/* border: none;
 	background: #EEEFF2;*/
 	padding: 0 !important;
@@ -5136,60 +5160,47 @@ main #content.internas .itens-relacionados {
 	margin-left: 0 !important;
 }
 
-main #content.internas blockquote.pull-right {
+main #conteudo-interna blockquote.pull-right {
 	float: right;
 	margin-right: 0 !important;
 	margin-left: 1.6em!important;
 }
 
-#content.internas blockquote span {
-	align-items: center;
-	-webkit-box-align: center;
-	display: flex;
-	justify-content: center;
-	margin-bottom: 35px;
-	text-transform: uppercase;
-	margin: 32px 0 24px;
-}
 
-#content.internas blockquote span:after {
-	background: #ccc;
-	content: "";
-	height: 1px;
-	width: 100%;
-}
 
-#content.internas blockquote span:before {
-	background: #ccc;
-	content: "";
-	height: 1px;
-	width: 100%;
-}
-
-#content.internas blockquote ul,
-#content.internas .itens-relacionados ul {
+#conteudo-interna blockquote ul,
+#conteudo-interna .itens-relacionados ul {
 	margin: 0 !important;
 	padding: 0;
 }
 
-#content.internas blockquote ul li,
-#content.internas .itens-relacionados ul li {
-	list-style: none !important;
-	/* margin-left: 0!important; */
-	/* padding: 7px 8px 5px 10px; */
-	/* line-height: 1em !important; */
-	/* border-top: 1px solid #cfcdcd !important; */
-	color: #0c326f!important;
-	font-size: 20px!important;
+#interna .conteudo-interna blockquote ul {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    margin: auto;
+    list-style: none !important;
+    color: #0c326f!important;
+
 }
 
-#content.internas blockquote ul li a {
+#interna .conteudo-interna blockquote ul a {
+    color: #0c326f!important;
+	font-size: 20px;
+    font-weight: 600;
+}
+
+#interna .conteudo-interna blockquote ul li {
+    margin-bottom: 16px;
+}
+
+#conteudo-interna blockquote ul li a {
 	color: #355075;
 	font-size: 0.78em !important;
 	letter-spacing: 0px !important;
 }
 
-#content.internas blockquote ul li a em {
+#conteudo-interna blockquote ul li a em {
 	font-style: normal !important;
 }
 
