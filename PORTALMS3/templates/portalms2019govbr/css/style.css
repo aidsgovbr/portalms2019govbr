@@ -5274,6 +5274,7 @@ main #conteudo-interna blockquote.pull-right {
 }
 .conteudo-relacionado ul li {
     margin-bottom: 16px;
+	list-style: none;
 }
 /***SAIBA MAIS***/
 
