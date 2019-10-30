@@ -1677,7 +1677,7 @@ span.separator {
 	padding-left: 1rem;
 	padding-right: 1rem;
 	width: 70%;
-    margin: auto;
+	margin: auto;
 }
 
 #interna .conteudo-interna ul ul {
@@ -2157,25 +2157,23 @@ body.capa-azul .documentFirstHeading {
 .pagination>li>span:focus,
 .pagination>li>span:hover {
 	z-index: 2;
-    color: #2670e8;
+	color: #2670e8;
 	text-decoration: none;
-	background-color: none !important;
-
 }
 
 a.page-link:hover {
-    background-color: #ffffff;
+	background-color: #ffffff;
 }
 
 .page-item a.page-link:hover {
-    background: #2670e8;
+	background: #2670e8;
 	display: block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    line-height: 32px;
-    text-align: center;
-    color: #fff !important;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	line-height: 32px;
+	text-align: center;
+	color: #fff !important;
 }
 
 .pagination>.disabled>a {
@@ -2215,22 +2213,23 @@ a.page-link:hover {
 	content: " >>";
 	font-size: 12px;
 	float: right;
-    position: relative;
-    bottom: 22px;
-    left: 5px;
+	position: relative;
+	bottom: 22px;
+	left: 5px;
 }
 
 span.icon-previous {
-    position: relative;
-    bottom: 22px;
-    font-weight: bold;
+	position: relative;
+	bottom: 22px;
+	font-weight: bold;
 }
+
 #pagination span.icon-previous::before {
-    content: "<< ";
-    font-size: 12px;
-    float: left;
-    position: relative;
-    top: 25px;
+	content: "<< ";
+	font-size: 12px;
+	float: left;
+	position: relative;
+	top: 25px;
 }
 
 
@@ -5196,6 +5195,8 @@ main #content.internas blockquote.pull-right {
 
 
 /***SAIBA MAIS***/
+
+
 /***
 *
 * add css
@@ -5204,12 +5205,12 @@ main #content.internas blockquote.pull-right {
 ***/
 
 .link2-egov {
-    display: block;
-    background: #EEEEEE;
-    border-left: 0px!important;
-    padding: 10px;
-    font-weight: bold;
-	font-family: rawline,sans-serif!important;
+	display: block;
+	background: #EEEEEE;
+	border-left: 0px!important;
+	padding: 10px;
+	font-weight: bold;
+	font-family: rawline, sans-serif!important;
 }
 
 a.link2-egov {
@@ -5228,10 +5229,10 @@ a.link2-egov {
 	background-color: #f8f8f8;
 	-webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
 	display: block;
-    font-size: 24px;
-    font-weight: 600;
-    color: #0c326f!important;
-	font-family: rawline,sans-serif!important;
+	font-size: 24px;
+	font-weight: 600;
+	color: #0c326f!important;
+	font-family: rawline, sans-serif!important;
 }
 
 a.link2-egov:after {
