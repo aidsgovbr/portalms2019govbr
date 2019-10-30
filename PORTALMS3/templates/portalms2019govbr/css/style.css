@@ -2236,7 +2236,7 @@ span.icon-previous a {
     font-weight: bold;
 }
 
-#pagination span.icon-previous::before a {
+#pagination span.icon-previous:before a {
 	content: "<< ";
 	font-size: 12px;
 	float: left;
@@ -2244,7 +2244,7 @@ span.icon-previous a {
 	top: 25px;
 }
 
-#pagination span.icon-previous::before {
+#pagination span.icon-previous:before {
     content: "<< ";
     font-size: 12px;
     float: left;
@@ -5224,7 +5224,57 @@ main #conteudo-interna blockquote.pull-right {
 	font-style: normal !important;
 }
 
+/***CONTEUDO RELACIONADO gov.br***/
 
+
+.conteudo-interna .conteudo-relacionado .tile-header h2 {
+    padding-bottom: 24px;
+}
+
+.tile-header {
+
+    margin: 32px 0 24px;
+}
+
+.tile-header h2 {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 16px!important;
+    padding: 0 12px;
+    white-space: nowrap;
+}
+
+.tile-header h2:before, .tile-header h2:after {
+    background: #ccc;
+    content: "";
+    height: 1px;
+    width: 100%;
+	margin: 12px!important;
+}
+
+.conteudo-interna .conteudo-relacionado .tile-header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+	padding-top: 10px;
+}
+
+.conteudo-relacionado ul li a {
+    color: #0c326f!important;
+    font-size: 20px;
+    font-weight: 600;
+}
+.conteudo-relacionado ul li {
+    margin-bottom: 16px;
+}
 /***SAIBA MAIS***/
 
 
