@@ -1676,8 +1676,12 @@ span.separator {
 #interna .conteudo-interna ul {
 	padding-left: 1rem;
 	padding-right: 1rem;
-	width: 70%;
-	margin: auto;
+    margin: auto;
+    width: 100%;
+    position: relative;
+    bottom: 23px;
+    background-color: #ffffff;
+    height: 40px;
 }
 
 #interna .conteudo-interna ul ul {
@@ -2108,7 +2112,9 @@ body.capa-azul .documentFirstHeading {
 	width: 100%;
 	text-align: center;
 	text-transform: capitalize;
-	min-height: 100px;
+	/* min-height: 100px; */
+	margin: auto;
+    width: 80%;
 }
 
 #pagination .pagination {
@@ -2214,22 +2220,36 @@ a.page-link:hover {
 	font-size: 12px;
 	float: right;
 	position: relative;
-	bottom: 22px;
+	bottom: 0px;
 	left: 5px;
 }
 
+
+
 span.icon-previous {
-	position: relative;
-	bottom: 22px;
 	font-weight: bold;
 }
 
-#pagination span.icon-previous::before {
+span.icon-previous a {
+    position: relative;
+    bottom: 22px;
+    font-weight: bold;
+}
+
+#pagination span.icon-previous::before a {
 	content: "<< ";
 	font-size: 12px;
 	float: left;
 	position: relative;
 	top: 25px;
+}
+
+#pagination span.icon-previous::before {
+    content: "<< ";
+    font-size: 12px;
+    float: left;
+    position: relative;
+    /* top: 25px; */
 }
 
 
