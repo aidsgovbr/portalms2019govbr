@@ -68,6 +68,7 @@ defined('_JEXEC') or die;
  *
  * @since   3.0
  */
+
 function pagination_list_footer($list)
 {
 	$html = "<div class=\"pagination\">\n";
@@ -87,6 +88,7 @@ function pagination_list_footer($list)
  *
  * @since   3.0
  */
+ 
 function pagination_list_render($list)
 {
 	// Calculate to display range of pages
@@ -112,7 +114,7 @@ function pagination_list_render($list)
 		}
 	}
 	
-	$html = '<ul class="pagination pull-right">';
+	$html = '<ul class="pagination">';
 	//$html .= $list['start']['data'];
 	$html .= $list['previous']['data'];
 
@@ -193,6 +195,7 @@ function pagination_item_active(&$item)
  *
  * @since   3.0
  */
+
 function pagination_item_inactive(&$item)
 {
 	// Check for "Start" item
