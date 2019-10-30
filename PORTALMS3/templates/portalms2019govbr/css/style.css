@@ -4058,6 +4058,37 @@ body .ui-datepicker .ui-state-default {
 /***ACCORDION***/
 
 
+a.accordion-toggle.collapsed {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    padding-left: 50px;
+	color: #333!important;
+}
+
+a.accordion-toggle {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    padding-left: 50px;
+	color: #333!important;
+}
+
+
+
+a.accordion-toggle:before {
+    top: -2px;
+    content: "+";
+    color: #1351b4;
+    position: relative;
+    top: 7px;
+    left: -5px;
+    font-size: 42px;
+    font-weight: 400;
+}
+
 /***TABS
 
 .su-tabs {
