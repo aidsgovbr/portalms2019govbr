@@ -4121,6 +4121,7 @@ html .ui-button.ui-state-disabled:active {
 
 .portalms .ui-accordion-icons .ui-accordion-header a {
 	/* padding-left: 2.2em; */
+	padding-left: 0px!important;
 }
 
 .portalms .ui-accordion .ui-accordion-header a {
@@ -5161,6 +5162,20 @@ main #content.internas blockquote.pull-right {
 
 
 /***SAIBA MAIS***/
+/***
+*
+* add css
+*<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+*
+***/
+
+.link2-egov {
+    display: block;
+    background: #EEEEEE;
+    border-left: 0px!important;
+    padding: 10px;
+    font-weight: bold;
+}
 
 a.link2-egov {
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
@@ -5177,6 +5192,10 @@ a.link2-egov {
 	margin: 10px 1%;
 	background-color: #f8f8f8;
 	-webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
+	display: block;
+    font-size: 24px;
+    font-weight: 600;
+    color: #0c326f!important;
 }
 
 a.link2-egov:after {
