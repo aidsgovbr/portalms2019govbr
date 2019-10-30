@@ -1675,7 +1675,9 @@ span.separator {
 
 #interna .conteudo-interna ul {
 	padding-left: 1rem;
-	padding-right: 1rem
+	padding-right: 1rem;
+	width: 70%;
+    margin: auto;
 }
 
 #interna .conteudo-interna ul ul {
@@ -2105,7 +2107,7 @@ body.capa-azul .documentFirstHeading {
 	clear: both;
 	width: 100%;
 	text-align: center;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	min-height: 100px;
 }
 
@@ -2155,10 +2157,25 @@ body.capa-azul .documentFirstHeading {
 .pagination>li>span:focus,
 .pagination>li>span:hover {
 	z-index: 2;
-	color: #000;
+    color: #2670e8;
 	text-decoration: none;
-	background-color: #e8e8e8 !important;
-	border-color: #e8e8e8;
+	background-color: none !important;
+
+}
+
+a.page-link:hover {
+    background-color: #ffffff;
+}
+
+.page-item a.page-link:hover {
+    background: #2670e8;
+	display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    line-height: 32px;
+    text-align: center;
+    color: #fff !important;
 }
 
 .pagination>.disabled>a {
@@ -2197,6 +2214,23 @@ body.capa-azul .documentFirstHeading {
 #pagination .page-link span.icon-next:after {
 	content: " >>";
 	font-size: 12px;
+	float: right;
+    position: relative;
+    bottom: 22px;
+    left: 5px;
+}
+
+span.icon-previous {
+    position: relative;
+    bottom: 22px;
+    font-weight: bold;
+}
+#pagination span.icon-previous::before {
+    content: "<< ";
+    font-size: 12px;
+    float: left;
+    position: relative;
+    top: 25px;
 }
 
 
