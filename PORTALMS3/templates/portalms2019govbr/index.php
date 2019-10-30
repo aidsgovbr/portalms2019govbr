@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 /**
  * @package
  * @subpackage
@@ -33,28 +33,36 @@ $frontpage = ($option == 'com_content' && $view == 'featured');
 $article = ($option == 'com_content' && $view == 'article');
 
 require_once  JPATH_SITE .'/templates/'.$this->template.'/helper.php';
-TmplIdg2019Helper::clearDefaultScripts( $this );
-$active_item = TmplIdg2019Helper::getActiveItemid();
 
+$TmplIdg2019Helper  = new TmplIdg2019Helper;
 
+$TmplIdg2019Helper->clearDefaultScripts( $this );
+$active_item = $TmplIdg2019Helper->getActiveItemid();
+
+$InfoIdgHelper = new InfoIdgHelper;
+
+// Menu		
+$menuitem   = $app->getMenu()->getActive();
+$pageclass  = $menuitem->params->get( 'pageclass_sfx' );
 ?>
 <!doctype html>
 <html lang="pt-br">
 <head>
 <!-- INFORMACOES A RESPEITO DO ITEM
-	    ID: <?php echo InfoIdgHelper::getID()."\n"; ?>
+	    ID: <?php echo $InfoIdgHelper->getID()."\n"; ?>
 	    ID MENU: <?php echo @$active_item->id."\n"; ?>
 	    Menu vinculado: <?php echo @$active_item->menutype."\n"; ?>
-	    URL completa, nao amigavel: <?php echo InfoIdgHelper::getFullURL()."\n"; ?>
+	    URL completa, nao amigavel: <?php echo $InfoIdgHelper->getFullURL()."\n"; ?>
+        HOME:<?php echo @$active_item->home ."\n"; ?>
 	    -->
 
-<?php if($active_item->home != '1') : ?>
+
 <jdoc:include type="head"/>
-<?php else: ?>
+
 <title><?php echo $sitename; ?></title>
 <meta charset="utf-8">
 <meta name="keywords" content="<?php echo $metaKey; ?>" />
-<?php endif; ?>
+
 <meta name="description" content="<?php echo $metaDesc; ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -75,12 +83,18 @@ $active_item = TmplIdg2019Helper::getActiveItemid();
 <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link rel="stylesheet" href="https://idangero.us/swiper/dist/css/swiper.min.css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 <!-- CSS -->
 </head>
 <?php 
-		$cor_capa = $active_item->params->get("menu-anchor_css");
-	?>
-<body class="<?php echo strstr($cor_capa, ' ', true); ?>">
+$cor_capa = $active_item->params->get("menu-anchor_css");
+?>
+
+<?php
+ $home_class = @$active_item->home == 1 ? 'pagina-inicial' : null;
+ ?>
+<body <?php echo "id=\"$home_class\""; ?> class="<?php echo strstr($cor_capa, ' ', true); ?> <?php echo $pageclass. ' ' ?> portalms">
+
 <div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;">
   <ul id="menu-barra-temp" style="list-style:none;">
     <li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED"> <a href="http://brasil.gov.br" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do Governo Brasileiro</a> </li>
@@ -170,7 +184,7 @@ $active_item = TmplIdg2019Helper::getActiveItemid();
   <?php //echo '<pre>'; var_dump($view,$active_item->home) ?>
   <?php //echo '<pre>'; var_dump($view,$active_item->home) ?>
   <?php //if (JRequest::getVar("view") == "featured" ) : ?>
-  <?php if(TmplIdg2019Helper::hasMessage()):  ?>
+  <?php if($TmplIdg2019Helper->hasMessage()):  ?>
   <div class="row-fluid">
     <jdoc:include type="message" />
   </div>
@@ -189,16 +203,12 @@ $active_item = TmplIdg2019Helper::getActiveItemid();
   </div>
   <div id="wrapper" class="container">
     <div class="conteudo-interna">
-      <?php $preffix = TmplIdg2019Helper::getPagePositionPreffix($active_item);
+      <?php $preffix = $TmplIdg2019Helper->getPagePositionPreffix($active_item);
             $posicao_topo = $preffix. '-topo';
             $posicao_rodape = $preffix. '-rodape';
             $posicao_direita = $preffix. '-direita';
                         ?>
-      <?php
-			// adiciona o titulo da pagina
-			$app	= JFactory::getApplication();
-    			$menuitem   = $app->getMenu()->getActive();
-			?>
+     
       <?php if($menuitem->component == "com_blankcomponent"):?>
       <?php if($menuitem->params->get("menu_text")) : ?>
       <h1 class="documentFirstHeading">
@@ -219,7 +229,7 @@ $active_item = TmplIdg2019Helper::getActiveItemid();
       <?php if($this->countModules($posicao_direita) || $this->countModules("internas-direita") || $this->countModules("menu-principal")): ?>
       <div class="row-fluid">
         <div class="span9">
-          <?php if(  TmplIdg2019Helper::isOnlyModulesPage() ): ?>
+          <?php if(  $TmplIdg2019Helper->isOnlyModulesPage() ): ?>
           <jdoc:include type="modules" name="pagina-interna-capa" style="container" headerLevel="2" />
           <jdoc:include type="modules" name="pagina-interna-capa-<?php echo $preffix ?>" style="container" headerLevel="2" />
           <?php else: ?>
@@ -229,7 +239,7 @@ $active_item = TmplIdg2019Helper::getActiveItemid();
       </div>
       <?php else: ?>
       <div class="row-fluid">
-        <?php if(  TmplIdg2019Helper::isOnlyModulesPage() ): ?>
+        <?php if(  $TmplIdg2019Helper->isOnlyModulesPage() ): ?>
         <jdoc:include type="modules" name="pagina-interna-capa" style="container" headerLevel="2" />
         <jdoc:include type="modules" name="pagina-interna-capa-<?php echo $preffix ?>" style="container" headerLevel="2" />
         <?php else: ?>
@@ -331,11 +341,11 @@ Javascript de carregamento do Framework jQuery
 &nbsp;<!-- item para fins de acessibilidade -->
 </noscript>
 <?php endif; ?>
-<?php //if($this->countModules('barra-do-governo')) TmplIdg2019Helper::getBarra2019Script( $this ); ?>
+<?php //if($this->countModules('barra-do-governo')) $TmplIdg2019Helper->getBarra2019Script( $this ); ?>
 
 <!-- debug -->
 <jdoc:include type="modules" name="debug" />
-<?php TmplIdg2019Helper::debug( @$preffix, @$active_item); ?>
+<?php $TmplIdg2019Helper->debug( @$preffix, @$active_item); ?>
 <script>
 		jQuery(document).ready(function(){	
 		    var swiperDados = new Swiper('.participacao-social', {
@@ -383,6 +393,8 @@ Javascript de carregamento do Framework jQuery
 		}); 
 
 		</script> 
+    
+        
 <script defer src="//barra.brasil.gov.br/barra_2.0.js" type="text/javascript"></script> 
 <!-- JS -->
 </body>
