@@ -5473,3 +5473,46 @@ a.link2-egov:after {
 	font-weight: 900;
 	font-size: 16px!important;
 }
+
+/***chamadas-secundarias***/
+
+h2.outstanding-title {
+    font-size: 36px!important;
+    color: #0c326f!important;
+    font-weight: 600!important;
+    text-align: center!important;
+}
+
+.chamadas-secundarias p.subtitle, .variacao-module-05 a {
+    color: #0094ff;
+    font-size: .875rem!important;
+    font-weight: 700;
+    margin-bottom: 0!important;
+    text-transform: uppercase;
+}
+
+.chamadas-secundarias h3 a, .variacao-module-05 h3 a, .title-pb h3 a {
+ {
+    text-transform: initial;
+    letter-spacing: normal;
+    font-size: 1.375rem!important;
+    line-height: 1.3em;
+    font-family: Raleway,sans-serif;
+    font-weight: 900;
+    color: #333!important;
+    line-height: normal;
+    letter-spacing: normal;
+    border: none;
+    text-decoration: none;
+}
+
+.chamadas-secundarias h3 a:hover, .variacao-module-05 h3 a:hover {
+
+    color: #0094ff!important;
+    text-decoration: none;
+}
+
+.chamadas-secundarias p.description {
+    color: #333;
+}
+
