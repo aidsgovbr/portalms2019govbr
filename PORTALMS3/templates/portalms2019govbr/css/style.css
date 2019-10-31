@@ -1676,12 +1676,12 @@ span.separator {
 #interna .conteudo-interna ul {
 	padding-left: 1rem;
 	padding-right: 1rem;
-    margin: auto;
-    width: 100%;
-    position: relative;
-    bottom: 23px;
-    background-color: #ffffff;
-    height: 40px;
+	margin: auto;
+	width: 100%;
+	position: relative;
+	bottom: 23px;
+	background-color: #ffffff;
+	/*height: 40px;*/
 }
 
 #interna .conteudo-interna ul ul {
@@ -2114,7 +2114,7 @@ body.capa-azul .documentFirstHeading {
 	text-transform: capitalize;
 	/* min-height: 100px; */
 	margin: auto;
-    width: 80%;
+	width: 80%;
 }
 
 #pagination .pagination {
@@ -2224,16 +2224,14 @@ a.page-link:hover {
 	left: 5px;
 }
 
-
-
 span.icon-previous {
 	font-weight: bold;
 }
 
 span.icon-previous a {
-    position: relative;
-    bottom: 22px;
-    font-weight: bold;
+	position: relative;
+	bottom: 22px;
+	font-weight: bold;
 }
 
 #pagination span.icon-previous:before a {
@@ -2245,11 +2243,11 @@ span.icon-previous a {
 }
 
 #pagination span.icon-previous:before {
-    content: "<< ";
-    font-size: 12px;
-    float: left;
-    position: relative;
-    /* top: 25px; */
+	content: "<< ";
+	font-size: 12px;
+	float: left;
+	position: relative;
+	/* top: 25px; */
 }
 
 
@@ -3790,7 +3788,7 @@ body .ui-datepicker .ui-datepicker-year {
 	color: rgb(34, 34, 34);
 }
 
-.conteudo-interna .horario::before {
+.conteudo-interna .horario:before {
 	background-image: url(../img/sprite-agenda.png);
 	width: 12px;
 	height: 12px;
@@ -3823,7 +3821,7 @@ body .ui-datepicker .ui-datepicker-year {
 	border-right: 1px solid rgb(221, 221, 221);
 }
 
-.conteudo-interna .compromisso-local::before {
+.conteudo-interna .compromisso-local:before {
 	background-image: url(../img/sprite-agenda.png);
 	width: 8px;
 	height: 12px;
@@ -4057,37 +4055,46 @@ body .ui-datepicker .ui-state-default {
 
 /***ACCORDION***/
 
-
 a.accordion-toggle.collapsed {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: 700;
-    padding-left: 50px;
+	display: block;
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-weight: 700;
+	/*padding-left: 50px; */
 	color: #333!important;
 }
 
 a.accordion-toggle {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: 700;
-    padding-left: 50px;
+	display: block;
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-weight: 700;
+	/*padding-left: 50px; */
 	color: #333!important;
 }
 
-
-
 a.accordion-toggle:before {
-    top: -2px;
-    content: "+";
-    color: #1351b4;
-    position: relative;
-    top: 7px;
-    left: -5px;
-    font-size: 42px;
-    font-weight: 400;
+	top: -2px;
+	content: "+";
+	color: #1351b4;
+	position: relative;
+	top: 7px;
+	left: -5px;
+	font-size: 42px;
+	font-weight: 400;
 }
+
+a.accordion-toggle.collapsed:before {
+	top: -2px;
+	content: "-"!important;
+	color: #1351b4;
+	position: relative;
+	top: 7px;
+	left: -5px;
+	font-size: 42px;
+	font-weight: 400;
+}
+
 
 /***TABS
 
@@ -4713,6 +4720,7 @@ html .ui-button.ui-state-disabled:active {
 	margin: 0 5px 0 0;
 	background: transparent;
 	color: #aaa;
+
 	font-weight: bold;
 }
 
@@ -5166,12 +5174,12 @@ html .ui-button.ui-state-disabled:active {
 /***CONTEUDO RELACIONADO***/
 
 .conteudo-interna blockquote span {
-    align-items: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0 auto;
-    width: auto;
-    display: table;
+	align-items: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0 auto;
+	width: auto;
+	display: table;
 	margin-bottom: 35px;
 }
 
@@ -5217,8 +5225,6 @@ main #conteudo-interna blockquote.pull-right {
 	margin-left: 1.6em!important;
 }
 
-
-
 #conteudo-interna blockquote ul,
 #conteudo-interna .itens-relacionados ul {
 	margin: 0 !important;
@@ -5226,23 +5232,22 @@ main #conteudo-interna blockquote.pull-right {
 }
 
 #interna .conteudo-interna blockquote ul {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    width: 100%;
-    margin: auto;
-    list-style: none !important;
-    color: #0c326f!important;
-
+	padding-left: 1rem;
+	padding-right: 1rem;
+	width: 100%;
+	margin: auto;
+	list-style: none !important;
+	color: #0c326f!important;
 }
 
 #interna .conteudo-interna blockquote ul a {
-    color: #0c326f!important;
+	color: #0c326f!important;
 	font-size: 20px;
-    font-weight: 600;
+	font-weight: 600;
 }
 
 #interna .conteudo-interna blockquote ul li {
-    margin-bottom: 16px;
+	margin-bottom: 16px;
 }
 
 #conteudo-interna blockquote ul li a {
@@ -5255,58 +5260,61 @@ main #conteudo-interna blockquote.pull-right {
 	font-style: normal !important;
 }
 
+
 /***CONTEUDO RELACIONADO gov.br***/
 
-
 .conteudo-interna .conteudo-relacionado .tile-header h2 {
-    padding-bottom: 24px;
+	padding-bottom: 24px;
 }
 
 .tile-header {
-
-    margin: 32px 0 24px;
+	margin: 32px 0 24px;
 }
 
 .tile-header h2 {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    text-transform: uppercase;
-    font-size: 16px!important;
-    padding: 0 12px;
-    white-space: nowrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-transform: uppercase;
+	font-size: 16px!important;
+	padding: 0 12px;
+	white-space: nowrap;
 }
 
-.tile-header h2:before, .tile-header h2:after {
-    background: #ccc;
-    content: "";
-    height: 1px;
-    width: 100%;
+.tile-header h2:before,
+.tile-header h2:after {
+	background: #ccc;
+	content: "";
+	height: 1px;
+	width: 100%;
 	margin: 12px!important;
 }
 
 .conteudo-interna .conteudo-relacionado .tile-header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 	padding-top: 10px;
 }
 
 .conteudo-relacionado ul li a {
-    color: #0c326f!important;
-    font-size: 20px;
-    font-weight: 600;
+	color: #0c326f!important;
+	font-size: 20px;
+	font-weight: 600;
 }
+
 .conteudo-relacionado ul li {
-    margin-bottom: 16px;
+	margin-bottom: 16px;
 	list-style: none;
 }
+
+
 /***SAIBA MAIS***/
 
 
@@ -5337,7 +5345,7 @@ a.link2-egov {
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 31%;
 	flex: 0 0 31%;
-	max-width: 50%;
+	max-width: 100%;
 	margin: 10px 1%;
 	background-color: #f8f8f8;
 	-webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
