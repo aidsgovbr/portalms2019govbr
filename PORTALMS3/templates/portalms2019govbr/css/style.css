@@ -5492,7 +5492,6 @@ h2.outstanding-title {
 }
 
 .chamadas-secundarias h3 a, .variacao-module-05 h3 a, .title-pb h3 a {
- {
     text-transform: initial;
     letter-spacing: normal;
     font-size: 1.375rem!important;
@@ -5506,7 +5505,7 @@ h2.outstanding-title {
     text-decoration: none;
 }
 
-.chamadas-secundarias h3 a:hover, .variacao-module-05 h3 a:hover {
+.chamadas-secundarias h3 a:hover, .variacao-module-05 h3 a:hover, .title-pb h3 a:hover {
 
     color: #0094ff!important;
     text-decoration: none;
