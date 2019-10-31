@@ -1679,7 +1679,7 @@ span.separator {
 	margin: auto;
 	width: 100%;
 	position: relative;
-	bottom: 23px;
+	bottom: 17px;
 	background-color: #ffffff;
 	/*height: 40px;*/
 }
@@ -2302,6 +2302,16 @@ span.icon-previous a {
 	padding: 0;
 }
 
+.line {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-left: 0!important;
+    margin-bottom: 7px;
+    text-indent: 0;
+    padding: 0;
+}
+
 .below-content .keys a {
 	text-transform: capitalize;
 	color: #2670e8!important;
@@ -2322,6 +2332,7 @@ span.icon-previous a {
 	font-size: .65rem;
 }
 
+/*
 a.link-categoria {
 	display: inline-block!important;
 	float: none;
@@ -2330,6 +2341,27 @@ a.link-categoria {
 	font-weight: 500;
 	text-decoration: underline;
 	color: #2670e8!important;
+}
+*/
+
+a.link-categoria {
+    text-transform: capitalize;
+    color: #2670e8!important;
+    display: inline-block!important;
+    float: none;
+    margin: 0 10px!important;
+    font-size: 16px;
+    background: none;
+    /* padding: 0!important; */
+    background: #eee;
+    font-weight: 400;
+    padding: 8px 15px;
+    color: #222!important;
+    border-radius: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    font-size: .65rem;
 }
 
 a.link-categoria:focus {
@@ -4113,8 +4145,9 @@ a.accordion-toggle.collapsed:before {
 ***/
 
 .portalms .su-tabs-nav {
-	background: #EEEEEE;
-	padding: 10px;
+    background: #ededed;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);
 }
 
 .portalms span.su-tabs-current {
@@ -4180,8 +4213,10 @@ h3.ui-accordion-header.ui-helper-reset.ui-state-default.ui-corner-all a {
 }
 
 .portalms h3.ui-accordion-header.ui-helper-reset.ui-state-default.ui-corner-all a:hover {
-	color: #2670e8!important;
+    color: #ffffff!important;
 }
+
+
 
 .portalms .ui-state-default,
 .ui-widget-content .ui-state-default,
@@ -4262,7 +4297,12 @@ html .ui-button.ui-state-disabled:active {
 .su-tabs-nav span.su-tabs-current {
 	background: #fff;
 	cursor: default;
+    background: #2670e8;
+    cursor: default;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);
 }
+
 
 .su-tabs-nav span.su-tabs-disabled {
 	opacity: 0.5;
@@ -4280,6 +4320,27 @@ html .ui-button.ui-state-disabled:active {
 	border-bottom-left-radius: 3px;
 	background: #fff;
 	color: #333;
+}
+
+.su-tabs-pane.su-clearfix a {
+    background-color: #fff;
+    color: #2670e8!important;
+	display: block;
+	line-height: 1.3;
+    padding: 5px;
+}
+
+.su-tabs-pane.su-clearfix a:hover {
+    background-color: #2670e8;
+    color: #ffffff!important;
+    display: block;
+    line-height: 1.3;
+    padding: 5px;
+}
+
+.su-tabs-nav span:hover {
+    background-color: #2670e8;
+    color: #ffffff;
 }
 
 .su-tabs-vertical:before,
@@ -4337,6 +4398,49 @@ html .ui-button.ui-state-disabled:active {
 	box-sizing: border-box !important;
 }
 
+
+/** Accordion antigo em Tabs **/
+
+
+.su-tabs.su-tabs-align-left.su-tabs-style-flat-blue.doacao-de-sague h2 {
+    background: #ededed !important;
+    margin: 0 !important;
+    border: none !important;
+    display: inline-block !important;
+    font-size: 1.2em;
+    padding: 0px !important;
+    border-right: none !important;
+}
+
+.su-tabs.su-tabs-align-left.su-tabs-style-flat-blue.doacao-de-sague a {
+    color: #555!important;
+}
+
+
+
+h2.flex-item a:hover {
+   /* padding-right: 20px;
+    padding-left: 20px; */
+	margin: 0 !important;
+    border: none !important;
+    display: inline-block !important;
+    background: #2670e8;
+    color: #ffffff!important;
+	padding: 0 20px 0px !important;
+    border-right: none !important;
+
+}
+
+.su-tabs.su-tabs-align-left.su-tabs-style-flat-blue.doacao-de-sague a:hover {
+    color: #ffffff!important;
+}
+
+h2.flex-item a {
+    margin: 0;
+    background: #ededed;
+    color: #555!important;
+	padding: 0 20px 0px !important;
+}
 
 /* Styles for screens that are less than 768px */
 
