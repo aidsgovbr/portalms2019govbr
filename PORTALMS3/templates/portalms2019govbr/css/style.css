@@ -5519,3 +5519,37 @@ h2.outstanding-title {
     color: #333;
 }
 
+
+/***
+*
+* mod-chamadas styles
+*chamadas-box-lista-4-manual-com-imagem-2
+*
+***/
+h2.chamada-box a:link, a:visited {
+    color: #0c326f!important;
+    font-size: 20px;
+}
+
+h2.chamada-box {
+    margin: 0px!important;
+    color: #0c326f;
+    display: block;
+    padding: 0!important;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+p.tile-subtitle {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-top: 20px!important;
+    margin-bottom: 0!important;
+    font-weight: 500;
+	text-transform: uppercase;
+}
+
+.tile.foto-sobreposta {
+    height: 375px;
+}
