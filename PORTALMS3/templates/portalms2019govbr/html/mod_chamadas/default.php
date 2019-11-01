@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 
 <div style="background:#0C3">
 <?php if ($params->get('titulo_alternativo')): ?>
-	<h3 class="page-header"><?php echo $params->get('titulo_alternativo')?></h3>
+	<h2 class="page-header"><?php echo $params->get('titulo_alternativo')?></h2>
 <?php endif; ?>
 
 <?php if ($params->get('link_saiba_mais')): ?>
@@ -28,25 +28,16 @@ defined('_JEXEC') or die;
 <?php endif; ?>
 
 	<?php foreach ($lista_chamadas as $lista): ?>
-		<?php
-			//Define link do artigo
-			
-			print_r($lista);
-		
-		?>
 
 		<?php if ($params->get('exibir_imagem')): ?>
-			<?php
-			$imagem = json_decode($lista->images);
-			?>
-			<?php if (!empty($imagem->image_intro)): ?>
-				<div>
-					<a href="<?php echo $link ?>">
-						<img src="<?php echo $imagem->image_intro ?>" />
-					</a>
-				</div>
+
+ 						<div class="image-container">
+	                        <a href="<?php echo $lista->link ?>" title="<?php echo $lista->title ?>">
+	                            <img src="<?php echo $lista->image_url ?>" alt="<?php echo $lista->image_alt ?>" />
+	                        </a>
+	                    </div>
 			<?php endif; ?>
-		<?php endif; ?>
+
 
 		<?php if ($params->get('exibir_title')): ?>
 				<<?php echo $params->get('header_tag')?> <?php if ($params->get('header_class')): echo 'class="'.$params->get('header_class').'"'; endif; ?>>
@@ -59,7 +50,7 @@ defined('_JEXEC') or die;
 			<div>
 				<div>
 					<a href="<?php echo $link ?>">
-						<?php echo $lista->chapeu ?>
+						<p class="tile-subtitle"><?php echo $lista->chapeu ?></p>
 					</a>
 				</div>
 			</div>
@@ -76,7 +67,7 @@ defined('_JEXEC') or die;
 				?>
 					<p><?php echo $texto; ?></p>
 			<?php else: ?>
-					<p><?php echo strip_tags($lista->introtext, '<b><i><strong><u><b>') ?></p>
+					<p class="tile-description"><?php echo strip_tags($lista->introtext, '<b><i><strong><u><b>') ?></p>
 			<?php endif; ?>
 		<?php endif; ?>
 	<?php endforeach; ?>
