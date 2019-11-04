@@ -5575,7 +5575,8 @@ p.tile-subtitle {
     padding-bottom: 40px;
 }
 
-.nitf-basic-tile.tile-content:before {
+/* .nitf-basic-tile.tile-content:before */
+.tile.foto-sobreposta>div:before {
     background-color: transparent;
     background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),to(#000));
     background-image: -o-linear-gradient(transparent,#000);
@@ -5650,5 +5651,44 @@ p.tile-description {
 *
 * mod-chamadas styles
 * tile-default
-* column col-md-6  tile foto-sobreposta-grande
+* column col-md-4  tile tile-default
 ***/
+
+.col-md-4 .row {
+    margin: 0px!important;
+}
+
+.nitf-basic-tile .tile-subtitle {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-top: 20px!important;
+    font-weight: 500;
+}
+
+.nitf-basic-tile h2.chamada-box a:link, a:visited {
+    color: #0c326f!important;
+    font-size: 20px;
+}
+
+
+.nitf-basic-tile h2 {
+    color: #0c326f;
+    display: block;
+    padding: 0!important;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nitf-basic-tile .tile-description {
+    display: block;
+    font-size: 16px!important;
+    color: #222;
+    font-weight: 400;
+}
+
+.basic-tile {
+    height: 239px!important;
+    width: 370px!important;
+    overflow: hidden;
+}
