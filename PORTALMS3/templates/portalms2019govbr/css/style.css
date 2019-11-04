@@ -5539,7 +5539,7 @@ h2.chamada-box a:link, a:visited {
     font-size: 20px;
 }
 
-h2.chamada-box {
+.foto-sobreposta h2.chamada-box {
     padding-left: 0!important;
     line-height: 1.4rem;
     margin: 5px 0 0!important;
@@ -5548,12 +5548,17 @@ h2.chamada-box {
     padding: 0!important;
 }
 
-h2.chamada-box a:link, a:visited {
+.foto-sobreposta.h2.chamada-box a:link, a:visited {
     color: #ffffff!important;
     font-size: 20px;
 }
 
-p.tile-subtitle {
+.tile.foto-sobreposta h2 a {
+    color: #ffffff!important;
+    font-size: 20px;
+}
+
+.foto-sobreposta p.tile-subtitle {
     display: block;
     font-size: 14px;
     margin-top: 20px!important;
@@ -5593,12 +5598,10 @@ p.tile-subtitle {
     text-indent: -3000px;
 }
 
-p.tile-description {
-    padding-left: 0!important;
-    margin-bottom: 15px!important;
-    color: #fff;
+.foto-sobreposta .nitf-basic-tile .tile-description {
     display: block;
     font-size: 16px!important;
+    color: #ffffff!important;
     font-weight: 400;
 }
 
@@ -5635,12 +5638,35 @@ p.tile-description {
 * column col-md-6  tile foto-sobreposta-grande
 ***/
 
+.tile.foto-sobreposta-grande h2 a {
+    color: #ffffff!important;
+    font-size: 20px;
+}
+
+.foto-sobreposta-grande p.tile-subtitle {
+    display: block;
+    font-size: 14px;
+    margin-top: 20px!important;
+    margin-bottom: 0!important;
+    font-weight: 500;
+	text-transform: uppercase;
+	color: #fff;
+    line-height: 1.563rem!important;
+}
+
+.foto-sobreposta-grande .nitf-basic-tile .tile-description {
+    display: block;
+    font-size: 16px!important;
+    color: #ffffff!important;
+    font-weight: 400;
+}
+
 .foto-sobreposta-grande.foto-sobreposta {
-    height: 565px;
+    height: 565px!important;
 }
 
 .foto-sobreposta-grande.foto-sobreposta>div:before {
-    height: 565px;
+    height: 565px!important;
 }
 
 .foto-sobreposta-grande.foto-sobreposta img, .col-md-12 .tile.foto-sobreposta-grande img, .col-md-6 .foto-sobreposta-grande.foto-sobreposta img{
@@ -5654,9 +5680,6 @@ p.tile-description {
 * column col-md-4  tile tile-default
 ***/
 
-.col-md-4 .row {
-    margin: 0px!important;
-}
 
 .nitf-basic-tile .tile-subtitle {
     display: block;
@@ -5687,8 +5710,12 @@ p.tile-description {
     font-weight: 400;
 }
 
+.nitf-basic-tile tile-content.basic-tile {
+    height: 239px!important;
+}
+
 .basic-tile {
     height: 239px!important;
     width: 370px!important;
     overflow: hidden;
-}
+} 
