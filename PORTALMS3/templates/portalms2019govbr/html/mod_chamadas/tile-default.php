@@ -11,8 +11,8 @@
    defined('_JEXEC') or die;
    ?>
 <div class="row">
-   <div class="column col-md-4 " data-panel="">
-      <div class="foto-sobreposta-grande foto-sobreposta">
+
+      <div class="tile tile-default">
          <div class="nitf-basic-tile tile-content">
             <?php foreach ($lista_chamadas as $key => $lista): ?>
             <?php if ($params->get('chapeu') && ($lista->chapeu)): ?>
@@ -22,10 +22,10 @@
             <h2 class="chamada-box"><a href="<?php echo $lista->link; ?>" title="<?php echo $lista->title ?>"><?php echo $lista->title ?></a></h2>
             <?php endif; ?>
             <p class="tile-description"><?php echo strip_tags($lista->introtext); ?></p>
-            <div class="<?php echo $params->get('header_class') ?>  " data-panel="">
+            <div class="<?php echo $params->get('header_class') ?>basic-tile" data-panel="">
                <?php if ($params->get('exibir_imagem') && !empty($lista->image_url)): ?>
                <a href="<?php echo $lista->link ?>" title="<?php echo $lista->title ?>">
-               <img src="<?php echo $lista->image_url ?>" alt="<?php echo $lista->image_alt ?>" />
+               <img src="<?php echo $lista->image_url ?>" width="370" height="246" class="left" alt="<?php echo $lista->image_alt ?>" />
                </a>
             </div>
             <?php endif; ?>		
