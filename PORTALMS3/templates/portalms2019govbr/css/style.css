@@ -5523,33 +5523,132 @@ h2.outstanding-title {
 /***
 *
 * mod-chamadas styles
-*chamadas-box-lista-4-manual-com-imagem-2
-*
+* foto-sobreposta
+* chamadas-box-lista-4-manual-com-imagem-2
+* column col-md-6  tile foto-sobreposta
 ***/
+
+.col-md-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%!important;
+}
+
 h2.chamada-box a:link, a:visited {
     color: #0c326f!important;
     font-size: 20px;
 }
 
 h2.chamada-box {
-    margin: 0px!important;
-    color: #0c326f;
+    padding-left: 0!important;
+    line-height: 1.4rem;
+    margin: 5px 0 0!important;
+    color: #fff;
     display: block;
     padding: 0!important;
+}
+
+h2.chamada-box a:link, a:visited {
+    color: #ffffff!important;
     font-size: 20px;
-    font-weight: 600;
 }
 
 p.tile-subtitle {
     display: block;
     font-size: 14px;
-    color: #555;
     margin-top: 20px!important;
     margin-bottom: 0!important;
     font-weight: 500;
 	text-transform: uppercase;
+	color: #fff;
+    line-height: 1.563rem!important;
 }
 
-.tile.foto-sobreposta {
+.foto-sobreposta {
     height: 375px;
+	position: relative;
+    display: flex;
 }
+
+.nitf-basic-tile.tile-content {
+    align-self: flex-end;
+    padding-bottom: 40px;
+}
+
+.nitf-basic-tile.tile-content:before {
+    background-color: transparent;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),to(#000));
+    background-image: -o-linear-gradient(transparent,#000);
+    background-image: linear-gradient(transparent,#000);
+    content: ".";
+    display: block;
+    height: 375px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    opacity: .8;
+    z-index: -1;
+    text-indent: -3000px;
+}
+
+p.tile-description {
+    padding-left: 0!important;
+    margin-bottom: 15px!important;
+    color: #fff;
+    display: block;
+    font-size: 16px!important;
+    font-weight: 400;
+}
+
+.tile.foto-sobreposta img, .tile.foto-sobreposta img {
+    height: 375px!important;
+    object-fit: cover;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+}
+
+.tile img.left {
+    float: left;
+    margin: 0 1em .5em 0;
+}
+.tile img {
+    max-width: 100%;
+    height: auto;
+}
+.tile img {
+    max-width: 100%;
+    height: auto;
+}
+* a img, :link img, :visited img {
+    border: none;
+}
+
+
+/***
+*
+* mod-chamadas styles
+* foto-sobreposta-grande
+* column col-md-6  tile foto-sobreposta-grande
+***/
+
+.foto-sobreposta-grande.foto-sobreposta {
+    height: 565px;
+}
+
+.foto-sobreposta-grande.foto-sobreposta>div:before {
+    height: 565px;
+}
+
+.foto-sobreposta-grande.foto-sobreposta img, .col-md-12 .tile.foto-sobreposta-grande img, .col-md-6 .foto-sobreposta-grande.foto-sobreposta img{
+    height: 565px!important;
+}
+
+/***
+*
+* mod-chamadas styles
+* tile-default
+* column col-md-6  tile foto-sobreposta-grande
+***/
