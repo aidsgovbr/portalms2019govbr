@@ -72,7 +72,7 @@ $pageclass  = $menuitem->params->get( 'pageclass_sfx' );
 <script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/jquery.js"></script>
 <script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/script-portal.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script type="text/javascript" src="https://idangero.us/swiper/dist/js/swiper.min.js"></script>
+<!-- <script type="text/javascript" src="https://idangero.us/swiper/dist/js/swiper.min.js"></script>  -->
 <!-- JS -->
 
 <!-- CSS -->
