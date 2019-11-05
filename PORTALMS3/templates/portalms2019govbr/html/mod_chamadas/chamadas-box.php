@@ -13,12 +13,7 @@ defined('_JEXEC') or die;
 <section class="chamada-box">
 	<div class="container">
 		<div class="row">
-
-
 			<?php foreach ($lista_chamadas as $key => $lista): ?>
-			<?php //foreach ($lista_chamadas as $lista): ?>
-
-			
 			<div class="col-md-4 text-center" data-panel="">
 			    <div class="tile tile-default">
 			    	<?php if ($params->get('exibir_imagem') && !empty($lista->image_url)): ?>
@@ -52,3 +47,4 @@ defined('_JEXEC') or die;
 	</div>
 </section>
 <!-- NOTICIAS END -->
+<pre><?php print_r($lista_chamadas); ?></pre>

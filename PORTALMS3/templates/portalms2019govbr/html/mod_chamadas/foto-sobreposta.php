@@ -11,9 +11,9 @@
    defined('_JEXEC') or die;
    ?>
 <div class="row">
+   <?php foreach ($lista_chamadas as $key => $lista): ?>
    <div class="tile foto-sobreposta col-md-6">
       <div class="nitf-basic-tile tile-content">
-         <?php foreach ($lista_chamadas as $key => $lista): ?>
          <?php if ($params->get('chapeu') && ($lista->chapeu)): ?>
          <p class="tile-subtitle"><?php echo $lista->chapeu ?></p>
          <?php endif; ?>
@@ -29,6 +29,8 @@
          </div>
          <?php endif; ?>		
       </div>
-      <?php endforeach; ?>
    </div>
+   <?php endforeach; ?>
 </div>
+
+<pre><?php print_r($lista_chamadas); ?></pre>

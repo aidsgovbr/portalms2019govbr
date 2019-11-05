@@ -65,5 +65,6 @@ defined('_JEXEC') or die;
 	
 		</div>
 	</div>
+<pre><?php print_r($lista_chamadas); ?></pre>
 </section>
 <!-- NOTICIAS END -->

@@ -18,7 +18,7 @@ defined('_JEXEC') or die;
 			<?php foreach ($lista_chamadas as $key => $lista): ?>
 				<?php
 					//Define link do artigo
-					$link = JRoute::_(ContentHelperRoute::getArticleRoute($lista->id, $lista->catid));	
+
 					if(isset($lista->extrafields->cor_de_fundo)):
 						$class_cor_de_fundo = substr($lista->extrafields->cor_de_fundo,0,1);
 					else:
@@ -73,5 +73,6 @@ defined('_JEXEC') or die;
 			</div>
 		<?php endif; ?>
 	</div>
+<pre><?php print_r($lista_chamadas); ?></pre>
 </section>
 <!-- NOTICIAS END -->
