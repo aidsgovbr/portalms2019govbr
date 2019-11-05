@@ -11,7 +11,7 @@
    defined('_JEXEC') or die;
    ?>
 <div class="row">
-   <div class="foto-sobreposta">
+   <div class="tile foto-sobreposta col-md-6">
       <div class="nitf-basic-tile tile-content">
          <?php foreach ($lista_chamadas as $key => $lista): ?>
          <?php if ($params->get('chapeu') && ($lista->chapeu)): ?>

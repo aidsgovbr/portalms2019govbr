@@ -14,11 +14,7 @@ defined('_JEXEC') or die;
 	<div class="container">
 		<div class="row">
 			<?php foreach ($lista_chamadas as $lista): ?>
-				<?php
-					//Define link do artigo
-					$link = JRoute::_(ContentHelperRoute::getArticleRoute($lista->id, $lista->catid));
-					//var_dump($lista->images->image_intro);			
-				?>
+
 				<div class="col-md-4">
 					<div class="item-mosaico">
 						<?php if ($params->get('exibir_imagem')): ?>
