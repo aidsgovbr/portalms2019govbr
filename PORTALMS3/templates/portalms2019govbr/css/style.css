@@ -5531,6 +5531,18 @@ h2.outstanding-title {
 * column col-md-6  tile foto-sobreposta
 ***/
 
+.tile.foto-sobreposta h2 a {
+	color: #ffffff!important;
+	font-size: 20px;
+	font-family: rawline, sans-serif!important;
+}
+
+.foto-sobreposta.nitf-basic-tile h2.chamada-box a:link,
+a:visited {
+	color: #ffffff!important;
+	font-size: 20px;
+}
+
 .tile.foto-sobreposta.col-md-6 {
 	padding: 0px!important;
 }
@@ -5655,6 +5667,14 @@ a:visited {
 * column col-md-6  tile foto-sobreposta-pequena
 ***/
 
+.foto-sobreposta-pequena.tile-default .column.col-md-4 {
+	float: left;
+}
+
+.tile-default .chamada-box a {
+	color: #0c326f!important;
+}
+
 .tile.foto-sobreposta-pequena h2 a {
 	color: #ffffff!important;
 	font-size: 20px;
@@ -5667,7 +5687,7 @@ a:visited {
 	color: #fff;
 	display: block;
 	padding: 0!important;
-	margin-left: 25px!important;
+	/* margin-left: 25px!important; */
 	padding: 0!important;
 }
 
@@ -5715,9 +5735,31 @@ a:visited {
 * column col-md-6  tile foto-sobreposta-grande
 ***/
 
+.foto-sobreposta-grande .col-md-6 {
+	-ms-flex: 0 0 50%;
+	flex: 0 0 50%;
+	max-width: 50%!important;
+	padding: 0px!important;
+}
+
 .tile.foto-sobreposta-grande h2 a {
 	color: #ffffff!important;
 	font-size: 20px;
+}
+
+.tile.foto-sobreposta-grande.foto-sobreposta h2.chamada-box a {
+	color: #fff!important;
+}
+
+.tile.foto-sobreposta-pequena.foto-sobreposta h2.chamada-box a {
+	padding-left: 0!important;
+	line-height: 1.4rem;
+	margin: 5px 0 0!important;
+	color: #fff!important;
+	display: block;
+	padding: 0!important;
+	margin-left: 25px!important;
+	padding: 0!important;
 }
 
 .foto-sobreposta-grande h2.chamada-box {
@@ -5775,6 +5817,18 @@ a:visited {
 * column col-md-4  tile tile-default
 ***/
 
+.tile-default p.tile-subtitle {
+	/*  margin: 0px!important; */
+}
+
+.nitf-basic-tile.tile-content.column.col-md-4 {
+	float: left;
+}
+
+.nitf-basic-tile h2 a {
+	font-family: rawline, sans-serif;
+}
+
 .nitf-basic-tile .tile-subtitle {
 	display: block;
 	font-size: 14px;
@@ -5783,7 +5837,7 @@ a:visited {
 	font-weight: 500;
 }
 
-.nitf-basic-tile h2.chamada-box a:link,
+.tile-default .nitf-basic-tile h2.chamada-box a:link,
 a:visited {
 	color: #0c326f!important;
 	font-size: 20px;
@@ -5812,4 +5866,50 @@ a:visited {
 	height: 239px!important;
 	width: 370px!important;
 	overflow: hidden;
+}
+
+
+/***
+*
+* mod-chamadas styles
+* noticias-home-destaques
+* column col-md-4  mosaico
+***/
+
+chapeu-mosaico a,
+a:link,
+a:visited {
+	font-size: 1.75rem;
+	line-height: 2.188rem;
+	color: #fff;
+	font-weight: 900;
+	font-family: 'Raleway', sans-serif!important;
+}
+
+a.titulo-mosaico,
+a:link,
+a:visited {
+	font-size: 1.8em;
+	font-weight: 800;
+	line-height: 1.2em;
+	color: #fff!important;
+	text-decoration: none;
+	font-family: 'Raleway', sans-serif!important;
+}
+
+
+/***
+*
+* mod-chamadas styles
+* chamadas-box
+* chamada-box col-md-4 text-center
+***/
+
+.chamada-box .image-container {
+	height: 246px!important;
+	overflow: hidden;
+}
+
+.botoes-centro a.btn-padrao {
+	color: #0c326f!important;
 }
