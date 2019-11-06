@@ -24,7 +24,7 @@
          <div class="<?php echo $params->get('header_class') ?>basic-tile" data-panel="">
             <?php if ($params->get('exibir_imagem') && !empty($lista->image_url)): ?>
             <a href="<?php echo $lista->link ?>" title="<?php echo $lista->title ?>">
-            <img src="<?php echo $lista->image_url ?>" width="370" height="246" class="left" alt="<?php echo $lista->image_alt ?>" />
+            <img src="<?php echo $lista->image_url ?>" width="370" height="246" class="<?php echo $lista->image_align ?>" alt="<?php echo $lista->image_alt ?>" title="<?php echo $lista->title ?>" />
             </a>
          </div>
          <?php endif; ?>		
