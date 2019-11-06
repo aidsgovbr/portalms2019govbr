@@ -5731,6 +5731,64 @@ a:visited {
 /***
 *
 * mod-chamadas styles
+* foto-sobreposta-pequena
+* column col-md-6  tile lista-4-com-imagem
+***/
+
+.tile.tile-default.lista-4-com-imagem .column.col-md-4 {
+	float: left;
+}
+
+.tile.tile-default.lista-4-com-imagem h2 a {
+	color: #ffffff!important;
+	font-size: 20px;
+}
+
+.tile.tile-default.lista-4-com-imagem h2.chamada-box {
+	padding-left: 0!important;
+	line-height: 1.4rem;
+	margin: 5px 0 0!important;
+	color: #fff;
+	display: block;
+	padding: 0!important;
+	/* margin-left: 25px!important; */
+	padding: 0!important;
+}
+
+.tile.tile-default.lista-4-com-imagem p.tile-subtitle {
+	display: block;
+	font-size: 14px;
+	margin-top: 20px!important;
+	margin-bottom: 0!important;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 1.563rem!important;
+	margin-left: 25px!important;
+	padding: 0!important;
+}
+
+.tile.tile-default.lista-4-com-imagem .nitf-basic-tile .tile-description {
+	display: block;
+	font-size: 16px!important;
+	color: #ffffff!important;
+	font-weight: 400;
+	margin-left: 25px!important;
+	padding-right: 20px;
+}
+
+.tile.tile-default.lista-4-com-imagem.foto-sobreposta {
+	height: 272px!important;
+}
+
+.tile.tile-default.lista-4-com-imagem.foto-sobreposta>div:before {
+	height: 272px!important;
+}
+
+
+/***
+*
+* mod-chamadas styles
 * foto-sobreposta-grande
 * column col-md-6  tile foto-sobreposta-grande
 ***/
@@ -5817,6 +5875,10 @@ a:visited {
 * column col-md-4  tile tile-default
 ***/
 
+.tile.tile-default h2.chamada-box {
+	height: 50px;
+}
+
 .tile-default p.tile-subtitle {
 	/*  margin: 0px!important; */
 }
@@ -5872,10 +5934,49 @@ a:visited {
 /***
 *
 * mod-chamadas styles
+* tile-default
+* column col-md-4  tile multimidia
+***/
+
+.tile.multimidia p.tile-subtitle {
+	margin: 0px!important;
+}
+
+.tile.multimidia h2:after {
+	display: inline-block;
+	content: "- Conte\FA do com Multimidia";
+	background-image: url(../img/sprite.png);
+	background-position: -240px -174px;
+	width: 29px;
+	height: 29px;
+	border-radius: 20px;
+	display: inline-block;
+	margin-left: 5px;
+	text-indent: -4999px;
+}
+
+
+/***
+*
+* mod-chamadas styles
+* tile-default
+* column col-md-4  tile tile-default-trim
+***/
+
+.tile.tile-default-trim h2.chamada-box {
+	height: 50px;
+}
+
+
+/***
+*
+* mod-chamadas styles
 * noticias-home-destaques
 * column col-md-4  mosaico
 ***/
 
+
+/*
 chapeu-mosaico a,
 a:link,
 a:visited {
@@ -5885,6 +5986,7 @@ a:visited {
 	font-weight: 900;
 	font-family: 'Raleway', sans-serif!important;
 }
+
 
 a.titulo-mosaico,
 a:link,
@@ -5896,6 +5998,8 @@ a:visited {
 	text-decoration: none;
 	font-family: 'Raleway', sans-serif!important;
 }
+
+*/
 
 
 /***
@@ -5912,4 +6016,74 @@ a:visited {
 
 .botoes-centro a.btn-padrao {
 	color: #0c326f!important;
+}
+
+
+/***
+*
+* mod-chamadas styles
+* chamadas-box
+* destaquehome
+***/
+
+.col-md-12 {
+	padding: 0!important;
+}
+
+.linha-destaquehome-content h1 {
+	font-size: 36px;
+	/* margin-bottom: .6em; */
+}
+
+.row.linha-destaquehome.column.col-md-12 {
+	padding: 0!important;
+}
+
+.row.linha-destaquehome.nitf-basic-tile.tile-content2 {
+	padding-bottom: 0!important;
+}
+
+.nitf-basic-tile.tile-content2 {
+	align-self: flex-end;
+	padding-bottom: 0!important;
+}
+
+img.destaquehome {
+	width: 100%;
+	margin: 0;
+}
+
+.tile h1 a:visited,
+#content .tile h2 a:link,
+#content .tile h2 a:visited {
+	color: #ffffff!important;
+}
+
+.row.linha-destaquehome {
+	position: relative;
+	width: 1152px!important;
+	margin: 0 auto;
+}
+
+.visualClear {
+	clear: both;
+}
+
+.linha-destaquehome-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(7, 29, 65, .65);
+	padding: 48px 32px;
+}
+
+.linha-destaquehome-content p.tile-description {
+	margin-left: 0!important;
+	padding-left: 0!important;
+	display: block;
+	font-size: 16px!important;
+	color: #ffffff;
+	font-weight: 400;
+	/* padding-left: 15px!important; */
 }
