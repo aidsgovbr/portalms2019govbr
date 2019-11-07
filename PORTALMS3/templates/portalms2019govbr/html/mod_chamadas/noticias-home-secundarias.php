@@ -15,10 +15,7 @@ defined('_JEXEC') or die;
 		<div class="row">
 			<?php foreach ($lista_chamadas as $key => $lista): ?>
 			<?php //foreach ($lista_chamadas as $lista): ?>
-				<?php
-					//Define link do artigo
-					$link = JRoute::_(ContentHelperRoute::getArticleRoute($lista->id, $lista->catid));			
-				?>
+
 				<div class="col-md-4">
 					<div class="item-mosaico mosaico-secundario">
 						<div class="chamada-mosaico">
