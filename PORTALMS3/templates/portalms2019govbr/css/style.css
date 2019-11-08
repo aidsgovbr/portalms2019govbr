@@ -1445,7 +1445,7 @@ div#viewlet-below-content {
 }
 
 .footer .box-menu ul li a {
-	color: #fff;
+	color: #fff!important;
 	text-align: left;
 	margin: 0;
 	padding: 0;
@@ -2451,7 +2451,6 @@ a.link-categoria:visited {
 
 @media (min-width: 1400px) {}
 
-
 @media (min-width: 1232px) {
 	.container {
 		min-width: 1200px;
@@ -2901,6 +2900,7 @@ h2.titulo-capa {
 	margin-bottom: 10px;
 }
 
+
 .rel-gestao .row-fluid {
 	border-bottom: 1px solid #bdbdbd;
 	margin-bottom: 25px;
@@ -3134,7 +3134,6 @@ h2.titulo-capa {
 }
 
 #banner-capes-tese .carousel-indicators li {
-
 	position: relative;
 	-ms-flex: 0 1 auto;
 	flex: 0 1 auto;
