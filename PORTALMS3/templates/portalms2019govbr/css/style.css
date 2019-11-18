@@ -6086,3 +6086,60 @@ img.destaquehome {
 	font-weight: 400;
 	/* padding-left: 15px!important; */
 }
+
+
+/***
+*
+* mod-chamadas styles
+* chamadas-box
+* 5-4-3-chamadas-layout
+***/
+
+.nitf-basic-tile.tile-content .subtitle {
+	padding-left: 25px;
+	color: #ffffff;
+}
+
+.nitf-basic-tile.tile-content a:link,
+.nitf-basic-tile.tile-content a,
+.nitf-basic-tile.tile-content a:visited {
+	padding-left: 25px;
+	color: #ffffff!important;
+}
+
+.foto-sobreposta-pequena.tile-default .column.col-md-3 {
+	float: left;
+}
+
+.foto-sobreposta-pequena.tile-default .column.col-md-4 {
+	float: left;
+}
+
+.foto-sobreposta-pequena.tile-default .column.col-md-5 {
+	float: left;
+}
+
+.foto-sobreposta-pequena.tile-default .column.col-md-6 {
+	float: left;
+}
+
+.foto-sobreposta-pequena.tile-default .column.col-md-7 {
+	float: left;
+}
+
+.foto-sobreposta-pequena.tile-default .column.col-md-8 {
+	float: left;
+}
+
+.foto-sobreposta-pequena.tile-default .column.col-md-9 {
+	float: left;
+}
+
+.foto-sobreposta-pequena.tile-default .column.col-md-10 {
+	float: left;
+}
+
+.botoes-centro a.btn-padrao {
+	color: #0c326f!important;
+	background-color: #ffffff;
+}
