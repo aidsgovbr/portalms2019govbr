@@ -9,7 +9,7 @@ class ModeloManual
 		$user	= JFactory::getUser();
 		$groups	= implode(',', $user->getAuthorisedViewLevels());
 		$lista = array();
-		$default = 3;
+		$default = 4;
 
 		$limite = (intval($params->get('limite_campos_preenchimento_manual', $default)) <= intval($params->get('quantidade', $default)))? intval($params->get('limite_campos_preenchimento_manual', $default)) : intval($params->get('quantidade', $default));
 
@@ -50,6 +50,12 @@ class ModeloManual
 			else {
 				$lista[$i]->image_alt = '';				
 			}
+			
+			//Ordenação
+			$lista[$i]->ordenacao = $params->get('ordering_item'.($i+1));
+			
+			//Variação de cor
+			$lista[$i]->variacao_item = $params->get('variacao_item'.($i+1));
 
 			// LINK DO ARTIGO
 			$fields = array();
