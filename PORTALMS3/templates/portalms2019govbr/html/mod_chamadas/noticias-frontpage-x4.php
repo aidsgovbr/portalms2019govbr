@@ -17,18 +17,18 @@ defined('_JEXEC') or die;
 			<?php //foreach ($lista_chamadas as $lista): ?>
 
 				<div class="col-md-3">
-					<div class="item-mosaico mosaico-secundario">
+
 						<div class="chamada-mosaico">
 							<?php if ($params->get('chapeu') && ($lista->chapeu)): ?>
-								<span class="chapeu-mosaico"><?php echo $lista->chapeu ?></span>
+								<span class="tile-subtitle"><?php echo $lista->chapeu ?></span>
 							<?php endif; ?>
 							<?php if ($params->get('exibir_title')): ?>			
-								<a href="<?php echo $link ?>" <?php if ($params->get('header_class')): echo 'class="'.$params->get('header_class').'"'; endif; ?>>
+								<h2 class="frontpage"><a href="<?php echo $link ?>" <?php if ($params->get('header_class')): echo 'class="'.$params->get('header_class').'"'; endif; ?>>
 									<?php echo $lista->title ?>
-								</a>
+								</a></h2>
 							<?php endif; ?>
 						</div>
-					</div>
+
 				</div>
 			<?php endforeach; ?>
 			<?php if (! empty($link_saiba_mais) ): ?>
