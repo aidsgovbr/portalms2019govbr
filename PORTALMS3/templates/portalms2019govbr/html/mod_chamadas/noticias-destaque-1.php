@@ -25,6 +25,8 @@ defined('_JEXEC') or die;
             </a>
 
          <?php endif; ?>		
+         
+         <p class="tile-description"><?php echo strip_tags($lista->introtext); ?></p>
       </div>
       <?php endforeach; ?>
    </div>

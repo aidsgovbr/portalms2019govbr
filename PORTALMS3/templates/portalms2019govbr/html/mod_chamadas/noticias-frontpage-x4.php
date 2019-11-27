@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * @package     Joomla.Site
  * @subpackage  mod_chamadas
@@ -25,10 +25,10 @@ defined('_JEXEC') or die;
 							<?php if ($params->get('exibir_title')): ?>			
 								<h2 class="frontpage"><a href="<?php echo $link ?>" <?php if ($params->get('header_class')): echo 'class="'.$params->get('header_class').'"'; endif; ?>>
 									<?php echo $lista->title ?>
-								</a></h2>
+								</a></h2>                       
 							<?php endif; ?>
 						</div>
-
+<p class="tile-description"><?php echo strip_tags($lista->introtext); ?></p>
 				</div>
 			<?php endforeach; ?>
 			<?php if (! empty($link_saiba_mais) ): ?>
@@ -46,3 +46,4 @@ defined('_JEXEC') or die;
 	</div>
 </section>
 <!-- NOTICIAS END -->
+<pre><?php print_r($lista_chamadas); ?></pre>
