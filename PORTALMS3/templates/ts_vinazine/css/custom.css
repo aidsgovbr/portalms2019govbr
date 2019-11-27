@@ -6191,11 +6191,13 @@ h3.post-title.lg {
 }
 
 h2.chamada-box-frontpage {
-    text-align: left;
     color: #0c326f!important;
-    font-size: 24px;
+	padding: 0px!important;
+    float: left;
     padding-top: 0!important;
-    padding-left: 0!important;
+    text-align: left;
+    line-height: 20px;
+	font-size: 20px;
 }
 
 p.tile-subtitle-frontpage {
@@ -6221,16 +6223,26 @@ span.tile-subtitle {
 }
 
 h2.frontpage {
+	color: #0c326f!important;
     padding: 0px!important;
 	float: left;
 	padding-top: 0!important;
+	padding: 0px!important;
+    float: left;
+    padding-top: 0!important;
+    text-align: left;
+    line-height: 20px;
+	font-size: 20px;
 }
 
 h2.frontpage a {
-    font-size: 20px;
-    color: #0c326f;
-    margin-bottom: 8px;
-	padding-top: 0!important;
+	color: #0c326f!important;
+    padding: 0px!important;
+    float: left;
+    padding-top: 0!important;
+    text-align: left;
+    line-height: 20px;
+	font-size: 20px;
 }
 
 /***
