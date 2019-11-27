@@ -6219,7 +6219,7 @@ span.tile-subtitle {
 	text-transform: uppercase;
 	color: #555;
 	line-height: 1.563rem!important;
-
+    padding-bottom: 8px;
 }
 
 h2.frontpage {
@@ -6245,6 +6245,35 @@ h2.frontpage a {
 	font-size: 20px;
 }
 
+h2.frontpage:after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    bottom: -10px;
+    left: 1%;
+    border-bottom: 3px solid #696969;
+    padding-bottom: 10px;
+}
+
+p.data-noticia {
+    position: relative;
+    top: 10px;
+    color: #666666;
+    font-size: 10px;
+}
+
+p.data-noticia:before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    bottom: 30px;
+    left: 1%;
+    border-bottom: 3px solid #696969;
+    padding-bottom: 10px;
+}
+
 /***
 *
 * mod-chamadas styles social share
@@ -6268,6 +6297,27 @@ h2.frontpage a {
 }
 
 
+
+
+/***
+*
+* mod-chamadas styles ASSUNTOS EM DESTAQUE
+* ts_vinazine\css
+* custom.css 
+* Home portalms2019govbr SP Page Builder
+***/
+
+.sppb-addon.sppb-addon-raw-html.assuntos-destaque {
+    position: relative;
+    top: 10px;
+    left: 50px;
+}
+
+.sp-page-builder .page-content #section-id-1574877598663 {
+    padding: 0px!important;
+    margin: 0px 0px 0px 0px;
+}
+
 a#btn-1574710791266.btn-destaque, a#btn-1574710939921.btn-destaque, a#btn-1574710950849.btn-destaque, a#btn-1574710959970.btn-destaque  {
     border: solid;
     border-width: 2px;
@@ -6275,6 +6325,9 @@ a#btn-1574710791266.btn-destaque, a#btn-1574710939921.btn-destaque, a#btn-157471
     color: #ffffff;
     background-color: Transparent;
     background-repeat: no-repeat;
+	border-radius: 12px;
+    border-color: #888888;
+	text-transform: uppercase;
 }
 
 #sbtn-1574710791266.btn-destaque:hover {
@@ -6310,14 +6363,13 @@ h3.sppb-title-heading:before {
     border-bottom: 3px solid #696969;
 }
 
-a#btn-1574711793541 {
-    /* border: solid; */
-    /* border-width: 2px; */
-    /* border-color: #222; */
-    color: #ffffff;
-    background-color: #696969;
-    /* background-repeat: no-repeat; */
+#sppb-addon-1574711793541 #btn-1574711793541.sppb-btn-custom {
+    background-color: #848685;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 12px;
 }
+
 
 /***
 *
@@ -6327,6 +6379,31 @@ a#btn-1574711793541 {
 * Home portalms2019govbr SP Page Builder
 ***/
 
+div#column-wrap-id-1574712876216 {
+    background-color: #626262;
+}
+
+li.btn-group a.btn {
+    background-color: #626262;
+    font-size: 14px;
+    text-transform: lowercase;
+    border-radius: 12px;
+    border-width: 2px;
+    border-color: #ffffff;
+    color: #ffffff;
+	padding: 5px;
+}
+
+li.btn-group a.btn:hover {
+    background-color: #ffffff;
+    font-size: 14px;
+    text-transform: lowercase;
+    border-radius: 12px;
+    border-width: 2px;
+    border-color: #626262;
+    color: #626262;
+	padding: 5px;
+}
 
 section#saude-brasil h3.sppb-title-heading {
     font-size: 36px!important;
@@ -6345,6 +6422,18 @@ section#saude-brasil h3.sppb-title-heading {
 * Home portalms2019govbr SP Page Builder
 ***/
 
+h3.sppb-addon-title {
+    color: #ffffff;
+	text-align: center;
+    text-transform: uppercase;
+}
+
+h3.sppb-title-heading-saude-az {
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
 .btn-group, .btn-group-vertical {
     position: relative;
     display: -ms-inline-flexbox;
@@ -6359,6 +6448,36 @@ section#saude-az h3.sppb-title-heading {
     font-weight: 600!important;
     text-align: center!important;
 
+}
+
+div#column-wrap-id-1574712876218, div#column-wrap-id-1574712973640 {
+    background-color: #ffffff;
+}
+
+a#btn-1574776765647 {
+    background-color: #848685;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 12px;
+    border: 0px;
+}
+
+a#btn-1574878527807, a#btn-1574878527814 {
+    background-color: #848685;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 12px;
+    border: 0px;
+    color: #ffffff;
+}
+
+span.sppb-icons-label-text.right {
+    color: #333333;
+    font-weight: 600;
+}
+
+i.fa.fa-cogs {
+    color: #b8b2b2;
 }
 
 /***
@@ -6381,6 +6500,16 @@ section#fake-news h3.sppb-title-heading {
     text-transform: uppercase;
 }
 
+a#btn-1574886747480.fake-news {
+    border: solid;
+    border-width: 2px;
+    border-color: #ffffff;
+    color: #ffffff;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
 
 /***
 *
@@ -6389,6 +6518,11 @@ section#fake-news h3.sppb-title-heading {
 * custom.css 
 * Home portalms2019govbr SP Page Builder
 ***/
+
+h3.sppb-title-heading {
+    margin-bottom: 0px!important;
+	padding-top: 50px;
+}
 
 div#campanhas h3.sppb-title-heading {
     font-size: 36px!important;
@@ -6399,13 +6533,12 @@ div#campanhas h3.sppb-title-heading {
 }
 
 .sp-page-builder .page-content #btn_campanhas {
-    padding-top: 0x;
+    padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 50px;
     padding-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
-    background-image: linear-gradient(90deg, #00c6fb 0%, #005bea 100%);
     position: relative;
     top: -21px;
 }
@@ -6426,10 +6559,11 @@ a#btn-1574778829681.btn-campanhas {
 * custom.css  section#redes-sociais h3.sppb-title-heading
 * Home portalms2019govbr SP Page Builder
 ***/
+
 .sppb-addon.sppb-addon-social-share.redes-sociais.sppb-social-share-style-custom.sppb-social-share-style-custom ul li a i
  {
     font-size: 36px!important;
-    color: #0c326f!important;
+    color: #313131!important;
     font-weight: 600!important;
     text-align: center!important;
     text-transform: uppercase;
@@ -6439,12 +6573,12 @@ a#btn-1574778829681.btn-campanhas {
  {
     font-size: 20px!important;
     color: #ffffff!important;
-    font-weight: 600!important;
     text-align: center!important;
-    text-transform: uppercase;
 	margin-left: 0px!important;
-    padding-left: 0px!important;
-}
+	padding: 3px;
+}	
+
+
 
 .sppb-social-share-style-custom ul li a i, .sppb-social-share-style-solid ul li a i {
     display: inline-block;
