@@ -1096,7 +1096,7 @@ header .box-menu {
 	background-image: -o-linear-gradient(transparent, #212121);
 	background-image: linear-gradient(transparent, #212121);
 }
-
+/*
 .mosaico .item-mosaico .chamada-mosaico {
 	position: absolute;
 	bottom: 20px;
@@ -1131,7 +1131,7 @@ header .box-menu {
 	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(236, 236, 236, 1) 100%);
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(236, 236, 236, 1) 100%);
 }
-
+*/
 .mosaico .item-mosaico.mosaico-secundario .chamada-mosaico .chapeu-mosaico {
 	font-size: 0.9em;
 	color: #0094ff
@@ -6379,6 +6379,42 @@ h3.sppb-title-heading:before {
 * Home portalms2019govbr SP Page Builder
 ***/
 
+.mosaico .item-mosaico.mosaico-secundario.saude-brasil {
+    height: 200px;
+    background-color: #4c7c3e;
+}
+
+.chamada-mosaico a {
+    color: #ffffff;
+}
+
+.mosaico .item-mosaico .chamada-mosaico {
+    /* position: absolute; */
+    /* bottom: 5px; */
+    z-index: 999993;
+    padding: 20px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.saude-brasil p.tile-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.saude-brasil h3.sppb-title-heading:before {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 1px;
+    bottom: -10px;
+    left: 45%;
+    border-bottom: 3px solid #4c7c3e;
+}
+
 div#column-wrap-id-1574712876216 {
     background-color: #626262;
 }
@@ -6413,6 +6449,17 @@ section#saude-brasil h3.sppb-title-heading {
     text-transform: uppercase;
 }
 
+a#btn.saude-brasil {
+    border: solid;
+    border-width: 2px;
+    border-color: #ffffff;
+    color: #ffffff;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+	text-transform: uppercase;
+}
 
 /***
 *
@@ -6488,6 +6535,16 @@ i.fa.fa-cogs {
 * Home portalms2019govbr SP Page Builder
 ***/
 
+.fake-news h3.sppb-title-heading:before {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 1px;
+    bottom: -10px;
+    left: 45%;
+    border-bottom: 3px solid #ffff01;
+}
+
 .sppb-carousel-pro-content {
     color: #ffffff;
 }
@@ -6518,6 +6575,17 @@ a#btn-1574886747480.fake-news {
 * custom.css 
 * Home portalms2019govbr SP Page Builder
 ***/
+
+.campanhas h3.sppb-title-heading:before {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 1px;
+    bottom: 0px;
+    left: 45%;
+    border-bottom: 3px solid #86cff4;
+}
+
 
 h3.sppb-title-heading {
     margin-bottom: 0px!important;
@@ -6559,6 +6627,15 @@ a#btn-1574778829681.btn-campanhas {
 * custom.css  section#redes-sociais h3.sppb-title-heading
 * Home portalms2019govbr SP Page Builder
 ***/
+
+section#redes-sociais h3.sppb-title-heading {
+    font-size: 36px!important;
+    color: #313131!important;
+    font-weight: 600!important;
+    text-align: center!important;
+    text-transform: uppercase;
+}
+
 
 .sppb-addon.sppb-addon-social-share.redes-sociais.sppb-social-share-style-custom.sppb-social-share-style-custom ul li a i
  {
