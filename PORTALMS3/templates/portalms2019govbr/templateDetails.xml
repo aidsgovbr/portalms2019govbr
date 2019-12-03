@@ -23,6 +23,7 @@
 		<filename>favicon.png</filename>
 		<filename>component.php</filename>
 		<filename>error.php</filename>
+		<folder>sppagebuilder/</folder>
 	</files>
 
 	<positions>
@@ -48,7 +49,7 @@
 		<position>barra-do-governo</position>
 		<position>rodape</position>
 		<position>menu-sobre</position>
-		
+        <position>pagebuilder</position>
 	</positions>
 
 	<config>
