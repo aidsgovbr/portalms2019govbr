@@ -3808,6 +3808,76 @@ body .ui-datepicker .ui-state-default {
 *
 * mod-chamadas styles
 * ts_vinazine\css
+* template.css 
+* Home portalms2019govbr SP owl-slider
+***/
+i.fa.fa-angle-left, i.fa.fa-angle-right {
+    color: #ffffff;
+}
+
+
+.ts-overlay-article .owl-nav {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.ts-overlay-article .owl-nav .owl-prev, .ts-overlay-article .owl-nav .owl-next {
+  font-size: 14px;
+  background: #00386c !important;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  outline: none;
+}
+.ts-overlay-article .owl-nav .owl-prev:hover, .ts-overlay-article .owl-nav .owl-next:hover {
+  color: #d72924;
+}
+.ts-overlay-article .owl-nav .owl-prev:before {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  bottom: 0;
+  width: 1px;
+  height: 15px;
+  background: #406a91;
+  content: '';
+  margin: auto;
+}
+.ts-overlay-article .owl-dots {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  bottom: 0;
+  /* height: 100%; */
+  margin: auto;
+  z-index: 1;
+  transform: translateY(-30%);
+}
+.ts-overlay-article .owl-dots .owl-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  display: block;
+  opacity: 1;
+  margin: 8px 0px;
+  background: #fff;
+  opacity: 0.5;
+}
+.ts-overlay-article .owl-dots .owl-dot.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  margin-left: -2px;
+}
+
+
+/***
+*
+* mod-chamadas styles
+* ts_vinazine\css
 * custom.css 
 * Home portalms2019govbr SP Page Builder
 ***/
@@ -3834,7 +3904,7 @@ h3.post-title.lg a {
 	font-size: 12px;
 	color: #8a8a8a;
 	position: relative;
-	top: 150px;
+	top: 200px;
 }
 
 a.post-cat {
@@ -3857,7 +3927,7 @@ h3.post-title.lg {
 	text-align: left;
 	color: #333;
 	position: relative;
-	padding-top: 80px;
+	padding-top: 130px;
 	padding-bottom: 15px;
 	margin-bottom: 23px;
 	margin: 0 auto;
