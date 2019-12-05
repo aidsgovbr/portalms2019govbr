@@ -984,7 +984,7 @@ header .box-menu {
 
 .mosaico .item-mosaico.mosaico-secundario {
 	height: 200px;
-/*	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(236, 236, 236, 1) 100%);
+	/*	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(236, 236, 236, 1) 100%);
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(236, 236, 236, 1) 100%);
 */
 }
@@ -2000,6 +2000,7 @@ body.capa-azul .documentFirstHeading {
 	background-color: #e8e8e8 !important;
 	border-color: #e8e8e8;
 }
+
 
 .pagination>.disabled>a {
 	color: #9a9999 !important;
@@ -3811,66 +3812,75 @@ body .ui-datepicker .ui-state-default {
 * template.css 
 * Home portalms2019govbr SP owl-slider
 ***/
-i.fa.fa-angle-left, i.fa.fa-angle-right {
-    color: #ffffff;
-}
 
+i.fa.fa-angle-left,
+i.fa.fa-angle-right {
+	color: #ffffff;
+}
 
 .ts-overlay-article .owl-nav {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
 }
-.ts-overlay-article .owl-nav .owl-prev, .ts-overlay-article .owl-nav .owl-next {
-  font-size: 14px;
-  background: #00386c !important;
-  color: #fff;
-  width: 28px;
-  height: 28px;
-  display: inline-block;
-  position: relative;
-  margin: 0;
-  outline: none;
+
+.ts-overlay-article .owl-nav .owl-prev,
+.ts-overlay-article .owl-nav .owl-next {
+	font-size: 14px;
+	background: #00386c !important;
+	color: #fff;
+	width: 28px;
+	height: 28px;
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	outline: none;
 }
-.ts-overlay-article .owl-nav .owl-prev:hover, .ts-overlay-article .owl-nav .owl-next:hover {
-  color: #d72924;
+
+.ts-overlay-article .owl-nav .owl-prev:hover,
+.ts-overlay-article .owl-nav .owl-next:hover {
+	color: #d72924;
 }
+
 .ts-overlay-article .owl-nav .owl-prev:before {
-  position: absolute;
-  right: 0;
-  top: 0px;
-  bottom: 0;
-  width: 1px;
-  height: 15px;
-  background: #406a91;
-  content: '';
-  margin: auto;
+	position: absolute;
+	right: 0;
+	top: 0px;
+	bottom: 0;
+	width: 1px;
+	height: 15px;
+	background: #406a91;
+	content: '';
+	margin: auto;
 }
+
 .ts-overlay-article .owl-dots {
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  bottom: 0;
-  /* height: 100%; */
-  margin: auto;
-  z-index: 1;
-  transform: translateY(-30%);
+	position: absolute;
+	right: 30px;
+	top: 50%;
+	bottom: 0;
+	/* height: 100%; */
+	margin: auto;
+	z-index: 1;
+	transform: translateY(-30%);
 }
+
 .ts-overlay-article .owl-dots .owl-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  display: block;
-  opacity: 1;
-  margin: 8px 0px;
-  background: #fff;
-  opacity: 0.5;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	display: block;
+	opacity: 1;
+	margin: 8px 0px;
+	background: #fff;
+	opacity: 0.5;
 }
+
 .ts-overlay-article .owl-dots .owl-dot.active {
-  width: 10px;
-  height: 10px;
-  opacity: 1;
-  margin-left: -2px;
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+	margin-left: -2px;
 }
 
 
@@ -3883,21 +3893,21 @@ i.fa.fa-angle-left, i.fa.fa-angle-right {
 ***/
 
 a.post-cat {
-    margin: 20px;
-    position: relative;
-    bottom: 50px;
-    color: #ffffff;
-    padding: 5px;
+	margin: 20px;
+	position: relative;
+	bottom: 50px;
+	color: #ffffff;
+	padding: 5px;
 }
 
 h3.post-title.lg a {
-    color: #ffffff;
-    position: absolute;
-    padding-top: 15px;
-    margin: 20px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1em;
-    font-weight: bold;
+	color: #ffffff;
+	position: absolute;
+	padding-top: 15px;
+	margin: 20px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1em;
+	font-weight: bold;
 }
 
 .sppb-meta-category {
@@ -4030,7 +4040,7 @@ p.data-noticia:before {
 ***/
 
 p.alert.alert-warning {
-    display: none;
+	display: none;
 }
 
 .sppb-social-share-style-custom ul li a,
@@ -4039,9 +4049,9 @@ p.alert.alert-warning {
 }
 
 .sppb-addon-social-share ul li {
-    display: inline-block;
-    box-sizing: border-box;
-    margin: 4px;
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 4px;
 }
 
 .sppb-social-share-style-custom ul li a i,
@@ -4135,11 +4145,12 @@ h3.sppb-title-heading:before {
 }
 
 #sppb-addon-1575473656564 #btn-1575473656564.sppb-btn-custom {
-    background-color: #848685;
-    color: #FFFFFF;
-    font-size: 16px;
-    text-transform: uppercase;
+	background-color: #848685;
+	color: #FFFFFF;
+	font-size: 16px;
+	text-transform: uppercase;
 }
+
 
 /***
 *
@@ -4424,7 +4435,8 @@ i.fa.fa-cogs {
 	color: #ffffff;
 }
 
-section#fake-news h3.sppb-title-heading, div#fake-news h3.sppb-title-heading {
+section#fake-news h3.sppb-title-heading,
+div#fake-news h3.sppb-title-heading {
 	font-size: 36px!important;
 	color: #ffffff!important;
 	font-weight: 600!important;
