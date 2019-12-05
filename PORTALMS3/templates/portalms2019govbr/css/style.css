@@ -1,4 +1,4 @@
-/*! 
+﻿/*! 
  * 2019 v1.0.0 
  * Copyright 2019.
  */
@@ -984,8 +984,9 @@ header .box-menu {
 
 .mosaico .item-mosaico.mosaico-secundario {
 	height: 200px;
-	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(236, 236, 236, 1) 100%);
+/*	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(236, 236, 236, 1) 100%);
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(236, 236, 236, 1) 100%);
+*/
 }
 
 .mosaico .item-mosaico.mosaico-secundario .chamada-mosaico .chapeu-mosaico {
@@ -3811,6 +3812,24 @@ body .ui-datepicker .ui-state-default {
 * Home portalms2019govbr SP Page Builder
 ***/
 
+a.post-cat {
+    margin: 20px;
+    position: relative;
+    bottom: 50px;
+    color: #ffffff;
+    padding: 5px;
+}
+
+h3.post-title.lg a {
+    color: #ffffff;
+    position: absolute;
+    padding-top: 15px;
+    margin: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+
 .sppb-meta-category {
 	font-size: 12px;
 	color: #8a8a8a;
@@ -3907,7 +3926,7 @@ h2.frontpage:after {
 	position: absolute;
 	width: 70%;
 	height: 1px;
-	bottom: -10px;
+	bottom: -20px;
 	left: 1%;
 	border-bottom: 3px solid #696969;
 	padding-bottom: 10px;
@@ -3940,9 +3959,19 @@ p.data-noticia:before {
 * Home portalms2019govbr SP Page Builder
 ***/
 
+p.alert.alert-warning {
+    display: none;
+}
+
 .sppb-social-share-style-custom ul li a,
 .sppb-social-share-style-solid ul li a {
 	padding: 1px;
+}
+
+.sppb-addon-social-share ul li {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 4px;
 }
 
 .sppb-social-share-style-custom ul li a i,
@@ -4035,6 +4064,12 @@ h3.sppb-title-heading:before {
 	border-radius: 12px;
 }
 
+#sppb-addon-1575473656564 #btn-1575473656564.sppb-btn-custom {
+    background-color: #848685;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-transform: uppercase;
+}
 
 /***
 *
@@ -4319,7 +4354,7 @@ i.fa.fa-cogs {
 	color: #ffffff;
 }
 
-section#fake-news h3.sppb-title-heading {
+section#fake-news h3.sppb-title-heading, div#fake-news h3.sppb-title-heading {
 	font-size: 36px!important;
 	color: #ffffff!important;
 	font-weight: 600!important;
