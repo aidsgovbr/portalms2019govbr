@@ -28,7 +28,7 @@ defined('_JEXEC') or die;
 								</a></h2>                       
 							<?php endif; ?>
 						</div>
-<p class="tile-description"><?php echo strip_tags($lista->introtext); ?></p>
+<p class="data-noticia"><?php echo strip_tags($lista->introtext); ?></p>
 				</div>
 			<?php endforeach; ?>
 			<?php if (! empty($link_saiba_mais) ): ?>
@@ -46,4 +46,3 @@ defined('_JEXEC') or die;
 	</div>
 </section>
 <!-- NOTICIAS END -->
-<pre><?php print_r($lista_chamadas); ?></pre>
