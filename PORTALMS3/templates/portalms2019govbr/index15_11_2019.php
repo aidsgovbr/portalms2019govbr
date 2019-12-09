@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
    /**
     * @package
     * @subpackage
@@ -46,7 +46,7 @@
    ?>
 <!doctype html>
 <html lang="pt-br">
-    <head>
+   <head>
       <?php if($frontpage != '1') : ?>
       <jdoc:include type="head"/>
       <?php else: ?>
@@ -61,10 +61,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="shortcut icon" type="image/png" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/favicon.png" />
       <!-- JS -->
-      <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>--> 
-      <!--<script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/jquery.js"></script>--> 
+      <script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/jquery.js"></script>
       <script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/script-portal.js"></script>
-      <!--<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+      <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
       <!--<script type="text/javascript" src="https://idangero.us/swiper/dist/js/swiper.min.js"></script>-->
       <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
       <script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/owl-carousel.2.3.0.min.js"></script>
@@ -73,8 +72,7 @@
       <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/bootstrap.min.css">
       <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/font-awesome.min.css">
       <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/style.css">
-      <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">-->
-     <!-- <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/owlcarousel.min.css">
+      <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/owlcarousel.min.css">
       <!--<link rel="stylesheet" href="https://idangero.us/swiper/dist/css/swiper.min.css">-->
       <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
       <!-- CSS -->
@@ -172,14 +170,8 @@
             <jdoc:include type="modules" name="rastro-navegacao" />
             <jdoc:include type="module" name="breadcrumbs" title="Rastro de navegação" />
          </div>
-         
-         
-         <!-- <div id="wrapper" class="container">
-            <div class="conteudo-interna"> -->
-                <div class="body-wrapper">
-        <div class="body-innerwrapper">
-        
-        
+         <div id="wrapper" class="container">
+            <div class="conteudo-interna">
                <?php   $posicao_topo = $preffix. '-topo';
                   $posicao_rodape = $preffix. '-rodape';
                   $posicao_direita = $preffix. '-direita'; ?>

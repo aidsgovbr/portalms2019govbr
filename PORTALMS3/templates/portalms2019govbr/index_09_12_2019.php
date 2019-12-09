@@ -1,9 +1,9 @@
 ﻿<?php 
    /**
-    * @package
-    * @subpackage
-    * @copyright
-    * @license
+    * package
+    * subpackage
+    * copyright
+    * license
     */
    
    // No direct access.
@@ -34,19 +34,19 @@
    $metaKey = $app->get('MetaKeys','');
    
    $preffix = '';
-   if(@$menuitem   = $app->getMenu()->getActive()){
+   if($menuitem   = $app->getMenu()->getActive()){
    // Menu
    $pageclass  = $menuitem->params->get( 'pageclass_sfx' ); 
    $preffix    = current(explode(' ',$pageclass));
    }
    // Type page
-   @$frontpage = $menuitem->home;
+   $frontpage = $menuitem->home;
    $article = ($option == 'com_content' && $view == 'article');
    $com_blankcomponent = ($option == 'com_blankcomponent');
    ?>
 <!doctype html>
 <html lang="pt-br">
-    <head>
+   <head>
       <?php if($frontpage != '1') : ?>
       <jdoc:include type="head"/>
       <?php else: ?>
@@ -75,6 +75,7 @@
       <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/style.css">
       <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">-->
      <!-- <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/owlcarousel.min.css">
+      
       <!--<link rel="stylesheet" href="https://idangero.us/swiper/dist/css/swiper.min.css">-->
       <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
       <!-- CSS -->
@@ -152,7 +153,7 @@
             <!-- BOX BUSCA -->
             <jdoc:include type="modules" name="modal-busca" />
             <!-- AREA DE DESTAQUE -->
-            <?php if (@$menuitem->home) : ?>
+            <?php if ($menuitem->home) : ?>
             <jdoc:include type="modules" name="super-banner" />
             <?php endif; ?>
          </header>
@@ -163,7 +164,7 @@
          </div>
          <?php endif; ?>
          <!--  verifica se a pagina é a inicial-->
-         <?php if (@$menuitem->home) : ?>
+         <?php if ($menuitem->home) : ?>
          <jdoc:include type="modules" name="pagina-inicial" style="container" headerLevel="2" />
          <!-- verifica se a pagina é interna -->
          <?php else: ?>
@@ -183,7 +184,7 @@
                <?php   $posicao_topo = $preffix. '-topo';
                   $posicao_rodape = $preffix. '-rodape';
                   $posicao_direita = $preffix. '-direita'; ?>
-               <?php if(@$menuitem->component == "com_blankcomponent" &&  @$menuitem->params->get("menu_text")):?>		
+               <?php if($menuitem->component == "com_blankcomponent" &&  $menuitem->params->get("menu_text")):?>		
                <h1 class="documentFirstHeading">
                   <?php if($menuitem->params->get("menu-anchor_title")) : ?>
                   <?php echo $menuitem->params->get("menu-anchor_title"); ?>
