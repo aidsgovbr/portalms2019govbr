@@ -1474,7 +1474,7 @@ span.separator {
 	margin-bottom: .5em;
 	line-height: normal;
 	letter-spacing: normal;
-	font-weight: 600;
+	font-weight: 200;
 	text-align: left;
 }
 
@@ -3813,6 +3813,15 @@ body .ui-datepicker .ui-state-default {
 * Home portalms2019govbr SP owl-slider
 ***/
 
+div#column-wrap-id-1575469698700 {
+    padding-top: 23px;
+}
+
+div#featured-slider-1575556427450 {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16)!important;
+}
+
+
 i.fa.fa-angle-left,
 i.fa.fa-angle-right {
 	color: #ffffff;
@@ -4529,6 +4538,10 @@ a#btn-1574878529795 {
 * custom.css  section#redes-sociais h3.sppb-title-heading
 * Home portalms2019govbr SP Page Builder
 ***/
+
+div#sppb-addon-1574708036512 {
+    padding-top: 23px;
+}
 
 section#redes-sociais h3.sppb-title-heading {
 	font-size: 36px!important;
