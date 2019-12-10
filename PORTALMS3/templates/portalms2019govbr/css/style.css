@@ -470,7 +470,7 @@ header #portal-searchbox .btn-busca:after {
 }
 
 header .box-menu {
-	/*margin-top: -74px;*/
+	margin-top: -75px;
 }
 
 .box-menu {
@@ -3957,6 +3957,10 @@ h2.chamada-box-frontpage {
 	font-size: 20px;
 }
 
+h2.chamada-box-frontpage a {
+    color: #0c326f!important;
+}
+
 p.tile-subtitle-frontpage {
 	display: block;
 	font-size: 14px;
@@ -4001,25 +4005,28 @@ h2.frontpage a {
 	font-size: 20px;
 }
 
-h2.frontpage:after {
+h2.frontpage:after, h2.chamada-box-frontpage:after {
 	content: "";
 	position: absolute;
 	width: 70%;
 	height: 1px;
-	bottom: -20px;
+	bottom: -15px;
 	left: 1%;
 	border-bottom: 3px solid #696969;
 	padding-bottom: 10px;
 }
 
+
 p.data-noticia {
-	position: relative;
+/*	position: relative;
 	top: 10px;
+*/
 	color: #666666;
 	font-size: 10px;
 }
 
-p.data-noticia:before {
+/*	
+p.data-noticia:after {
 	content: "";
 	position: absolute;
 	width: 70%;
@@ -4029,7 +4036,7 @@ p.data-noticia:before {
 	border-bottom: 3px solid #696969;
 	padding-bottom: 10px;
 }
-
+*/
 
 /***
 *
