@@ -9,52 +9,68 @@
    // No direct access.
    defined('_JEXEC') or die;
    
-$doc = JFactory::getDocument();
-$app = JFactory::getApplication();
-
-$message  =  $app->getMessageQueue();
-$pageclass = "";
-$preffix = "";
-$option = $app->input->getCmd('option', '');
-$view = $app->input->getCmd('view', '');
-$com_blankcomponent = ($option  == 'com_blankcomponen' ? true : false);
-
-if(!empty($app->getMenu()->getActive())){
-   $menuitem   = $app->getMenu()->getActive();
+   // Getting framwork from template
+   $app             = JFactory::getApplication();
+   $doc             = JFactory::getDocument();
+   $user            = JFactory::getUser();
+   
+   $this->language  = $doc->language;
+   $this->direction = $doc->direction;
+   
+   // Getting params from template
+   $params = $app->getTemplate(true)->params;
+   
+   // Detecting Active Variables
+   $option   = $app->input->getCmd('option', '');
+   $view     = $app->input->getCmd('view', '');
+   $layout   = $app->input->getCmd('layout', '');
+   $task     = $app->input->getCmd('task', '');
+   $itemid   = $app->input->getCmd('Itemid', '');
+   $message  =  $app->getMessageQueue();
+   
+   // Head information
+   $sitename = $app->get('sitename','');
+   $metaDesc = $app->get('MetaDesc','');
+   $metaKey = $app->get('MetaKeys','');
+   
+   $preffix = '';
+   if(@$menuitem   = $app->getMenu()->getActive()){
+   // Menu
    $pageclass  = $menuitem->params->get( 'pageclass_sfx' ); 
-   $preffix    = current(explode(' ',$pageclass));  
-}
-
-$helix_path = JPATH_PLUGINS . '/system/helixultimate/core/helixultimate.php';
-if (file_exists($helix_path)) {
-    require_once($helix_path);
-    $theme = new helixUltimate;
-} else {
-    die('Install and activate <a target="_blank" href="https://www.joomshaper.com/helix">Helix Ultimate Framework</a>.');
-}
-?>
+   $preffix    = current(explode(' ',$pageclass));
+   }
+   // Type page
+   @$frontpage = $menuitem->home;
+   $article = ($option == 'com_content' && $view == 'article');
+   $com_blankcomponent = ($option == 'com_blankcomponent');
+   ?>
 <!doctype html>
 <html lang="pt-br">
-	<head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="canonical" href="<?php echo JUri::current(); ?>">
-        <?php
-
-        $theme->head();
-        
-        $theme->add_css('font-awesome.min.css,bootstrap.min.css,owlcarousel.min.css,style.css,jquery-ui.css,all.css');						
-        $theme->add_js('jquery.sticky.js, main.js,owl-carousel.2.3.0.min.js,script-portal.js,jquery-ui.js,swiper.min.js');
- 
-
-        //Before Head
-        if ($before_head = $this->params->get('before_head'))
-        {
-            echo $before_head . "\n";
-        }
-        ?>
-    </head>
-   
+   <head>
+      <jdoc:include type="head"/>
+      <title><?php echo $sitename; ?></title>
+      <meta charset="utf-8">
+      <meta name="keywords" content="<?php echo $metaKey; ?>" />
+      <meta name="description" content="<?php echo $metaDesc; ?>" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" type="image/png" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/favicon.png" />
+      <!-- JS -->
+      <script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/script-portal.js"></script>
+      <script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/owl-carousel.2.3.0.min.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>   
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+	  <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <!-- JS -->
+      <!-- CSS -->
+      <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/bootstrap.min.css">
+      <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/font-awesome.min.css">
+      <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/style.css">
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+      <!-- CSS -->
+   </head>
    <body class="<?php echo $pageclass ; ?> ">
       <div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;">
          <ul id="menu-barra-temp" style="list-style:none;">
@@ -101,35 +117,49 @@ if (file_exists($helix_path)) {
                         </form>
                      </div>
                   </div>
-               </div>             
+               </div>
+               <!-- HEADER --> 
+               <!-- <div class="search-wrapper"> --> 
+               <!-- Submenu Links Destaque/Serviços --> 
+               <!-- <jdoc:include type="modules" name="top-menu" />--> 
+               <!--      </div>--> 
+               <!-- MENU PRINCIPAL -->
                <div class="box-menu">
                   <div class="container">
                      <div class="row">
+                        <!-- Menu Principal -->
                         <jdoc:include type="modules" name="menu-principal-interno" />
                      </div>
+                     <!-- row -->
                      <div class="row">
+                        <!-- Redes Sociais Menu Principal -->
                         <jdoc:include type="modules" name="redes-sociais-menu-principal" />
                      </div>
                   </div>
                </div>
+               <!-- CONTAINER --> 
             </nav>
+            <!-- BOX BUSCA -->
             <jdoc:include type="modules" name="modal-busca" />
+            <!-- AREA DE DESTAQUE -->
             <?php if (@$menuitem->home) : ?>
             <jdoc:include type="modules" name="super-banner" />
             <?php endif; ?>
          </header>
+         <!-- HEADER END -->
          <?php if($message):  ?>
          <div class="row-fluid">
             <jdoc:include type="message" />
          </div>
          <?php endif; ?>
-         
+         <!--  verifica se a pagina é a inicial-->
          <?php if (empty($menuitem->home)) : ?>
-             <div class="container">
-                <!-- rastro de navegacao -->
-                <jdoc:include type="modules" name="rastro-navegacao" />
-                <jdoc:include type="module" name="breadcrumbs" title="Rastro de navegação" />
-             </div>
+         <div class="container">
+            <!-- rastro de navegacao -->
+            <jdoc:include type="modules" name="rastro-navegacao" />
+            <jdoc:include type="module" name="breadcrumbs" title="Rastro de navegação" />
+         </div>
+      </div>
       <?php endif; ?>
       <div class="conteudo-interna">
          <div class="body-wrapper">
