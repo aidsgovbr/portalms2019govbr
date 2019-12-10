@@ -46,37 +46,31 @@
    ?>
 <!doctype html>
 <html lang="pt-br">
-    <head>
-      <?php if($frontpage != '1') : ?>
+   <head>
       <jdoc:include type="head"/>
-      <?php else: ?>
       <title><?php echo $sitename; ?></title>
       <meta charset="utf-8">
       <meta name="keywords" content="<?php echo $metaKey; ?>" />
-      <?php endif; ?>
       <meta name="description" content="<?php echo $metaDesc; ?>" />
-      <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="shortcut icon" type="image/png" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/favicon.png" />
       <!-- JS -->
-      <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>--> 
-      <!--<script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/jquery.js"></script>--> 
       <script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/script-portal.js"></script>
-      <!--<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
-      <!--<script type="text/javascript" src="https://idangero.us/swiper/dist/js/swiper.min.js"></script>-->
       <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
       <script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/owl-carousel.2.3.0.min.js"></script>
+      <!--   <script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/jquery.js"></script>-->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
       <!-- JS -->
       <!-- CSS -->
       <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/bootstrap.min.css">
       <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/font-awesome.min.css">
       <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/style.css">
-      <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">-->
-     <!-- <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/owlcarousel.min.css">
-      <!--<link rel="stylesheet" href="https://idangero.us/swiper/dist/css/swiper.min.css">-->
+      <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
       <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
       <!-- CSS -->
    </head>
    <body class="<?php echo $pageclass ; ?> ">
@@ -87,103 +81,96 @@
       </div>
       <jdoc:include type="modules" name="barra-do-governo" />
       <div id="interna">
-         <!-- TOPO -->
-         <header class="topo">
-            <nav class="menu-principal">
-               <div class="container">
-                  <div class="header-wrapper">
-                     <!-- MENU & BUSCA --> 
-                     <!-- icones -->
-                     <div class="header-icons"> <a class="ico-navegacao">Navegação</a> </div>
-                     <!-- Logo 
-                        <jdoc:include type="modules" name="logo" />-->
-                     <div id="logo" class="span8<?php if($this->params->get('classe_nome_principal', '') != '') echo ' '.$this->params->get('classe_nome_principal'); ?>">
-                        <a href="<?php echo JURI::root(); ?>" title="<?php echo $this->params->get('nome_principal', 'Nome principal'); ?>">
-                           <?php if( $this->params->get('emblema', '') != '' ): ?>
-                           <img src="<?php echo JURI::root(); ?><?php echo $this->params->get('emblema', ''); ?>" alt="<?php echo $this->params->get('nome_principal', 'Nome principal'); ?>" />
-                           <?php endif; ?>
-                           <span class="portal-title-1"><?php echo $this->params->get('denominacao', ''); ?></span>
-                           <h1 class="portal-title corto"><?php echo $this->params->get('nome_principal', 'Nome principal'); ?></h1>
-                           <!-- <span class="portal-description"><?php //echo $this->params->get('subordinacao', ''); ?></span> --> 
-                        </a>
-                     </div>
-                     <!-- Acessibilidade 
-                        <jdoc:include type="modules" name="acessibilidade" />-->
-                     <div class="header-accessibility">
-                        <ul>
-                           <li id="siteaction-contraste"> <a href="#" accesskey="6" class="toggle-contraste">Alto Contraste</a> </li>
-                           <li id="siteaction-vlibras"> <a href="http://www.vlibras.gov.br/" accesskey="">VLibras</a> </li>
-                        </ul>
-                     </div>
-                     <!-- Search -->
-                     <div id="portal-searchbox">
-                        <form action="<?php echo $this->baseurl; ?>/busca" method="post" class="form-inline search-form">
-                           <div class="LSBox">
-                              <input name="searchword" id="mod-search-searchword" maxlength="200" class="inputbox search-query searchField" type="search" size="20" placeholder="O que você procura?">
-                              <button onclick="this.form.searchword.focus();" class="searchButton" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                              <input type="hidden" name="task" value="search">
-                              <input type="hidden" name="option" value="com_search">
-                        </form>
-                        </div>
-                     </div>
+      <!-- TOPO -->
+      <header class="topo">
+         <nav class="menu-principal">
+            <div class="container">
+               <div class="header-wrapper">
+                  <!-- MENU & BUSCA --> 
+                  <!-- icones -->
+                  <div class="header-icons"> <a class="ico-navegacao">Navegação</a> </div>
+                  <!-- Logo 
+                     <jdoc:include type="modules" name="logo" />-->
+                  <div id="logo" class="span8<?php if($this->params->get('classe_nome_principal', '') != '') echo ' '.$this->params->get('classe_nome_principal'); ?>">
+                     <a href="<?php echo JURI::root(); ?>" title="<?php echo $this->params->get('nome_principal', 'Nome principal'); ?>">
+                        <?php if( $this->params->get('emblema', '') != '' ): ?>
+                        <img src="<?php echo JURI::root(); ?><?php echo $this->params->get('emblema', ''); ?>" alt="<?php echo $this->params->get('nome_principal', 'Nome principal'); ?>" />
+                        <?php endif; ?>
+                        <span class="portal-title-1"><?php echo $this->params->get('denominacao', ''); ?></span>
+                        <h1 class="portal-title corto"><?php echo $this->params->get('nome_principal', 'Nome principal'); ?></h1>
+                        <!-- <span class="portal-description"><?php //echo $this->params->get('subordinacao', ''); ?></span> --> 
+                     </a>
                   </div>
-                  <!-- HEADER --> 
-                  <!-- <div class="search-wrapper"> --> 
-                  <!-- Submenu Links Destaque/Serviços --> 
-                  <!-- <jdoc:include type="modules" name="top-menu" />--> 
-                  <!--      </div>--> 
-                  <!-- MENU PRINCIPAL -->
-                  <div class="box-menu">
-                     <div class="container">
-                        <div class="row">
-                           <!-- Menu Principal -->
-                           <jdoc:include type="modules" name="menu-principal-interno" />
-                        </div>
-                        <!-- row -->
-                        <div class="row">
-                           <!-- Redes Sociais Menu Principal -->
-                           <jdoc:include type="modules" name="redes-sociais-menu-principal" />
-                        </div>
-                     </div>
+                  <!-- Acessibilidade 
+                     <jdoc:include type="modules" name="acessibilidade" />-->
+                  <div class="header-accessibility">
+                     <ul>
+                        <li id="siteaction-contraste"> <a href="#" accesskey="6" class="toggle-contraste">Alto Contraste</a> </li>
+                        <li id="siteaction-vlibras"> <a href="http://www.vlibras.gov.br/" accesskey="">VLibras</a> </li>
+                     </ul>
+                  </div>
+                  <!-- Search -->
+                  <div id="portal-searchbox">
+                     <form action="<?php echo $this->baseurl; ?>/busca" method="post" class="form-inline search-form">
+                        <input name="searchword" id="mod-search-searchword" maxlength="200" class="inputbox search-query searchField" type="search" size="20" placeholder="O que você procura?">
+                        <button onclick="this.form.searchword.focus();" class="searchButton" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                        <input type="hidden" name="task" value="search">
+                        <input type="hidden" name="option" value="com_search">
+                     </form>
                   </div>
                </div>
-               <!-- CONTAINER --> 
-            </nav>
-            <!-- BOX BUSCA -->
-            <jdoc:include type="modules" name="modal-busca" />
-            <!-- AREA DE DESTAQUE -->
-            <?php if (@$menuitem->home) : ?>
-            <jdoc:include type="modules" name="super-banner" />
-            <?php endif; ?>
-         </header>
-         <!-- HEADER END -->
-         <?php if($message):  ?>
-         <div class="row-fluid">
-            <jdoc:include type="message" />
-         </div>
-         <?php endif; ?>
-         <!--  verifica se a pagina é a inicial-->
+            </div>
+            <!-- HEADER --> 
+            <!-- <div class="search-wrapper"> --> 
+            <!-- Submenu Links Destaque/Serviços --> 
+            <!-- <jdoc:include type="modules" name="top-menu" />--> 
+            <!--      </div>--> 
+            <!-- MENU PRINCIPAL -->
+            <div class="box-menu">
+               <div class="container">
+                  <div class="row">
+                     <!-- Menu Principal -->
+                     <jdoc:include type="modules" name="menu-principal-interno" />
+                  </div>
+                  <!-- row -->
+                  <div class="row">
+                     <!-- Redes Sociais Menu Principal -->
+                     <jdoc:include type="modules" name="redes-sociais-menu-principal" />
+                  </div>
+               </div>
+            </div>
+            <!-- CONTAINER --> 
+         </nav>
+         <!-- BOX BUSCA -->
+         <jdoc:include type="modules" name="modal-busca" />
+         <!-- AREA DE DESTAQUE -->
          <?php if (@$menuitem->home) : ?>
-         <jdoc:include type="modules" name="pagina-inicial" style="container" headerLevel="2" />
-         <!-- verifica se a pagina é interna -->
-         <?php else: ?>
-         <div class="container">
-            <!-- rastro de navegacao -->
-            <jdoc:include type="modules" name="rastro-navegacao" />
-            <jdoc:include type="module" name="breadcrumbs" title="Rastro de navegação" />
-         </div>
-         
-         
-         <!-- <div id="wrapper" class="container">
-            <div class="conteudo-interna"> -->
-                <div class="body-wrapper">
-        <div class="body-innerwrapper">
-        
-        
-               <?php   $posicao_topo = $preffix. '-topo';
-                  $posicao_rodape = $preffix. '-rodape';
-                  $posicao_direita = $preffix. '-direita'; ?>
-               <?php if(@$menuitem->component == "com_blankcomponent" &&  @$menuitem->params->get("menu_text")):?>		
+         <jdoc:include type="modules" name="super-banner" />
+         <?php endif; ?>
+      </header>
+      <!-- HEADER END -->
+      <?php if($message):  ?>
+      <div class="row-fluid">
+         <jdoc:include type="message" />
+      </div>
+      <?php endif; ?>
+      <!--  verifica se a pagina é a inicial-->
+      <?php if (empty($menuitem->home)) : ?>
+      <div class="container">
+         <!-- rastro de navegacao -->
+         <jdoc:include type="modules" name="rastro-navegacao" />
+         <jdoc:include type="module" name="breadcrumbs" title="Rastro de navegação" />
+      </div>
+      <?php endif; ?>
+      <div class="conteudo-interna">
+         <div class="body-wrapper">
+            <div class="body-innerwrapper">
+               <?php 
+                  $posicao_topo = $preffix. '-topo';
+                           $posicao_rodape = $preffix. '-rodape';
+                           $posicao_direita = $preffix. '-direita'; ?>
+               <?php if(!empty($menuitem)) : ?> 
+               <?php if($menuitem->component == "com_blankcomponent" &&  $menuitem->params->get("menu_text")):?>		
                <h1 class="documentFirstHeading">
                   <?php if($menuitem->params->get("menu-anchor_title")) : ?>
                   <?php echo $menuitem->params->get("menu-anchor_title"); ?>
@@ -191,6 +178,7 @@
                   <?php echo $menuitem->title; ?>
                   <?php endif; ?>
                </h1>
+               <?php endif; ?>
                <?php endif; ?>
                <?php if($this->countModules($posicao_topo) || $this->countModules("internas-topo")): ?>
                <div class="row-fluid">
@@ -224,8 +212,6 @@
                   <jdoc:include type="modules" name="<?php echo $posicao_rodape ?>" headerLevel="2" style="container" />
                   <jdoc:include type="modules" name="internas-rodape" headerLevel="2" style="container" />
                </div>
-               <?php endif; ?>
-
                <?php endif; ?>
             </div>
          </div>
