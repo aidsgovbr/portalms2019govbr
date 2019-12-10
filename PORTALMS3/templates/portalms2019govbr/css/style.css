@@ -2001,7 +2001,6 @@ body.capa-azul .documentFirstHeading {
 	border-color: #e8e8e8;
 }
 
-
 .pagination>.disabled>a {
 	color: #9a9999 !important;
 	padding-right: 10px
@@ -3814,13 +3813,12 @@ body .ui-datepicker .ui-state-default {
 ***/
 
 div#column-wrap-id-1575469698700 {
-    padding-top: 23px;
+	padding-top: 23px;
 }
 
 div#featured-slider-1575556427450 {
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16)!important;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16)!important;
 }
-
 
 i.fa.fa-angle-left,
 i.fa.fa-angle-right {
@@ -3967,7 +3965,7 @@ h2.chamada-box-frontpage {
 }
 
 h2.chamada-box-frontpage a {
-    color: #0c326f!important;
+	color: #0c326f!important;
 }
 
 p.tile-subtitle-frontpage {
@@ -4014,7 +4012,8 @@ h2.frontpage a {
 	font-size: 20px;
 }
 
-h2.frontpage:after, h2.chamada-box-frontpage:after {
+h2.frontpage:after,
+h2.chamada-box-frontpage:after {
 	content: "";
 	position: absolute;
 	width: 70%;
@@ -4025,14 +4024,14 @@ h2.frontpage:after, h2.chamada-box-frontpage:after {
 	padding-bottom: 10px;
 }
 
-
 p.data-noticia {
-/*	position: relative;
+	/*	position: relative;
 	top: 10px;
 */
 	color: #666666;
 	font-size: 10px;
 }
+
 
 /*	
 p.data-noticia:after {
@@ -4046,6 +4045,7 @@ p.data-noticia:after {
 	padding-bottom: 10px;
 }
 */
+
 
 /***
 *
@@ -4124,6 +4124,58 @@ a#btn-1574710959970.btn-destaque,
 #sbtn-1574710791266.btn-destaque:hover {
 	background-color: #222;
 	color: #FFFFFF;
+}
+
+
+/***
+*
+* mod-chamadas styles ASSUNTOS EM DESTAQUE versão 2
+* ts_vinazine\css
+* custom.css 
+* Home portalms2019govbr SP Page Builder
+***/
+
+div#sppb-addon-1576008460277 {
+	float: left;
+	margin-left: 110px;
+}
+
+div#sppb-addon-1576008460279 {
+	float: left;
+	margin-left: 100px;
+}
+
+a#btn-1576008460279,
+a#btn-1576008460281,
+a#btn-1576008460283,
+a#btn-1576008460285 {
+	border: solid;
+	border-width: 2px;
+	border-color: #222;
+	color: #ffffff;
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	border-radius: 12px;
+	border-color: #969696;
+	text-transform: uppercase;
+	color: #222;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+div#sppb-addon-1576008460281 {
+	float: left;
+	margin-left: 30px;
+}
+
+div#sppb-addon-1576008460283 {
+	float: left;
+	margin-left: 30px;
+}
+
+div#sppb-addon-1576008460285 {
+	float: left;
+	margin-left: 30px;
 }
 
 
@@ -4502,6 +4554,10 @@ div#campanhas h3.sppb-title-heading {
 	text-transform: uppercase;
 }
 
+.sppb-carousel-pro-inner-content {
+	margin-top: 40px;
+}
+
 .sp-page-builder .page-content #btn_campanhas {
 	padding-top: 0px;
 	padding-right: 0px;
@@ -4540,7 +4596,7 @@ a#btn-1574878529795 {
 ***/
 
 div#sppb-addon-1574708036512 {
-    padding-top: 23px;
+	padding-top: 23px;
 }
 
 section#redes-sociais h3.sppb-title-heading {
