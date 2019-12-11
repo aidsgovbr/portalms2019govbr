@@ -4244,7 +4244,7 @@ h3.sppb-title-heading:before {
 	padding: 25px;
 	color: #fff;
 	font-size: 24px;
-	font-weight: 600;
+	font-weight: 200;
 	text-align: left;
 }
 
@@ -4268,6 +4268,16 @@ h3.sppb-title-heading:before {
 
 div#column-wrap-id-1574712876216 {
 	background-color: #626262;
+}
+
+.column.col-md-3 .chamada-mosaico a:before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    bottom: 30px;
+    left: 15%;
+    border-bottom: 3px solid #ffffff;
 }
 
 li.btn-group a.btn {
