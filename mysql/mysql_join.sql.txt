@@ -1,0 +1,11 @@
+SELECT * FROM `pmgov2013_categories` WHERE `id`=1191 AND `extension`= 'com_jevents'  [SAS]
+
+SELECT * FROM `pmgov2013_jevents_vevent` WHERE `catid`=1191 [ PEGA UM EVENTO DA CATEGORIA ev_id = 7177 | detail_id = 7178]
+
+SELECT * FROM `pmgov2013_jevents_vevdetail` WHERE `evdet_id`= 7178 [detalhes da agenda]
+
+https://pt.stackoverflow.com/questions/72710/inner-join-com-3-tabelas
+
+SELECT * FROM `pmgov2013_jevents_vevdetail` 
+INNER JOIN `pmgov2013_jevents_vevent` ON `pmgov2013_jevents_vevent`.`detail_id` = `pmgov2013_jevents_vevdetail`.`evdet_id`
+WHERE  `pmgov2013_jevents_vevent`.`catid`=1191
