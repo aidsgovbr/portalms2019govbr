@@ -9,52 +9,50 @@
    // No direct access.
    defined('_JEXEC') or die;
    
-$doc = JFactory::getDocument();
-$app = JFactory::getApplication();
-
-$message  =  $app->getMessageQueue();
-$pageclass = "";
-$preffix = "";
-$option = $app->input->getCmd('option', '');
-$view = $app->input->getCmd('view', '');
-$com_blankcomponent = ($option  == 'com_blankcomponen' ? true : false);
-
-if(!empty($app->getMenu()->getActive())){
+   $doc = JFactory::getDocument();
+   $app = JFactory::getApplication();
+   
+   $message  =  $app->getMessageQueue();
+   $pageclass = "";
+   $preffix = "";
+   $option = $app->input->getCmd('option', '');
+   $view = $app->input->getCmd('view', '');
+   $com_blankcomponent = ($option  == 'com_blankcomponen' ? true : false);
+   
+   if(!empty($app->getMenu()->getActive())){
    $menuitem   = $app->getMenu()->getActive();
    $pageclass  = $menuitem->params->get( 'pageclass_sfx' ); 
    $preffix    = current(explode(' ',$pageclass));  
-}
-
-$helix_path = JPATH_PLUGINS . '/system/helixultimate/core/helixultimate.php';
-if (file_exists($helix_path)) {
+   }
+   
+   $helix_path = JPATH_PLUGINS . '/system/helixultimate/core/helixultimate.php';
+   if (file_exists($helix_path)) {
     require_once($helix_path);
     $theme = new helixUltimate;
-} else {
+   } else {
     die('Install and activate <a target="_blank" href="https://www.joomshaper.com/helix">Helix Ultimate Framework</a>.');
-}
-?>
+   }
+   ?>
 <!doctype html>
 <html lang="pt-br">
-	<head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="canonical" href="<?php echo JUri::current(); ?>">
-        <?php
-
-        $theme->head();
-        
-        $theme->add_css('font-awesome.min.css,bootstrap.min.css,owlcarousel.min.css,style.css,jquery-ui.css,all.css');						
-        $theme->add_js('jquery.sticky.js, main.js,owl-carousel.2.3.0.min.js,script-portal.js,jquery-ui.js,swiper.min.js');
- 
-
-        //Before Head
-        if ($before_head = $this->params->get('before_head'))
-        {
-            echo $before_head . "\n";
-        }
-        ?>
-    </head>
-   
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="canonical" href="<?php echo JUri::current(); ?>">
+      <?php
+         $theme->head();
+         
+         $theme->add_css('font-awesome.min.css,bootstrap.min.css,owlcarousel.min.css,style.css,jquery-ui.css,all.css');						
+         $theme->add_js('jquery.sticky.js, main.js,owl-carousel.2.3.0.min.js,script-portal.js,jquery-ui.js,swiper.min.js');
+         
+         
+         //Before Head
+         if ($before_head = $this->params->get('before_head'))
+         {
+             echo $before_head . "\n";
+         }
+         ?>
+   </head>
    <body class="<?php echo $pageclass ; ?> ">
       <div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;">
          <ul id="menu-barra-temp" style="list-style:none;">
@@ -101,7 +99,7 @@ if (file_exists($helix_path)) {
                         </form>
                      </div>
                   </div>
-               </div>             
+               </div>
                <div class="box-menu">
                   <div class="container">
                      <div class="row">
@@ -123,102 +121,113 @@ if (file_exists($helix_path)) {
             <jdoc:include type="message" />
          </div>
          <?php endif; ?>
-         
          <?php if (empty($menuitem->home)) : ?>
-             <div class="container">
-                <!-- rastro de navegacao -->
-                <jdoc:include type="modules" name="rastro-navegacao" />
-                <jdoc:include type="module" name="breadcrumbs" title="Rastro de navegação" />
-             </div>
-      <?php endif; ?>
-      <div class="conteudo-interna">
-         <div class="body-wrapper">
-            <div class="body-innerwrapper">
-               <?php 
-                  $posicao_topo = $preffix. '-topo';
-                           $posicao_rodape = $preffix. '-rodape';
-                           $posicao_direita = $preffix. '-direita'; ?>
-               <?php if(!empty($menuitem)) : ?> 
-               <?php if($menuitem->component == "com_blankcomponent" &&  $menuitem->params->get("menu_text")):?>		
-               <h1 class="documentFirstHeading">
-                  <?php if($menuitem->params->get("menu-anchor_title")) : ?>
-                  <?php echo $menuitem->params->get("menu-anchor_title"); ?>
-                  <?php else :?>
-                  <?php echo $menuitem->title; ?>
-                  <?php endif; ?>
-               </h1>
-               <?php endif; ?>
-               <?php endif; ?>
-               <?php if($this->countModules($posicao_topo) || $this->countModules("internas-topo")): ?>
-               <div class="row-fluid">
-                  <jdoc:include type="modules" name="internas-topo" headerLevel="2" style="container" />
-                  <jdoc:include type="modules" name="<?php echo $posicao_topo ?>" headerLevel="2" style="container" />
-               </div>
-               <?php endif; ?>
-               <?php if($this->countModules($posicao_direita) || $this->countModules("internas-direita")): ?>
-               <div class="row-fluid">
-                  <div class="span9">
-                     <?php if($com_blankcomponent): ?>
-                     <jdoc:include type="modules" name="pagina-interna-capa" style="container" headerLevel="2" />
-                     <jdoc:include type="modules" name="pagina-interna-capa-<?php echo $preffix ?>" style="container" headerLevel="2" />
-                     <?php else: ?>
-                     <jdoc:include type="component" />
-                     <?php endif; ?>
-                  </div>
-               </div>
+         <div class="container">
+            <!-- rastro de navegacao -->
+            <jdoc:include type="modules" name="rastro-navegacao" />
+            <jdoc:include type="module" name="breadcrumbs" title="Rastro de navegação" />
+         </div>
+         <?php endif; ?>
+         <?php
+            $app = JFactory::getApplication();
+            $menu = $app->getMenu();
+            $lang = JFactory::getLanguage();
+            if ($menu->getActive() == $menu->getDefault($lang->getTag())) {
+                echo '<div class="conteudo-interna">';
+                echo '<div class="body-wrapper">';
+                echo '<div class="body-innerwrapper">';
+            }
+            else {
+                echo '<div id="wrapper" class="container">';
+                echo '<div class="conteudo-interna">';
+            }
+            ?>
+         <?php 
+            $posicao_topo = $preffix. '-topo';
+                     $posicao_rodape = $preffix. '-rodape';
+                     $posicao_direita = $preffix. '-direita'; ?>
+         <?php if(!empty($menuitem)) : ?> 
+         <?php if($menuitem->component == "com_blankcomponent" &&  $menuitem->params->get("menu_text")):?>		
+         <h1 class="documentFirstHeading">
+            <?php if($menuitem->params->get("menu-anchor_title")) : ?>
+            <?php echo $menuitem->params->get("menu-anchor_title"); ?>
+            <?php else :?>
+            <?php echo $menuitem->title; ?>
+            <?php endif; ?>
+         </h1>
+         <?php endif; ?>
+         <?php endif; ?>
+         <?php if($this->countModules($posicao_topo) || $this->countModules("internas-topo")): ?>
+         <div class="row-fluid">
+            <jdoc:include type="modules" name="internas-topo" headerLevel="2" style="container" />
+            <jdoc:include type="modules" name="<?php echo $posicao_topo ?>" headerLevel="2" style="container" />
+         </div>
+         <?php endif; ?>
+         <?php if($this->countModules($posicao_direita) || $this->countModules("internas-direita")): ?>
+         <div class="row-fluid">
+            <div class="span9">
+               <?php if($com_blankcomponent): ?>
+               <jdoc:include type="modules" name="pagina-interna-capa" style="container" headerLevel="2" />
+               <jdoc:include type="modules" name="pagina-interna-capa-<?php echo $preffix ?>" style="container" headerLevel="2" />
                <?php else: ?>
-               <div class="row-fluid">
-                  <?php if($com_blankcomponent): ?>
-                  <jdoc:include type="modules" name="pagina-interna-capa" style="container" headerLevel="2" />
-                  <jdoc:include type="modules" name="pagina-interna-capa-<?php echo $preffix ?>" style="container" headerLevel="2" />
-                  <?php else: ?>
-                  <jdoc:include type="component" />
-                  <?php endif; ?>
-               </div>
-               <?php endif; ?>
-               <?php if($this->countModules($posicao_rodape) || $this->countModules("internas-rodape")): ?>
-               <div class="row-fluid">
-                  <jdoc:include type="modules" name="<?php echo $posicao_rodape ?>" headerLevel="2" style="container" />
-                  <jdoc:include type="modules" name="internas-rodape" headerLevel="2" style="container" />
-               </div>
+               <jdoc:include type="component" />
                <?php endif; ?>
             </div>
          </div>
-         <!-- FINAL CONTEUDO --> 
-         <!--<jdoc:include type="modules" name="voltar-topo" />-->
-         <div id="viewlet-below-content">
-            <div class="voltar-topo"> <a href="#interna">Voltar ao topo</a> </div>
-            <div class="texto-copyright"> </div>
+         <?php else: ?>
+         <div class="row-fluid">
+            <?php if($com_blankcomponent): ?>
+            <jdoc:include type="modules" name="pagina-interna-capa" style="container" headerLevel="2" />
+            <jdoc:include type="modules" name="pagina-interna-capa-<?php echo $preffix ?>" style="container" headerLevel="2" />
+            <?php else: ?>
+            <jdoc:include type="component" />
+            <?php endif; ?>
          </div>
-         <!-- FINAL CONTEUDO END --> 
-         <!-- FOOTER -->
-         <section class="footer">
-            <div class="container">
-               <div class="box-menu">
-                  <div class="col-md-12">
-                     <!-- Redes Sociais Rodapé-->
-                     <jdoc:include type="modules" name="rodape-redes-sociais" />
-                     <div class="row">
-                        <div class="col-md-12">
-                           <div class="row">
-                              <!-- Menu Rodapé -->
-                              <jdoc:include type="modules" name="menu-rodape" />
-                           </div>
+         <?php endif; ?>
+         <?php if($this->countModules($posicao_rodape) || $this->countModules("internas-rodape")): ?>
+         <div class="row-fluid">
+            <jdoc:include type="modules" name="<?php echo $posicao_rodape ?>" headerLevel="2" style="container" />
+            <jdoc:include type="modules" name="internas-rodape" headerLevel="2" style="container" />
+         </div>
+         <?php endif; ?>
+      </div>
+      </div>
+      </div>
+      <!-- FINAL CONTEUDO --> 
+      <!--<jdoc:include type="modules" name="voltar-topo" />-->
+      <div id="viewlet-below-content">
+         <div class="voltar-topo"> <a href="#interna">Voltar ao topo</a> </div>
+         <div class="texto-copyright"> </div>
+      </div>
+      <!-- FINAL CONTEUDO END --> 
+      <!-- FOOTER -->
+      <section class="footer">
+         <div class="container">
+            <div class="box-menu">
+               <div class="col-md-12">
+                  <!-- Redes Sociais Rodapé-->
+                  <jdoc:include type="modules" name="rodape-redes-sociais" />
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="row">
+                           <!-- Menu Rodapé -->
+                           <jdoc:include type="modules" name="menu-rodape" />
                         </div>
                      </div>
-                     <!-- row --> 
                   </div>
-               </div>
-               <!-- Rodapé -->
-               <div class="redes-e-logos">
-                  <jdoc:include type="modules" name="rodape" />
-                  <div id="footer-brasil">
-                     <div id="wrapper-footer-brasil"><a class="logo-acesso-footer" href="http://www.acessoainformacao.gov.br/" alt="Acesso à informação" title="Acesso à informação"></a><a class="logo-governo-federal" href="http://www.brasil.gov.br/" alt="Governo Federal" title="Governo Federal"></a></div>
-                  </div>
+                  <!-- row --> 
                </div>
             </div>
-         </section>
-         <!-- FOOTER END -->
+            <!-- Rodapé -->
+            <div class="redes-e-logos">
+               <jdoc:include type="modules" name="rodape" />
+               <div id="footer-brasil">
+                  <div id="wrapper-footer-brasil"><a class="logo-acesso-footer" href="http://www.acessoainformacao.gov.br/" alt="Acesso à informação" title="Acesso à informação"></a><a class="logo-governo-federal" href="http://www.brasil.gov.br/" alt="Governo Federal" title="Governo Federal"></a></div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- FOOTER END -->
       </div>
       <!-- PRINCIPAL --> 
       <!-- JS --> 
