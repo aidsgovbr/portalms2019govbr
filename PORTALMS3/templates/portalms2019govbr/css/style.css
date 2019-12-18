@@ -1943,10 +1943,11 @@ body.capa-azul .documentFirstHeading {
 
 #pagination {
 	clear: both;
-	width: 100%;
-	text-align: center;
-	text-transform: uppercase;
-	min-height: 100px;
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    min-height: 100px;
+    margin: auto;
 }
 
 #pagination .pagination {
